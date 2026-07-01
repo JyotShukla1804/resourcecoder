@@ -142,15 +142,6 @@ export default function BespokeSoftwarePage() {
                 >
                   Get Started
                 </Link>
-                <Link
-                  href="#about-section"
-                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-slate-700 transition-all border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300 gap-2"
-                >
-                  <svg className="w-4 h-4 text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                  Watch Video
-                </Link>
               </div>
 
               {/* Stats Row */}
