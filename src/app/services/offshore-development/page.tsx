@@ -1,5 +1,5 @@
 import React from "react";
-import { OffshoreHero, OffshoreTrustedLogos, OffshoreOutcomes, OffshoreCapabilities, OffshoreCTA } from "@/components";
+import { OffshoreHero, TrustedBy, OffshoreOutcomes, OffshoreCapabilities, OffshoreCTA } from "@/components";
 import { HireInterview } from "@/components/HireInterview";
 
 export default function OffshoreDevelopmentPage() {
@@ -8,8 +8,8 @@ export default function OffshoreDevelopmentPage() {
       {/* 1. Custom animated Hero */}
       <OffshoreHero />
 
-      {/* 2. Infinite scroll Trusted Logos */}
-      <OffshoreTrustedLogos />
+      {/* 2. Trusted By logo slider section */}
+      <TrustedBy />
 
       {/* 3. Outcomes / Guarantees Section */}
       <OffshoreOutcomes />

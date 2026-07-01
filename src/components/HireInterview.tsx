@@ -63,7 +63,7 @@ export function HireInterview({
         className="w-full max-w-[1358px] mx-auto py-16 md:py-[96px] px-4 sm:px-6 md:px-[55px] relative min-h-[auto] md:min-h-[920px] flex items-center"
       >
       {/* Background soft glow decoration */}
-      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-[#4B56D2]/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="w-full relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
@@ -184,7 +184,7 @@ export function HireInterview({
                         value={formData.firstName}
                         onChange={handleChange}
                         placeholder="John"
-                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#4B56D2]/50 transition-colors"
                       />
                     </div>
                     <div>
@@ -200,7 +200,7 @@ export function HireInterview({
                         value={formData.lastName}
                         onChange={handleChange}
                         placeholder="Doe"
-                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#4B56D2]/50 transition-colors"
                       />
                     </div>
                   </div>
@@ -219,7 +219,7 @@ export function HireInterview({
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="john@company.com"
-                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#4B56D2]/50 transition-colors"
                     />
                   </div>
 
@@ -236,7 +236,7 @@ export function HireInterview({
                         required
                         value={formData.hiringModel}
                         onChange={handleChange}
-                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-blue-500/50 appearance-none cursor-pointer transition-colors"
+                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#4B56D2]/50 appearance-none cursor-pointer transition-colors"
                       >
                         <option value="Dedicated Team (Monthly)">Dedicated Team (Monthly)</option>
                         <option value="Hourly Model">Hourly Model</option>
@@ -263,7 +263,7 @@ export function HireInterview({
                       value={formData.requirements}
                       onChange={handleChange}
                       placeholder="Tell us about your ReactJS needs..."
-                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-650 text-sm focus:outline-none focus:border-blue-500/50 h-28 resize-none transition-colors"
+                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-650 text-sm focus:outline-none focus:border-[#4B56D2]/50 h-28 resize-none transition-colors"
                     />
                   </div>
 

@@ -31,7 +31,7 @@ export function OffshoreCapabilities() {
     <section id="capabilities" className="w-full bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
       <div className="max-w-7xl mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Our Offshore <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Capabilities</span>
+          Our Offshore <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Capabilities</span>
         </h2>
         <p className="text-slate-600 mt-4 max-w-2xl mx-auto">
           Tailored engagement models designed to match your specific business requirements and operational maturity.
@@ -47,8 +47,8 @@ export function OffshoreCapabilities() {
               onClick={() => setActiveTab(idx)}
               className={`w-full text-left px-6 py-4 rounded-xl transition-all font-semibold ${
                 activeTab === idx 
-                ? "bg-blue-600 text-white shadow-lg shadow-blue-500/20" 
-                : "bg-white text-slate-600 hover:bg-blue-50 hover:text-blue-700"
+                ? "bg-[#4B56D2] text-white shadow-lg shadow-[#4B56D2]/20" 
+                : "bg-white text-slate-600 hover:bg-indigo-50/50 hover:text-[#4B56D2]"
               }`}
             >
               {cap.title}
@@ -69,7 +69,7 @@ export function OffshoreCapabilities() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {capabilities[activeTab].features.map((feature, idx) => (
                 <div key={idx} className="flex items-center gap-3 text-slate-700">
-                  <svg className="w-5 h-5 text-blue-500 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <svg className="w-5 h-5 text-[#4B56D2] flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span>{feature}</span>
