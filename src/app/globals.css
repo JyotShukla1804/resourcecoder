@@ -63,17 +63,36 @@ body {
   box-shadow: 0 10px 35px rgba(75, 86, 210, 0.5);
 }
 
-/* Circle Ripple Hover Effect */
 .btn-ripple {
   background-image: radial-gradient(circle, var(--ripple-color-start, #8b5cf6) 0%, var(--ripple-color-end, #3b82f6) 48%, transparent 50%);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 0% 0%;
-  transition: background-size 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-out !important;
+  transition: background-size 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-out, color 0.3s ease-out !important;
 }
 
 .btn-ripple:hover {
   background-size: 300% 300%;
+}
+
+.btn-ripple.bg-black {
+  --ripple-color-start: #edf0fa; /* icy blue-50 */
+  --ripple-color-end: #dde1f5;   /* icy blue-100 */
+}
+
+.btn-ripple.bg-black:hover {
+  color: #171a41; /* deep blue-950 text */
+  box-shadow: 0 10px 25px rgba(237, 240, 250, 0.2);
+}
+
+.btn-ripple.bg-white {
+  --ripple-color-start: #232966; /* midnight blue-900 */
+  --ripple-color-end: #171a41;   /* midnight blue-950 */
+}
+
+.btn-ripple.bg-white:hover {
+  color: #ffffff;
+  box-shadow: 0 10px 25px rgba(23, 26, 65, 0.3);
 }
 
 .badge-primary {

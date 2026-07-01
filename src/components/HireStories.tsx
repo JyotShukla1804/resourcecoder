@@ -133,7 +133,7 @@ export function HireStories({ heading, subheading, data }: HireStoriesProps = {}
 
                   <Link
                     href={story.btnUrl || "#contact-form"}
-                    className="inline-flex items-center justify-center text-[#0f172a] font-bold text-xs tracking-wider hover:bg-black hover:text-white transition-all duration-300 uppercase text-center w-full max-w-[356px] h-[50px] py-3 rounded-full border border-black"
+                    className="btn-ripple bg-white inline-flex items-center justify-center text-[#0f172a] font-bold text-xs tracking-wider hover:border-transparent transition-all duration-300 uppercase text-center w-full max-w-[356px] h-[50px] py-3 rounded-full border border-black"
                   >
                     {story.btnText || "Request a Quote"}
                   </Link>
