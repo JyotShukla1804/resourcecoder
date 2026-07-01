@@ -47,7 +47,7 @@ export function Navbar() {
   }
 
   const navLinks = [
-    { name: "About us", href: "/about", hasChevron: true },
+    { name: "About us", href: "/about", hasChevron: false },
     { name: "Services", href: "/services", hasChevron: true },
     { name: "Hire Team", href: "/hire-team", hasChevron: true },
     { name: "Industries", href: "/industries", hasChevron: false },
