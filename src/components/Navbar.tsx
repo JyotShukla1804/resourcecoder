@@ -11,8 +11,11 @@ export function Navbar() {
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
+  const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] = useState(false);
+  const [isMobileIndustriesDropdownOpen, setIsMobileIndustriesDropdownOpen] = useState(false);
   const pathname = usePathname();
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   const handleServicesEnter = () => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -24,6 +27,32 @@ export function Navbar() {
       setIsServicesDropdownOpen(false);
     }, 150);
   };
+
+  const handleIndustriesEnter = () => {
+    if (industriesTimeoutRef.current) clearTimeout(industriesTimeoutRef.current);
+    setIsIndustriesDropdownOpen(true);
+  };
+
+  const handleIndustriesLeave = () => {
+    industriesTimeoutRef.current = setTimeout(() => {
+      setIsIndustriesDropdownOpen(false);
+    }, 150);
+  };
+
+  const industries = [
+    { name: "Banking & Finance", desc: "Reliable fintech solutions that ensure security & enhanced user experience.", icon: "🏦", href: "https://krazio.com/industries/banking-finance" },
+    { name: "Manufacturing", desc: "IoT-enabled product monitoring.", icon: "🏭", href: "https://krazio.com/industries/manufacturing" },
+    { name: "Travel", desc: "AI-Powered travel recommendations.", icon: "✈️", href: "https://krazio.com/industries/travel" },
+    { name: "Healthcare", desc: "Secure, scalable healthcare platforms to enhance patient care and operations.", icon: "🏥", href: "https://krazio.com/industries/healthcare" },
+    { name: "Real Estate", desc: "Innovative digital solutions for property management and client engagement.", icon: "🏠", href: "https://krazio.com/industries/real-estate" },
+    { name: "Restaurant", desc: "Smart POS System.", icon: "🍽️", href: "https://krazio.com/industries/restaurant" },
+    { name: "Education", desc: "Virtual Learning Environments.", icon: "🎓", href: "https://krazio.com/industries/education" },
+    { name: "Logistics", desc: "Efficient logistics solutions for real-time tracking and supply chain management.", icon: "🚚", href: "https://krazio.com/industries/logistics" },
+    { name: "Entertainment", desc: "Immersive AR/VR content.", icon: "🎬", href: "https://krazio.com/industries/entertainment" },
+    { name: "E-commerce", desc: "AI-powered product recommendations.", icon: "🛒", href: "https://krazio.com/industries/ecommerce" },
+    { name: "Transportation", desc: "Fleet Management Solutions.", icon: "🚌", href: "https://krazio.com/industries/transportation" },
+    { name: "Oil & Gas", desc: "IoT-based equipment monitoring.", icon: "⛽", href: "https://krazio.com/industries/oil-gas" },
+  ];
 
   useEffect(() => {
     async function fetchPages() {
@@ -50,7 +79,7 @@ export function Navbar() {
     { name: "About us", href: "/about", hasChevron: false },
     { name: "Services", href: "/services", hasChevron: true },
     { name: "Hire Team", href: "/hire-team", hasChevron: true },
-    { name: "Industries", href: "/industries", hasChevron: false },
+    { name: "Industries", href: "/industries", hasChevron: true },
     { name: "Company", href: "/partner-with-us", hasChevron: false },
   ];
 
@@ -82,6 +111,7 @@ export function Navbar() {
             const isActive = pathname === link.href;
             const isHireTeam = link.name === "Hire Team";
             const isServices = link.name === "Services";
+            const isIndustries = link.name === "Industries";
 
             return (
               <div key={link.name} className="flex items-center">
@@ -90,26 +120,29 @@ export function Navbar() {
                   onMouseEnter={() => {
                     if (isHireTeam) setIsDropdownOpen(true);
                     if (isServices) handleServicesEnter();
+                    if (isIndustries) handleIndustriesEnter();
                   }}
                   onMouseLeave={() => {
                     if (isHireTeam) setIsDropdownOpen(false);
                     if (isServices) handleServicesLeave();
+                    if (isIndustries) handleIndustriesLeave();
                   }}
                 >
-                  {isHireTeam || isServices ? (
+                  {isHireTeam || isServices || isIndustries ? (
                     <button
                       type="button"
                       onClick={() => {
                         if (isHireTeam) setIsDropdownOpen(!isDropdownOpen);
                         if (isServices) setIsServicesDropdownOpen(!isServicesDropdownOpen);
+                        if (isIndustries) setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen);
                       }}
-                      className={`text-[16px] font-semibold transition-colors flex items-center py-1 px-1.5 cursor-pointer select-none ${isActive || (isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) ? "text-white" : "text-slate-400 hover:text-white"
+                      className={`text-[16px] font-semibold transition-colors flex items-center py-1 px-1.5 cursor-pointer select-none ${isActive || (isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) ? "text-white" : "text-slate-400 hover:text-white"
                         }`}
                     >
                       <span>{link.name}</span>
                       {link.hasChevron && (
                         <svg
-                          className={`w-2.5 h-2.5 text-slate-500 ml-1 mt-0.5 transition-transform duration-200 ${(isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) ? "rotate-180 text-white" : "group-hover:text-slate-300"
+                          className={`w-2.5 h-2.5 text-slate-500 ml-1 mt-0.5 transition-transform duration-200 ${(isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) ? "rotate-180 text-white" : "group-hover:text-slate-300"
                             }`}
                           fill="none"
                           stroke="currentColor"
@@ -275,6 +308,41 @@ export function Navbar() {
           </div>
         </div>
 
+        {/* Industries Full-Width Mega Menu */}
+        <div
+          onMouseEnter={handleIndustriesEnter}
+          onMouseLeave={handleIndustriesLeave}
+          className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-300 origin-top z-40 ${
+            isIndustriesDropdownOpen
+              ? "opacity-100 translate-y-0 pointer-events-auto"
+              : "opacity-0 -translate-y-4 pointer-events-none"
+          }`}
+        >
+          <div className="p-10 px-12">
+            <h3 className="text-black font-extrabold text-[20px] mb-8 tracking-tight">Industries We Serve</h3>
+            <div className="grid grid-cols-3 gap-x-12 gap-y-6">
+              {industries.map((industry) => (
+                <a
+                  key={industry.name}
+                  href={industry.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setIsIndustriesDropdownOpen(false)}
+                  className="flex items-start gap-4 p-4 rounded-[16px] hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group"
+                >
+                  <div className="w-[48px] h-[48px] rounded-[14px] bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <span className="text-2xl">{industry.icon}</span>
+                  </div>
+                  <div>
+                    <h4 className="text-[#4B56D2] font-bold text-[15px] mb-1 group-hover:underline">{industry.name}</h4>
+                    <p className="text-[#5e6b7e] text-[13px] leading-[1.5]">{industry.desc}</p>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+        </div>
+
         {/* Mobile menu button */}
         <div className="md:hidden flex items-center">
           <button
@@ -307,9 +375,10 @@ export function Navbar() {
               const isHireTeam = link.name === "Hire Team";
               const isServices = link.name === "Services";
 
-              if (isHireTeam || isServices) {
-                const isMobileOpen = isHireTeam ? isMobileDropdownOpen : isMobileServicesDropdownOpen;
-                const toggleMobileOpen = isHireTeam ? () => setIsMobileDropdownOpen(!isMobileDropdownOpen) : () => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
+              const isIndustriesMobile = link.name === "Industries";
+              if (isHireTeam || isServices || isIndustriesMobile) {
+                const isMobileOpen = isHireTeam ? isMobileDropdownOpen : isIndustriesMobile ? isMobileIndustriesDropdownOpen : isMobileServicesDropdownOpen;
+                const toggleMobileOpen = isHireTeam ? () => setIsMobileDropdownOpen(!isMobileDropdownOpen) : isIndustriesMobile ? () => setIsMobileIndustriesDropdownOpen(!isMobileIndustriesDropdownOpen) : () => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
                 
                 return (
                   <div key={link.name} className="space-y-1">
@@ -355,6 +424,22 @@ export function Navbar() {
                               No sub-pages available
                             </div>
                           )
+                        ) : isIndustriesMobile ? (
+                          <>
+                            {industries.map((industry) => (
+                              <a
+                                key={industry.name}
+                                href={industry.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                onClick={() => setIsOpen(false)}
+                                className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors text-slate-400 hover:text-white hover:bg-slate-900/50"
+                              >
+                                <span>{industry.icon}</span>
+                                <span>{industry.name}</span>
+                              </a>
+                            ))}
+                          </>
                         ) : (
                           <>
                             <Link href="/services/offshore-development" onClick={() => setIsOpen(false)} className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors text-slate-400 hover:text-white hover:bg-slate-900/50`}>
