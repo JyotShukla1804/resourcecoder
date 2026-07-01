@@ -6,7 +6,7 @@ import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/TrustedBy";
 import { HireInterview } from "@/components/HireInterview";
 
-const CobeGlobe = dynamic(() => import("@/components/CobeGlobe"), { ssr: false });
+const CobeGlobe = dynamic(() => import("@/components/CobeGlobe").then(mod => mod.CobeGlobe), { ssr: false });
 
 
 export default function BespokeSoftwarePage() {
