@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -12,6 +12,18 @@ export function Navbar() {
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleServicesEnter = () => {
+    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
+    setIsServicesDropdownOpen(true);
+  };
+
+  const handleServicesLeave = () => {
+    servicesTimeoutRef.current = setTimeout(() => {
+      setIsServicesDropdownOpen(false);
+    }, 150);
+  };
 
   useEffect(() => {
     async function fetchPages() {
@@ -39,7 +51,6 @@ export function Navbar() {
     { name: "Services", href: "/services", hasChevron: true },
     { name: "Hire Team", href: "/hire-team", hasChevron: true },
     { name: "Industries", href: "/industries", hasChevron: false },
-    { name: "Work", href: "/work", hasChevron: false },
     { name: "Company", href: "/partner-with-us", hasChevron: false },
   ];
 
@@ -78,9 +89,11 @@ export function Navbar() {
                   className="relative flex items-center h-[72px]"
                   onMouseEnter={() => {
                     if (isHireTeam) setIsDropdownOpen(true);
+                    if (isServices) handleServicesEnter();
                   }}
                   onMouseLeave={() => {
                     if (isHireTeam) setIsDropdownOpen(false);
+                    if (isServices) handleServicesLeave();
                   }}
                 >
                   {isHireTeam || isServices ? (
@@ -179,6 +192,8 @@ export function Navbar() {
 
         {/* Services Full-Width Mega Menu */}
         <div
+          onMouseEnter={handleServicesEnter}
+          onMouseLeave={handleServicesLeave}
           className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-300 origin-top z-40 ${
             isServicesDropdownOpen
               ? "opacity-100 translate-y-0 pointer-events-auto"

@@ -10,43 +10,21 @@ export function Footer() {
     return null;
   }
   const socialIconClass =
-    "w-10 h-10 rounded-full border border-slate-200/80 flex items-center justify-center hover:bg-slate-50 hover:border-slate-300 transition-all duration-300 group";
+    "w-10 h-10 rounded-full border border-slate-800 flex items-center justify-center hover:bg-slate-900 hover:border-slate-700 transition-all duration-300 group";
 
   return (
-    <footer className="w-full bg-[#f9fafb] border-t border-slate-200/50 py-16 px-4 sm:px-6 lg:px-8 relative z-10">
+    <footer className="w-full bg-black border-t border-slate-900 py-16 px-4 sm:px-6 lg:px-8 relative z-10">
       <div className="max-w-[1280px] mx-auto w-full">
         {/* Main Footer Links Grid */}
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pb-12">
           {/* Logo and Tagline (Col span 4) */}
           <div className="md:col-span-4 space-y-6 text-left">
-            <Link href="/" className="flex items-center gap-3 select-none">
-              {/* Blue circle logo with brackets (no slash, matching screenshot) */}
-              <div
-                className="w-10 h-10 rounded-full flex items-center justify-center"
-                style={{
-                  background: "linear-gradient(90deg, #4B56D2 0%, #4B56D2 100%)"
-                }}
-              >
-                <svg
-                  className="w-5 h-5 text-white"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2.5"
-                  viewBox="0 0 24 24"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    d="M17.25 6.75L22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25"
-                  />
-                </svg>
-              </div>
-              <span className="text-[22px] font-bold tracking-tight text-black">
-                ResourceCoders
-              </span>
+            <Link href="/" className="flex items-center gap-2 select-none">
+              <img src="/K.svg?v=2" alt="K" className="h-8 w-auto object-contain flex-shrink-0" />
+              <img src="/Frame 65 (1).svg" alt="Res.coders" className="h-8 w-auto object-contain flex-shrink-0" />
             </Link>
 
-            <p className="text-[#5e6b7e] text-[15px] sm:text-[16px] leading-[1.7] max-w-[320px] font-normal">
+            <p className="text-slate-400 text-[15px] sm:text-[16px] leading-[1.7] max-w-[320px] font-normal">
               Engineering excellence for the modern digital landscape. Your trusted partner in dedicated IT resources.
             </p>
 
@@ -55,7 +33,7 @@ export function Footer() {
               {/* LinkedIn */}
               <Link href="https://linkedin.com" target="_blank" className={socialIconClass}>
                 <svg
-                  className="w-[18px] h-[18px] text-[#5e6b7e] group-hover:text-blue-600 transition-colors"
+                  className="w-[18px] h-[18px] text-slate-400 group-hover:text-blue-500 transition-colors"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.75"
@@ -72,7 +50,7 @@ export function Footer() {
               {/* Twitter/X */}
               <Link href="https://twitter.com" target="_blank" className={socialIconClass}>
                 <svg
-                  className="w-[18px] h-[18px] text-[#5e6b7e] group-hover:text-blue-400 transition-colors"
+                  className="w-[18px] h-[18px] text-slate-400 group-hover:text-blue-400 transition-colors"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.75"
@@ -88,7 +66,7 @@ export function Footer() {
               {/* GitHub */}
               <Link href="https://github.com" target="_blank" className={socialIconClass}>
                 <svg
-                  className="w-[18px] h-[18px] text-[#5e6b7e] group-hover:text-black transition-colors"
+                  className="w-[18px] h-[18px] text-slate-400 group-hover:text-white transition-colors"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.75"
@@ -108,7 +86,7 @@ export function Footer() {
           <div className="md:col-span-8 md:col-start-5 grid grid-cols-3 gap-8 md:gap-16">
             {/* Services */}
             <div className="space-y-6 text-left">
-              <h3 className="text-black font-bold text-[17px] tracking-tight">
+              <h3 className="text-white font-bold text-[17px] tracking-tight">
                 Services
               </h3>
               <ul className="space-y-4">
@@ -121,7 +99,7 @@ export function Footer() {
                   <li key={item}>
                     <Link
                       href="/services"
-                      className="text-[#5e6b7e] hover:text-[#4B56D2] text-[15px] font-normal transition-colors duration-200"
+                      className="text-slate-400 hover:text-white text-[15px] font-normal transition-colors duration-200"
                     >
                       {item}
                     </Link>
@@ -132,7 +110,7 @@ export function Footer() {
 
             {/* Company */}
             <div className="space-y-6 text-left">
-              <h3 className="text-black font-bold text-[17px] tracking-tight">
+              <h3 className="text-white font-bold text-[17px] tracking-tight">
                 Company
               </h3>
               <ul className="space-y-4">
@@ -145,7 +123,7 @@ export function Footer() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-[#5e6b7e] hover:text-[#4B56D2] text-[15px] font-normal transition-colors duration-200"
+                      className="text-slate-400 hover:text-white text-[15px] font-normal transition-colors duration-200"
                     >
                       {item.name}
                     </Link>
@@ -156,7 +134,7 @@ export function Footer() {
 
             {/* Contact */}
             <div className="space-y-6 text-left">
-              <h3 className="text-black font-bold text-[17px] tracking-tight">
+              <h3 className="text-white font-bold text-[17px] tracking-tight">
                 Contact
               </h3>
               <ul className="space-y-4">
@@ -167,7 +145,7 @@ export function Footer() {
                   </svg>
                   <a
                     href="mailto:sales@kraziocloud.com"
-                    className="text-[#5e6b7e] hover:text-[#4B56D2] text-[15px] font-normal transition-colors duration-200 break-all"
+                    className="text-slate-400 hover:text-white text-[15px] font-normal transition-colors duration-200 break-all"
                   >
                     sales@kraziocloud.com
                   </a>
@@ -177,7 +155,7 @@ export function Footer() {
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span className="text-[#5e6b7e] text-[15px] font-normal">
+                  <span className="text-slate-400 text-[15px] font-normal">
                     India & USA
                   </span>
                 </li>
@@ -188,19 +166,19 @@ export function Footer() {
 
         {/* Bottom copyright section (no top-border/line, matching screenshot) */}
         <div className="pt-16 mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-[#8e9cae] text-[14px] font-normal text-center md:text-left">
+          <p className="text-slate-500 text-[14px] font-normal text-center md:text-left">
             © 2026 ResourceCoders (Krazio Cloud). All rights reserved.
           </p>
           <div className="flex items-center gap-8">
             <Link
               href="/privacy-policy"
-              className="text-[#8e9cae] hover:text-[#4B56D2] text-[14px] font-normal transition-colors duration-200"
+              className="text-slate-500 hover:text-white text-[14px] font-normal transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-[#8e9cae] hover:text-[#4B56D2] text-[14px] font-normal transition-colors duration-200"
+              className="text-slate-500 hover:text-white text-[14px] font-normal transition-colors duration-200"
             >
               Terms of Service
             </Link>
