@@ -42,18 +42,18 @@ export function Navbar() {
   };
 
   const industries = [
-    { name: "Banking & Finance", desc: "Reliable fintech solutions that ensure security & enhanced user experience.", icon: "🏦", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Manufacturing", desc: "IoT-enabled product monitoring.", icon: "🏭", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Travel", desc: "AI-Powered travel recommendations.", icon: "✈️", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Healthcare", desc: "Secure, scalable healthcare platforms to enhance patient care and operations.", icon: "🏥", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Real Estate", desc: "Innovative digital solutions for property management and client engagement.", icon: "🏠", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Restaurant", desc: "Smart POS System.", icon: "🍽️", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Education", desc: "Virtual Learning Environments.", icon: "🎓", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Logistics", desc: "Efficient logistics solutions for real-time tracking and supply chain management.", icon: "🚚", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Entertainment", desc: "Immersive AR/VR content.", icon: "🎬", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "E-commerce", desc: "AI-powered product recommendations.", icon: "🛒", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Transportation", desc: "Fleet Management Solutions.", icon: "🚌", href: "https://kraziocloud.com/industries-serve/" },
-    { name: "Oil & Gas", desc: "IoT-based equipment monitoring.", icon: "⛽", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Banking & Finance", desc: "Reliable fintech solutions that ensure security & enhanced user experience.", icon: "🏦", href: "https://kraziocloud.com/industries/banking-finance/" },
+    { name: "Manufacturing", desc: "IoT-enabled product monitoring.", icon: "🏭", href: "https://kraziocloud.com/industries/manufacturing" },
+    { name: "Travel", desc: "AI-Powered travel recommendations.", icon: "✈️", href: "https://kraziocloud.com/industries/travel" },
+    { name: "Healthcare", desc: "Secure, scalable healthcare platforms to enhance patient care and operations.", icon: "🏥", href: "https://kraziocloud.com/industries/healthcare" },
+    { name: "Real Estate", desc: "Innovative digital solutions for property management and client engagement.", icon: "🏠", href: "https://kraziocloud.com/industries/real-estate" },
+    { name: "Restaurant", desc: "Smart POS System.", icon: "🍽️", href: "https://kraziocloud.com/industries/restaurant" },
+    { name: "Education", desc: "Virtual Learning Environments.", icon: "🎓", href: "https://kraziocloud.com/industries/education" },
+    { name: "Logistics", desc: "Efficient logistics solutions for real-time tracking and supply chain management.", icon: "🚚", href: "https://kraziocloud.com/industries/logistics" },
+    { name: "Entertainment", desc: "Immersive AR/VR content.", icon: "🎬", href: "https://kraziocloud.com/industries/entertainment" },
+    { name: "E-commerce", desc: "AI-powered product recommendations.", icon: "🛒", href: "https://kraziocloud.com/industries/ecommerce" },
+    { name: "Transportation", desc: "Fleet Management Solutions.", icon: "🚌", href: "https://kraziocloud.com/industries/transportation" },
+    { name: "Oil & Gas", desc: "IoT-based equipment monitoring.", icon: "⛽", href: "https://kraziocloud.com/industries/oil-gas" },
   ];
 
   useEffect(() => {
@@ -265,80 +265,80 @@ export function Navbar() {
           <div
             onMouseEnter={handleServicesEnter}
             onMouseLeave={handleServicesLeave}
-            className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-300 origin-top z-40 ${isServicesDropdownOpen
+            className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-black/95 backdrop-blur-md border border-slate-900 shadow-2xl overflow-hidden transition-all duration-300 origin-top z-40 ${isServicesDropdownOpen
                 ? "opacity-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 -translate-y-4 pointer-events-none"
               }`}
           >
             <div className="p-10 px-12">
-              <h3 className="text-black font-extrabold text-[20px] mb-8 tracking-tight">Engagement Models</h3>
+              <h3 className="text-white font-extrabold text-[20px] mb-8 tracking-tight">Engagement Models</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <Link href="/services/offshore-development" onClick={() => setIsServicesDropdownOpen(false)} className="flex items-start gap-5 p-5 rounded-[20px] hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
-                  <div className="w-[52px] h-[52px] rounded-[16px] bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <Link href="/services/offshore-development" onClick={() => setIsServicesDropdownOpen(false)} className="flex items-start gap-5 p-5 rounded-[20px] hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-800 group">
+                  <div className="w-[52px] h-[52px] rounded-[16px] bg-slate-900 shadow-sm border border-slate-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">🌍</span>
                   </div>
                   <div>
-                    <h4 className="text-black font-bold text-[16px] mb-1.5">Offshore Development Center in India</h4>
-                    <p className="text-[#5e6b7e] text-[14px] leading-[1.6]">Hire developers dedicatedly working for your project</p>
+                    <h4 className="text-white font-bold text-[16px] mb-1.5">Offshore Development Center in India</h4>
+                    <p className="text-slate-400 text-[14px] leading-[1.6]">Hire developers dedicatedly working for your project</p>
                   </div>
                 </Link>
-                <Link href="/services/hire-dedicated" onClick={() => setIsServicesDropdownOpen(false)} className="flex items-start gap-5 p-5 rounded-[20px] hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
-                  <div className="w-[52px] h-[52px] rounded-[16px] bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <Link href="/services/hire-dedicated" onClick={() => setIsServicesDropdownOpen(false)} className="flex items-start gap-5 p-5 rounded-[20px] hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-800 group">
+                  <div className="w-[52px] h-[52px] rounded-[16px] bg-slate-900 shadow-sm border border-slate-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">👨‍💻</span>
                   </div>
                   <div>
-                    <h4 className="text-black font-bold text-[16px] mb-1.5">Hire Dedicated Developers</h4>
-                    <p className="text-[#5e6b7e] text-[14px] leading-[1.6]">Get custom solution built as per your requirement.</p>
+                    <h4 className="text-white font-bold text-[16px] mb-1.5">Hire Dedicated Developers</h4>
+                    <p className="text-slate-400 text-[14px] leading-[1.6]">Get custom solution built as per your requirement.</p>
                   </div>
                 </Link>
-                <Link href="/services/bespoke-software" onClick={() => setIsServicesDropdownOpen(false)} className="flex items-start gap-5 p-5 rounded-[20px] hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group">
-                  <div className="w-[52px] h-[52px] rounded-[16px] bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                <Link href="/services/bespoke-software" onClick={() => setIsServicesDropdownOpen(false)} className="flex items-start gap-5 p-5 rounded-[20px] hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-800 group">
+                  <div className="w-[52px] h-[52px] rounded-[16px] bg-slate-900 shadow-sm border border-slate-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                     <span className="text-2xl">⚙️</span>
                   </div>
                   <div>
-                    <h4 className="text-black font-bold text-[16px] mb-1.5">Bespoke Software Development</h4>
-                    <p className="text-[#5e6b7e] text-[14px] leading-[1.6]">We are also happy to develop software from scratch.</p>
+                    <h4 className="text-white font-bold text-[16px] mb-1.5">Bespoke Software Development</h4>
+                    <p className="text-slate-400 text-[14px] leading-[1.6]">We are also happy to develop software from scratch.</p>
                   </div>
                 </Link>
               </div>
             </div>
 
-            <div className="bg-[#f8f9fc] py-6 px-12 border-t border-slate-100">
+            <div className="bg-slate-900/30 py-6 px-12 border-t border-slate-900">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">UNITED STATES</div>
-                    <div className="text-black font-extrabold text-[15px]">+1 (623) 887-5363</div>
+                    <div className="text-white font-extrabold text-[15px]">+1 (623) 887-5363</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">EMAIL ADDRESS</div>
-                    <div className="text-black font-extrabold text-[15px]">sales@kraziocloud.com</div>
+                    <div className="text-white font-extrabold text-[15px]">sales@kraziocloud.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">LINKEDIN</div>
-                    <div className="text-black font-extrabold text-[15px]">krazio</div>
+                    <div className="text-white font-extrabold text-[15px]">krazio</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 2.667C8.639 2.667 2.667 8.638 2.667 16c0 2.347.634 4.638 1.837 6.643L2.667 29.333l6.875-1.802A13.265 13.265 0 0 0 16.003 29.333c7.363 0 13.33-5.97 13.33-13.333 0-7.362-5.967-13.333-13.33-13.333zm0 24.267a11.04 11.04 0 0 1-5.635-1.545l-.404-.24-4.08 1.07 1.09-3.978-.263-.41A10.972 10.972 0 0 1 5.04 16c0-6.044 4.92-10.96 10.963-10.96C22.044 5.04 26.96 9.956 26.96 16c0 6.044-4.916 10.934-10.957 10.934zm6.01-8.196c-.33-.165-1.95-.962-2.252-1.072-.302-.11-.521-.165-.74.165-.22.33-.851 1.072-1.043 1.292-.192.22-.384.247-.714.082-.33-.165-1.394-.514-2.655-1.638-.982-.875-1.645-1.955-1.838-2.285-.192-.33-.02-.508.145-.672.149-.148.33-.385.494-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.027-.578-.083-.165-.74-1.785-1.014-2.443-.267-.64-.538-.553-.74-.563l-.63-.011c-.22 0-.577.083-.88.413-.302.33-1.153 1.127-1.153 2.747 0 1.62 1.18 3.187 1.344 3.407.165.22 2.322 3.547 5.627 4.973.787.34 1.4.543 1.879.694.789.252 1.508.217 2.077.132.634-.095 1.95-.797 2.225-1.567.275-.77.275-1.43.192-1.567-.082-.138-.302-.22-.632-.385z"/></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">WHATSAPP</div>
-                    <div className="text-black font-extrabold text-[15px]">+91 7202002034</div>
+                    <div className="text-white font-extrabold text-[15px]">+91 7202002034</div>
                   </div>
                 </div>
               </div>
@@ -349,13 +349,13 @@ export function Navbar() {
           <div
             onMouseEnter={handleIndustriesEnter}
             onMouseLeave={handleIndustriesLeave}
-            className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-white shadow-[0_30px_60px_rgba(0,0,0,0.12)] overflow-hidden transition-all duration-300 origin-top z-40 ${isIndustriesDropdownOpen
+            className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-black/95 backdrop-blur-md border border-slate-900 shadow-2xl overflow-hidden transition-all duration-300 origin-top z-40 ${isIndustriesDropdownOpen
                 ? "opacity-100 translate-y-0 pointer-events-auto"
                 : "opacity-0 -translate-y-4 pointer-events-none"
               }`}
           >
             <div className="p-10 px-12">
-              <h3 className="text-black font-extrabold text-[20px] mb-8 tracking-tight">Industries We Serve</h3>
+              <h3 className="text-white font-extrabold text-[20px] mb-8 tracking-tight">Industries We Serve</h3>
               <div className="grid grid-cols-3 gap-x-12 gap-y-6">
                 {industries.map((industry) => (
                   <a
@@ -364,56 +364,56 @@ export function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsIndustriesDropdownOpen(false)}
-                    className="flex items-start gap-4 p-4 rounded-[16px] hover:bg-slate-50 transition-colors border border-transparent hover:border-slate-100 group"
+                    className="flex items-start gap-4 p-4 rounded-[16px] hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-800 group"
                   >
-                    <div className="w-[48px] h-[48px] rounded-[14px] bg-white shadow-sm border border-slate-100 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <div className="w-[48px] h-[48px] rounded-[14px] bg-slate-900 shadow-sm border border-slate-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                       <span className="text-2xl">{industry.icon}</span>
                     </div>
                     <div>
                       <h4 className="text-[#4B56D2] font-bold text-[15px] mb-1 group-hover:underline">{industry.name}</h4>
-                      <p className="text-[#5e6b7e] text-[13px] leading-[1.5]">{industry.desc}</p>
+                      <p className="text-slate-400 text-[13px] leading-[1.5]">{industry.desc}</p>
                     </div>
                   </a>
                 ))}
               </div>
             </div>
 
-            <div className="bg-[#f8f9fc] py-6 px-12 border-t border-slate-100">
+            <div className="bg-slate-900/30 py-6 px-12 border-t border-slate-900">
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-center">
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" /></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">UNITED STATES</div>
-                    <div className="text-black font-extrabold text-[15px]">+1 (623) 887-5363</div>
+                    <div className="text-white font-extrabold text-[15px]">+1 (623) 887-5363</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">EMAIL ADDRESS</div>
-                    <div className="text-black font-extrabold text-[15px]">sales@kraziocloud.com</div>
+                    <div className="text-white font-extrabold text-[15px]">sales@kraziocloud.com</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">LINKEDIN</div>
-                    <div className="text-black font-extrabold text-[15px]">krazio</div>
+                    <div className="text-white font-extrabold text-[15px]">krazio</div>
                   </div>
                 </div>
                 <div className="flex items-center gap-4">
-                  <div className="w-10 h-10 rounded-full bg-[#e6ebff] flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 2.667C8.639 2.667 2.667 8.638 2.667 16c0 2.347.634 4.638 1.837 6.643L2.667 29.333l6.875-1.802A13.265 13.265 0 0 0 16.003 29.333c7.363 0 13.33-5.97 13.33-13.333 0-7.362-5.967-13.333-13.33-13.333zm0 24.267a11.04 11.04 0 0 1-5.635-1.545l-.404-.24-4.08 1.07 1.09-3.978-.263-.41A10.972 10.972 0 0 1 5.04 16c0-6.044 4.92-10.96 10.963-10.96C22.044 5.04 26.96 9.956 26.96 16c0 6.044-4.916 10.934-10.957 10.934zm6.01-8.196c-.33-.165-1.95-.962-2.252-1.072-.302-.11-.521-.165-.74.165-.22.33-.851 1.072-1.043 1.292-.192.22-.384.247-.714.082-.33-.165-1.394-.514-2.655-1.638-.982-.875-1.645-1.955-1.838-2.285-.192-.33-.02-.508.145-.672.149-.148.33-.385.494-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.027-.578-.083-.165-.74-1.785-1.014-2.443-.267-.64-.538-.553-.74-.563l-.63-.011c-.22 0-.577.083-.88.413-.302.33-1.153 1.127-1.153 2.747 0 1.62 1.18 3.187 1.344 3.407.165.22 2.322 3.547 5.627 4.973.787.34 1.4.543 1.879.694.789.252 1.508.217 2.077.132.634-.095 1.95-.797 2.225-1.567.275-.77.275-1.43.192-1.567-.082-.138-.302-.22-.632-.385z"/></svg>
                   </div>
                   <div>
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">WHATSAPP</div>
-                    <div className="text-black font-extrabold text-[15px]">+91 7202002034</div>
+                    <div className="text-white font-extrabold text-[15px]">+91 7202002034</div>
                   </div>
                 </div>
               </div>
