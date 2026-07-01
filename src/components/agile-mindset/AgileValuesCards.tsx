@@ -1,42 +1,67 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
+import { Heart, Target } from "lucide-react";
 
 export function AgileValuesCards() {
   return (
-    <section className="w-full bg-slate-50 pb-16">
+    <section className="w-full bg-slate-50 py-24 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           
           {/* Core Values Card */}
-          <div className="bg-white rounded-3xl p-10 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-[#4B56D2] text-2xl mb-6 group-hover:bg-[#4B56D2] group-hover:text-white transition-colors duration-300">
-              <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 10h4.764a2 2 0 011.789 2.894l-3.5 7A2 2 0 0115.263 21h-4.017c-.163 0-.326-.02-.485-.06L7 20m7-10V5a2 2 0 00-2-2h-.095c-.5 0-.905.405-.905.905 0 .714-.211 1.412-.608 2.006L7 11v9m7-10h-2M7 20H5a2 2 0 01-2-2v-6a2 2 0 012-2h2.5" />
-              </svg>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            whileHover={{ y: -5 }}
+            className="relative overflow-hidden rounded-[2rem] bg-white p-10 shadow-lg border border-slate-200 group"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-[#4B56D2]/5 rounded-full blur-[80px] group-hover:bg-[#4B56D2]/10 transition-all duration-500" />
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-[#4B56D2] via-blue-500 to-cyan-400 flex items-center justify-center text-white mb-8 shadow-xl shadow-[#4B56D2]/20 border border-[#4B56D2]/20">
+                <Heart className="w-8 h-8" />
+              </div>
+              <h3 className="text-3xl font-extrabold text-slate-900 mb-4">
+                Core Values
+              </h3>
+              <p className="text-slate-600 text-lg leading-relaxed">
+                Our core values encompass a commitment to excellence, continuous learning, and fostering a collaborative environment. We build software that not only works but drives meaningful business growth, ensuring every decision is rooted in transparency and trust.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              Core Values
-            </h3>
-            <p className="text-slate-600 text-base leading-relaxed">
-              Our core values encompass a commitment to excellence, continuous learning, and fostering a collaborative environment. We build software that not only works but drives meaningful business growth.
-            </p>
-          </div>
+          </motion.div>
 
           {/* What Sets Us Apart Card */}
-          <div className="bg-white rounded-3xl p-10 shadow-sm hover:shadow-xl border border-slate-100 transition-all duration-300 group">
-            <div className="w-14 h-14 rounded-2xl bg-indigo-50 flex items-center justify-center text-[#4B56D2] text-2xl mb-6 group-hover:bg-[#4B56D2] group-hover:text-white transition-colors duration-300">
-              <svg className="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
-              </svg>
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, delay: 0.1 }}
+            whileHover={{ y: -5 }}
+            className="relative overflow-hidden rounded-[2rem] bg-[#4B56D2] p-10 shadow-2xl border border-[#4B56D2] group"
+          >
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-[80px] group-hover:bg-white/20 transition-all duration-500" />
+            
+            <div className="relative z-10">
+              <div className="w-16 h-16 rounded-2xl bg-white flex items-center justify-center mb-8 shadow-xl shadow-black/10 relative">
+                <svg width="0" height="0" className="absolute">
+                  <linearGradient id="targetGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop stopColor="#4B56D2" offset="0%" />
+                    <stop stopColor="#3b82f6" offset="50%" />
+                    <stop stopColor="#22d3ee" offset="100%" />
+                  </linearGradient>
+                </svg>
+                <Target className="w-8 h-8" stroke="url(#targetGradient)" />
+              </div>
+              <h3 className="text-3xl font-extrabold text-white mb-4">
+                What Sets Us Apart
+              </h3>
+              <p className="text-white/90 text-lg leading-relaxed">
+                What sets us apart is our relentless Agile mindset, allowing us to deliver software solutions with unmatched speed, quality, and adaptability. We prioritize your strategic goals in every sprint we execute, pivoting swiftly to seize new market opportunities.
+              </p>
             </div>
-            <h3 className="text-2xl font-bold text-slate-900 mb-4">
-              What Sets Us Apart
-            </h3>
-            <p className="text-slate-600 text-base leading-relaxed">
-              What sets us apart is our Agile mindset, allowing us to deliver software solutions with unmatched speed, quality, and adaptability. We prioritize your strategic goals in every sprint we execute.
-            </p>
-          </div>
+          </motion.div>
 
         </div>
       </div>

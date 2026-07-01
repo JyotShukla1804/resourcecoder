@@ -34,6 +34,7 @@ export { HireFAQ } from "./HireFAQ";
 export { HireCTA } from "./HireCTA";
 export { EditorComponent } from "./EditorComponent";
 export { BlockRenderer } from "./BlockRenderer";
+
 export { ScrollToHash } from "./ScrollToHash";
 
 // Offshore Components
@@ -42,3 +43,11 @@ export { OffshoreTrustedLogos } from "./OffshoreTrustedLogos";
 export { OffshoreOutcomes } from "./OffshoreOutcomes";
 export { OffshoreCapabilities } from "./OffshoreCapabilities";
 export { OffshoreCTA } from "./OffshoreCTA";
+
+// Development Process
+export * from "./development-process/DevProcessHero";
+export * from "./development-process/DevProcessScrum";
+export * from "./development-process/DevProcessBanner";
+export * from "./development-process/DevProcessSteps";
+export * from "./development-process/DevProcessWhy";
+export * from "./development-process/DevProcessFAQ";

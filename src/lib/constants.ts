@@ -18,7 +18,7 @@ export const DEFAULT_PAGE_CONTENT = {
       { label: "Custom App Architectures", text: "Expertise in building SPAs, Next.js setups, and robust enterprise dashboards." }
     ],
     btnText: "Discover Our Process",
-    btnUrl: "/our-development-process"
+    btnUrl: "/development-process"
   },
   technologies: {
     title: "ReactJS Development Services Where Front-end Evolution Begins",

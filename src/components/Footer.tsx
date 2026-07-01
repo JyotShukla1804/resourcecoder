@@ -116,7 +116,7 @@ export function Footer() {
               <ul className="space-y-4">
                 {[
                   { name: "About Us", href: "/agile-mindset" },
-                  { name: "How to Hire", href: "/our-development-process" },
+                  { name: "How to Hire", href: "/development-process" },
                   { name: "Success Stories", href: "/work" },
                   { name: "Contact", href: "/#interview-section" },
                 ].map((item) => (

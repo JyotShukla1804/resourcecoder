@@ -105,7 +105,7 @@ export function HireBenefits({
             dangerouslySetInnerHTML={{ __html: description || defaultDesc }}
           />
           <Link
-            href={btnUrl || "/our-development-process"}
+            href={btnUrl || "/development-process"}
             className="btn-ripple inline-flex items-center justify-center bg-black text-white transition-shadow duration-300 shadow-md hover:shadow-lg px-9 py-4.5 rounded-full font-bold text-base leading-6 text-center"
           >
             {btnText || "Discover Our Process"}
