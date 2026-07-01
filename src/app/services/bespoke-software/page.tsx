@@ -171,7 +171,7 @@ export default function BespokeSoftwarePage() {
             </div>
 
             {/* Right Column: Globe */}
-            <div className="lg:col-span-6 flex items-center justify-center w-full">
+            <div className="lg:col-span-6 flex items-center justify-center w-full -mt-16">
               <div className="w-full" style={{ height: "520px" }}>
                 <CobeGlobe />
               </div>
