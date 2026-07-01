@@ -6,6 +6,8 @@ import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/TrustedBy";
 import { HireInterview } from "@/components/HireInterview";
 
+const CobeGlobe = dynamic(() => import("@/components/CobeGlobe"), { ssr: false });
+
 
 export default function BespokeSoftwarePage() {
   const [activeCapTab, setActiveCapTab] = useState(0);
@@ -113,10 +115,10 @@ export default function BespokeSoftwarePage() {
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             {/* Left Content */}
-            <div className="lg:col-span-7 text-left space-y-8 max-w-3xl">
+            <div className="lg:col-span-6 text-left space-y-8 max-w-3xl">
               <div className="inline-flex items-center justify-center bg-indigo-50 border border-indigo-100 rounded-full px-4 py-1.5 text-[#4B56D2] font-semibold text-xs tracking-[0.1em] uppercase">
                 Bespoke Engineering
               </div>
@@ -168,8 +170,12 @@ export default function BespokeSoftwarePage() {
               </div>
             </div>
 
-            {/* Right Column: Blank space as requested */}
-            <div className="lg:col-span-5" />
+            {/* Right Column: Globe */}
+            <div className="lg:col-span-6 flex items-center justify-center w-full">
+              <div className="w-full" style={{ height: "520px" }}>
+                <CobeGlobe />
+              </div>
+            </div>
 
           </div>
         </div>
