@@ -13,6 +13,8 @@ export function Navbar() {
   const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
   const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] = useState(false);
   const [isMobileIndustriesDropdownOpen, setIsMobileIndustriesDropdownOpen] = useState(false);
+  const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
+  const [isMobileCompanyDropdownOpen, setIsMobileCompanyDropdownOpen] = useState(false);
   const pathname = usePathname();
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -40,18 +42,18 @@ export function Navbar() {
   };
 
   const industries = [
-    { name: "Banking & Finance", desc: "Reliable fintech solutions that ensure security & enhanced user experience.", icon: "🏦", href: "https://krazio.com/industries/banking-finance" },
-    { name: "Manufacturing", desc: "IoT-enabled product monitoring.", icon: "🏭", href: "https://krazio.com/industries/manufacturing" },
-    { name: "Travel", desc: "AI-Powered travel recommendations.", icon: "✈️", href: "https://krazio.com/industries/travel" },
-    { name: "Healthcare", desc: "Secure, scalable healthcare platforms to enhance patient care and operations.", icon: "🏥", href: "https://krazio.com/industries/healthcare" },
-    { name: "Real Estate", desc: "Innovative digital solutions for property management and client engagement.", icon: "🏠", href: "https://krazio.com/industries/real-estate" },
-    { name: "Restaurant", desc: "Smart POS System.", icon: "🍽️", href: "https://krazio.com/industries/restaurant" },
-    { name: "Education", desc: "Virtual Learning Environments.", icon: "🎓", href: "https://krazio.com/industries/education" },
-    { name: "Logistics", desc: "Efficient logistics solutions for real-time tracking and supply chain management.", icon: "🚚", href: "https://krazio.com/industries/logistics" },
-    { name: "Entertainment", desc: "Immersive AR/VR content.", icon: "🎬", href: "https://krazio.com/industries/entertainment" },
-    { name: "E-commerce", desc: "AI-powered product recommendations.", icon: "🛒", href: "https://krazio.com/industries/ecommerce" },
-    { name: "Transportation", desc: "Fleet Management Solutions.", icon: "🚌", href: "https://krazio.com/industries/transportation" },
-    { name: "Oil & Gas", desc: "IoT-based equipment monitoring.", icon: "⛽", href: "https://krazio.com/industries/oil-gas" },
+    { name: "Banking & Finance", desc: "Reliable fintech solutions that ensure security & enhanced user experience.", icon: "🏦", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Manufacturing", desc: "IoT-enabled product monitoring.", icon: "🏭", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Travel", desc: "AI-Powered travel recommendations.", icon: "✈️", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Healthcare", desc: "Secure, scalable healthcare platforms to enhance patient care and operations.", icon: "🏥", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Real Estate", desc: "Innovative digital solutions for property management and client engagement.", icon: "🏠", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Restaurant", desc: "Smart POS System.", icon: "🍽️", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Education", desc: "Virtual Learning Environments.", icon: "🎓", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Logistics", desc: "Efficient logistics solutions for real-time tracking and supply chain management.", icon: "🚚", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Entertainment", desc: "Immersive AR/VR content.", icon: "🎬", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "E-commerce", desc: "AI-powered product recommendations.", icon: "🛒", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Transportation", desc: "Fleet Management Solutions.", icon: "🚌", href: "https://kraziocloud.com/industries-serve/" },
+    { name: "Oil & Gas", desc: "IoT-based equipment monitoring.", icon: "⛽", href: "https://kraziocloud.com/industries-serve/" },
   ];
 
   useEffect(() => {
@@ -80,7 +82,7 @@ export function Navbar() {
     { name: "Services", href: "/services", hasChevron: true },
     { name: "Hire Team", href: "/hire-team", hasChevron: true },
     { name: "Industries", href: "/industries", hasChevron: true },
-    { name: "Company", href: "/partner-with-us", hasChevron: false },
+    { name: "Company", href: "/partner-with-us", hasChevron: true },
   ];
 
   // Exclude main landing page 'hire-team' and 'home' if present from dropdown
@@ -112,6 +114,7 @@ export function Navbar() {
               const isHireTeam = link.name === "Hire Team";
               const isServices = link.name === "Services";
               const isIndustries = link.name === "Industries";
+              const isCompany = link.name === "Company";
 
               return (
                 <div key={link.name} className="flex items-center">
@@ -121,28 +124,31 @@ export function Navbar() {
                       if (isHireTeam) setIsDropdownOpen(true);
                       if (isServices) handleServicesEnter();
                       if (isIndustries) handleIndustriesEnter();
+                      if (isCompany) setIsCompanyDropdownOpen(true);
                     }}
                     onMouseLeave={() => {
                       if (isHireTeam) setIsDropdownOpen(false);
                       if (isServices) handleServicesLeave();
                       if (isIndustries) handleIndustriesLeave();
+                      if (isCompany) setIsCompanyDropdownOpen(false);
                     }}
                   >
-                    {isHireTeam || isServices || isIndustries ? (
+                    {isHireTeam || isServices || isIndustries || isCompany ? (
                       <button
                         type="button"
                         onClick={() => {
                           if (isHireTeam) setIsDropdownOpen(!isDropdownOpen);
                           if (isServices) setIsServicesDropdownOpen(!isServicesDropdownOpen);
                           if (isIndustries) setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen);
+                          if (isCompany) setIsCompanyDropdownOpen(!isCompanyDropdownOpen);
                         }}
-                        className={`text-[16px] font-semibold transition-colors flex items-center py-1 px-1.5 cursor-pointer select-none ${isActive || (isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) ? "text-white" : "text-slate-400 hover:text-white"
+                        className={`text-[16px] font-semibold transition-colors flex items-center py-1 px-1.5 cursor-pointer select-none ${isActive || (isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) || (isCompanyDropdownOpen && isCompany) ? "text-white" : "text-slate-400 hover:text-white"
                           }`}
                       >
                         <span>{link.name}</span>
                         {link.hasChevron && (
                           <svg
-                            className={`w-2.5 h-2.5 text-slate-500 ml-1 mt-0.5 transition-transform duration-200 ${(isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) ? "rotate-180 text-white" : "group-hover:text-slate-300"
+                            className={`w-2.5 h-2.5 text-slate-500 ml-1 mt-0.5 transition-transform duration-200 ${(isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) || (isCompanyDropdownOpen && isCompany) ? "rotate-180 text-white" : "group-hover:text-slate-300"
                               }`}
                             fill="none"
                             stroke="currentColor"
@@ -202,6 +208,38 @@ export function Navbar() {
                             No sub-pages available
                           </div>
                         )}
+                      </div>
+                    )}
+
+                    {isCompany && (
+                      <div
+                        className={`absolute top-[60px] left-1/2 -translate-x-1/2 w-64 rounded-2xl bg-black/95 backdrop-blur-md border border-slate-900 shadow-2xl p-2 transition-all duration-200 origin-top z-50 ${isCompanyDropdownOpen
+                          ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
+                          : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+                          }`}
+                      >
+                        {[
+                          { title: "Development Process", slug: "development-process" },
+                          { title: "Partner with Us", slug: "partner-with-us" },
+                          { title: "Agile Mindset", slug: "agile-mindset" },
+                          { title: "Krazio Recognition", slug: "krazio-recognition" },
+                          { title: "1:1 Startup Consulting", slug: "startup-consulting" },
+                        ].map((page) => {
+                          const isSubActive = pathname === `/${page.slug}`;
+                          return (
+                            <Link
+                              key={page.slug}
+                              href={`/${page.slug}`}
+                              onClick={() => setIsCompanyDropdownOpen(false)}
+                              className={`block px-4 py-2.5 rounded-xl text-[16px] font-semibold text-left transition-all ${isSubActive
+                                ? "text-white bg-slate-900"
+                                : "text-slate-400 hover:text-white hover:bg-slate-900/50"
+                                }`}
+                            >
+                              {page.title}
+                            </Link>
+                          );
+                        })}
                       </div>
                     )}
                   </div>
@@ -415,9 +453,10 @@ export function Navbar() {
                 const isServices = link.name === "Services";
 
                 const isIndustriesMobile = link.name === "Industries";
-                if (isHireTeam || isServices || isIndustriesMobile) {
-                  const isMobileOpen = isHireTeam ? isMobileDropdownOpen : isIndustriesMobile ? isMobileIndustriesDropdownOpen : isMobileServicesDropdownOpen;
-                  const toggleMobileOpen = isHireTeam ? () => setIsMobileDropdownOpen(!isMobileDropdownOpen) : isIndustriesMobile ? () => setIsMobileIndustriesDropdownOpen(!isMobileIndustriesDropdownOpen) : () => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
+                const isCompanyMobile = link.name === "Company";
+                if (isHireTeam || isServices || isIndustriesMobile || isCompanyMobile) {
+                  const isMobileOpen = isHireTeam ? isMobileDropdownOpen : isIndustriesMobile ? isMobileIndustriesDropdownOpen : isCompanyMobile ? isMobileCompanyDropdownOpen : isMobileServicesDropdownOpen;
+                  const toggleMobileOpen = isHireTeam ? () => setIsMobileDropdownOpen(!isMobileDropdownOpen) : isIndustriesMobile ? () => setIsMobileIndustriesDropdownOpen(!isMobileIndustriesDropdownOpen) : isCompanyMobile ? () => setIsMobileCompanyDropdownOpen(!isMobileCompanyDropdownOpen) : () => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
 
                   return (
                     <div key={link.name} className="space-y-1">
@@ -477,6 +516,25 @@ export function Navbar() {
                                   <span>{industry.icon}</span>
                                   <span>{industry.name}</span>
                                 </a>
+                              ))}
+                            </>
+                          ) : isCompanyMobile ? (
+                            <>
+                              {[
+                                { title: "Development Process", slug: "development-process" },
+                                { title: "Partner with Us", slug: "partner-with-us" },
+                                { title: "Agile Mindset", slug: "agile-mindset" },
+                                { title: "Krazio Recognition", slug: "krazio-recognition" },
+                                { title: "1:1 Startup Consulting", slug: "startup-consulting" },
+                              ].map((page) => (
+                                <Link
+                                  key={page.slug}
+                                  href={`/${page.slug}`}
+                                  onClick={() => setIsOpen(false)}
+                                  className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors text-slate-400 hover:text-white hover:bg-slate-900/50"
+                                >
+                                  <span>{page.title}</span>
+                                </Link>
                               ))}
                             </>
                           ) : (
