@@ -30,10 +30,6 @@ export function CTASection() {
             <Link
               href="/#interview-section"
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
-              style={{ 
-                "--ripple-color-start": "rgba(75, 86, 210, 0.15)",
-                "--ripple-color-end": "rgba(75, 86, 210, 0.05)" 
-              } as React.CSSProperties}
             >
               Start 15 Days Risk-Free Trial
             </Link>

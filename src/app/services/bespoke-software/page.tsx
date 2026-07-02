@@ -5,7 +5,7 @@ import Link from "next/link";
 import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/TrustedBy";
 import { HireInterview } from "@/components/HireInterview";
-
+import { AnimatedNumber } from "@/components/AboutStats";
 
 export default function BespokeSoftwarePage() {
   const [activeCapTab, setActiveCapTab] = useState(0);
@@ -136,7 +136,7 @@ export default function BespokeSoftwarePage() {
               <div className="flex flex-col sm:flex-row gap-4 pt-4">
                 <Link
                   href="#contact-form"
-                  className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all bg-[#4B56D2] rounded-full hover:bg-[#3d46a8] hover:shadow-[0_0_20px_rgba(75,86,210,0.25)]"
+                  className="btn-ripple inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all bg-[#4B56D2] rounded-full hover:bg-[#3d46a8] hover:shadow-[0_0_20px_rgba(75,86,210,0.25)]"
                 >
                   Get Started
                 </Link>
@@ -145,15 +145,15 @@ export default function BespokeSoftwarePage() {
               {/* Stats Row */}
               <div className="grid grid-cols-3 gap-6 pt-12 border-t border-slate-100 mt-12">
                 <div>
-                  <div className="text-3xl font-extrabold text-[#4B56D2]">10+</div>
+                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="10+" /></div>
                   <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-extrabold text-[#4B56D2]">350+</div>
+                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="350+" /></div>
                   <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Projects Done</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-extrabold text-[#4B56D2]">150+</div>
+                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="150+" /></div>
                   <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Happy Clients</div>
                 </div>
               </div>
@@ -321,7 +321,7 @@ export default function BespokeSoftwarePage() {
           <div className="pt-2">
             <Link
               href="#contact-form"
-              className="inline-flex items-center justify-center px-10 py-4 text-sm font-bold text-[#4B56D2] bg-white rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
+              className="btn-ripple inline-flex items-center justify-center px-10 py-4 text-sm font-bold text-[#4B56D2] bg-white rounded-full shadow-lg hover:shadow-xl hover:-translate-y-1 transition-all"
             >
               Work With Us
             </Link>
@@ -495,7 +495,7 @@ export default function BespokeSoftwarePage() {
         <div className="text-center">
           <Link
             href="/insights"
-            className="inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold text-[#4B56D2] border border-[#4B56D2]/25 rounded-full hover:bg-indigo-50/50 transition-all"
+            className="btn-ripple bg-white inline-flex items-center justify-center px-8 py-3.5 text-sm font-bold text-[#4B56D2] border border-[#4B56D2]/25 rounded-full hover:bg-indigo-50/50 transition-all"
           >
             View all blogs
           </Link>
@@ -521,7 +521,7 @@ export default function BespokeSoftwarePage() {
             <div className="pt-4">
               <Link
                 href="#contact-form"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all bg-[#4B56D2] rounded-full hover:bg-[#3d46a8] hover:shadow-[0_0_20px_rgba(75,86,210,0.25)]"
+                className="btn-ripple inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all bg-[#4B56D2] rounded-full hover:bg-[#3d46a8] hover:shadow-[0_0_20px_rgba(75,86,210,0.25)]"
               >
                 Explore AI Capabilities
               </Link>

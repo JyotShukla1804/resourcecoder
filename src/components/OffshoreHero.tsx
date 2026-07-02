@@ -2,6 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
+import { AnimatedNumber } from "./AboutStats";
 import dynamic from "next/dynamic";
 
 const CobeGlobe = dynamic(() => import("./CobeGlobe").then((m) => m.CobeGlobe), {
@@ -36,13 +37,13 @@ export function OffshoreHero() {
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up delay-300">
               <Link
                 href="#contact-form"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all bg-[#4B56D2] rounded-full hover:bg-[#3d46a8] hover:shadow-[0_0_20px_rgba(75,86,210,0.25)]"
+                className="btn-ripple inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white transition-all bg-[#4B56D2] rounded-full hover:bg-[#3d46a8] hover:shadow-[0_0_20px_rgba(75,86,210,0.25)]"
               >
                 Set Up Your ODC
               </Link>
               <Link
                 href="#capabilities"
-                className="inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-slate-700 transition-all border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300"
+                className="btn-ripple inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-slate-700 transition-all border border-slate-200 rounded-full hover:bg-slate-50 hover:border-slate-300"
               >
                 Explore Capabilities
               </Link>
@@ -51,15 +52,15 @@ export function OffshoreHero() {
             {/* Stats Row */}
             <div className="grid grid-cols-3 gap-6 pt-12 border-t border-slate-100 mt-12 animate-fade-in-up delay-400">
               <div>
-                <div className="text-3xl font-extrabold text-[#4B56D2]">500+</div>
+                <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="500+" /></div>
                 <div className="text-xs text-[#4B56D2] font-semibold uppercase tracking-wider mt-1">Engineers</div>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-[#4B56D2]">40+</div>
+                <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="40+" /></div>
                 <div className="text-xs text-[#4B56D2] font-semibold uppercase tracking-wider mt-1">Countries</div>
               </div>
               <div>
-                <div className="text-3xl font-extrabold text-[#4B56D2]">60%</div>
+                <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="60%" /></div>
                 <div className="text-xs text-[#4B56D2] font-semibold uppercase tracking-wider mt-1">Cost Savings</div>
               </div>
             </div>

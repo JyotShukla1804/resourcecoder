@@ -99,7 +99,7 @@ export default function HireDedicatedPage() {
             <p className="text-gray-500 text-base leading-relaxed">
               We focus on delivering high-quality, scalable solutions tailored exactly to your user requirements and business goals, ensuring every line of code adds tangible value.
             </p>
-            <a href="#contact-form" className="inline-block px-8 py-3 bg-[#4B56D2] text-white font-bold rounded-full hover:bg-blue-700 transition-colors">
+            <a href="#contact-form" className="btn-ripple inline-flex justify-center items-center px-8 py-3 bg-[#4B56D2] text-white font-bold rounded-full hover:bg-blue-700 transition-colors">
               HIRE DEVELOPERS
             </a>
           </div>

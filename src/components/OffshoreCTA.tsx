@@ -28,7 +28,7 @@ export function OffshoreCTA() {
         <div className="mt-10">
           <Link 
             href="#contact-form"
-            className="inline-flex items-center justify-center px-10 py-4 text-sm font-bold text-[#4B56D2] bg-white rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-all"
+            className="btn-ripple inline-flex items-center justify-center px-10 py-4 text-sm font-bold text-[#4B56D2] bg-white rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-all"
           >
             Start Building Today
           </Link>

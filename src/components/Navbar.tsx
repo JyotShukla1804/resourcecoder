@@ -102,7 +102,10 @@ export function Navbar() {
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-2 text-base font-black tracking-tight text-white select-none">
               <img src="/K.svg?v=2" alt="K" className="h-8 w-auto object-contain flex-shrink-0" />
-              <img src="/Frame 65 (1).svg" alt="Res.coders" className="h-8 w-auto object-contain flex-shrink-0" />
+              <div className="flex flex-col leading-none justify-center mt-1">
+                <span className="text-[17px] font-bold text-white tracking-tight leading-tight">Res</span>
+                <span className="text-[17px] font-medium text-white tracking-tight leading-tight">.coders</span>
+              </div>
             </Link>
           </div>
 
@@ -344,7 +347,7 @@ export function Navbar() {
             </div>
           </div>
 
-          {/* Industries Full-Width Mega Menu */}
+          {/* Industries Full-Width Mega Menu (Compact Height) */}
           <div
             onMouseEnter={handleIndustriesEnter}
             onMouseLeave={handleIndustriesLeave}
@@ -353,9 +356,9 @@ export function Navbar() {
                 : "opacity-0 -translate-y-4 pointer-events-none"
               }`}
           >
-            <div className="p-10 px-12">
-              <h3 className="text-white font-extrabold text-[20px] mb-8 tracking-tight">Industries We Serve</h3>
-              <div className="grid grid-cols-3 gap-x-12 gap-y-6">
+            <div className="p-6 px-12">
+              <h3 className="text-white font-extrabold text-[18px] mb-6 tracking-tight">Industries We Serve</h3>
+              <div className="grid grid-cols-4 gap-x-8 gap-y-4">
                 {industries.map((industry) => (
                   <a
                     key={industry.name}
@@ -363,14 +366,14 @@ export function Navbar() {
                     target="_blank"
                     rel="noopener noreferrer"
                     onClick={() => setIsIndustriesDropdownOpen(false)}
-                    className="flex items-start gap-4 p-4 rounded-[16px] hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-800 group"
+                    className="flex items-start gap-3 p-3 rounded-[16px] hover:bg-slate-900/50 transition-colors border border-transparent hover:border-slate-800 group"
                   >
-                    <div className="w-[48px] h-[48px] rounded-[14px] bg-slate-900 shadow-sm border border-slate-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
-                      <span className="text-2xl">{industry.icon}</span>
+                    <div className="w-[42px] h-[42px] rounded-[12px] bg-slate-900 shadow-sm border border-slate-800 flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                      <span className="text-xl">{industry.icon}</span>
                     </div>
                     <div>
-                      <h4 className="text-[#4B56D2] font-bold text-[15px] mb-1 group-hover:underline">{industry.name}</h4>
-                      <p className="text-slate-400 text-[13px] leading-[1.5]">{industry.desc}</p>
+                      <h4 className="text-[#4B56D2] font-bold text-[14px] mb-0.5 group-hover:underline">{industry.name}</h4>
+                      <p className="text-slate-400 text-[12px] leading-[1.4] line-clamp-2">{industry.desc}</p>
                     </div>
                   </a>
                 ))}

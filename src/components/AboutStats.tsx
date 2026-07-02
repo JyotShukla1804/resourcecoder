@@ -2,9 +2,10 @@
 
 import React, { useEffect, useState, useRef } from "react";
 
-function AnimatedNumber({ value, duration = 1500 }: { value: string; duration?: number }) {
+export function AnimatedNumber({ value, duration = 1500 }: { value: string; duration?: number }) {
   const numericValue = parseInt(value.replace(/\D/g, ""), 10);
   const isPlus = value.includes("+");
+  const isPercent = value.includes("%");
   const [count, setCount] = useState(0);
   const [hasStarted, setHasStarted] = useState(false);
   const elementRef = useRef<HTMLSpanElement>(null);
@@ -59,6 +60,7 @@ function AnimatedNumber({ value, duration = 1500 }: { value: string; duration?: 
     <span ref={elementRef}>
       {count}
       {isPlus ? "+" : ""}
+      {isPercent ? "%" : ""}
     </span>
   );
 }

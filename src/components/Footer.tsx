@@ -21,7 +21,10 @@ export function Footer() {
           <div className="md:col-span-4 space-y-6 text-left">
             <Link href="/" className="flex items-center gap-2 select-none">
               <img src="/K.svg?v=2" alt="K" className="h-8 w-auto object-contain flex-shrink-0" />
-              <img src="/Frame 65 (1).svg" alt="Res.coders" className="h-8 w-auto object-contain flex-shrink-0" />
+              <div className="flex flex-col leading-none justify-center mt-1">
+                <span className="text-[17px] font-bold text-white tracking-tight leading-tight">Res</span>
+                <span className="text-[17px] font-medium text-white tracking-tight leading-tight">.coders</span>
+              </div>
             </Link>
 
             <p className="text-slate-400 text-[15px] sm:text-[16px] leading-[1.7] max-w-[320px] font-normal">

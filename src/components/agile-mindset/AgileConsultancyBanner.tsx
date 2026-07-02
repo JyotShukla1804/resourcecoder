@@ -64,7 +64,7 @@ export function AgileConsultancyBanner() {
           >
             <Link 
               href="/services/startup-consulting" 
-              className="group inline-flex items-center gap-3 px-8 py-4 bg-white text-[#4B56D2] font-bold rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-all"
+              className="btn-ripple group inline-flex items-center gap-3 px-8 py-4 bg-white text-[#4B56D2] font-bold rounded-full shadow-[0_10px_25px_rgba(0,0,0,0.1)] hover:shadow-[0_15px_35px_rgba(0,0,0,0.2)] hover:-translate-y-1 transition-all"
             >
               Discover More
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />

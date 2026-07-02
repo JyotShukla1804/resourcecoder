@@ -6,14 +6,26 @@ import { Award, Star, ShieldCheck, Cpu } from "lucide-react";
 
 export function AwardsShowcase() {
   const awards = [
-    { title: "AWS Select Partner", year: "2023", icon: <Cpu className="w-8 h-8 text-blue-500 mb-4" />, color: "bg-blue-50" },
-    { title: "Clutch Champion", year: "2023", icon: <Star className="w-8 h-8 text-amber-500 mb-4" />, color: "bg-amber-50" },
-    { title: "Clutch Global", year: "2023", icon: <Star className="w-8 h-8 text-emerald-500 mb-4" />, color: "bg-emerald-50" },
-    { title: "Top B2B Company", year: "2022", icon: <Award className="w-8 h-8 text-indigo-500 mb-4" />, color: "bg-indigo-50" },
-    { title: "App Development", year: "2024", icon: <Cpu className="w-8 h-8 text-rose-500 mb-4" />, color: "bg-rose-50" },
-    { title: "HIPAA Compliant", year: "2023", icon: <ShieldCheck className="w-8 h-8 text-cyan-500 mb-4" />, color: "bg-cyan-50" },
-    { title: "GDPR Certified", year: "2024", icon: <ShieldCheck className="w-8 h-8 text-violet-500 mb-4" />, color: "bg-violet-50" },
-    { title: "ISO 27001", year: "2023", icon: <ShieldCheck className="w-8 h-8 text-teal-500 mb-4" />, color: "bg-teal-50" },
+    "/cer2.webp",
+    "/cer3.webp",
+    "/cer4.webp",
+    "/cer5.webp",
+    "/cer6.webp",
+    "/cer7.webp",
+    "/cer8.webp",
+    "/cer9.webp",
+    "/cer10.webp",
+    "/cer11.webp",
+    "/cer12.jpg",
+    "/cer12.webp",
+    "/cer13.webp",
+    "/cer14.webp",
+    "/cer15.jpg",
+    "/cer16.webp",
+    "/cer17.webp",
+    "/cer18.png",
+    "/cer19.webp",
+    "/GoodFirms.png",
   ];
 
   const doubledAwards = [...awards, ...awards];
@@ -47,28 +59,17 @@ export function AwardsShowcase() {
 
           {/* Marquee Track - using animate-marquee class from globals.css */}
           <div className="flex animate-marquee-slow gap-8 items-center w-max">
-            {doubledAwards.map((award, idx) => (
+            {doubledAwards.map((awardSrc, idx) => (
               <div 
                 key={idx} 
-                className={`flex-shrink-0 w-64 h-72 ${award.color} rounded-[2rem] border border-white p-8 flex flex-col items-center justify-center text-center shadow-sm hover:shadow-xl hover:-translate-y-2 transition-all duration-300 relative group cursor-pointer overflow-hidden`}
+                className="flex-shrink-0 w-56 h-56 flex flex-col items-center justify-center text-center hover:scale-105 transition-all duration-300 relative cursor-pointer"
               >
-                {/* Abstract Glass Shine */}
-                <div className="absolute inset-0 bg-gradient-to-tr from-white/0 via-white/40 to-white/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 translate-x-[-100%] group-hover:translate-x-[100%]" />
-                
-                {award.icon}
-                <h3 className="text-slate-900 font-bold text-xl mb-2">{award.title}</h3>
-                <span className="inline-block px-3 py-1 bg-white/60 backdrop-blur-sm rounded-full text-sm font-semibold text-slate-600 mt-4">
-                  {award.year}
-                </span>
+                <div className="relative w-full h-full flex items-center justify-center z-0">
+                  <img src={awardSrc} alt="Award or Certification" className="w-full h-full object-contain mix-blend-multiply" />
+                </div>
               </div>
             ))}
           </div>
-        </div>
-
-        <div className="mt-12 text-center">
-           <p className="text-sm text-slate-400 italic">
-             *Official certificates provided upon request during the partnership scoping phase.
-           </p>
         </div>
       </div>
     </section>

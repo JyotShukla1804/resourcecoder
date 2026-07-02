@@ -26,7 +26,7 @@ export function DevProcessBanner() {
         
         <Link 
           href="/contact"
-          className="inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-[#4B56D2] bg-white rounded-full hover:bg-slate-50 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] hover:-translate-y-1"
+          className="btn-ripple inline-flex items-center justify-center gap-3 px-8 py-4 text-lg font-bold text-[#4B56D2] bg-white rounded-full hover:bg-slate-50 transition-all shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:shadow-[0_0_60px_rgba(255,255,255,0.5)] hover:-translate-y-1"
         >
           Start Building Today
           <ArrowRight className="w-5 h-5" />

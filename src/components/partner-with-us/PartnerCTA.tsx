@@ -29,7 +29,7 @@ export function PartnerCTA() {
             
             <Link href="#partner-form">
               <button 
-                className="bg-white text-[#4B56D2] font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
+                className="btn-ripple bg-white text-[#4B56D2] font-bold text-lg px-8 py-4 rounded-full shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center gap-2"
                 onClick={(e) => {
                   e.preventDefault();
                   window.scrollTo({ top: 0, behavior: 'smooth' });
