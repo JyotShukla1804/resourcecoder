@@ -59,7 +59,7 @@ export function HiringModels() {
         </div>
 
         {/* 3 Columns Grid */}
-        <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
+        <div className="max-w-[1358px] mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 relative z-10">
           {models.map((model, idx) => (
             <div
               key={idx}

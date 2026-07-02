@@ -23,10 +23,7 @@ export function AboutBeyondWork() {
           <div className="!mt-3">
             <Link
               href="/#interview-section"
-              className="btn-ripple inline-flex items-center justify-center text-white rounded-full px-8 py-3.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/45 transition-shadow duration-300 w-fit"
-              style={{
-                backgroundColor: '#4B56D2'
-              }}
+              className="btn-ripple inline-flex items-center justify-center text-white rounded-full px-8 py-3.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/45 transition-shadow duration-300 w-fit bg-[#4B56D2]"
             >
               <span
                 className="font-bold text-lg leading-7 tracking-[0.9px] text-center uppercase whitespace-nowrap"

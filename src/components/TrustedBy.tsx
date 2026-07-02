@@ -89,21 +89,11 @@ export function TrustedBy({
   );
 
   return (
-    <section className={`w-full py-10 ${bgColor} border-y border-slate-100 mt-20 overflow-hidden relative`}>
-      <div className="max-w-7xl mx-auto text-center relative">
+    <section className={`w-full py-10 ${bgColor} border-y border-slate-100 overflow-hidden relative`}>
+      <div className="max-w-[1358px] mx-auto text-center relative">
         <h3
           className="mb-8"
-          style={{
-            fontFamily: '"Liberation Sans", sans-serif',
-            fontWeight: 700,
-            fontSize: "14px",
-            lineHeight: "20px",
-            letterSpacing: "1.4px",
-            textAlign: "center",
-            verticalAlign: "middle",
-            textTransform: "uppercase",
-            color: "#99A1AF"
-          }}
+          
         >
           TRUSTED BY INNOVATIVE COMPANIES WORLDWIDE
         </h3>

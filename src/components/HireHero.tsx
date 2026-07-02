@@ -42,37 +42,13 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
 
   return (
     <section
-      className="relative w-full bg-white overflow-hidden flex items-center min-h-[auto] md:min-h-[727px] mt-[81px]"
+      className="relative w-full bg-white overflow-hidden flex items-center min-h-[auto] md:min-h-[727px]"
     >
       {/* Custom Styles for Hire Hero Heading */}
-      <style>{`
-        .hire-hero-title {
-          font-family: "Liberation Sans", sans-serif;
-          font-weight: 700;
-          font-style: bold;
-          font-size: 36px;
-          line-height: 44px;
-          letter-spacing: -0.5px;
-          vertical-align: middle;
-        }
-        @media (min-width: 640px) {
-          .hire-hero-title {
-            font-size: 48px;
-            line-height: 56px;
-            letter-spacing: -1px;
-          }
-        }
-        @media (min-width: 768px) {
-          .hire-hero-title {
-            font-size: 72px;
-            line-height: 80px;
-            letter-spacing: -1.8px;
-          }
-        }
-      `}</style>
+      
 
       {/* Container Grid */}
-      <div className="w-full max-w-[1358px] mx-auto py-16 md:py-[128px] px-6 md:px-[55px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      <div className="w-full max-w-[1358px] mx-auto py-16 md:pt-48 md:pb-24 px-6 md:px-[55px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
         {/* Left Column - Content */}
         <div className="lg:col-span-7 flex flex-col justify-center items-start text-left">

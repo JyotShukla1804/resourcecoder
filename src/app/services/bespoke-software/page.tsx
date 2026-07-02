@@ -114,7 +114,7 @@ export default function BespokeSoftwarePage() {
         <div className="absolute bottom-0 left-0 right-0 h-[300px] w-full grid-floor pointer-events-none opacity-50" />
         <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+        <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
 
             {/* Left Content */}
@@ -163,7 +163,7 @@ export default function BespokeSoftwarePage() {
 
             {/* Right Column: Globe */}
             <div className="lg:col-span-6 flex items-center justify-center w-full -mt-16">
-              <div className="w-full" style={{ height: "520px" }}>
+              <div className="w-full h-[520px]">
                 <CobeGlobe />
               </div>
             </div>
@@ -171,15 +171,7 @@ export default function BespokeSoftwarePage() {
           </div>
         </div>
 
-        <style>{`
-          .grid-floor {
-            background-image: linear-gradient(rgba(75, 86, 210, 0.08) 1px, transparent 1px),
-                              linear-gradient(90deg, rgba(75, 86, 210, 0.08) 1px, transparent 1px);
-            background-size: 32px 32px;
-            transform: perspective(600px) rotateX(62deg);
-            transform-origin: bottom;
-          }
-        `}</style>
+        
       </section>
 
       {/* 2. Trusted By logo slider section */}
@@ -187,7 +179,7 @@ export default function BespokeSoftwarePage() {
 
       {/* 3. Outcomes / Guarantees Section */}
       <section className="w-full bg-white py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1358px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
             {/* Left Column */}
@@ -236,7 +228,7 @@ export default function BespokeSoftwarePage() {
 
       {/* 4. Stats section: Numbers That Define Us */}
       <section className="w-full bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto text-center mb-16">
+        <div className="max-w-[1358px] mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             Numbers That <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Define Us</span>
           </h2>
@@ -295,7 +287,7 @@ export default function BespokeSoftwarePage() {
 
       {/* 6. About Team / Video Section */}
       <section id="about-section" className="w-full bg-white py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto">
+        <div className="max-w-[1358px] mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
 
             {/* Left: Team image */}
@@ -333,7 +325,7 @@ export default function BespokeSoftwarePage() {
 
       {/* 7. Interactive Capabilities tabs section */}
       <section className="w-full bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto text-center mb-16">
+        <div className="max-w-[1358px] mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Capabilities</span>
           </h2>
@@ -397,7 +389,7 @@ export default function BespokeSoftwarePage() {
 
       {/* 8. Stay ahead with Krazio (Blogs Grid) */}
       <section className="w-full bg-white py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-100">
-        <div className="max-w-7xl mx-auto text-center mb-16">
+        <div className="max-w-[1358px] mx-auto text-center mb-16">
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
             Stay Ahead with <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Krazio</span>
           </h2>
@@ -536,17 +528,12 @@ export default function BespokeSoftwarePage() {
           </div>
         </div>
 
-        <style>{`
-          @keyframes robot-bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
-          }
-        `}</style>
+        
       </section>
 
       {/* 10. Who We Serve (Industries Grid) */}
       <section className="w-full bg-[#fafafa] py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-        <div className="max-w-7xl mx-auto text-center mb-16">
+        <div className="max-w-[1358px] mx-auto text-center mb-16">
           <span className="bg-indigo-50 border border-indigo-100 text-[#4B56D2] font-semibold text-xs tracking-wider uppercase px-3 py-1.5 rounded-full">
             Who We Serve
           </span>

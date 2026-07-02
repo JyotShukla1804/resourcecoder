@@ -10,12 +10,12 @@ const CobeGlobe = dynamic(() => import("./CobeGlobe").then((m) => m.CobeGlobe), 
 
 export function OffshoreHero() {
   return (
-    <section className="relative w-full min-h-[90vh] flex items-center bg-white overflow-hidden pt-24 pb-16">
+    <section className="relative w-full min-h-[90vh] flex items-center bg-white overflow-hidden pt-48 pb-24">
       {/* Background gradients */}
       <div className="absolute top-1/4 left-1/4 w-[500px] h-[500px] bg-[#4B56D2]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-1/4 right-1/4 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+      <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">
 
           {/* Left Column: Content */}
@@ -70,12 +70,7 @@ export function OffshoreHero() {
             {/* Ambient Background Glow */}
             <div className="absolute w-[360px] h-[360px] bg-[#4B56D2]/10 rounded-full blur-[110px] animate-pulse pointer-events-none" />
             
-            <style>{`
-              @keyframes float-badge {
-                0%, 100% { transform: translateY(0px); }
-                50% { transform: translateY(-15px); }
-              }
-            `}</style>
+            
 
             <CobeGlobe />
 

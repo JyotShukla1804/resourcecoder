@@ -28,11 +28,7 @@ export function BlockRenderer({ data }: BlockRendererProps) {
               <p
                 key={index}
                 className="text-[#9F9FA9] font-normal"
-                style={{
-                  fontFamily: '"Nimbus Sans", sans-serif',
-                  fontSize: "16px",
-                  lineHeight: "26px",
-                }}
+                
                 dangerouslySetInnerHTML={{ __html: block.data.text || "" }}
               />
             );
@@ -42,19 +38,7 @@ export function BlockRenderer({ data }: BlockRendererProps) {
               <Level
                 key={index}
                 className="text-white font-bold"
-                style={{
-                  fontFamily: '"Nimbus Sans", sans-serif',
-                  fontWeight: 700,
-                  fontSize:
-                    block.data.level === 1
-                      ? "32px"
-                      : block.data.level === 2
-                      ? "28px"
-                      : "24px",
-                  lineHeight: "36px",
-                  marginTop: "1.5rem",
-                  marginBottom: "0.5rem",
-                }}
+                
                 dangerouslySetInnerHTML={{ __html: block.data.text || "" }}
               />
             );
@@ -68,10 +52,7 @@ export function BlockRenderer({ data }: BlockRendererProps) {
                     ? "list-decimal"
                     : "list-disc"
                 }`}
-                style={{
-                  fontFamily: '"Nimbus Sans", sans-serif',
-                  paddingLeft: "1.25rem",
-                }}
+                
               >
                 {(block.data.items || []).map((item, idx) => (
                   <li

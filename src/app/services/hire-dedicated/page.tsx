@@ -37,7 +37,7 @@ export default function HireDedicatedPage() {
 
       {/* Badges Banner */}
       <div className="bg-[#111111] text-white py-6 border-b border-gray-800/50">
-        <div className="max-w-7xl mx-auto px-6 flex flex-wrap justify-center items-center gap-6 sm:gap-12 md:gap-24">
+        <div className="max-w-[1358px] mx-auto px-6 flex flex-wrap justify-center items-center gap-6 sm:gap-12 md:gap-24">
           <div className="flex items-center space-x-3">
             <span className="text-orange-500 font-bold text-2xl">50+</span>
             <span className="text-sm text-gray-400 leading-tight">Software<br/>Experts</span>
@@ -68,7 +68,7 @@ export default function HireDedicatedPage() {
       </div>
 
       {/* Expertise Section */}
-      <div className="py-16 md:py-24 bg-white max-w-7xl mx-auto px-6 w-full">
+      <div className="py-16 md:py-24 bg-white max-w-[1358px] mx-auto px-6 w-full">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Hire Exclusive Developers for Diverse Technology<br/>Requirements</h2>
         </div>
@@ -93,7 +93,7 @@ export default function HireDedicatedPage() {
 
       {/* Advantages Section */}
       <div className="py-16 md:py-24 bg-[#FAFAFA] w-full">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-[1358px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
             <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">User-Centric Advantages to<br/>Upskill with High-Quality Services</h2>
             <p className="text-gray-500 text-base leading-relaxed">
@@ -122,7 +122,7 @@ export default function HireDedicatedPage() {
       </div>
 
       {/* Remote IT Staff Models */}
-      <div className="py-16 md:py-24 bg-white max-w-7xl mx-auto px-6 w-full text-center">
+      <div className="py-16 md:py-24 bg-white max-w-[1358px] mx-auto px-6 w-full text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Build Your Dedicated Remote IT Staff<br/>With the Scope Of Your Project Needs</h2>
         <p className="text-gray-500 mb-12 max-w-2xl mx-auto">Flexible hiring engagements designed to give you the exact talent resources you require, precisely when you need them.</p>
         

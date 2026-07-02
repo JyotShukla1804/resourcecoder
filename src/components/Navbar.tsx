@@ -93,8 +93,7 @@ export function Navbar() {
   return (
     <div className="absolute top-[22px] left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 flex justify-center pointer-events-none">
       <div
-        className="w-full max-w-[1358px] transition-all duration-300 pointer-events-auto"
-        style={{ opacity: 1 }}
+        className="w-full max-w-[1358px] transition-all duration-300 pointer-events-auto opacity-100"
       >
         <nav
           className="relative bg-black border border-slate-900 rounded-[1000px] h-[72px] pt-[6px] pr-[6px] pb-[6px] pl-[20px] flex items-center justify-between transition-all duration-300"
@@ -222,7 +221,7 @@ export function Navbar() {
                           { title: "Development Process", slug: "development-process" },
                           { title: "Partner with Us", slug: "partner-with-us" },
                           { title: "Agile Mindset", slug: "agile-mindset" },
-                          { title: "Krazio Recognition", slug: "krazio-recognition" },
+                          { title: "Awards & Recognition", slug: "awards" },
                           { title: "1:1 Startup Consulting", slug: "startup-consulting" },
                         ].map((page) => {
                           const isSubActive = pathname === `/${page.slug}`;
@@ -524,7 +523,7 @@ export function Navbar() {
                                 { title: "Development Process", slug: "development-process" },
                                 { title: "Partner with Us", slug: "partner-with-us" },
                                 { title: "Agile Mindset", slug: "agile-mindset" },
-                                { title: "Krazio Recognition", slug: "krazio-recognition" },
+                                { title: "Awards & Recognition", slug: "awards" },
                                 { title: "1:1 Startup Consulting", slug: "startup-consulting" },
                               ].map((page) => (
                                 <Link

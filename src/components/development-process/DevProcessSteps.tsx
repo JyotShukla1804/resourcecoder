@@ -47,7 +47,7 @@ export function DevProcessSteps() {
 
   return (
     <section className="w-full relative py-24 bg-[#f8f9ff] overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-[#4B56D2] font-bold tracking-wider uppercase text-sm mb-4 block">STEP-BY-STEP</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">

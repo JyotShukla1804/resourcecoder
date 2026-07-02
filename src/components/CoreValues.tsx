@@ -3,31 +3,18 @@ import React from "react";
 export function CoreValues() {
   return (
     <div className="w-auto self-stretch -mx-4 sm:-mx-6 lg:-mx-8 bg-transparent pt-32 pb-32 px-6 sm:px-12 md:px-20 relative z-10">
-      <div className="max-w-7xl mx-auto text-center space-y-16">
+      <div className="max-w-[1358px] mx-auto text-center space-y-16">
         {/* Section Header */}
         <div className="space-y-6 max-w-4xl mx-auto">
           <h2
             className="text-4xl sm:text-5xl md:text-[56px] text-slate-900 tracking-tighter"
-            style={{
-              fontFamily: '"Liberation Sans", sans-serif',
-              fontWeight: 700,
-              lineHeight: '48px',
-              letterSpacing: '0px',
-              textAlign: 'center'
-            }}
+            
           >
             Our Core Values
           </h2>
           <p 
             className="text-base md:text-[18px]"
-            style={{
-              fontFamily: '"Liberation Sans", sans-serif',
-              fontWeight: 400,
-              lineHeight: '28px',
-              letterSpacing: '0px',
-              textAlign: 'center',
-              color: '#545454'
-            }}
+            
           >
             The principles that guide our work, our culture, and our relationships with clients and partners.
           </p>
@@ -48,7 +35,7 @@ export function CoreValues() {
             <h3 className="text-slate-900 font-extrabold text-xl mb-3 leading-snug">
               Innovation First
             </h3>
-            <p className="text-sm leading-relaxed font-normal" style={{ color: '#545454' }}>
+            <p className="text-sm leading-relaxed font-normal text-[#545454]">
               We constantly explore new technologies and methodologies to deliver cutting-edge solutions that keep our clients ahead of the curve.
             </p>
           </div>
@@ -64,7 +51,7 @@ export function CoreValues() {
             <h3 className="text-slate-900 font-extrabold text-xl mb-3 leading-snug">
               Uncompromising Quality
             </h3>
-            <p className="text-sm leading-relaxed font-normal" style={{ color: '#545454' }}>
+            <p className="text-sm leading-relaxed font-normal text-[#545454]">
               Excellence is not an act, but a habit. We maintain the highest standards in code quality, design, and project delivery.
             </p>
           </div>
@@ -82,7 +69,7 @@ export function CoreValues() {
             <h3 className="text-slate-900 font-extrabold text-xl mb-3 leading-snug">
               Client-Centricity
             </h3>
-            <p className="text-sm leading-relaxed font-normal" style={{ color: '#545454' }}>
+            <p className="text-sm leading-relaxed font-normal text-[#545454]">
               Your success is our success. We build strong, transparent partnerships focused on achieving your specific business goals.
             </p>
           </div>

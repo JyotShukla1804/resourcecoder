@@ -56,7 +56,7 @@ export default async function Home() {
     <div className="relative min-h-screen w-full bg-white flex flex-col items-center">
       {/* Hero Section Container with exact specs */}
       <section
-        className="relative w-full max-w-[1358px] min-h-[600px] md:min-h-[861px] mx-auto pt-[100px] px-6 pb-[100px] flex flex-col justify-center items-center text-center z-10 transition-all duration-300 top-[73px] mb-[73px]"
+        className="relative w-full max-w-[1358px] min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-24 flex flex-col justify-center items-center text-center z-10 transition-all duration-300"
       >
         {/* Floating Ambient Colors (Soft Glows) */}
         <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
@@ -81,11 +81,7 @@ export default async function Home() {
               from India &{" "}
               <span
                 className="bg-gradient-to-r from-[#4B56D2] to-[#4B56D2] bg-clip-text text-transparent"
-                style={{
-                  backgroundImage: "linear-gradient(90deg, #4B56D2 0%, #4B56D2 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent"
-                }}
+                
               >
                 Save 40%
               </span>{" "}

@@ -42,7 +42,7 @@ export function OffshoreOutcomes() {
 
   return (
     <section className="w-full bg-white py-24 px-4 sm:px-6 lg:px-8 relative border-b border-slate-100">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-[1358px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           
           {/* Left: Text */}

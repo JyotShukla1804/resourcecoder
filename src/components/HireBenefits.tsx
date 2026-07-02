@@ -62,35 +62,7 @@ export function HireBenefits({
     <section 
       className="relative w-full bg-[#FAFAFA] flex items-center overflow-hidden border-t border-slate-100 min-h-[843px]"
     >
-      <style>{`
-        .hire-benefits-title {
-          font-family: "Liberation Sans", sans-serif;
-          font-weight: 700;
-          font-style: bold;
-          font-size: 24px;
-          line-height: 32px;
-          letter-spacing: 0px;
-          vertical-align: middle;
-        }
-        @media (min-width: 640px) {
-          .hire-benefits-title {
-            font-size: 32px;
-            line-height: 40px;
-          }
-        }
-        @media (min-width: 1024px) {
-          .hire-benefits-title {
-            font-size: 40px;
-            line-height: 48px;
-          }
-        }
-        @media (min-width: 1280px) {
-          .hire-benefits-title {
-            font-size: 48px;
-            line-height: 60px;
-          }
-        }
-      `}</style>
+      
 
       <div className="w-full max-w-[1358px] mx-auto py-24 px-6 md:px-[55px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         

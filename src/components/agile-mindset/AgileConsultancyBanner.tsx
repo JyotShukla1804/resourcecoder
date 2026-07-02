@@ -23,7 +23,7 @@ export function AgileConsultancyBanner() {
       <div className="absolute top-0 right-1/4 w-96 h-96 bg-indigo-800/40 rounded-full blur-[100px] pointer-events-none" />
       <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-cyan-400/30 rounded-full blur-[100px] pointer-events-none" />
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
+      <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col md:flex-row items-center justify-between gap-12">
         
         {/* Left Content */}
         <div className="w-full md:w-3/5 space-y-8">

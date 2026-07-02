@@ -16,7 +16,7 @@ export function SpecializationSection() {
     {
       title: "Web and Mobile App Development",
       description:
-        "We specialize in developing feature-rich web and mobile applications to help your business reach a wider audience. Krazio's dedicated developers are proficient in utilizing front-end and back-end technologies to create intuitive, user-friendly apps.",
+        "We specialize in developing feature-rich web and mobile applications to help your business reach a wider audience. ResourceCoders' dedicated developers are proficient in utilizing front-end and back-end technologies to create intuitive, user-friendly apps.",
     },
     {
       title: "Full Stack Development",
@@ -35,28 +35,16 @@ export function SpecializationSection() {
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
         {/* Left Column */}
         <div className="lg:col-span-5 lg:sticky lg:top-28 space-y-6 text-left">
-          <h2 
-            className="w-full max-w-[384px] md:h-[120px] text-3xl sm:text-4xl md:text-[36px] font-[700] leading-tight md:leading-[40px] md:tracking-[0px] text-[#0f172a] transition-all duration-300"
-            style={{ 
-              fontFamily: "'Liberation Sans', Arial, sans-serif", 
-              transform: "rotate(0deg)", 
-              opacity: 1 
-            }}
-          >
+          <h2 className="w-full max-w-[420px] text-3xl sm:text-4xl md:text-[36px] font-[700] leading-tight md:leading-[1.2] text-[#0f172a] mb-6">
             Our Dedicated Developers Specialize In Quality Services
           </h2>
           <p className="text-slate-500 text-sm sm:text-base leading-relaxed font-normal">
-            At Krazio, our team of skilled and dedicated developers is committed to delivering cost-efficient solutions with complete transparency and excellence. Whether you need web development, mobile apps, or custom software solutions, our expert developers bring your ideas to life with precision and innovation.
+            At ResourceCoders, our team of skilled and dedicated developers is committed to delivering cost-efficient solutions with complete transparency and excellence. Whether you need web development, mobile apps, or custom software solutions, our expert developers bring your ideas to life with precision and innovation.
           </p>
           <div className="pt-4">
             <Link
               href="#interview-section"
-              className="btn-ripple inline-flex items-center justify-center w-[230.88px] h-[44px] pt-[12px] pr-[32px] pb-[12px] pl-[32px] rounded-full text-white font-bold text-xs tracking-wider transition-shadow duration-300 hover:shadow-lg select-none uppercase"
-              style={{
-                backgroundColor: "#4B56D2",
-                transform: "rotate(0deg)",
-                opacity: 1
-              }}
+              className="btn-ripple inline-flex items-center justify-center bg-[#4B56D2] rounded-full text-white font-bold text-xs tracking-wider px-8 py-4 transition-shadow duration-300 hover:shadow-lg select-none uppercase"
             >
               TALK TO OUR EXPERT
             </Link>
@@ -72,11 +60,7 @@ export function SpecializationSection() {
             >
               <h3 
                 className="w-full max-w-[766px] md:h-[32px] text-xl md:text-[24px] font-[700] leading-tight md:leading-[32px] md:tracking-[0px] text-[#0f172a] mb-3 flex items-center transition-all duration-300"
-                style={{ 
-                  fontFamily: "'Liberation Sans', Arial, sans-serif", 
-                  transform: "rotate(0deg)", 
-                  opacity: 1 
-                }}
+                
               >
                 {spec.title}
               </h3>

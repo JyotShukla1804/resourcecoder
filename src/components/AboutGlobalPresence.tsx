@@ -52,9 +52,7 @@ export function AboutGlobalPresence() {
                   src="/icon-location.png"
                   alt="Location Icon"
                   className="w-full h-full object-contain scale-[1.1]"
-                  style={{
-                    filter: "hue-rotate(25deg) saturate(1.5)"
-                  }}
+                  
                 />
               </div>
 

@@ -30,25 +30,7 @@ export default async function AboutPage() {
   return (
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up">
       {/* Global Page Keyframes for About Us */}
-      <style>{`
-        @keyframes fadeInUp {
-          from {
-            opacity: 0;
-            transform: translateY(20px);
-          }
-          to {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-        .animate-fade-in-up {
-          animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
-          opacity: 0;
-        }
-        .delay-100 { animation-delay: 100ms; }
-        .delay-200 { animation-delay: 200ms; }
-        .delay-300 { animation-delay: 300ms; }
-      `}</style>
+      
 
       {/* About Hero Section */}
       <AboutHero data={heroContent} />

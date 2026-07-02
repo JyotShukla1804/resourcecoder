@@ -39,25 +39,7 @@ export function AboutHearFromUs() {
       className="w-full relative z-10 flex flex-col items-center overflow-hidden border-t border-slate-950 bg-[#0A0A0A]"
     >
       {/* Custom styles for the infinite scrolling marquee */}
-      <style>{`
-        @keyframes marquee {
-          0% {
-            transform: translateX(0);
-          }
-          100% {
-            transform: translateX(-33.333%);
-          }
-        }
-        .animate-marquee-slow {
-          display: flex;
-          gap: 24px;
-          width: max-content;
-          animation: marquee 35s linear infinite;
-        }
-        .animate-marquee-slow:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
+      
 
       <div className="w-full max-w-[1358px] min-h-[638px] flex flex-col justify-between py-24 relative text-white">
 

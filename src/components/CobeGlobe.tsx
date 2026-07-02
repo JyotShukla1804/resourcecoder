@@ -280,19 +280,9 @@ export function CobeGlobe() {
     <div 
       aria-label="Interactive 3D World Globe"
       ref={containerRef} 
-      className="w-full max-w-[400px] sm:max-w-[560px] aspect-square mx-auto relative z-10 flex items-center justify-center cursor-grab active:cursor-grabbing focus:outline-none"
-      style={{ outline: "none", border: "none" }}
+      className="w-full max-w-[400px] sm:max-w-[560px] aspect-square mx-auto relative z-10 flex items-center justify-center cursor-grab active:cursor-grabbing focus:outline-none outline-none border-none"
     >
-      <style>{`
-        div, canvas {
-          outline: none !important;
-          outline-width: 0 !important;
-          border: none !important;
-          border-width: 0 !important;
-          box-shadow: none !important;
-          -webkit-tap-highlight-color: transparent;
-        }
-      `}</style>
+      
     </div>
   );
 }

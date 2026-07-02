@@ -35,7 +35,7 @@ export function TestimonialsSection() {
 
   const StarIcon = () => (
     <svg
-      className="w-4 h-4 text-blue-500 fill-none"
+      className="w-4 h-4 text-[#FACC15] fill-current"
       stroke="currentColor"
       strokeWidth="2"
       viewBox="0 0 24 24"
@@ -60,7 +60,7 @@ export function TestimonialsSection() {
             Words of Appreciation
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto font-normal">
-            Discover how Krazio's innovative solutions have transformed businesses and empowered our
+            Discover how ResourceCoders' innovative solutions have transformed businesses and empowered our
             clients. Hear directly from those who trust us, choose us, and succeed with us—time and time
             again!
           </p>
@@ -72,31 +72,18 @@ export function TestimonialsSection() {
 
           {/* Scrolling Track */}
           <div 
-            className="animate-marquee flex"
-            style={{ gap: "16px" }}
+            className="animate-marquee flex gap-6"
           >
             {doubledTestimonials.map((t, idx) => (
               <div
                 key={idx}
-                className="flex-shrink-0"
-                style={{ 
-                  width: "410.6666564941406px",
-                  height: "280px"
-                }}
+                className="flex-shrink-0 w-[320px] md:w-[410px]"
               >
                 <div 
-                  className="w-full h-full border border-slate-800/80 flex flex-col justify-between hover:border-slate-700 transition-all duration-300 group relative overflow-hidden"
-                  style={{ 
-                    background: "#FFFFFF0D",
-                    borderRadius: "24px",
-                    borderWidth: "1px",
-                    padding: "32px",
-                    opacity: 1,
-                    transform: "rotate(0deg)"
-                  }}
+                  className="w-full h-full min-h-[280px] bg-white/5 rounded-3xl border border-white/10 p-8 flex flex-col justify-between hover:border-white/20 hover:bg-white/10 transition-all duration-300 group relative overflow-hidden"
                 >
                   <div className="space-y-6 relative z-10">
-                    {/* 5 Outline Star Rating */}
+                    {/* 5 Filled Star Rating */}
                     <div className="flex gap-1.5">
                       <StarIcon />
                       <StarIcon />
@@ -105,13 +92,13 @@ export function TestimonialsSection() {
                       <StarIcon />
                     </div>
                     {/* Review Text */}
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal italic group-hover:text-slate-100 transition-colors duration-350 line-clamp-3">
+                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal italic group-hover:text-slate-100 transition-colors duration-350">
                       {t.text}
                     </p>
                   </div>
 
                   {/* Author Info */}
-                  <div className="relative z-10">
+                  <div className="relative z-10 mt-6">
                     <h4 className="text-white font-bold text-sm sm:text-base leading-tight group-hover:text-blue-400 transition-colors duration-350">
                       {t.author}
                     </h4>
@@ -129,10 +116,7 @@ export function TestimonialsSection() {
         <div className="flex justify-center">
           <Link
             href="#interview-section"
-            className="btn-ripple inline-flex items-center justify-center text-white font-bold text-xs tracking-widest py-4.5 px-10 rounded-full transition-shadow duration-300 uppercase shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)]"
-            style={{
-              backgroundColor: "#4B56D2"
-            }}
+            className="btn-ripple inline-flex items-center justify-center text-white font-bold text-xs tracking-widest py-4.5 px-10 rounded-full transition-shadow duration-300 uppercase shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)] bg-[#4B56D2]"
           >
             Talk To Our Experts
           </Link>

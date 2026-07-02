@@ -3,32 +3,19 @@ import React from "react";
 export function OurWorkspace() {
   return (
     <div className="w-auto self-stretch -mx-4 sm:-mx-6 lg:-mx-8 bg-[#fafafa] pt-24 pb-24 px-6 md:px-[55px] relative z-10 border-t border-slate-100">
-      <div className="max-w-7xl mx-auto text-center flex flex-col gap-20">
+      <div className="max-w-[1358px] mx-auto text-center flex flex-col gap-20">
         
         {/* Section Header */}
         <div className="space-y-4 max-w-4xl mx-auto">
           <h2 
             className="text-3xl sm:text-4xl md:text-[48px] text-[#0f172a]"
-            style={{
-              fontFamily: '"Liberation Sans", sans-serif',
-              fontWeight: 700,
-              lineHeight: '48px',
-              letterSpacing: '0px',
-              textAlign: 'center'
-            }}
+            
           >
             Our Workspace
           </h2>
           <p 
             className="text-base md:text-[18px]"
-            style={{
-              fontFamily: '"Liberation Sans", sans-serif',
-              fontWeight: 400,
-              lineHeight: '28px',
-              letterSpacing: '0px',
-              textAlign: 'center',
-              color: '#545454'
-            }}
+            
           >
             A collaborative environment designed to inspire creativity and foster innovation among our talented teams.
           </p>

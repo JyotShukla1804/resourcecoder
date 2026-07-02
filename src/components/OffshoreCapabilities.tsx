@@ -29,7 +29,7 @@ export function OffshoreCapabilities() {
 
   return (
     <section id="capabilities" className="w-full bg-slate-50 py-24 px-4 sm:px-6 lg:px-8 border-b border-slate-200">
-      <div className="max-w-7xl mx-auto text-center mb-16">
+      <div className="max-w-[1358px] mx-auto text-center mb-16">
         <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 tracking-tight">
           Our Offshore <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Capabilities</span>
         </h2>
@@ -38,7 +38,7 @@ export function OffshoreCapabilities() {
         </p>
       </div>
 
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-8 lg:gap-16">
+      <div className="max-w-[1358px] mx-auto flex flex-col md:flex-row gap-8 lg:gap-16">
         {/* Sidebar Tabs */}
         <div className="w-full md:w-1/3 space-y-2">
           {capabilities.map((cap, idx) => (

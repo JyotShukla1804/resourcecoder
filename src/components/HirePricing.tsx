@@ -82,7 +82,7 @@ export function HirePricing({ data, bottomCtaText, bottomCtaUrl }: HirePricingPr
         </div>
 
         {/* Pricing Cards Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-6xl mx-auto w-full mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch max-w-[1358px] mx-auto w-full mb-16">
           {plans.map((plan, idx) => {
             const isFeatured = plan.is_featured;
             if (isFeatured) {

@@ -20,7 +20,7 @@ export function TechSection() { // Tech Section Component
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-w-[1358px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
 
           {/* Card 1 */}
           <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 hover:bg-white/10 hover:border-white/20 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-500 hover:-translate-y-2 group">

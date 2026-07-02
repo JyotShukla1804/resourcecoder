@@ -127,3 +127,142 @@ body {
 .animate-marquee:hover {
   animation-play-state: paused;
 }
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in-up {
+  animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  opacity: 0;
+}
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+
+.grid-floor {
+  background-image: linear-gradient(rgba(75, 86, 210, 0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(75, 86, 210, 0.08) 1px, transparent 1px);
+  background-size: 32px 32px;
+  transform: perspective(600px) rotateX(62deg);
+  transform-origin: bottom;
+}
+
+@keyframes robot-bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+.animate-robot-bounce { animation: robot-bounce 3s infinite ease-in-out; }
+
+.animate-marquee-slow {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+  animation: marquee 35s linear infinite;
+}
+.animate-marquee-slow:hover {
+  animation-play-state: paused;
+}
+
+@keyframes float-badge {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-15px); }
+}
+.animate-float-badge { animation: float-badge 3s ease-in-out infinite; }
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-33.33%); }
+}
+.animate-scroll { animation: scroll 20s linear infinite; }
+
+.cta-headline {
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 100%;
+  letter-spacing: -1.8px;
+  text-align: center;
+  vertical-align: middle;
+  opacity: 1;
+}
+.cta-description {
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.5;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffffff;
+  color: #4B56D2;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  max-width: 320px;
+  height: 56px;
+  border-radius: 9999px;
+  opacity: 1;
+  box-shadow: 0px 10px 25px -5px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+}
+.cta-button:hover {
+  box-shadow: 0px 20px 40px -10px rgba(0, 0, 0, 0.2);
+}
+.cta-button-text {
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0px;
+  text-align: center;
+  vertical-align: middle;
+}
+@media (min-width: 640px) {
+  .cta-headline { font-size: 56px; letter-spacing: -2.8px; }
+  .cta-description { font-size: 16px; }
+  .cta-button { max-width: 380px; height: 68px; }
+  .cta-button-text { font-size: 20px; line-height: 28px; }
+  .hire-benefits-title { font-size: 32px; line-height: 40px; }
+  .hire-hero-title { font-size: 48px; line-height: 56px; letter-spacing: -1px; }
+}
+@media (min-width: 768px) {
+  .hire-hero-title { font-size: 72px; line-height: 80px; letter-spacing: -1.8px; }
+}
+@media (min-width: 1024px) {
+  .cta-headline { font-size: 72px; letter-spacing: -3.6px; width: 989px; height: 160px; }
+  .cta-description { font-size: 20px; line-height: 32.5px; }
+  .cta-button { width: 421px; max-width: 421px; height: 80px; box-shadow: 0px 25px 50px -12px rgba(75, 86, 210, 0.2); }
+  .cta-button-text { font-size: 24px; line-height: 32px; }
+  .hire-benefits-title { font-size: 40px; line-height: 48px; }
+}
+@media (min-width: 1280px) {
+  .hire-benefits-title { font-size: 48px; line-height: 60px; }
+}
+.hire-benefits-title {
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  vertical-align: middle;
+}
+.hire-hero-title {
+  font-family: "Liberation Sans", sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.5px;
+  vertical-align: middle;
+}
+.cobe-globe-container, .cobe-globe-container canvas {
+  outline: none !important;
+  border: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}

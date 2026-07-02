@@ -33,7 +33,7 @@ export function HireProcess() {
 
   return (
     <section className="relative w-full max-w-[1440px] mx-auto py-20 px-6 md:px-[80px] bg-slate-50 border-t border-slate-100">
-      <div className="relative z-10 max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-[1358px] mx-auto">
         {/* Header */}
         <div className="max-w-3xl mx-auto text-center mb-20">
           <span className="badge-primary mb-4">ONBOARDING WORKFLOW</span>
