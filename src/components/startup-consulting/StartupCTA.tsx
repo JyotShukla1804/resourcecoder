@@ -7,7 +7,7 @@ import { Calendar, Clock, Video } from "lucide-react";
 
 export function StartupCTA() {
   return (
-    <section className="w-full bg-white relative z-10 border-t border-slate-100">
+    <section className="w-full bg-white lg:bg-[linear-gradient(to_right,#0f172a_50%,#f8f9ff_50%)] relative z-10 border-t border-slate-100">
       <div className="w-full max-w-[1358px] mx-auto">
         <div className="flex flex-col lg:flex-row">
           

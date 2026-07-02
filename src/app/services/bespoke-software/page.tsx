@@ -6,8 +6,6 @@ import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/TrustedBy";
 import { HireInterview } from "@/components/HireInterview";
 
-const CobeGlobe = dynamic(() => import("@/components/CobeGlobe").then(mod => mod.CobeGlobe), { ssr: false });
-
 
 export default function BespokeSoftwarePage() {
   const [activeCapTab, setActiveCapTab] = useState(0);
@@ -161,10 +159,56 @@ export default function BespokeSoftwarePage() {
               </div>
             </div>
 
-            {/* Right Column: Globe */}
-            <div className="lg:col-span-6 flex items-center justify-center w-full -mt-16">
-              <div className="w-full h-[520px]">
-                <CobeGlobe />
+            {/* Right Column: Software Product Ecosystem Visual */}
+            <div className="lg:col-span-6 flex items-center justify-center w-full lg:pl-10">
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-[#0a0f1d] hover:shadow-[0_20px_50px_rgba(75,86,210,0.15)] transition-all duration-500 group flex items-center justify-center p-4">
+                
+                {/* Abstract Background Elements */}
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-[#0a0f1d] to-[#0a0f1d]" />
+                <div className="absolute w-[300px] h-[300px] bg-[#4B56D2]/10 rounded-full blur-[80px] animate-pulse" />
+
+                {/* Central Product Hub */}
+                <div className="relative z-10 flex items-center justify-center w-full h-full">
+                  
+                  {/* Orbit Rings */}
+                  <div className="absolute w-64 h-64 sm:w-[340px] sm:h-[340px] border border-slate-700/50 rounded-full animate-[spin_40s_linear_infinite]" />
+                  <div className="absolute w-40 h-40 sm:w-56 sm:h-56 border border-indigo-500/30 rounded-full animate-[spin_30s_linear_infinite_reverse]" />
+                  
+                  {/* Core Product Node (Center) */}
+                  <div className="relative z-20 flex flex-col items-center justify-center w-28 h-28 sm:w-32 sm:h-32 bg-gradient-to-br from-[#4B56D2] to-indigo-600 rounded-3xl shadow-[0_0_40px_rgba(75,86,210,0.4)] border border-indigo-400">
+                    <svg className="w-8 h-8 text-white mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
+                    </svg>
+                    <span className="text-[10px] sm:text-xs font-bold text-white text-center leading-tight tracking-wide">Core Software<br/>Product</span>
+                  </div>
+
+                  {/* Satellite Nodes */}
+                  {/* Top Left: Web App */}
+                  <div className="absolute top-[12%] left-[12%] sm:top-[15%] sm:left-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-emerald-500/50 transition-all cursor-default group/node">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-emerald-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
+                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Web App</span>
+                  </div>
+
+                  {/* Top Right: Mobile App */}
+                  <div className="absolute top-[12%] right-[12%] sm:top-[15%] sm:right-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-blue-500/50 transition-all cursor-default group/node">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
+                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Mobile App</span>
+                  </div>
+
+                  {/* Bottom Right: Admin Panel */}
+                  <div className="absolute bottom-[12%] right-[12%] sm:bottom-[15%] sm:right-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-rose-500/50 transition-all cursor-default group/node">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-rose-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2-2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
+                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Admin Panel</span>
+                  </div>
+
+                  {/* Bottom Left: Integrations */}
+                  <div className="absolute bottom-[12%] left-[12%] sm:bottom-[15%] sm:left-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-amber-500/50 transition-all cursor-default group/node">
+                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-amber-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
+                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Integrations</span>
+                  </div>
+
+                </div>
+
               </div>
             </div>
 
