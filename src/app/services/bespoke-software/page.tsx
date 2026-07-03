@@ -95,12 +95,12 @@ export default function BespokeSoftwarePage() {
   ];
 
   const industries = [
-    { name: "Retail & E-commerce", img: "/success_food.png", desc: "Custom digital marketplaces and checkout engines." },
-    { name: "Manufacturing", img: "/team_collab_sticky.png", desc: "Automated workflow and factory resource management." },
-    { name: "Education", img: "/why-krazio.jpg", desc: "Smart learning systems and student dashboards." },
-    { name: "Healthcare", img: "/success_transport.png", desc: "HIPAA-compliant software and telemedicine tools." },
-    { name: "Real Estate", img: "/vision-earth.png", desc: "Immersive property portals and booking platforms." },
-    { name: "Finance & Banking", img: "/success_finance.png", desc: "Secure transaction channels and fintech portals." }
+    { name: "Retail & E-commerce", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000", desc: "Custom digital marketplaces and checkout engines." },
+    { name: "Manufacturing", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000", desc: "Automated workflow and factory resource management." },
+    { name: "Education", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1000", desc: "Smart learning systems and student dashboards." },
+    { name: "Healthcare", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000", desc: "HIPAA-compliant software and telemedicine tools." },
+    { name: "Real Estate", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000", desc: "Immersive property portals and booking platforms." },
+    { name: "Finance & Banking", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1000", desc: "Secure transaction channels and fintech portals." }
   ];
 
   return (

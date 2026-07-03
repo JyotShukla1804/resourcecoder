@@ -33,7 +33,7 @@ export function AwardsShowcase() {
   return (
     <section className="w-full bg-slate-50 py-24 relative overflow-hidden">
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.03] pointer-events-none mix-blend-overlay" />
-      
+
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <motion.div
@@ -60,8 +60,8 @@ export function AwardsShowcase() {
           {/* Marquee Track - using animate-marquee class from globals.css */}
           <div className="flex animate-marquee-slow gap-8 items-center w-max">
             {doubledAwards.map((awardSrc, idx) => (
-              <div 
-                key={idx} 
+              <div
+                key={idx}
                 className="flex-shrink-0 w-56 h-56 flex flex-col items-center justify-center text-center hover:scale-105 transition-all duration-300 relative cursor-pointer"
               >
                 <div className="relative w-full h-full flex items-center justify-center z-0">

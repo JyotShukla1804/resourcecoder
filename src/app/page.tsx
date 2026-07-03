@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
-import { TrustedBy, TechSection, SpecializationSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, WhyKrazio, SuccessStoriesSection } from "@/components";
+import { TrustedBy, TechSection, SpecializationSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, WhyKrazio, SuccessStoriesSection, AnimatedMeshBackground } from "@/components";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CTASection } from "@/components/CTASection";
 import { supabase } from "@/lib/supabase";
@@ -56,14 +56,13 @@ export default async function Home() {
     <div className="relative min-h-screen w-full bg-white flex flex-col items-center">
       {/* Hero Section Container with exact specs */}
       <section
-        className="relative w-full max-w-[1358px] min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-24 flex flex-col justify-center items-center text-center z-10 transition-all duration-300"
+        className="relative w-full min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-24 flex flex-col justify-center items-center text-center z-10 transition-all duration-300 bg-[#f8f9ff] overflow-hidden"
       >
-        {/* Floating Ambient Colors (Soft Glows) */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
-        <div className="absolute bottom-10 left-1/4 w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
+        {/* Animated Mesh Gradient Background */}
+        <AnimatedMeshBackground />
 
         {/* Content Wrapper */}
-        <div className="relative max-w-4xl mx-auto text-center w-full flex flex-col items-center space-y-8 px-4 sm:px-6">
+        <div className="relative z-10 max-w-[1358px] mx-auto text-center w-full flex flex-col items-center space-y-8 px-4 sm:px-6">
           {/* Floating Badge */}
           <div className="badge-primary">
             Hire Dedicated IT Developers

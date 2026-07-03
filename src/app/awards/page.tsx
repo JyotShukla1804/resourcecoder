@@ -25,6 +25,7 @@ export default function AwardsPage() {
 
       {/* 4. Let's Build Something Great */}
       <CTASection />
+    
     </main>
   );
 }

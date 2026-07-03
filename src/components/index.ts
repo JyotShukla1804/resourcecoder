@@ -52,3 +52,4 @@ export * from "./development-process/DevProcessSteps";
 export * from "./development-process/DevProcessWhy";
 export * from "./development-process/DevProcessFAQ";
 export * from "./awards";
+export * from "./AnimatedMeshBackground";

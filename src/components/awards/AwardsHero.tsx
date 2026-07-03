@@ -20,7 +20,11 @@ export function AwardsHero() {
         >
           <span className="badge-primary mb-6">AWARDS & RECOGNITION</span>
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 mb-6 leading-[1.2]">
-            Celebrating Our <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Achievements</span>
+            Celebrating Our {" "}
+            <span className="relative inline-block">
+              <span className="absolute -inset-2 bg-[#4B56D2]/30 blur-2xl animate-pulse"></span>
+              <span className="relative text-[#4B56D2]">Achievements</span>
+            </span>
           </h1>
           <p className="text-slate-500 text-lg sm:text-xl leading-relaxed max-w-3xl mx-auto font-normal">
             Being a global IT leader, we are working tirelessly to serve our customers seamlessly and fulfill any needs. Award recognition is an affirmation that shows that things our people do positively impact their jobs, communities, and organizations around the world. Together, we are extraordinary.

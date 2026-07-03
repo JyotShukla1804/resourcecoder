@@ -12,6 +12,8 @@ interface AboutHeroProps {
   };
 }
 
+import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
+
 export function AboutHero({ data }: AboutHeroProps = {}) {
   // Extract all text blocks (header or paragraph) to map to Title & Description
   const textBlocks = data?.blocks?.filter((b: any) => b.type === "header" || b.type === "paragraph") || [];
@@ -33,10 +35,9 @@ export function AboutHero({ data }: AboutHeroProps = {}) {
   }
 
   return (
-    <section className="w-full bg-white relative overflow-hidden">
-      {/* Background Soft Glow for Hero */}
-      <div className="absolute top-10 left-1/2 -translate-x-1/2 w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[120px] pointer-events-none" />
-      <div className="absolute top-40 left-1/4 w-[300px] h-[300px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
+    <section className="w-full bg-[#f8f9ff] relative overflow-hidden">
+      {/* Animated Mesh Gradient Background */}
+      <AnimatedMeshBackground />
 
       {/* Hero Section */}
       <div className="w-full max-w-[1358px] mx-auto text-center z-10 flex flex-col items-center space-y-8 pt-48 pb-24 px-4 sm:px-6 md:px-[55px]">

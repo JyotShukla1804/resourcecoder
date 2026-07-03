@@ -180,9 +180,9 @@ export function Navbar() {
 
                     {isHireTeam && (
                       <div
-                        className={`absolute top-[60px] left-1/2 -translate-x-1/2 w-64 rounded-2xl bg-black/95 backdrop-blur-md border border-slate-900 shadow-2xl p-2 transition-all duration-200 origin-top z-50 ${isDropdownOpen
+                        className={`absolute top-[70px] left-1/2 -translate-x-1/2 w-[300px] rounded-[24px] bg-[#0A0A0A]/95 backdrop-blur-xl border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] p-3 transition-all duration-300 origin-top z-50 ${isDropdownOpen
                           ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                          : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+                          : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
                           }`}
                       >
                         {dropdownPages.length > 0 ? (
@@ -192,17 +192,23 @@ export function Navbar() {
                               <Link
                                 key={page.slug}
                                 href={`/hire-team/${page.slug}`}
-                                className={`block px-4 py-2.5 rounded-xl text-[16px] font-semibold text-left transition-all ${isSubActive
-                                  ? "text-white bg-slate-900"
-                                  : "text-slate-400 hover:text-white hover:bg-slate-900/50"
+                                className={`group flex items-center justify-between px-4 py-3.5 rounded-[16px] text-[15px] font-semibold text-left transition-all duration-300 ${isSubActive
+                                  ? "text-white bg-white/10 shadow-inner"
+                                  : "text-slate-400 hover:text-white hover:bg-white/5"
                                   }`}
                               >
-                                {page.title}
+                                <span>{page.title}</span>
+                                <svg
+                                  className={`w-4 h-4 transition-transform duration-300 ${isSubActive ? "text-blue-500 translate-x-0 opacity-100" : "text-slate-500 -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-blue-400"}`}
+                                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+                                >
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                </svg>
                               </Link>
                             );
                           })
                         ) : (
-                          <div className="px-4 py-3 text-[16px] text-slate-500 text-center">
+                          <div className="px-4 py-3 text-[15px] text-slate-500 text-center font-medium">
                             No sub-pages available
                           </div>
                         )}
@@ -211,9 +217,9 @@ export function Navbar() {
 
                     {isCompany && (
                       <div
-                        className={`absolute top-[60px] left-1/2 -translate-x-1/2 w-64 rounded-2xl bg-black/95 backdrop-blur-md border border-slate-900 shadow-2xl p-2 transition-all duration-200 origin-top z-50 ${isCompanyDropdownOpen
+                        className={`absolute top-[70px] left-1/2 -translate-x-1/2 w-[300px] rounded-[24px] bg-[#0A0A0A]/95 backdrop-blur-xl border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] p-3 transition-all duration-300 origin-top z-50 ${isCompanyDropdownOpen
                           ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                          : "opacity-0 -translate-y-2 scale-95 pointer-events-none"
+                          : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
                           }`}
                       >
                         {[
@@ -229,12 +235,18 @@ export function Navbar() {
                               key={page.slug}
                               href={`/${page.slug}`}
                               onClick={() => setIsCompanyDropdownOpen(false)}
-                              className={`block px-4 py-2.5 rounded-xl text-[16px] font-semibold text-left transition-all ${isSubActive
-                                ? "text-white bg-slate-900"
-                                : "text-slate-400 hover:text-white hover:bg-slate-900/50"
+                              className={`group flex items-center justify-between px-4 py-3.5 rounded-[16px] text-[15px] font-semibold text-left transition-all duration-300 ${isSubActive
+                                ? "text-white bg-white/10 shadow-inner"
+                                : "text-slate-400 hover:text-white hover:bg-white/5"
                                 }`}
                             >
-                              {page.title}
+                              <span>{page.title}</span>
+                              <svg
+                                className={`w-4 h-4 transition-transform duration-300 ${isSubActive ? "text-blue-500 translate-x-0 opacity-100" : "text-slate-500 -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-blue-400"}`}
+                                fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
+                              >
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                              </svg>
                             </Link>
                           );
                         })}

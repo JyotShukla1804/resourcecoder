@@ -21,7 +21,7 @@ export const HireCTA: React.FC<HireCTAProps> = ({
   const defaultBtnText = "Start 15 Days Risk-Free Trial";
 
   return (
-    <section className="w-full bg-[#FAFAFA] pb-16 px-4 md:px-8 flex justify-center items-center">
+    <section className="w-full bg-[#FAFAFA] py-16 md:py-24 px-4 md:px-8 flex justify-center items-center">
       <div 
         className="w-full max-w-[1358px] mx-auto flex flex-col items-center justify-center text-center px-6 md:px-16 lg:px-[128px] py-12 md:py-[100px] text-white shadow-[0_20px_50px_rgba(75,86,210,0.15)] rounded-[64px] min-h-[656px] gap-10 bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#4B56D2]"
       >

@@ -47,8 +47,7 @@ export function PricingSection() {
 
           {/* Badge */}
           <div 
-            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full uppercase shadow-lg whitespace-nowrap z-20"
-            
+            className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 inline-flex items-center gap-1.5 px-5 py-2 rounded-full uppercase shadow-lg whitespace-nowrap z-20 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold text-[11px] tracking-widest border border-blue-400/30"
           >
             MOST POPULAR
           </div>
