@@ -40,7 +40,8 @@ export function AgileConsultancyBanner() {
           <motion.h2 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight"
           >
             Achieve true Agility with our <br/>
@@ -50,7 +51,8 @@ export function AgileConsultancyBanner() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.2 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2 }}
             className="text-indigo-100 text-lg md:text-xl leading-relaxed max-w-xl"
           >
             At Krazio Cloud, our tailored consultancy services help you align your strategy, adopt Agile frameworks, and navigate the complexities of product development. Let our experts guide your startup towards sustainable, scalable success.
@@ -59,7 +61,8 @@ export function AgileConsultancyBanner() {
           <motion.div 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.3 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
             className="pt-4"
           >
             <Link 
