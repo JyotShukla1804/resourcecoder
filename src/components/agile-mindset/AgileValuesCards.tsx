@@ -37,7 +37,8 @@ export function AgileValuesCards() {
           <motion.div 
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
             whileHover={{ y: -5 }}
             className="relative overflow-hidden rounded-[2rem] bg-[#4B56D2] p-10 shadow-2xl border border-[#4B56D2] group"
           >

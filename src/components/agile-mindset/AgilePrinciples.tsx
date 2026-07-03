@@ -66,7 +66,8 @@ export function AgilePrinciples() {
           <motion.p 
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, delay: 0.1 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.1 }}
             className="text-lg text-slate-600 max-w-2xl mx-auto"
           >
             The core tenets that drive our engineering excellence and ensure we consistently deliver unparalleled value.

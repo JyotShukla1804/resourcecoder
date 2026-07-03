@@ -79,7 +79,8 @@ export function AgileConsultancyBanner() {
         <motion.div 
           initial={{ opacity: 0, scale: 0.95 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          viewport={{ once: true, delay: 0.4 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.4 }}
           className="w-full md:w-2/5 flex justify-center lg:justify-end"
         >
           <div className="relative w-64 h-80 sm:w-72 sm:h-[350px] transform rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl rounded-2xl overflow-hidden border border-white/20">
