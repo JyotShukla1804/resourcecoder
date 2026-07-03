@@ -75,7 +75,7 @@ export function DevProcessSteps() {
                 >
                   <div className={`w-14 h-14 shrink-0 rounded-2xl flex items-center justify-center transition-colors duration-300 ${
                     isActive 
-                      ? "bg-gradient-to-br from-[#4B56D2] via-blue-500 to-cyan-400 shadow-lg shadow-[#4B56D2]/30" 
+                      ? "bg-[#4B56D2] shadow-lg shadow-[#4B56D2]/30" 
                       : "bg-white shadow-sm border border-slate-200"
                   }`}>
                     <step.icon className={`w-6 h-6 ${isActive ? "text-white" : "text-slate-400"}`} />
@@ -104,7 +104,7 @@ export function DevProcessSteps() {
                 {/* Decorative blob inside card */}
                 <div className="absolute top-0 right-0 w-64 h-64 bg-[#4B56D2]/5 rounded-full blur-[80px] group-hover:bg-[#4B56D2]/10 transition-colors duration-500" />
                 
-                <div className="w-20 h-20 rounded-3xl bg-gradient-to-br from-[#4B56D2]/10 to-transparent flex items-center justify-center mb-8 ring-1 ring-[#4B56D2]/20">
+                <div className="w-20 h-20 rounded-3xl bg-[#4B56D2]/10 flex items-center justify-center mb-8 ring-1 ring-[#4B56D2]/20">
                   {React.createElement(steps[activeTab].icon, { className: "w-10 h-10 text-[#4B56D2]" })}
                 </div>
                 

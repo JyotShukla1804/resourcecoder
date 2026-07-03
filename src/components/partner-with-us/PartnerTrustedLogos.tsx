@@ -4,13 +4,7 @@ import React from "react";
 import { motion } from "framer-motion";
 
 export function PartnerTrustedLogos() {
-  const logos = [
-    { name: "Diversity", class: "font-serif italic text-2xl font-bold" },
-    { name: "Global Reach", class: "font-sans uppercase text-xl font-bold tracking-widest" },
-    { name: "Innovative", class: "font-mono text-2xl font-semibold" },
-    { name: "Certified", class: "font-serif text-2xl font-bold tracking-tight" },
-    { name: "Excellence", class: "font-sans text-xl font-black uppercase" },
-  ];
+  const logos: any[] = [];
 
   return (
     <div className="w-full bg-white py-10 border-y border-slate-100 overflow-hidden relative">

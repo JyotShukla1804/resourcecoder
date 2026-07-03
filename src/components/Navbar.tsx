@@ -101,11 +101,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-2 text-base font-black tracking-tight text-white select-none">
-              <img src="/K.svg?v=2" alt="K" className="h-8 w-auto object-contain flex-shrink-0" />
-              <div className="flex flex-col leading-none justify-center mt-1">
-                <span className="text-[17px] font-bold text-white tracking-tight leading-tight">Res</span>
-                <span className="text-[17px] font-medium text-white tracking-tight leading-tight">.coders</span>
-              </div>
+              <img src="/Frame 66 (2).svg" alt="Resource Coders Logo" className="h-8 w-auto object-contain flex-shrink-0" />
             </Link>
           </div>
 

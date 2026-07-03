@@ -1,14 +1,7 @@
 import React from "react";
 
 export function OffshoreTrustedLogos() {
-  const logos = [
-    { name: "TechNova", type: "tech" },
-    { name: "GlobalFin", type: "fin" },
-    { name: "HealthPlus", type: "health" },
-    { name: "EduSmart", type: "edu" },
-    { name: "Logisys", type: "log" },
-    { name: "RetailPro", type: "ret" },
-  ];
+  const logos: any[] = [];
 
   return (
     <section className="w-full bg-slate-50 py-10 border-b border-slate-200 overflow-hidden relative">

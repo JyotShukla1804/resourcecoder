@@ -336,14 +336,12 @@ export default function BespokeSoftwarePage() {
 
             {/* Left: Team image */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl border border-slate-200 aspect-[4/3]">
+              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
                 <img
                   src="/team_working_table.png"
                   alt="Krazio Engineering Team"
                   className="w-full h-full object-cover"
                 />
-                {/* Decorative border glow */}
-                <div className="absolute inset-0 border border-white/20 rounded-2xl" />
               </div>
             </div>
 
@@ -447,13 +445,13 @@ export default function BespokeSoftwarePage() {
             {
               title: "Revolutionizing Retail: How AI is transforming sales funnel velocity",
               tag: "Artificial Intelligence",
-              img: "/success_food.png",
+              img: "/beyond-work-code.png",
               readTime: "5 min read"
             },
             {
               title: "Smart Logistics: The future of supply chain custom microservices",
               tag: "Cloud Solutions",
-              img: "/success_transport.png",
+              img: "/workspace-collaborating.png",
               readTime: "7 min read"
             },
             {

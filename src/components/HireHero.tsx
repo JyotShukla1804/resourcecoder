@@ -75,11 +75,11 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
           {/* Heading */}
           {dynamicTitle ? (
             <h1
-              className="hire-hero-title text-[#0f172a] mb-6"
+              className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6"
               dangerouslySetInnerHTML={{ __html: dynamicTitle }}
             />
           ) : (
-            <h1 className="hire-hero-title text-[#0f172a] mb-6">
+            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
               Hire <br />
               <span
                 className="bg-gradient-to-r from-[#4B56D2] to-[#4B56D2] bg-clip-text text-transparent"

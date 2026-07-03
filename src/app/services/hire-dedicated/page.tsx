@@ -14,7 +14,7 @@ export default function HireDedicatedPage() {
       {
         type: "header",
         data: {
-          text: "Hire Dedicated IT <br/>Developers"
+          text: "Hire Dedicated IT <br/><span class=\"text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600\">Developers</span>"
         }
       },
       {
@@ -36,21 +36,21 @@ export default function HireDedicatedPage() {
       />
 
       {/* Badges Banner */}
-      <div className="bg-[#111111] text-white py-6 border-b border-gray-800/50">
+      <div className="bg-white text-gray-900 py-6 border-y border-gray-200">
         <div className="max-w-[1358px] mx-auto px-6 flex flex-wrap justify-center items-center gap-6 sm:gap-12 md:gap-24">
           <div className="flex items-center space-x-3">
-            <span className="text-orange-500 font-bold text-2xl">50+</span>
-            <span className="text-sm text-gray-400 leading-tight">Software<br/>Experts</span>
+            <span className="text-[#4B56D2] font-bold text-2xl">50+</span>
+            <span className="text-sm text-gray-800 font-medium leading-tight">Software<br/>Experts</span>
           </div>
-          <div className="hidden sm:block w-px h-10 bg-gray-800"></div>
+          <div className="hidden sm:block w-px h-10 bg-gray-200"></div>
           <div className="flex items-center space-x-3">
-            <span className="text-orange-500 font-bold text-2xl">97%</span>
-            <span className="text-sm text-gray-400 leading-tight">Client<br/>Retention</span>
+            <span className="text-[#4B56D2] font-bold text-2xl">97%</span>
+            <span className="text-sm text-gray-800 font-medium leading-tight">Client<br/>Retention</span>
           </div>
-          <div className="hidden sm:block w-px h-10 bg-gray-800"></div>
+          <div className="hidden sm:block w-px h-10 bg-gray-200"></div>
           <div className="flex items-center space-x-3">
-            <span className="text-orange-500 font-bold text-2xl">4.9/5</span>
-            <span className="text-sm text-gray-400 leading-tight">Average<br/>Rating</span>
+            <span className="text-[#4B56D2] font-bold text-2xl">4.9/5</span>
+            <span className="text-sm text-gray-800 font-medium leading-tight">Average<br/>Rating</span>
           </div>
         </div>
       </div>
@@ -60,7 +60,7 @@ export default function HireDedicatedPage() {
         <h3 className="text-lg md:text-xl font-bold text-gray-800 text-center">Hire Exclusive Developers for Diverse Technology Requirements</h3>
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-12">
           {["Node.js", "React", "Next.js", "Go", "TypeScript", "AWS", "GCP"].map((tech, idx) => (
-            <div key={idx} className="flex items-center justify-center px-6 py-3 bg-white rounded-full shadow-sm border border-gray-200 text-sm font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-colors cursor-pointer">
+            <div key={idx} className="flex items-center justify-center px-8 py-4 bg-white rounded-full shadow-sm border border-gray-200 text-base font-semibold text-gray-700 hover:border-blue-500 hover:text-blue-600 transition-colors cursor-pointer">
               {tech}
             </div>
           ))}
@@ -110,11 +110,8 @@ export default function HireDedicatedPage() {
               "Agile Development Process",
               "Seamless Communication"
             ].map((adv, idx) => (
-              <div key={idx} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center justify-between cursor-pointer hover:border-blue-300 transition-colors group">
-                <span className="font-bold text-gray-800 group-hover:text-blue-600 transition-colors">{adv}</span>
-                <span className="text-blue-600">
-                  <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" /></svg>
-                </span>
+              <div key={idx} className="bg-white p-5 rounded-2xl shadow-sm border border-gray-100 flex items-center">
+                <span className="font-bold text-gray-800">{adv}</span>
               </div>
             ))}
           </div>

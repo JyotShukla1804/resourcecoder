@@ -43,13 +43,7 @@ export function DevProcessWhy() {
             >
               {/* iOS App Style Icon */}
               <div className="w-14 h-14 rounded-2xl bg-white flex items-center justify-center mb-6 shadow-xl shadow-[#4B56D2]/10 ring-4 ring-slate-50 group-hover:scale-110 transition-transform duration-300 relative">
-                <svg width="0" height="0" className="absolute">
-                  <linearGradient id={`gradient-${idx}`} x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop stopColor="#4B56D2" offset="0%" />
-                    <stop stopColor="#22d3ee" offset="100%" />
-                  </linearGradient>
-                </svg>
-                <feature.icon className="w-7 h-7" stroke={`url(#gradient-${idx})`} strokeWidth={2} />
+                <feature.icon className="w-7 h-7 text-[#4B56D2]" strokeWidth={2} />
               </div>
               
               <h3 className="text-xl font-bold text-slate-900 mb-3 group-hover:text-[#4B56D2] transition-colors">
