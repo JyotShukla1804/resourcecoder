@@ -31,7 +31,10 @@ export function TrustedBy({
     "Tommy.svg",
     "Torrent_Power.svg",
     "Unilever.svg",
-    "Lodha2.svg"
+    "Lodha2.svg",
+    "Jaguar.svg",
+    "JTC.svg",
+    "ONGC.svg"
   ];
 
   const renderLogos = () => (
