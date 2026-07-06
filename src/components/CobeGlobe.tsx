@@ -47,6 +47,7 @@ export function CobeGlobe() {
         { location: [-33.8688, 151.2093], size: 0.1 }, // Australia
         { location: [52.5200, 13.4050], size: 0.1 }, // Germany
       ],
+      // @ts-ignore: onRender is required by cobe but missing in its typescript definitions
       onRender: (state) => {
         // Use cached width to prevent forced synchronous layout thrashing (60 times/sec)
         state.width = currentWidth * dpr;
