@@ -7,12 +7,6 @@ import dynamic from "next/dynamic";
 
 const CobeGlobe = dynamic(() => import("./CobeGlobe").then((m) => m.CobeGlobe), {
   ssr: false,
-  loading: () => (
-    <div className="w-full max-w-[400px] sm:max-w-[560px] aspect-square mx-auto rounded-full bg-slate-100/50 flex flex-col items-center justify-center border border-slate-200">
-      <div className="w-10 h-10 border-4 border-[#4B56D2]/30 border-t-[#4B56D2] rounded-full animate-spin mb-4" />
-      <span className="text-slate-500 font-semibold text-xs uppercase tracking-widest animate-pulse">Initializing Globe...</span>
-    </div>
-  ),
 });
 
 import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
