@@ -4,6 +4,8 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Handshake } from "lucide-react";
 
+import { AnimatedMeshBackground } from "../AnimatedMeshBackground";
+
 export function PartnerHero() {
   const [formData, setFormData] = useState({
     name: "",
@@ -26,27 +28,7 @@ export function PartnerHero() {
 
   return (
     <section className="w-full relative overflow-hidden flex items-center min-h-[90vh] bg-[#f8f9ff]">
-      {/* Animated Mesh Gradient Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <motion.div
-          animate={{ x: [0, 100, -50, 0], y: [0, -100, 50, 0], scale: [1, 1.2, 0.8, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-[#4B56D2]/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"
-        />
-        <motion.div
-          animate={{ x: [0, -100, 50, 0], y: [0, 100, -50, 0], scale: [1, 0.9, 1.3, 1] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-indigo-400/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"
-        />
-        <motion.div
-          animate={{ x: [0, 50, -100, 0], y: [0, -50, 100, 0], scale: [1, 1.1, 0.9, 1] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[-20%] left-[20%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-blue-400/20 rounded-full mix-blend-multiply filter blur-[120px] opacity-70"
-        />
-      </div>
-
-      <div className="absolute inset-0 bg-white/40 backdrop-blur-[60px] pointer-events-none" />
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay" />
+      <AnimatedMeshBackground position="left" />
 
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-48 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

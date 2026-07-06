@@ -3,13 +3,12 @@
 import React from "react";
 import { motion } from "framer-motion";
 
+import { AnimatedMeshBackground } from "../AnimatedMeshBackground";
+
 export function AwardsHero() {
   return (
-    <section className="w-full bg-white relative overflow-hidden min-h-[70vh] flex flex-col justify-center pt-48 pb-24 border-b border-slate-100">
-      {/* Abstract Background Shapes */}
-      <div className="absolute top-0 right-0 -mr-40 -mt-40 w-96 h-96 bg-blue-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 pointer-events-none" />
-      <div className="absolute bottom-0 left-0 -ml-40 -mb-40 w-96 h-96 bg-indigo-50 rounded-full mix-blend-multiply filter blur-3xl opacity-70 pointer-events-none" />
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-[0.02] pointer-events-none mix-blend-overlay" />
+    <section className="w-full bg-[#f8f9ff] relative overflow-hidden min-h-[70vh] flex flex-col justify-center pt-48 pb-24 border-b border-slate-100">
+      <AnimatedMeshBackground position="center" />
 
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div

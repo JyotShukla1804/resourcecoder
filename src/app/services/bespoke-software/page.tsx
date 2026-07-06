@@ -6,6 +6,7 @@ import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/TrustedBy";
 import { HireInterview } from "@/components/HireInterview";
 import { AnimatedNumber } from "@/components/AboutStats";
+import { AnimatedMeshBackground } from "@/components/AnimatedMeshBackground";
 
 export default function BespokeSoftwarePage() {
   const [activeCapTab, setActiveCapTab] = useState(0);
@@ -107,10 +108,10 @@ export default function BespokeSoftwarePage() {
     <div className="flex flex-col w-full bg-white overflow-hidden">
 
       {/* 1. Custom Hero Section with perspective grid and floating WebGL Globe */}
-      <section className="relative w-full min-h-[95vh] flex items-center bg-white pt-32 pb-20 overflow-hidden">
+      <section className="relative w-full min-h-[95vh] flex items-center bg-[#f8f9ff] pt-32 pb-20 overflow-hidden">
+        <AnimatedMeshBackground position="left" />
         {/* Background perspective grid floor */}
         <div className="absolute bottom-0 left-0 right-0 h-[300px] w-full grid-floor pointer-events-none opacity-50" />
-        <div className="absolute top-1/4 left-1/4 w-[400px] h-[400px] bg-indigo-500/5 rounded-full blur-[100px] pointer-events-none" />
 
         <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">

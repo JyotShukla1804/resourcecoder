@@ -4,6 +4,8 @@ import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
 
+import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
+
 interface HireHeroProps {
   btn1Text?: string;
   btn1Url?: string;
@@ -49,28 +51,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
     <section
       className="relative w-full overflow-hidden flex items-center min-h-[auto] md:min-h-[727px] bg-[#f8f9ff]"
     >
-      {/* Animated Mesh Gradient Background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
-        <motion.div 
-          animate={{ x: [0, 100, -50, 0], y: [0, -100, 50, 0], scale: [1, 1.2, 0.8, 1] }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[-10%] left-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-[#4B56D2]/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"
-        />
-        <motion.div 
-          animate={{ x: [0, -100, 50, 0], y: [0, 100, -50, 0], scale: [1, 0.9, 1.3, 1] }}
-          transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-          className="absolute top-[20%] right-[-10%] w-[50vw] h-[50vw] max-w-[700px] max-h-[700px] bg-indigo-400/20 rounded-full mix-blend-multiply filter blur-[100px] opacity-70"
-        />
-        <motion.div 
-          animate={{ x: [0, 50, -100, 0], y: [0, -50, 100, 0], scale: [1, 1.1, 0.9, 1] }}
-          transition={{ duration: 22, repeat: Infinity, ease: "linear" }}
-          className="absolute bottom-[-20%] left-[20%] w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-blue-400/20 rounded-full mix-blend-multiply filter blur-[120px] opacity-70"
-        />
-      </div>
-
-      {/* Glassmorphism Overlay */}
-      <div className="absolute inset-0 bg-white/40 backdrop-blur-[60px] pointer-events-none z-0" />
-      <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay z-0" />
+      <AnimatedMeshBackground position="left" />
 
       {/* Container Grid */}
       <div className="relative z-10 w-full max-w-[1358px] mx-auto py-16 md:pt-48 md:pb-24 px-6 md:px-[55px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -136,11 +117,11 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
             {/* Hire Now button */}
             <Link
               href={btn1Url || "#contact-form"}
-              className="btn-ripple inline-flex items-center justify-center text-white shadow-[0_4px_20px_rgba(21,93,252,0.35)] hover:shadow-lg transition-shadow duration-300 bg-[#4B56D2] w-full sm:w-[185px] h-[64px] px-10 rounded-full font-bold text-lg whitespace-nowrap"
+              className="btn-ripple inline-flex items-center justify-center text-white shadow-[0_4px_20px_rgba(21,93,252,0.35)] hover:shadow-lg transition-shadow duration-300 bg-[#4B56D2] w-full sm:w-auto min-w-[185px] h-[64px] px-10 rounded-full font-bold text-lg whitespace-nowrap flex-shrink-0"
             >
               <span>{btn1Text || "Hire Now"}</span>
               <svg
-                className="w-4 h-4 ml-2"
+                className="w-4 h-4 ml-2 flex-shrink-0"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth="3.5"
@@ -153,7 +134,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
             {/* Schedule Meeting button */}
             <Link
               href={btn2Url || "#contact-form"}
-              className="btn-ripple inline-flex items-center justify-center text-white shadow-md hover:shadow-lg transition-shadow duration-300 bg-black w-full sm:w-[294px] h-[64px] px-10 rounded-full font-bold text-base uppercase whitespace-nowrap"
+              className="btn-ripple inline-flex items-center justify-center text-white shadow-md hover:shadow-lg transition-shadow duration-300 bg-black w-full sm:w-auto min-w-[200px] h-[64px] px-10 rounded-full font-bold text-base uppercase whitespace-nowrap flex-shrink-0"
             >
               <span>{btn2Text || "Schedule A Call"}</span>
             </Link>

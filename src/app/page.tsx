@@ -59,7 +59,7 @@ export default async function Home() {
         className="relative w-full min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-24 flex flex-col justify-center items-center text-center z-10 transition-all duration-300 bg-[#f8f9ff] overflow-hidden"
       >
         {/* Animated Mesh Gradient Background */}
-        <AnimatedMeshBackground />
+        <AnimatedMeshBackground position="center" />
 
         {/* Content Wrapper */}
         <div className="relative z-10 max-w-[1358px] mx-auto text-center w-full flex flex-col items-center space-y-8 px-4 sm:px-6">
