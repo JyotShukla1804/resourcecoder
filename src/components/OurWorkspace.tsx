@@ -2,13 +2,13 @@ import React from "react";
 
 export function OurWorkspace() {
   return (
-    <div className="w-auto self-stretch -mx-4 sm:-mx-6 lg:-mx-8 bg-[#fafafa] pt-24 pb-24 px-6 md:px-[55px] relative z-10 border-t border-slate-100">
+    <div className="w-full self-stretch bg-[#fafafa] pt-24 pb-24 px-6 md:px-[55px] relative z-10 border-t border-slate-100">
       <div className="max-w-[1358px] mx-auto text-center flex flex-col gap-20">
         
         {/* Section Header */}
         <div className="space-y-4 max-w-4xl mx-auto">
           <h2 
-            className="text-3xl sm:text-4xl md:text-[48px] text-[#0f172a]"
+            className="text-3xl sm:text-4xl md:text-[48px] font-extrabold text-slate-900 tracking-tight"
             
           >
             Our Workspace

@@ -8,10 +8,12 @@ import { AnimatedMeshBackground } from "../AnimatedMeshBackground";
 
 export function PartnerHero() {
   const [formData, setFormData] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
     email: "",
-    company: "",
-    message: ""
+    phoneNumber: "",
+    techStack: "",
+    projectDetails: ""
   });
 
   const handleSubmit = (e: React.FormEvent) => {
@@ -19,7 +21,7 @@ export function PartnerHero() {
     // Placeholder for actual form submission
     console.log("Form submitted:", formData);
     alert("Thank you for your interest! We will be in touch soon.");
-    setFormData({ name: "", email: "", company: "", message: "" });
+    setFormData({ firstName: "", lastName: "", email: "", phoneNumber: "", techStack: "", projectDetails: "" });
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -104,18 +106,33 @@ export function PartnerHero() {
               <p className="text-slate-500 mb-8 font-medium">Fill out the form below and let's explore synergies.</p>
 
               <form onSubmit={handleSubmit} className="space-y-5">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-bold text-slate-700 mb-1">Name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 focus:border-[#4B56D2] focus:ring-2 focus:ring-[#4B56D2]/20 transition-all outline-none text-slate-800"
-                    placeholder="John Doe"
-                  />
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label htmlFor="firstName" className="block text-sm font-bold text-slate-700 mb-1">First Name</label>
+                    <input
+                      type="text"
+                      id="firstName"
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 focus:border-[#4B56D2] focus:ring-2 focus:ring-[#4B56D2]/20 transition-all outline-none text-slate-800"
+                      placeholder="John"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="lastName" className="block text-sm font-bold text-slate-700 mb-1">Last Name</label>
+                    <input
+                      type="text"
+                      id="lastName"
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 focus:border-[#4B56D2] focus:ring-2 focus:ring-[#4B56D2]/20 transition-all outline-none text-slate-800"
+                      placeholder="Doe"
+                    />
+                  </div>
                 </div>
                 <div>
                   <label htmlFor="email" className="block text-sm font-bold text-slate-700 mb-1">Email Address</label>
@@ -131,28 +148,55 @@ export function PartnerHero() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="company" className="block text-sm font-bold text-slate-700 mb-1">Company Name</label>
+                  <label htmlFor="phoneNumber" className="block text-sm font-bold text-slate-700 mb-1">Phone Number</label>
                   <input
-                    type="text"
-                    id="company"
-                    name="company"
-                    value={formData.company}
+                    type="tel"
+                    id="phoneNumber"
+                    name="phoneNumber"
+                    value={formData.phoneNumber}
                     onChange={handleChange}
                     required
                     className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 focus:border-[#4B56D2] focus:ring-2 focus:ring-[#4B56D2]/20 transition-all outline-none text-slate-800"
-                    placeholder="Acme Corp"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <div>
-                  <label htmlFor="message" className="block text-sm font-bold text-slate-700 mb-1">Message (Optional)</label>
+                  <label htmlFor="techStack" className="block text-sm font-bold text-slate-700 mb-1">Select Tech Stack</label>
+                  <div className="relative">
+                    <select
+                      id="techStack"
+                      name="techStack"
+                      value={formData.techStack}
+                      onChange={handleChange}
+                      required
+                      className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 focus:border-[#4B56D2] focus:ring-2 focus:ring-[#4B56D2]/20 transition-all outline-none text-slate-500 appearance-none cursor-pointer"
+                    >
+                      <option value="" disabled>Select Tech Stack</option>
+                      <option value="React / Next.js">React / Next.js</option>
+                      <option value="Node.js / Python">Node.js / Python</option>
+                      <option value="Flutter / React Native">Flutter / React Native</option>
+                      <option value="AI / ML / Data">AI / ML / Data Engineering</option>
+                      <option value="Unity / Unreal / AR/VR">Unity / Unreal / AR/VR</option>
+                      <option value="Full Stack Developers">Full Stack Developers</option>
+                    </select>
+                    <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-slate-400">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <label htmlFor="projectDetails" className="block text-sm font-bold text-slate-700 mb-1">Project Details</label>
                   <textarea
-                    id="message"
-                    name="message"
+                    id="projectDetails"
+                    name="projectDetails"
                     rows={3}
-                    value={formData.message}
+                    value={formData.projectDetails}
                     onChange={handleChange}
+                    required
                     className="w-full px-4 py-3 rounded-xl bg-white/50 border border-slate-200 focus:border-[#4B56D2] focus:ring-2 focus:ring-[#4B56D2]/20 transition-all outline-none text-slate-800 resize-none"
-                    placeholder="How can we collaborate?"
+                    placeholder="Tell us about your project"
                   />
                 </div>
 
@@ -160,7 +204,7 @@ export function PartnerHero() {
                   type="submit"
                   className="w-full py-4 rounded-xl bg-gradient-to-r from-[#4B56D2] to-blue-500 text-white font-bold text-lg hover:shadow-lg hover:shadow-[#4B56D2]/30 transition-all duration-300 flex items-center justify-center gap-2 mt-4 group"
                 >
-                  Submit Inquiry
+                  Submit Request
                   <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                 </button>
               </form>

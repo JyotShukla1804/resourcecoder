@@ -27,8 +27,9 @@ export function HireInterview({
     firstName: "",
     lastName: "",
     email: "",
-    hiringModel: "Dedicated Team (Monthly)",
-    requirements: ""
+    phoneNumber: "",
+    techStack: "",
+    projectDetails: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
 
@@ -210,7 +211,7 @@ export function HireInterview({
                     <label
                       className="block mb-2 text-[#9F9FA9] font-normal text-sm leading-5"
                     >
-                      Work Email
+                      Email Address
                     </label>
                     <input
                       type="email"
@@ -218,29 +219,51 @@ export function HireInterview({
                       required
                       value={formData.email}
                       onChange={handleChange}
-                      placeholder="john@company.com"
+                      placeholder="Email Address"
                       className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#4B56D2]/50 transition-colors"
                     />
                   </div>
 
-                  {/* Hiring Model Select */}
+                  {/* Phone Number Field */}
                   <div>
                     <label
                       className="block mb-2 text-[#9F9FA9] font-normal text-sm leading-5"
                     >
-                      Hiring Model
+                      Phone Number
+                    </label>
+                    <input
+                      type="tel"
+                      name="phoneNumber"
+                      required
+                      value={formData.phoneNumber}
+                      onChange={handleChange}
+                      placeholder="Phone Number"
+                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#4B56D2]/50 transition-colors"
+                    />
+                  </div>
+
+                  {/* Tech Stack Select */}
+                  <div>
+                    <label
+                      className="block mb-2 text-[#9F9FA9] font-normal text-sm leading-5"
+                    >
+                      Select Tech Stack
                     </label>
                     <div className="relative">
                       <select
-                        name="hiringModel"
+                        name="techStack"
                         required
-                        value={formData.hiringModel}
+                        value={formData.techStack}
                         onChange={handleChange}
-                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white text-sm focus:outline-none focus:border-[#4B56D2]/50 appearance-none cursor-pointer transition-colors"
+                        className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-slate-400 text-sm focus:outline-none focus:border-[#4B56D2]/50 appearance-none cursor-pointer transition-colors"
                       >
-                        <option value="Dedicated Team (Monthly)">Dedicated Team (Monthly)</option>
-                        <option value="Hourly Model">Hourly Model</option>
-                        <option value="Fixed Price Project">Fixed Price Project</option>
+                        <option value="" disabled>Select Tech Stack</option>
+                        <option value="React / Next.js">React / Next.js</option>
+                        <option value="Node.js / Python">Node.js / Python</option>
+                        <option value="Flutter / React Native">Flutter / React Native</option>
+                        <option value="AI / ML / Data">AI / ML / Data Engineering</option>
+                        <option value="Unity / Unreal / AR/VR">Unity / Unreal / AR/VR</option>
+                        <option value="Full Stack Developers">Full Stack Developers</option>
                       </select>
                       <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-slate-400">
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
@@ -250,20 +273,20 @@ export function HireInterview({
                     </div>
                   </div>
 
-                  {/* Project Requirements Textarea */}
+                  {/* Project Details Textarea */}
                   <div>
                     <label
                       className="block mb-2 text-[#9F9FA9] font-normal text-sm leading-5"
                     >
-                      Project Requirements
+                      Project Details
                     </label>
                     <textarea
-                      name="requirements"
+                      name="projectDetails"
                       required
-                      value={formData.requirements}
+                      value={formData.projectDetails}
                       onChange={handleChange}
-                      placeholder="Tell us about your ReactJS needs..."
-                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-650 text-sm focus:outline-none focus:border-[#4B56D2]/50 h-28 resize-none transition-colors"
+                      placeholder="Project Details"
+                      className="w-full bg-[#16161a] border border-slate-900 rounded-xl px-4 py-3 text-white placeholder-slate-600 text-sm focus:outline-none focus:border-[#4B56D2]/50 h-28 resize-none transition-colors"
                     />
                   </div>
 

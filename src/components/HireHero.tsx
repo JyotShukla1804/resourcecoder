@@ -21,9 +21,10 @@ interface HireHeroProps {
       };
     }>;
   };
+  children?: React.ReactNode;
 }
 
-export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: HireHeroProps = {}) {
+export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, children }: HireHeroProps = {}) {
   // Extract all text blocks (header or paragraph) to map to Title & Description
   const textBlocks = data?.blocks?.filter((b: any) => b.type === "header" || b.type === "paragraph") || [];
   let dynamicTitle = undefined;
@@ -49,12 +50,13 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
 
   return (
     <section
-      className="relative w-full overflow-hidden flex items-center min-h-[auto] md:min-h-[727px] bg-[#f8f9ff]"
+      className="relative w-full overflow-hidden min-h-[auto] md:min-h-[727px] bg-[#f8f9ff]"
     >
       <AnimatedMeshBackground position="left" />
 
-      {/* Container Grid */}
-      <div className="relative z-10 w-full max-w-[1358px] mx-auto py-16 md:pt-48 md:pb-24 px-6 md:px-[55px] grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      {/* Main Container */}
+      <div className="relative z-10 w-full max-w-[1358px] mx-auto pt-16 md:pt-48 pb-10 md:pb-16 px-6 md:px-[55px]">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
         {/* Left Column - Content */}
         <div className="lg:col-span-7 flex flex-col justify-center items-start text-left">
@@ -161,6 +163,14 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data }: 
           )}
         </div>
 
+        </div>
+
+        {/* Children (e.g. Stats / Badges) placed right below the grid */}
+        {children && (
+          <div className="mt-12 md:mt-16 w-full">
+            {children}
+          </div>
+        )}
       </div>
     </section>
   );
