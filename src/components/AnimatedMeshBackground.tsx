@@ -10,7 +10,13 @@ export function AnimatedMeshBackground({ position = "left" }: AnimatedMeshBackgr
   const isCenter = position === "center";
 
   return (
-    <>
+    <div 
+      className="absolute inset-0 pointer-events-none"
+      style={{ 
+        WebkitMaskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)', 
+        maskImage: 'linear-gradient(to bottom, black 60%, transparent 100%)' 
+      }}
+    >
       {/* Animated Mesh Gradient Background (Now Pure CSS for Performance!) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
@@ -27,6 +33,6 @@ export function AnimatedMeshBackground({ position = "left" }: AnimatedMeshBackgr
       {/* Glassmorphism Overlay */}
       <div className="absolute inset-0 bg-white/40 backdrop-blur-[60px] pointer-events-none" />
       <div className="absolute inset-0 bg-[url('https://grainy-gradients.vercel.app/noise.svg')] opacity-20 pointer-events-none mix-blend-overlay" />
-    </>
+    </div>
   );
 }
