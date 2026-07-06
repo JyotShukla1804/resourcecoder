@@ -9,7 +9,7 @@ export function SuccessStoriesSection() {
       tech: "Core Technology: Angular JS | Nodejs | .Net",
       description:
         "Our client, an international shipping and logistics company, approached us to build a hassle-free, efficient CMS system and maximize revenue. We integrated a flawless payment gateway and database control system for a smooth user experience and bulk ordering.",
-      image: "/dashboard-mockup.png",
+      image: "/Global Shipping.svg",
       imageLeft: true,
     },
     {
@@ -18,7 +18,7 @@ export function SuccessStoriesSection() {
       tech: "Core Technology: React Js | Ruby on Rails | Java| Golang",
       description:
         "Krazio designed a chat and voice platform that helps Swiggy customers satisfy their queries fully by selecting agents based on the location and language of the customer. Also, We solved the technical problem in one service, which acts as middleware.",
-      image: "/dashboard-mockup.png",
+      image: "/Global Shipping.svg",
       imageLeft: false,
     },
     {
@@ -27,7 +27,7 @@ export function SuccessStoriesSection() {
       tech: "Core Technology: Angular JS | Springboot",
       description:
         "We deliver the best software development services to the Cetera Financial Group, helping them maintain 365-degree relationships with their clients. Our solution enables centralizing account information, linking third-party accounts via SSO, and proper financial planning.",
-      image: "/dashboard-mockup.png",
+      image: "/Global Shipping.svg",
       imageLeft: true,
     },
   ];

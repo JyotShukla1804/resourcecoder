@@ -88,7 +88,7 @@ export function TrustedBy({
         }
         .animate-marquee-logos {
           display: flex;
-          animation: marquee-logos 30s linear infinite;
+          animation: marquee-logos 50s linear infinite;
         }
       `}} />
     </section>
