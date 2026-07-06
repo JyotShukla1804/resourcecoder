@@ -2,7 +2,7 @@ import React from "react";
 
 export function CoreValues() {
   return (
-    <div className="w-auto self-stretch -mx-4 sm:-mx-6 lg:-mx-8 bg-transparent pt-32 pb-32 px-6 sm:px-12 md:px-20 relative z-10">
+    <div className="w-full self-stretch bg-transparent pt-32 pb-32 px-6 sm:px-12 md:px-20 relative z-10">
       <div className="max-w-[1358px] mx-auto text-center space-y-16">
         {/* Section Header */}
         <div className="space-y-6 max-w-4xl mx-auto">

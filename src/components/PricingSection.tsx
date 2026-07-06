@@ -94,8 +94,7 @@ export function PricingSection() {
       <div className="flex justify-center">
         <Link
           href="#interview-section"
-          className="btn-ripple inline-flex items-center justify-center transition-shadow duration-300 shadow-[0_10px_25px_rgba(21,93,252,0.3)] hover:shadow-[0_10px_35px_rgba(21,93,252,0.5)]"
-          
+          className="btn-ripple inline-flex items-center justify-center transition-shadow duration-300 shadow-lg hover:shadow-xl bg-[#4B56D2] w-full max-w-[443px] h-[60px] rounded-full px-10 py-4 text-white font-bold text-lg tracking-wide uppercase text-center"
         >
           Schedule a Developer Interview
         </Link>

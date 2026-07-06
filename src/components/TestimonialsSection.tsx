@@ -49,7 +49,7 @@ export function TestimonialsSection() {
   );
 
   return (
-    <section className="w-auto self-stretch -mx-4 sm:-mx-6 lg:-mx-8 bg-black py-20 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden border-t border-slate-950/80">
+    <section className="w-full self-stretch bg-black py-20 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden border-t border-slate-950/80">
       {/* Decorative Ambient Background Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
 

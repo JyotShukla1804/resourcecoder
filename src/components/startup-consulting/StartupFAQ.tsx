@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { ChevronDown } from "lucide-react";
+import { Plus, Minus } from "lucide-react";
 
 const faqs = [
   {
@@ -48,17 +48,17 @@ export function StartupFAQ() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-[#4B56D2] shadow-md' : 'border-slate-200 hover:border-[#4B56D2]/50'}`}
+                className={`border rounded-2xl overflow-hidden transition-all duration-300 ${isOpen ? 'border-[#4B56D2]/30 shadow-lg shadow-[#4B56D2]/5 bg-white' : 'border-slate-100 bg-slate-50 hover:bg-slate-100/50'}`}
               >
                 <button
                   onClick={() => setOpenIndex(isOpen ? null : index)}
-                  className="w-full flex items-center justify-between p-6 text-left bg-white"
+                  className="w-full flex items-center justify-between p-6 text-left"
                 >
                   <span className={`font-bold text-lg pr-8 transition-colors ${isOpen ? 'text-[#4B56D2]' : 'text-slate-800'}`}>
                     {faq.question}
                   </span>
-                  <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 flex-shrink-0 ${isOpen ? 'bg-[#4B56D2] text-white rotate-180' : 'bg-slate-100 text-slate-500'}`}>
-                    <ChevronDown className="w-5 h-5" />
+                  <div className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center transition-colors duration-300 ${isOpen ? 'bg-[#4B56D2] text-white' : 'bg-white border border-slate-200 text-slate-400'}`}>
+                    {isOpen ? <Minus className="w-4 h-4" /> : <Plus className="w-4 h-4" />}
                   </div>
                 </button>
                 <AnimatePresence>
@@ -69,7 +69,7 @@ export function StartupFAQ() {
                       exit={{ height: 0, opacity: 0 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <div className="p-6 pt-0 text-slate-600 leading-relaxed border-t border-slate-100 bg-slate-50/50">
+                      <div className="px-6 pb-6 text-slate-600 leading-relaxed">
                         {faq.answer}
                       </div>
                     </motion.div>
