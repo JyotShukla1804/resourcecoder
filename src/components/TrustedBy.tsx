@@ -44,6 +44,8 @@ export function TrustedBy({
           <img 
             src={`/${logo}`} 
             alt={logo.replace('.svg', '').replace(/_/g, ' ')} 
+            width={200}
+            height={80}
             className="max-h-12 md:max-h-16 w-full object-contain mix-blend-multiply" 
           />
         </div>
@@ -54,12 +56,11 @@ export function TrustedBy({
   return (
     <section className={`w-full py-10 ${bgColor} border-y border-slate-100 overflow-hidden relative`}>
       <div className="max-w-[1358px] mx-auto text-center relative">
-        <h3
-          className="mb-8"
-          
+        <h2
+          className="mb-8 font-semibold text-slate-500 text-sm tracking-widest uppercase"
         >
           TRUSTED BY INNOVATIVE COMPANIES WORLDWIDE
-        </h3>
+        </h2>
 
         {/* Logos Marquee Container */}
         <div className="w-full overflow-hidden relative py-2">

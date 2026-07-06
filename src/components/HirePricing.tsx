@@ -167,7 +167,7 @@ export function HirePricing({ data, bottomCtaText, bottomCtaUrl }: HirePricingPr
                 >
                   <div>
                     {plan.badge && (
-                      <span className="text-[11px] font-black text-slate-400 uppercase tracking-widest block mb-2">
+                      <span className="text-[11px] font-black text-slate-500 uppercase tracking-widest block mb-2">
                         {plan.badge}
                       </span>
                     )}
@@ -177,7 +177,7 @@ export function HirePricing({ data, bottomCtaText, bottomCtaUrl }: HirePricingPr
 
                     <div className="flex items-baseline mb-6">
                       <span className="text-[#0f172a] font-black text-4xl sm:text-5xl">{plan.price}</span>
-                      {plan.unit && <span className="text-slate-400 text-sm ml-2 font-medium">/ {plan.unit}</span>}
+                      {plan.unit && <span className="text-slate-500 text-sm ml-2 font-medium">/ {plan.unit}</span>}
                     </div>
 
                     {plan.description && (

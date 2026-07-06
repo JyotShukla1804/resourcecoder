@@ -19,20 +19,20 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 pb-12">
           {/* Logo and Tagline (Col span 4) */}
           <div className="md:col-span-4 space-y-6 text-left">
-            <Link href="/" className="flex items-center gap-2 select-none">
-              <img src="/Frame 66 (2).svg" alt="Resource Coders Logo" className="h-8 w-auto object-contain flex-shrink-0" />
+            <Link href="/" className="flex items-center gap-2 select-none" aria-label="Home">
+              <img src="/Frame 66 (2).svg" alt="Resource Coders Logo" width={160} height={32} className="h-8 w-auto object-contain flex-shrink-0" />
             </Link>
 
-            <p className="text-slate-400 text-[15px] sm:text-[16px] leading-[1.7] max-w-[320px] font-normal">
+            <p className="text-slate-300 text-[15px] sm:text-[16px] leading-[1.7] max-w-[320px] font-normal">
               Engineering excellence for the modern digital landscape. Your trusted partner in dedicated IT resources.
             </p>
 
             {/* Social Links */}
             <div className="flex items-center gap-3.5">
               {/* LinkedIn */}
-              <Link href="https://linkedin.com" target="_blank" className={socialIconClass}>
+              <Link href="https://linkedin.com" target="_blank" aria-label="LinkedIn" className={socialIconClass}>
                 <svg
-                  className="w-[18px] h-[18px] text-slate-400 group-hover:text-blue-500 transition-colors"
+                  className="w-[18px] h-[18px] text-slate-300 group-hover:text-blue-500 transition-colors"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.75"
@@ -47,9 +47,9 @@ export function Footer() {
                 </svg>
               </Link>
               {/* Twitter/X */}
-              <Link href="https://twitter.com" target="_blank" className={socialIconClass}>
+              <Link href="https://twitter.com" target="_blank" aria-label="Twitter" className={socialIconClass}>
                 <svg
-                  className="w-[18px] h-[18px] text-slate-400 group-hover:text-blue-400 transition-colors"
+                  className="w-[18px] h-[18px] text-slate-300 group-hover:text-blue-400 transition-colors"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.75"
@@ -63,9 +63,9 @@ export function Footer() {
                 </svg>
               </Link>
               {/* GitHub */}
-              <Link href="https://github.com" target="_blank" className={socialIconClass}>
+              <Link href="https://github.com" target="_blank" aria-label="GitHub" className={socialIconClass}>
                 <svg
-                  className="w-[18px] h-[18px] text-slate-400 group-hover:text-white transition-colors"
+                  className="w-[18px] h-[18px] text-slate-300 group-hover:text-white transition-colors"
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="1.75"
@@ -98,7 +98,7 @@ export function Footer() {
                   <li key={item}>
                     <Link
                       href="/services"
-                      className="text-slate-400 hover:text-white text-[15px] font-normal transition-colors duration-200"
+                      className="text-slate-300 hover:text-white text-[15px] font-normal transition-colors duration-200"
                     >
                       {item}
                     </Link>
@@ -122,7 +122,7 @@ export function Footer() {
                   <li key={item.name}>
                     <Link
                       href={item.href}
-                      className="text-slate-400 hover:text-white text-[15px] font-normal transition-colors duration-200"
+                      className="text-slate-300 hover:text-white text-[15px] font-normal transition-colors duration-200"
                     >
                       {item.name}
                     </Link>
@@ -144,7 +144,7 @@ export function Footer() {
                   </svg>
                   <a
                     href="mailto:sales@kraziocloud.com"
-                    className="text-slate-400 hover:text-white text-[15px] font-normal transition-colors duration-200 break-all"
+                    className="text-slate-300 hover:text-white text-[15px] font-normal transition-colors duration-200 break-all"
                   >
                     sales@kraziocloud.com
                   </a>
@@ -154,7 +154,7 @@ export function Footer() {
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  <span className="text-slate-400 text-[15px] font-normal">
+                  <span className="text-slate-300 text-[15px] font-normal">
                     India & USA
                   </span>
                 </li>
@@ -165,19 +165,19 @@ export function Footer() {
 
         {/* Bottom copyright section (no top-border/line, matching screenshot) */}
         <div className="pt-16 mt-8 flex flex-col md:flex-row items-center justify-between gap-4">
-          <p className="text-slate-500 text-[14px] font-normal text-center md:text-left">
+          <p className="text-slate-400 text-[14px] font-normal text-center md:text-left">
             © 2026 ResourceCoders (Krazio Cloud). All rights reserved.
           </p>
           <div className="flex items-center gap-8">
             <Link
               href="/privacy-policy"
-              className="text-slate-500 hover:text-white text-[14px] font-normal transition-colors duration-200"
+              className="text-slate-400 hover:text-white text-[14px] font-normal transition-colors duration-200"
             >
               Privacy Policy
             </Link>
             <Link
               href="/terms"
-              className="text-slate-500 hover:text-white text-[14px] font-normal transition-colors duration-200"
+              className="text-slate-400 hover:text-white text-[14px] font-normal transition-colors duration-200"
             >
               Terms of Service
             </Link>

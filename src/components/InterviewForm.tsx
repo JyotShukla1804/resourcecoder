@@ -154,6 +154,7 @@ export function InterviewForm() {
                     <div className="relative">
                       <select
                         name="techStack"
+                        aria-label="Select Tech Stack"
                         required
                         value={formData.techStack}
                         onChange={handleChange}

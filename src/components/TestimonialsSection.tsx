@@ -99,9 +99,9 @@ export function TestimonialsSection() {
 
                   {/* Author Info */}
                   <div className="relative z-10 mt-6">
-                    <h4 className="text-white font-bold text-sm sm:text-base leading-tight group-hover:text-blue-400 transition-colors duration-350">
+                    <h3 className="text-white font-bold text-sm sm:text-base leading-tight group-hover:text-blue-400 transition-colors duration-350">
                       {t.author}
-                    </h4>
+                    </h3>
                     <p className="text-slate-500 text-xs sm:text-sm mt-1">
                       {t.role}
                     </p>
