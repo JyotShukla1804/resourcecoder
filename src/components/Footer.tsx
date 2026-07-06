@@ -47,7 +47,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { usePathname } from "next/navigation";
 
-const SocialLink = ({ href, icon: Icon }) => (
+const SocialLink = ({ href, icon: Icon }: { href: string; icon: React.ElementType }) => (
   <a
     href={href}
     target="_blank"
@@ -58,7 +58,7 @@ const SocialLink = ({ href, icon: Icon }) => (
   </a>
 );
 
-const FooterLink = ({ to, children }) => (
+const FooterLink = ({ to, children }: { to: string; children: React.ReactNode }) => (
   <Link
     href={to}
     className="text-gray-400 hover:text-white transition-colors duration-300 block"
@@ -67,7 +67,7 @@ const FooterLink = ({ to, children }) => (
   </Link>
 );
 
-const LocationCard = ({ country, flag, city, address }) => (
+const LocationCard = ({ country, flag, city, address }: { country?: string; flag: string; city: string; address: string }) => (
   <div className="p-4 border border-gray-800 rounded-sm bg-gray-900/50 h-full w-[400px] mx-2">
     <div className="flex items-center gap-2 mb-2">
       <img src={flag} alt={city} className="h-3 object-contain" />
@@ -77,13 +77,13 @@ const LocationCard = ({ country, flag, city, address }) => (
   </div>
 );
 
-const Certification = ({ image, alt }) => (
+const Certification = ({ image, alt }: { image: string; alt?: string }) => (
   <div className="flex items-center justify-center p-2">
     <img src={image} alt={alt} className="h-20 object-contain" />
   </div>
 );
 
-const Rating = ({ platform, logo, link }) => (
+const Rating = ({ platform, logo, link }: { platform: string; logo: string; link: string }) => (
   <div className="flex flex-col items-center">
     {/* <img src={logo} alt={platform} className="h-12 mt-1 mx-3" /> */}
     <a href={link} target="_blank" rel="noopener noreferrer">
@@ -404,7 +404,7 @@ const Footer = () => {
 
   const pathname = usePathname();
   const loopLocations = [...indiaLocations, ...indiaLocations];
-  const AutoAnimateSlider = ({ indiaLocations }) => { };
+  const AutoAnimateSlider = ({ indiaLocations }: { indiaLocations: any[] }) => { };
   // Duplicate the array so we can loop seamlessly
 
   return (
