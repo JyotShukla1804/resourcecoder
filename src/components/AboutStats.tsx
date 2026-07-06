@@ -14,7 +14,7 @@ export function AnimatedNumber({ value, duration = 1500 }: { value: string; dura
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setHasStarted(true);
+          setTimeout(() => setHasStarted(true), 0);
           observer.disconnect();
         }
       },
@@ -67,7 +67,7 @@ export function AnimatedNumber({ value, duration = 1500 }: { value: string; dura
 
 export function AboutStats() {
   return (
-    <section className="w-full bg-white border-t border-b border-slate-100 mt-6 mb-16 relative">
+    <section className="w-full bg-transparent mt-6 mb-16 relative z-20">
       <div className="w-full max-w-[1358px] mx-auto py-8 sm:py-12 px-4 md:px-[55px] animate-fade-in-up delay-300">
       <div className="grid grid-cols-2 md:grid-cols-4 gap-y-8 md:gap-y-0 text-center relative">
         
@@ -78,9 +78,9 @@ export function AboutStats() {
           </span>
           <span className="text-xs md:text-sm font-semibold text-slate-700">Global Customers</span>
           {/* Divider (desktop) */}
-          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-200/60" />
+          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-400/50" />
           {/* Divider (mobile) */}
-          <div className="block md:hidden absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-slate-200/60" />
+          <div className="block md:hidden absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-slate-400/50" />
         </div>
 
         {/* Stat Item 2 */}
@@ -90,7 +90,7 @@ export function AboutStats() {
           </span>
           <span className="text-xs md:text-sm font-semibold text-slate-700">Global Locations</span>
           {/* Divider (desktop) */}
-          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-200/60" />
+          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-400/50" />
         </div>
 
         {/* Stat Item 3 */}
@@ -100,9 +100,9 @@ export function AboutStats() {
           </span>
           <span className="text-xs md:text-sm font-semibold text-slate-700">Established</span>
           {/* Divider (desktop) */}
-          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-200/60" />
+          <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-400/50" />
           {/* Divider (mobile) */}
-          <div className="block md:hidden absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-slate-200/60" />
+          <div className="block md:hidden absolute right-0 top-1/2 -translate-y-1/2 w-px h-10 bg-slate-400/50" />
         </div>
 
         {/* Stat Item 4 */}

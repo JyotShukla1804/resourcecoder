@@ -8,7 +8,7 @@ export function OurWorkspace() {
         {/* Section Header */}
         <div className="space-y-4 max-w-4xl mx-auto">
           <h2 
-            className="text-3xl sm:text-4xl md:text-[48px] text-[#0f172a]"
+            className="text-3xl sm:text-4xl md:text-[48px] font-extrabold text-slate-900 tracking-tight"
             
           >
             Our Workspace

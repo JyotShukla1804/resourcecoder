@@ -33,27 +33,27 @@ export default function HireDedicatedPage() {
         data={heroData}
         btn1Text="Hire Developers"
         btn1Url="#contact-form"
-      />
-
-      {/* Badges Banner */}
-      <div className="bg-white text-gray-900 py-6 border-y border-gray-200">
-        <div className="max-w-[1358px] mx-auto px-6 flex flex-wrap justify-center items-center gap-6 sm:gap-12 md:gap-24">
-          <div className="flex items-center space-x-3">
-            <span className="text-[#4B56D2] font-bold text-2xl">50+</span>
-            <span className="text-sm text-gray-800 font-medium leading-tight">Software<br/>Experts</span>
-          </div>
-          <div className="hidden sm:block w-px h-10 bg-gray-200"></div>
-          <div className="flex items-center space-x-3">
-            <span className="text-[#4B56D2] font-bold text-2xl">97%</span>
-            <span className="text-sm text-gray-800 font-medium leading-tight">Client<br/>Retention</span>
-          </div>
-          <div className="hidden sm:block w-px h-10 bg-gray-200"></div>
-          <div className="flex items-center space-x-3">
-            <span className="text-[#4B56D2] font-bold text-2xl">4.9/5</span>
-            <span className="text-sm text-gray-800 font-medium leading-tight">Average<br/>Rating</span>
+      >
+        {/* Integrated Badges Banner */}
+        <div className="w-full text-gray-900 py-6 relative z-20">
+          <div className="max-w-[1358px] mx-auto px-6 flex flex-wrap justify-center items-center gap-6 sm:gap-12 md:gap-24">
+            <div className="flex items-center space-x-3">
+              <span className="text-[#4B56D2] font-bold text-2xl">50+</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Software<br/>Experts</span>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-slate-400/50"></div>
+            <div className="flex items-center space-x-3">
+              <span className="text-[#4B56D2] font-bold text-2xl">97%</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Client<br/>Retention</span>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-slate-400/50"></div>
+            <div className="flex items-center space-x-3">
+              <span className="text-[#4B56D2] font-bold text-2xl">4.9/5</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Average<br/>Rating</span>
+            </div>
           </div>
         </div>
-      </div>
+      </HireHero>
 
       {/* Tech Stack Banner */}
       <div className="py-12 bg-gray-50 flex flex-col items-center justify-center space-y-8 px-4">
@@ -70,7 +70,7 @@ export default function HireDedicatedPage() {
       {/* Expertise Section */}
       <div className="py-16 md:py-24 bg-white max-w-[1358px] mx-auto px-6 w-full">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Hire Exclusive Developers for Diverse Technology<br/>Requirements</h2>
+          <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900">Hire Exclusive Developers for Diverse Technology<br />Requirements</h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-6">
           {[
@@ -95,7 +95,7 @@ export default function HireDedicatedPage() {
       <div className="py-16 md:py-24 bg-[#FAFAFA] w-full">
         <div className="max-w-[1358px] mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-6">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">User-Centric Advantages to<br/>Upskill with High-Quality Services</h2>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 leading-tight">User-Centric Advantages to<br />Upskill with High-Quality Services</h2>
             <p className="text-gray-500 text-base leading-relaxed">
               We focus on delivering high-quality, scalable solutions tailored exactly to your user requirements and business goals, ensuring every line of code adds tangible value.
             </p>
@@ -120,9 +120,9 @@ export default function HireDedicatedPage() {
 
       {/* Remote IT Staff Models */}
       <div className="py-16 md:py-24 bg-white max-w-[1358px] mx-auto px-6 w-full text-center">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Build Your Dedicated Remote IT Staff<br/>With the Scope Of Your Project Needs</h2>
+        <h2 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-4">Build Your Dedicated Remote IT Staff<br />With the Scope Of Your Project Needs</h2>
         <p className="text-gray-500 mb-12 max-w-2xl mx-auto">Flexible hiring engagements designed to give you the exact talent resources you require, precisely when you need them.</p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
             { title: "HOURLY", icon: "🕒" },
@@ -143,8 +143,8 @@ export default function HireDedicatedPage() {
       </div>
 
       {/* Interview Form */}
-      <HireInterview 
-        heading="Create your team with our matchless IT hiring Staff.<br/>Start Today! 🚀" 
+      <HireInterview
+        heading="Create your team with our matchless IT hiring Staff.<br/>Start Today! 🚀"
       />
 
       {/* Hiring Process */}
@@ -154,7 +154,7 @@ export default function HireDedicatedPage() {
 
       {/* Benefits */}
       <div className="bg-[#FAFAFA]">
-        <HireBenefits 
+        <HireBenefits
           title="Why hiring Dedicated IT Developers in India is A Smart Decision?"
           description="Leverage cost advantages without compromising on engineering quality. Access a vast pool of top-tier talent ready to scale your product."
           benefitsTitle="Key Advantages"

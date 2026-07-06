@@ -9,7 +9,7 @@ interface BenefitCardProps {
 function BenefitCard({ icon, title, description }: BenefitCardProps) {
   return (
     <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[32px] p-8 text-left hover:bg-white/10 hover:border-white/20 hover:shadow-[0_20px_40px_rgba(0,0,0,0.2)] transition-all duration-500 hover:-translate-y-2 group flex flex-col gap-6">
-      <div className="flex items-center justify-start">
+      <div className="w-12 h-12 rounded-[14px] bg-white/10 flex items-center justify-center">
         {icon}
       </div>
       <div className="space-y-3">
@@ -58,7 +58,7 @@ export function AboutBenefits() {
               <img
                 src="/icon-heart.png"
                 alt="Health & Wellness"
-                className="w-[30px] h-[30px] mix-blend-screen opacity-100"
+                className="w-[24px] h-[24px] mix-blend-screen opacity-100"
               />
             }
             title="Health & Wellness"
@@ -71,7 +71,7 @@ export function AboutBenefits() {
               <img
                 src="/icon-learning.png"
                 alt="Continuous Learning"
-                className="w-[30px] h-[30px] mix-blend-screen opacity-100"
+                className="w-[24px] h-[24px] mix-blend-screen opacity-100"
               />
             }
             title="Continuous Learning"
@@ -84,7 +84,7 @@ export function AboutBenefits() {
               <img
                 src="/icon-working.png"
                 alt="Flexible Working"
-                className="w-[30px] h-[30px] mix-blend-screen opacity-100"
+                className="w-[24px] h-[24px] mix-blend-screen opacity-100"
               />
             }
             title="Flexible Working"
@@ -97,7 +97,7 @@ export function AboutBenefits() {
               <img
                 src="/icon-plane.png"
                 alt="Global Opportunities"
-                className="w-[30px] h-[30px] mix-blend-screen opacity-100"
+                className="w-[24px] h-[24px] mix-blend-screen opacity-100"
               />
             }
             title="Global Opportunities"

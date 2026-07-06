@@ -1,4 +1,5 @@
 import React from "react";
+import { AboutStats } from "./AboutStats";
 
 interface AboutHeroProps {
   data?: {
@@ -72,6 +73,9 @@ export function AboutHero({ data }: AboutHeroProps = {}) {
           </p>
         )}
       </div>
+      
+      {/* Integrated About Stats */}
+      <AboutStats />
     </section>
   );
 }

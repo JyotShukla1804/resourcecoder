@@ -47,13 +47,19 @@ export function AboutGlobalPresence() {
               className="bg-white border border-slate-100 rounded-[24px] p-8 flex flex-col items-center text-center shadow-[0_4px_20px_rgba(15,23,42,0.02)] hover:shadow-[0_10px_35px_rgba(15,23,42,0.06)] hover:scale-[1.02] transition-all duration-300"
             >
               {/* Circular Location Icon Wrapper */}
-              <div className="w-16 h-16 rounded-full bg-[#EFF6FF] flex items-center justify-center mb-6 overflow-hidden">
-                <img
-                  src="/icon-location.png"
-                  alt="Location Icon"
-                  className="w-full h-full object-contain scale-[1.1]"
-                  
-                />
+              <div className="w-14 h-14 rounded-[14px] bg-[#EFF6FF] flex items-center justify-center mb-6 overflow-hidden">
+                <svg 
+                  className="w-[24px] h-[24px] text-[#4B56D2]" 
+                  viewBox="0 0 24 24" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="2.5" 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round"
+                >
+                  <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                  <circle cx="12" cy="10" r="3"/>
+                </svg>
               </div>
 
               {/* City & Country Title */}

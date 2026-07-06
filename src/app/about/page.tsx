@@ -35,9 +35,6 @@ export default async function AboutPage() {
       {/* About Hero Section */}
       <AboutHero data={heroContent} />
 
-      {/* About Stats Section */}
-      <AboutStats />
-
       {/* Vision & Mission Section */}
       <VisionMission />
 
