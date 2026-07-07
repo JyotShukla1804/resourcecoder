@@ -165,7 +165,7 @@ export default function BespokeSoftwarePage() {
               <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-[#0a0f1d] hover:shadow-[0_20px_50px_rgba(75,86,210,0.15)] transition-all duration-500 group flex items-center justify-center p-4">
                 
                 {/* Abstract Background Elements */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-indigo-900/20 via-[#0a0f1d] to-[#0a0f1d]" />
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(, tw-gradient-stops))] from-indigo-900/20 via-[#0a0f1d] to-[#0a0f1d]" />
                 <div className="absolute w-[300px] h-[300px] bg-[#4B56D2]/10 rounded-full blur-[80px] animate-pulse" />
 
                 {/* Central Product Hub */}

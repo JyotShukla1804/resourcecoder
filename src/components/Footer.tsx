@@ -407,6 +407,10 @@ const Footer = () => {
   const AutoAnimateSlider = ({ indiaLocations }: { indiaLocations: any[] }) => { };
   // Duplicate the array so we can loop seamlessly
 
+  if (pathname?.startsWith("/admin")) {
+    return null;
+  }
+
   return (
     <footer className="bg-black text-white">
       {/* Offices and Development Centers */}

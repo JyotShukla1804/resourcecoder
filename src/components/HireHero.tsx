@@ -29,17 +29,24 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
   const textBlocks = data?.blocks?.filter((b: any) => b.type === "header" || b.type === "paragraph") || [];
   let dynamicTitle = undefined;
   let dynamicDesc = undefined;
+  let dynamicExtraDesc = undefined;
 
   if (textBlocks.length > 0) {
     const headerBlock = textBlocks.find((b: any) => b.type === "header");
     if (headerBlock) {
       dynamicTitle = headerBlock.data?.text;
-      const descBlock = textBlocks.find((b: any) => b.type === "paragraph");
-      dynamicDesc = descBlock?.data?.text;
+      const paragraphBlocks = textBlocks.filter((b: any) => b.type === "paragraph");
+      dynamicDesc = paragraphBlocks[0]?.data?.text;
+      if (paragraphBlocks.length > 1) {
+        dynamicExtraDesc = paragraphBlocks[1]?.data?.text;
+      }
     } else {
       dynamicTitle = textBlocks[0]?.data?.text;
       if (textBlocks.length > 1) {
         dynamicDesc = textBlocks[1]?.data?.text;
+      }
+      if (textBlocks.length > 2) {
+        dynamicExtraDesc = textBlocks[2]?.data?.text;
       }
     }
     
@@ -99,10 +106,18 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
 
           {/* Paragraph description */}
           {dynamicDesc ? (
-            <p
-              className="max-w-[620px] mb-10 text-xl leading-[32.5px] text-[#52525C]"
-              dangerouslySetInnerHTML={{ __html: dynamicDesc }}
-            />
+            <>
+              <p
+                className="max-w-[620px] mb-6 text-xl leading-[32.5px] text-[#52525C]"
+                dangerouslySetInnerHTML={{ __html: dynamicDesc }}
+              />
+              {dynamicExtraDesc && (
+                <p
+                  className="max-w-[620px] mb-10 text-[17px] leading-[28px] text-[#6b7280]"
+                  dangerouslySetInnerHTML={{ __html: dynamicExtraDesc }}
+                />
+              )}
+            </>
           ) : (
             <p
               className="max-w-[620px] mb-10 text-xl leading-[32.5px] text-[#52525C]"
@@ -119,7 +134,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
             {/* Hire Now button */}
             <Link
               href={btn1Url || "#contact-form"}
-              className="btn-ripple inline-flex items-center justify-center text-white shadow-[0_4px_20px_rgba(21,93,252,0.35)] hover:shadow-lg transition-shadow duration-300 bg-[#4B56D2] w-full sm:w-auto min-w-[185px] h-[64px] px-10 rounded-full font-bold text-lg whitespace-nowrap flex-shrink-0"
+              className="btn-ripple inline-flex items-center justify-center text-white shadow-[0_4px_20px_rgba(21,93,252,0.35)] hover:shadow-lg transition-shadow duration-300 bg-[#4B56D2] w-full sm:w-auto min-w-[185px] h-[56px] px-8 rounded-full font-bold text-base whitespace-nowrap flex-shrink-0"
             >
               <span>{btn1Text || "Hire Now"}</span>
               <svg
@@ -133,13 +148,6 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
               </svg>
             </Link>
 
-            {/* Schedule Meeting button */}
-            <Link
-              href={btn2Url || "#contact-form"}
-              className="btn-ripple inline-flex items-center justify-center text-white shadow-md hover:shadow-lg transition-shadow duration-300 bg-black w-full sm:w-auto min-w-[200px] h-[64px] px-10 rounded-full font-bold text-base uppercase whitespace-nowrap flex-shrink-0"
-            >
-              <span>{btn2Text || "Schedule A Call"}</span>
-            </Link>
           </div>
 
         </div>

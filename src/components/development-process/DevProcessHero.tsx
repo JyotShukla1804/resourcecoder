@@ -51,7 +51,7 @@ export function DevProcessHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10 font-medium"
             >
-              At Krazio, our development process is more than just a workflow—it’s a commitment to excellence. Simple, Effective & Results-driven.
+              At Krazio, our development process is more than just a workflow, it’s a commitment to excellence. Simple, Effective & Results-driven.
             </motion.p>
             
             <motion.div 

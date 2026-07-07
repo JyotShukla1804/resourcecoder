@@ -13,7 +13,7 @@ export function AwardsTeam() {
       label: "Top-Tier IT Geniuses",
       icon: <Code className="w-5 h-5" />,
       title: "Elite Software Developers",
-      description: "At ResourceCoders we bring together the most elite software developers, UI/UX designers, QA experts, and product managers—all with exceptional skills and experience. Whether you need independent IT developers or a fully managed team, we provide access to top-tier IT talent worldwide to drive your project's success.",
+      description: "At ResourceCoders we bring together the most elite software developers, UI/UX designers, QA experts, and product managers, all with exceptional skills and experience. Whether you need independent IT developers or a fully managed team, we provide access to top-tier IT talent worldwide to drive your project's success.",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=800&q=80",
     },
     {

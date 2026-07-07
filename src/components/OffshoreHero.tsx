@@ -31,7 +31,7 @@ export function OffshoreHero() {
             </h1>
 
             <p className="text-slate-600 text-lg leading-relaxed animate-fade-in-up delay-200">
-              Establish a fully managed Offshore Development Center (ODC). Access top-tier engineering talent, scale operations seamlessly, and reduce overhead—without compromising on quality or control.
+              Establish a fully managed Offshore Development Center (ODC). Access top-tier engineering talent, scale operations seamlessly, and reduce overhead, without compromising on quality or control.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 pt-4 animate-fade-in-up delay-300">

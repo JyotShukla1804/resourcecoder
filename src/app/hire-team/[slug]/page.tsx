@@ -39,7 +39,26 @@ export default function DynamicHirePage() {
         }
 
         const page = await res.json();
-        setContent(page.content || {});
+        
+        // Deep string replacement to remove -- and em-dashes from the entire page content
+        const removeHyphens = (obj: any): any => {
+          if (typeof obj === 'string') {
+            return obj.replace(/--/g, '').replace(/—/g, '').replace(/–/g, '').replace(/ - /g, ' ');
+          }
+          if (Array.isArray(obj)) {
+            return obj.map(removeHyphens);
+          }
+          if (obj !== null && typeof obj === 'object') {
+            const newObj: any = {};
+            for (const key in obj) {
+              newObj[key] = removeHyphens(obj[key]);
+            }
+            return newObj;
+          }
+          return obj;
+        };
+
+        setContent(removeHyphens(page.content || {}));
       } catch (err) {
         setError("An unexpected error occurred.");
       } finally {

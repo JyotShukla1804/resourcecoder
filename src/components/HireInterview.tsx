@@ -105,7 +105,7 @@ export function HireInterview({
 
           {/* Paragraph description */}
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-[530px] font-normal mb-8">
-            {description || "We make hiring seamless by matching you with the right developer based on your specific requirements. Interview our experts, assess their skills, and start risk-free for 05 days—no commitment, just results!"}
+            {description || "We make hiring seamless by matching you with the right developer based on your specific requirements. Interview our experts, assess their skills, and start risk-free for 05 days, no commitment, just results!"}
           </p>
 
           {/* Thin divider */}

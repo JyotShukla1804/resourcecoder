@@ -17,7 +17,7 @@ export const HireCTA: React.FC<HireCTAProps> = ({
   btnUrl
 }) => {
   const defaultTitle = "Top-Tier IT Geniuses at Krazio";
-  const defaultSubtitle = `At Krazio, we bring together a team of elite software developers, UI/UX designers, QA experts, and product managers—all with exceptional skills and expertise. Whether you need independent developers or a fully managed team, we provide access to top-tier IT talent worldwide to drive your project's success.`;
+  const defaultSubtitle = `At Krazio, we bring together a team of elite software developers, UI/UX designers, QA experts, and product managers, all with exceptional skills and expertise. Whether you need independent developers or a fully managed team, we provide access to top-tier IT talent worldwide to drive your project's success.`;
   const defaultBtnText = "Start 15 Days Risk-Free Trial";
 
   return (

@@ -45,7 +45,7 @@ export function InterviewForm() {
                 Risk-Free Trial 🚀
               </h2>
               <p className="text-blue-100/80 text-sm sm:text-base leading-relaxed font-normal">
-                We make hiring seamless by matching you with the right developer based on your specific requirements. Interview our experts, assess their skills, and start risk-free for 05 days—no commitment, just results!
+                We make hiring seamless by matching you with the right developer based on your specific requirements. Interview our experts, assess their skills, and start risk-free for 05 days, no commitment, just results!
               </p>
             </div>
 

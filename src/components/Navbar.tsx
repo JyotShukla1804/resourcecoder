@@ -9,6 +9,8 @@ export function Navbar() {
   const [pages, setPages] = useState<any[]>([]);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isMobileDropdownOpen, setIsMobileDropdownOpen] = useState(false);
+  const [isHireTeamDropdownOpen, setIsHireTeamDropdownOpen] = useState(false);
+  const [isMobileHireTeamDropdownOpen, setIsMobileHireTeamDropdownOpen] = useState(false);
   const [isServicesDropdownOpen, setIsServicesDropdownOpen] = useState(false);
   const [isMobileServicesDropdownOpen, setIsMobileServicesDropdownOpen] = useState(false);
   const [isIndustriesDropdownOpen, setIsIndustriesDropdownOpen] = useState(false);
@@ -16,8 +18,20 @@ export function Navbar() {
   const [isCompanyDropdownOpen, setIsCompanyDropdownOpen] = useState(false);
   const [isMobileCompanyDropdownOpen, setIsMobileCompanyDropdownOpen] = useState(false);
   const pathname = usePathname();
+  const hireTeamTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
   const industriesTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+
+  const handleHireTeamEnter = () => {
+    if (hireTeamTimeoutRef.current) clearTimeout(hireTeamTimeoutRef.current);
+    setIsHireTeamDropdownOpen(true);
+  };
+
+  const handleHireTeamLeave = () => {
+    hireTeamTimeoutRef.current = setTimeout(() => {
+      setIsHireTeamDropdownOpen(false);
+    }, 150);
+  };
 
   const handleServicesEnter = () => {
     if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current);
@@ -55,6 +69,37 @@ export function Navbar() {
     { name: "Transportation", desc: "Fleet Management Solutions.", icon: "🚌", href: "https://kraziocloud.com/industries/transportation" },
     { name: "Oil & Gas", desc: "IoT-based equipment monitoring.", icon: "⛽", href: "https://kraziocloud.com/industries/oil-gas" },
   ];
+
+  const hireTeamCategories = [
+    {
+      title: "Frontend",
+      roles: ["React.js Developer", "Next.js Developer", "Angular Developer", "Vue.js Developer", "Frontend Developer", "UI/UX Designer"]
+    },
+    {
+      title: "Backend",
+      roles: ["Node.js Developer", "Python Developer", "Java Developer", ".NET Developer", "PHP / Laravel Developer", "Golang Developer"]
+    },
+    {
+      title: "Full-Stack",
+      roles: ["Full-Stack Developer", "MERN Stack Developer", "MEAN Stack Developer", "JavaScript Developer", "TypeScript Developer"]
+    },
+    {
+      title: "Mobile",
+      roles: ["React Native Developer", "Flutter Developer", "iOS Developer", "Android Developer"]
+    },
+    {
+      title: "AI, Data & Cloud",
+      roles: ["AI/ML Engineer", "Generative AI / LLM Developer", "AI Integration Developer", "Data Engineer", "Data Scientist", "DevOps Engineer", "Cloud Engineer (AWS / Azure / GCP)"]
+    },
+    {
+      title: "CMS, E-commerce & QA",
+      roles: ["WordPress Developer", "Shopify Developer", "WooCommerce Developer", "QA / Automation Engineer", "Cybersecurity / DevSecOps Engineer", "Blockchain Developer"]
+    }
+  ];
+
+  const generateRoleSlug = (role: string) => {
+    return role.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '');
+  };
 
   useEffect(() => {
     async function fetchPages() {
@@ -119,13 +164,13 @@ export function Navbar() {
                   <div
                     className="relative flex items-center h-[72px]"
                     onMouseEnter={() => {
-                      if (isHireTeam) setIsDropdownOpen(true);
+                      if (isHireTeam) handleHireTeamEnter();
                       if (isServices) handleServicesEnter();
                       if (isIndustries) handleIndustriesEnter();
                       if (isCompany) setIsCompanyDropdownOpen(true);
                     }}
                     onMouseLeave={() => {
-                      if (isHireTeam) setIsDropdownOpen(false);
+                      if (isHireTeam) handleHireTeamLeave();
                       if (isServices) handleServicesLeave();
                       if (isIndustries) handleIndustriesLeave();
                       if (isCompany) setIsCompanyDropdownOpen(false);
@@ -135,18 +180,18 @@ export function Navbar() {
                       <button
                         type="button"
                         onClick={() => {
-                          if (isHireTeam) setIsDropdownOpen(!isDropdownOpen);
+                          if (isHireTeam) setIsHireTeamDropdownOpen(!isHireTeamDropdownOpen);
                           if (isServices) setIsServicesDropdownOpen(!isServicesDropdownOpen);
                           if (isIndustries) setIsIndustriesDropdownOpen(!isIndustriesDropdownOpen);
                           if (isCompany) setIsCompanyDropdownOpen(!isCompanyDropdownOpen);
                         }}
-                        className={`text-[16px] font-semibold transition-colors flex items-center py-1 px-1.5 cursor-pointer select-none ${isActive || (isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) || (isCompanyDropdownOpen && isCompany) ? "text-white" : "text-slate-400 hover:text-white"
+                        className={`text-[16px] font-semibold transition-colors flex items-center py-1 px-1.5 cursor-pointer select-none ${isActive || (isHireTeamDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) || (isCompanyDropdownOpen && isCompany) ? "text-white" : "text-slate-400 hover:text-white"
                           }`}
                       >
                         <span>{link.name}</span>
                         {link.hasChevron && (
                           <svg
-                            className={`w-2.5 h-2.5 text-slate-500 ml-1 mt-0.5 transition-transform duration-200 ${(isDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) || (isCompanyDropdownOpen && isCompany) ? "rotate-180 text-white" : "group-hover:text-slate-300"
+                            className={`w-2.5 h-2.5 text-slate-500 ml-1 mt-0.5 transition-transform duration-200 ${(isHireTeamDropdownOpen && isHireTeam) || (isServicesDropdownOpen && isServices) || (isIndustriesDropdownOpen && isIndustries) || (isCompanyDropdownOpen && isCompany) ? "rotate-180 text-white" : "group-hover:text-slate-300"
                               }`}
                             fill="none"
                             stroke="currentColor"
@@ -178,42 +223,7 @@ export function Navbar() {
                       </Link>
                     )}
 
-                    {isHireTeam && (
-                      <div
-                        className={`absolute top-[70px] left-1/2 -translate-x-1/2 w-[300px] rounded-[24px] bg-[#0A0A0A]/95 backdrop-blur-xl border border-white/10 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.8)] p-3 transition-all duration-300 origin-top z-50 ${isDropdownOpen
-                          ? "opacity-100 translate-y-0 scale-100 pointer-events-auto"
-                          : "opacity-0 -translate-y-4 scale-95 pointer-events-none"
-                          }`}
-                      >
-                        {dropdownPages.length > 0 ? (
-                          dropdownPages.map((page: any) => {
-                            const isSubActive = pathname === `/hire-team/${page.slug}`;
-                            return (
-                              <Link
-                                key={page.slug}
-                                href={`/hire-team/${page.slug}`}
-                                className={`group flex items-center justify-between px-4 py-3.5 rounded-[16px] text-[15px] font-semibold text-left transition-all duration-300 ${isSubActive
-                                  ? "text-white bg-white/10 shadow-inner"
-                                  : "text-slate-400 hover:text-white hover:bg-white/5"
-                                  }`}
-                              >
-                                <span>{page.title}</span>
-                                <svg
-                                  className={`w-4 h-4 transition-transform duration-300 ${isSubActive ? "text-blue-500 translate-x-0 opacity-100" : "text-slate-500 -translate-x-2 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 group-hover:text-blue-400"}`}
-                                  fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}
-                                >
-                                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-                                </svg>
-                              </Link>
-                            );
-                          })
-                        ) : (
-                          <div className="px-4 py-3 text-[15px] text-slate-500 text-center font-medium">
-                            No sub-pages available
-                          </div>
-                        )}
-                      </div>
-                    )}
+                    {/* Rendered below, handled via Mega Menu for Hire Team */}
 
                     {isCompany && (
                       <div
@@ -269,6 +279,60 @@ export function Navbar() {
             >
               Inquiry Now
             </Link>
+          </div>
+
+          {/* Hire Team Full-Width Mega Menu */}
+          <div
+            onMouseEnter={handleHireTeamEnter}
+            onMouseLeave={handleHireTeamLeave}
+            className={`absolute top-[88px] left-0 right-0 w-full rounded-[24px] bg-black/95 backdrop-blur-md border border-slate-900 shadow-2xl overflow-hidden transition-all duration-300 origin-top z-40 ${isHireTeamDropdownOpen
+                ? "opacity-100 translate-y-0 pointer-events-auto"
+                : "opacity-0 -translate-y-4 pointer-events-none"
+              }`}
+          >
+            <div className="p-8 px-12">
+              <div className="flex justify-between items-end mb-6">
+                <h3 className="text-white font-extrabold text-[20px] tracking-tight">Hire Team</h3>
+                <Link href="/hire-team" onClick={() => setIsHireTeamDropdownOpen(false)} className="text-[#4B56D2] font-semibold text-[14px] hover:underline flex items-center gap-1">
+                  View All Roles
+                  <svg className="w-3.5 h-3.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </Link>
+              </div>
+              <div className="grid grid-cols-6 gap-x-6 gap-y-8">
+                {hireTeamCategories.map((category) => (
+                  <div key={category.title}>
+                    <h4 className="text-slate-200 font-bold text-[14px] mb-3 uppercase tracking-wider">{category.title}</h4>
+                    <ul className="space-y-2">
+                      {category.roles.map((role) => {
+                        const slug = generateRoleSlug(role.replace(/^Hire /, ''));
+                        return (
+                          <li key={role}>
+                            <Link 
+                              href={`/hire-team/${slug}`} 
+                              onClick={() => setIsHireTeamDropdownOpen(false)}
+                              className="text-slate-400 hover:text-white hover:underline text-[13px] font-medium transition-colors block"
+                            >
+                              {role}
+                            </Link>
+                          </li>
+                        );
+                      })}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+            
+            <div className="bg-slate-900/30 py-4 px-12 border-t border-slate-900">
+              <div className="flex items-center justify-between">
+                <div className="text-slate-400 text-sm font-medium">Looking for a role not listed here?</div>
+                <Link href="/contact" onClick={() => setIsHireTeamDropdownOpen(false)} className="text-white font-bold text-sm bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full transition-colors">
+                  Contact Us
+                </Link>
+              </div>
+            </div>
           </div>
 
           {/* Services Full-Width Mega Menu */}
@@ -465,8 +529,8 @@ export function Navbar() {
                 const isIndustriesMobile = link.name === "Industries";
                 const isCompanyMobile = link.name === "Company";
                 if (isHireTeam || isServices || isIndustriesMobile || isCompanyMobile) {
-                  const isMobileOpen = isHireTeam ? isMobileDropdownOpen : isIndustriesMobile ? isMobileIndustriesDropdownOpen : isCompanyMobile ? isMobileCompanyDropdownOpen : isMobileServicesDropdownOpen;
-                  const toggleMobileOpen = isHireTeam ? () => setIsMobileDropdownOpen(!isMobileDropdownOpen) : isIndustriesMobile ? () => setIsMobileIndustriesDropdownOpen(!isMobileIndustriesDropdownOpen) : isCompanyMobile ? () => setIsMobileCompanyDropdownOpen(!isMobileCompanyDropdownOpen) : () => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
+                  const isMobileOpen = isHireTeam ? isMobileHireTeamDropdownOpen : isIndustriesMobile ? isMobileIndustriesDropdownOpen : isCompanyMobile ? isMobileCompanyDropdownOpen : isMobileServicesDropdownOpen;
+                  const toggleMobileOpen = isHireTeam ? () => setIsMobileHireTeamDropdownOpen(!isMobileHireTeamDropdownOpen) : isIndustriesMobile ? () => setIsMobileIndustriesDropdownOpen(!isMobileIndustriesDropdownOpen) : isCompanyMobile ? () => setIsMobileCompanyDropdownOpen(!isMobileCompanyDropdownOpen) : () => setIsMobileServicesDropdownOpen(!isMobileServicesDropdownOpen);
 
                   return (
                     <div key={link.name} className="space-y-1">
@@ -489,29 +553,30 @@ export function Navbar() {
                       {isMobileOpen && (
                         <div className="pl-6 pr-2 py-1 space-y-1 border-l border-slate-900/60 ml-4">
                           {isHireTeam ? (
-                            dropdownPages.length > 0 ? (
-                              dropdownPages.map((page: any) => {
-                                const isSubActive = pathname === `/hire-team/${page.slug}`;
-                                return (
-                                  <Link
-                                    key={page.slug}
-                                    href={`/hire-team/${page.slug}`}
-                                    onClick={() => setIsOpen(false)}
-                                    className={`flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors ${isSubActive
-                                      ? "text-white bg-slate-900"
-                                      : "text-slate-400 hover:text-white hover:bg-slate-900/50"
-                                      }`}
-                                  >
-                                    <span>📄</span>
-                                    <span>{page.title}</span>
-                                  </Link>
-                                );
-                              })
-                            ) : (
-                              <div className="px-4 py-2 text-xs text-slate-500">
-                                No sub-pages available
+                            <>
+                              <div className="max-h-[300px] overflow-y-auto custom-scrollbar pr-2 space-y-4">
+                                {hireTeamCategories.map((category) => (
+                                  <div key={category.title}>
+                                    <div className="text-xs font-bold text-slate-500 uppercase tracking-wider mb-2">{category.title}</div>
+                                    <div className="space-y-1">
+                                      {category.roles.map((role) => {
+                                        const slug = generateRoleSlug(role.replace(/^Hire /, ''));
+                                        return (
+                                          <Link
+                                            key={role}
+                                            href={`/hire-team/${slug}`}
+                                            onClick={() => setIsOpen(false)}
+                                            className="block px-3 py-1.5 rounded-lg text-[13px] font-medium text-slate-400 hover:text-white hover:bg-slate-900/50 transition-colors"
+                                          >
+                                            {role}
+                                          </Link>
+                                        );
+                                      })}
+                                    </div>
+                                  </div>
+                                ))}
                               </div>
-                            )
+                            </>
                           ) : isIndustriesMobile ? (
                             <>
                               {industries.map((industry) => (

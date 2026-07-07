@@ -53,7 +53,7 @@ export function HiringModels() {
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto font-normal">
             We provide flexible, transparent, and cost-effective hiring models to help you scale your team
-            effortlessly. With Krazio's dedicated developers, you only pay for what you need—no hidden
+            effortlessly. With Krazio's dedicated developers, you only pay for what you need, no hidden
             costs, just quality-driven development.
           </p>
         </div>

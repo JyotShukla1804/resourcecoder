@@ -57,7 +57,18 @@ export function HirePricing({ data, bottomCtaText, bottomCtaUrl }: HirePricingPr
     }
   ];
 
-  const plans = data && data.length > 0 ? data : defaultPlans;
+  let plans = data && data.length > 0 ? data : defaultPlans;
+
+  // Ensure the featured plan is always in the middle (index 1) for a 3-card layout
+  if (plans.length === 3) {
+    const plansCopy = [...plans];
+    const featuredIndex = plansCopy.findIndex(p => p.is_featured);
+    if (featuredIndex !== -1 && featuredIndex !== 1) {
+      const featuredPlan = plansCopy.splice(featuredIndex, 1)[0];
+      plansCopy.splice(1, 0, featuredPlan);
+      plans = plansCopy;
+    }
+  }
 
   return (
     <section

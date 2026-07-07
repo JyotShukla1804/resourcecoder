@@ -71,7 +71,7 @@ export function PartnerHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10 font-medium"
             >
-              A successful partnership is more than just an agreement—it's a shared vision. Join forces with us to deliver high-impact digital solutions and scale your operations globally.
+              A successful partnership is more than just an agreement, it's a shared vision. Join forces with us to deliver high-impact digital solutions and scale your operations globally.
             </motion.p>
 
             <motion.div

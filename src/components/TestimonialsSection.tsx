@@ -61,7 +61,7 @@ export function TestimonialsSection() {
           </h2>
           <p className="text-slate-400 text-sm sm:text-base leading-relaxed max-w-3xl mx-auto font-normal">
             Discover how ResourceCoders' innovative solutions have transformed businesses and empowered our
-            clients. Hear directly from those who trust us, choose us, and succeed with us—time and time
+            clients. Hear directly from those who trust us, choose us, and succeed with us, time and time
             again!
           </p>
         </div>
