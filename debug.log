@@ -356,3 +356,5 @@
 [2026-07-08T10:16:04.068Z] checkAuth: Authentication successful for user 62457c53-cf1b-4d76-a165-9c3b5357d067 / jyot.krazio@gmail.com
 [2026-07-08T10:16:04.169Z] checkAuth: Started verification
 [2026-07-08T10:16:04.404Z] checkAuth: Authentication successful for user 62457c53-cf1b-4d76-a165-9c3b5357d067 / jyot.krazio@gmail.com
+[2026-07-08T10:56:49.054Z] checkAuth: Started verification
+[2026-07-08T10:56:49.147Z] checkAuth: No admin_session cookie found
