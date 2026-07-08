@@ -161,11 +161,11 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
               className="w-full max-w-[580px] h-auto object-contain"
             />
           ) : (
-            <div className="relative w-full max-w-[580px] aspect-[4/3] rounded-[24px] md:rounded-[32px] overflow-hidden border border-slate-100 shadow-xl bg-slate-50 flex items-center justify-center">
+            <div className="relative w-full max-w-[580px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-xl flex items-center justify-center">
               <img
                 src={image}
                 alt="React Developer Workspace"
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-cover"
               />
             </div>
           )}
