@@ -527,7 +527,7 @@ const Footer = () => {
                 href="/krazio-corporate-profile.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center px-6 py-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
+                className="btn-ripple inline-flex items-center px-6 py-3 rounded-md bg-blue-600 hover:bg-blue-700 transition-colors duration-300"
               >
                 <Download className="w-5 h-5 mr-2" />
                 <span className="font-medium">Krazio Profile</span>
