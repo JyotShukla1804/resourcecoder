@@ -51,7 +51,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
     }
     
     if (dynamicTitle) {
-      dynamicTitle = dynamicTitle.replace(/(Web|AR\/VR|ReactJS)/gi, '<span class="text-[#4B56D2]">$1</span>');
+      dynamicTitle = dynamicTitle.replace(/(AR\/VR|ReactJS)/gi, '<span class="text-[#4B56D2]">$1</span>');
     }
   }
 
