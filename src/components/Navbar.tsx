@@ -146,7 +146,7 @@ export function Navbar() {
           {/* Logo */}
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="group flex items-center gap-2 text-base font-black tracking-tight text-white select-none">
-              <img src="/Frame 66 (2).svg" alt="Resource Coders Logo" className="h-8 w-auto object-contain flex-shrink-0" />
+              <img src="/Frame 66 (2).svg?v=3" alt="Resource Coders Logo" className="h-8 w-auto object-contain flex-shrink-0" />
             </Link>
           </div>
 
