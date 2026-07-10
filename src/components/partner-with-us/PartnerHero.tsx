@@ -3,8 +3,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Send, Handshake } from "lucide-react";
-
-import { AnimatedMeshBackground } from "../AnimatedMeshBackground";
+import { HeroBackground } from "@/components";
 
 export function PartnerHero() {
   const [formData, setFormData] = useState({
@@ -30,7 +29,8 @@ export function PartnerHero() {
 
   return (
     <section className="w-full relative overflow-hidden flex items-center min-h-[90vh] bg-[#f8f9ff]">
-      <AnimatedMeshBackground position="left" />
+        <HeroBackground />
+      
 
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-48 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">

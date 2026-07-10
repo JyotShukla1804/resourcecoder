@@ -1,5 +1,6 @@
 import React from "react";
 import { AboutStats } from "./AboutStats";
+import { HeroBackground } from "@/components";
 
 interface AboutHeroProps {
   data?: {
@@ -12,8 +13,6 @@ interface AboutHeroProps {
     }>;
   };
 }
-
-import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
 
 export function AboutHero({ data }: AboutHeroProps = {}) {
   // Extract all text blocks (header or paragraph) to map to Title & Description
@@ -37,8 +36,9 @@ export function AboutHero({ data }: AboutHeroProps = {}) {
 
   return (
     <section className="w-full bg-[#f8f9ff] relative overflow-hidden">
+        <HeroBackground />
       {/* Animated Mesh Gradient Background */}
-      <AnimatedMeshBackground position="center" />
+      
 
       {/* Hero Section */}
       <div className="w-full max-w-[1358px] mx-auto text-center relative z-10 flex flex-col items-center space-y-8 pt-48 pb-24 px-4 sm:px-6 md:px-[55px]">

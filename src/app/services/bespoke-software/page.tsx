@@ -6,8 +6,7 @@ import dynamic from "next/dynamic";
 import { TrustedBy } from "@/components/TrustedBy";
 import { HireInterview } from "@/components/HireInterview";
 import { AnimatedNumber } from "@/components/AboutStats";
-import { AnimatedMeshBackground } from "@/components/AnimatedMeshBackground";
-
+import { HeroBackground } from "@/components";
 export default function BespokeSoftwarePage() {
   const [activeCapTab, setActiveCapTab] = useState(0);
 
@@ -109,7 +108,8 @@ export default function BespokeSoftwarePage() {
 
       {/* 1. Custom Hero Section with perspective grid and floating WebGL Globe */}
       <section className="relative w-full min-h-[95vh] flex items-center bg-[#f8f9ff] pt-32 pb-20 overflow-hidden">
-        <AnimatedMeshBackground position="left" />
+        <HeroBackground />
+        
         {/* Background perspective grid floor */}
         <div className="absolute bottom-0 left-0 right-0 h-[300px] w-full grid-floor pointer-events-none opacity-50" />
 

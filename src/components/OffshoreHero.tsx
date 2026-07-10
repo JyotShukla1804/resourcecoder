@@ -4,17 +4,17 @@ import React from "react";
 import Link from "next/link";
 import { AnimatedNumber } from "./AboutStats";
 import dynamic from "next/dynamic";
+import { HeroBackground } from "@/components";
 
 const CobeGlobe = dynamic(() => import("./CobeGlobe").then((m) => m.CobeGlobe), {
   ssr: false,
 });
 
-import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
-
 export function OffshoreHero() {
   return (
     <section className="relative w-full min-h-[90vh] flex items-center bg-[#f8f9ff] overflow-hidden pt-48 pb-24">
-      <AnimatedMeshBackground />
+        <HeroBackground />
+      
 
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-8 items-center">

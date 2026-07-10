@@ -3,8 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
-
+import { HeroBackground } from "@/components";
 interface HireHeroProps {
   btn1Text?: string;
   btn1Url?: string;
@@ -58,9 +57,8 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
     <section
       className="relative w-full overflow-hidden min-h-[auto] md:min-h-[727px] bg-[#f8f9ff]"
     >
-      {!(dynamicTitle && dynamicTitle.toLowerCase().includes("next")) && (
-        <AnimatedMeshBackground position="left" isStatic={true} />
-      )}
+      <HeroBackground />
+
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-[1358px] mx-auto pt-16 md:pt-48 pb-10 md:pb-16 px-6 md:px-[55px]">

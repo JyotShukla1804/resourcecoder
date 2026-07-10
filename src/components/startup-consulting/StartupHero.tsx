@@ -4,13 +4,13 @@ import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { ArrowRight, Lightbulb } from "lucide-react";
-
-import { AnimatedMeshBackground } from "../AnimatedMeshBackground";
+import { HeroBackground } from "@/components";
 
 export function StartupHero() {
   return (
     <section className="w-full relative overflow-hidden flex items-center min-h-[90vh] bg-[#f8f9ff]">
-      <AnimatedMeshBackground position="center" />
+        <HeroBackground />
+      
       
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-48 pb-24 text-center">
         <motion.div

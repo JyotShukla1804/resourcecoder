@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
-import { TrustedBy, TechSection, SpecializationSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, WhyKrazio, SuccessStoriesSection, AnimatedMeshBackground } from "@/components";
+import { TrustedBy, TechSection, SpecializationSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, WhyKrazio, SuccessStoriesSection } from "@/components";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CTASection } from "@/components/CTASection";
 import { supabase } from "@/lib/supabase";
@@ -58,9 +58,16 @@ export default async function Home() {
       <section
         className="relative w-full min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-24 flex flex-col justify-center items-center text-center z-10 transition-all duration-300 bg-[#f8f9ff] overflow-hidden"
       >
-        {/* Animated Mesh Gradient Background */}
-        <AnimatedMeshBackground position="center" />
-
+        {/* Unique Home Page Hero Background */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          {/* Glowing Orbs */}
+          <div className="absolute top-[-20%] left-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-indigo-500/20 to-purple-500/20 rounded-full blur-[120px] mix-blend-multiply opacity-70 animate-pulse" />
+          <div className="absolute bottom-[-20%] right-[-10%] w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-gradient-to-br from-blue-500/20 to-teal-500/20 rounded-full blur-[120px] mix-blend-multiply opacity-70 animate-pulse" style={{ animationDelay: '2s' }} />
+          
+          {/* Subtle Grid Pattern */}
+          <div className="absolute inset-0 bg-[linear-gradient(to_right,#8080801a_1px,transparent_1px),linear-gradient(to_bottom,#8080801a_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_80%_80%_at_50%_50%,#000_20%,transparent_100%)]" />
+        </div>
+        
         {/* Content Wrapper */}
         <div className="relative z-10 max-w-[1358px] mx-auto text-center w-full flex flex-col items-center space-y-8 px-4 sm:px-6">
           {/* Floating Badge */}

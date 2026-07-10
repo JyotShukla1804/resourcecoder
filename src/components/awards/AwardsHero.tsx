@@ -2,13 +2,13 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-
-import { AnimatedMeshBackground } from "../AnimatedMeshBackground";
+import { HeroBackground } from "@/components";
 
 export function AwardsHero() {
   return (
     <section className="w-full bg-[#f8f9ff] relative overflow-hidden min-h-[70vh] flex flex-col justify-center pt-48 pb-24 border-b border-slate-100">
-      <AnimatedMeshBackground position="center" />
+        <HeroBackground />
+      
 
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         <motion.div
