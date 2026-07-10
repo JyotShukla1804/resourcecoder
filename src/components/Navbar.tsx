@@ -328,9 +328,17 @@ export function Navbar() {
             <div className="bg-slate-900/30 py-4 px-12 border-t border-slate-900">
               <div className="flex items-center justify-between">
                 <div className="text-slate-400 text-sm font-medium">Looking for a role not listed here?</div>
-                <Link href="/contact" onClick={() => setIsHireTeamDropdownOpen(false)} className="text-white font-bold text-sm bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full transition-colors">
+                <button 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    document.getElementById('floating-contact-button')?.click();
+                    setIsHireTeamDropdownOpen(false);
+                  }} 
+                  className="text-white font-bold text-sm bg-slate-800 hover:bg-slate-700 px-4 py-2 rounded-full transition-colors"
+                >
                   Contact Us
-                </Link>
+                </button>
               </div>
             </div>
           </div>

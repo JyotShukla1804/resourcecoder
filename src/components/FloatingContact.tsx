@@ -90,6 +90,15 @@ export function FloatingContact() {
   });
 
   React.useEffect(() => {
+    const handleOpenModal = () => setIsOpen(true);
+    window.addEventListener('open-contact-modal', handleOpenModal);
+
+    return () => {
+      window.removeEventListener('open-contact-modal', handleOpenModal);
+    };
+  }, []);
+
+  React.useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden';
     } else {
@@ -132,6 +141,7 @@ export function FloatingContact() {
       {/* Floating Action Button */}
       <div className="fixed bottom-6 right-6 z-[60]">
         <button
+          id="floating-contact-button"
           onClick={() => setIsOpen(true)}
           className="w-14 h-14 bg-gradient-to-tr from-[#4B56D2] to-[#60A5FA] hover:shadow-[0_0_20px_rgba(75,86,210,0.6)] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
           aria-label="Contact Us"
@@ -230,7 +240,7 @@ export function FloatingContact() {
               </div>
 
               {/* Right Pane (Form) */}
-              <div className="w-full md:w-[60%] p-6 sm:p-8 relative z-10 flex flex-col justify-center bg-white">
+              <div className="w-full md:w-[60%] p-6 md:p-8 lg:p-10 relative z-10 flex flex-col justify-start bg-white">
                 {isSubmitted ? (
                   <div className="flex flex-col items-center justify-center py-12 text-center space-y-4">
                     <div className="w-20 h-20 rounded-full bg-gradient-to-tr from-green-400 to-emerald-300 flex items-center justify-center text-white shadow-lg shadow-green-500/30 animate-bounce">
@@ -245,7 +255,7 @@ export function FloatingContact() {
                   </div>
                 ) : (
                   <>
-                    <div className="mb-8 text-center">
+                    <div className="mb-8 text-left pt-1 lg:pt-2">
                       <h3 className="text-2xl sm:text-3xl font-extrabold text-[#1e293b] tracking-tight mb-2">
                         Got an idea? Drop it here,
                       </h3>
