@@ -154,155 +154,155 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
           {/* Right Column - Image */}
           <div className="lg:col-span-5 flex justify-center items-center relative w-full mt-10 lg:mt-0">
             <div className="relative w-full flex items-center justify-center">
-              {(!image || image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
+              {(image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
                 <img
-                  src="/ReactJS Developer.svg"
+                  src="/ReactJS%20Developer.svg"
                   alt="React Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/NextJS Developer.svg" || image === "/NextJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("next"))) ? (
                 <img
                   src="/NextJS Developer.svg"
                   alt="NextJS Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
-              ) : (image === "/AI Integration Developer.svg" || image === "/AI%20Integration%20Developer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("ai") || dynamicTitle.toLowerCase().includes("llm")))) ? (
+              ) : (image === "/AI Integration Developer.svg" || image === "/AI%20Integration%20Developer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("generative ai") || dynamicTitle.toLowerCase().includes("llm")))) ? (
                 <img
                   src="/AI%20Integration%20Developer.svg"
                   alt="AI/LLM Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Angular Developer.svg" || image === "/Angular%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("angular"))) ? (
                 <img
                   src="/Angular Developer.svg"
                   alt="Angular Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Vue.JS Developer.svg" || image === "/Vue.JS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("vue"))) ? (
                 <img
                   src="/Vue.JS Developer.svg"
                   alt="Vue.JS Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Frontend Developer.svg" || image === "/Frontend%20Developer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("frontend") || dynamicTitle.toLowerCase().includes("front-end")))) ? (
                 <img
                   src="/Frontend Developer.svg"
                   alt="Frontend Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/UX Designer.svg" || image === "/UX%20Designer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("ui/ux") || dynamicTitle.toLowerCase().includes("ux/ui") || dynamicTitle.toLowerCase().includes("ux designer")))) ? (
                 <img
                   src="/UX Designer.svg"
                   alt="UI/UX Designer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Full Stack Developer.svg" || image === "/Full%20Stack%20Developer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("full stack") || dynamicTitle.toLowerCase().includes("fullstack")))) ? (
                 <img
                   src="/Full Stack Developer.svg"
                   alt="Full Stack Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Mern Stack Developer.svg" || image === "/Mern%20Stack%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("mern"))) ? (
                 <img
                   src="/mern_stack_developer.png"
                   alt="MERN Stack Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Mean Stack Developer.svg" || image === "/Mean%20Stack%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("mean"))) ? (
                 <img
-                  src="/Mern Stack Developer.svg"
+                  src="/Mean%20Stack%20Developer.svg"
                   alt="MEAN Stack Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/JAVA Developer.svg" || image === "/JAVA%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("java") && !dynamicTitle.toLowerCase().includes("javascript"))) ? (
                 <img
-                  src="/JAVA Developer.svg"
+                  src="/JAVA%20Developer.svg"
                   alt="Java Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("javascript")) ? (
                 <img
-                  src="/Javascript Developer.svg"
+                  src="/Javascript%20Developer.svg"
                   alt="Javascript Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (image === "/Node.JS Developer.svg" || image === "/Node.JS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("node"))) ? (
                 <img
                   src="/Node.JS%20Developer.svg"
                   alt="Node.JS Developer Workspace"
-                  className="max-w-full h-auto drop-shadow-2xl hover:-translate-y-2 transition-transform duration-500"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("node")) ? (
                 <img
-                  src="/Node.JS Developer.svg"
+                  src="/Node.JS%20Developer.svg"
                   alt="Node.JS Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("python")) ? (
                 <img
-                  src="/Python Developer.svg"
+                  src="/Python%20Developer.svg"
                   alt="Python Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes(".net")) ? (
                 <img
                   src="/net-developer.svg"
                   alt=".NET Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && (dynamicTitle.toLowerCase().includes("golang") || dynamicTitle.toLowerCase().includes("go "))) ? (
                 <img
-                  src="/Golang Developer.svg"
+                  src="/Golang%20Developer.svg"
                   alt="Golang Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("typescript")) ? (
                 <img
-                  src="/Typescript Developer.svg"
+                  src="/Typescript%20Developer.svg"
                   alt="TypeScript Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && (dynamicTitle.toLowerCase().includes("react native") || dynamicTitle.toLowerCase().includes("react-native"))) ? (
                 <img
-                  src="/React Native Developer.svg"
+                  src="/React%20Native%20Developer.svg"
                   alt="React Native Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("flutter")) ? (
                 <img
-                  src="/Flutter Developer.svg"
+                  src="/Flutter%20Developer.svg"
                   alt="Flutter Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("ios")) ? (
                 <img
-                  src="/IOS Developer.svg"
+                  src="/IOS%20Developer.svg"
                   alt="iOS Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("android")) ? (
                 <img
-                  src="/Android Developer.svg"
+                  src="/Android%20Developer.svg"
                   alt="Android Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && (dynamicTitle.toLowerCase().includes("ai/ml") || dynamicTitle.toLowerCase().includes("ai / ml") || dynamicTitle.toLowerCase().includes("machine learning") || dynamicTitle.toLowerCase().includes("artificial intelligence"))) ? (
                 <img
                   src="/ai, data & cloud.svg"
                   alt="AI/ML Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && (dynamicTitle.toLowerCase().includes("llm") || dynamicTitle.toLowerCase().includes("generative ai"))) ? (
                 <img
-                  src="/LLM Developer.svg"
+                  src="/LLM%20Developer.svg"
                   alt="LLM Developer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (dynamicTitle && dynamicTitle.toLowerCase().includes("data engineer")) ? (
                 <img
-                  src="/Data Engineer.svg"
+                  src="/Data%20Engineer.svg"
                   alt="Data Engineer Workspace"
-                  className="w-full h-auto object-cover"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
               ) : (
                 <img
