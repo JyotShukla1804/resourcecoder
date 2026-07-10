@@ -3,7 +3,7 @@ export const DEFAULT_PAGE_CONTENT = {
     title: "Hire Expert ReactJS Developers",
     subtitle: "Build fast, scalable web apps with a dedicated React team",
     description: "Get access to top React developers who deliver clean, production-ready code.",
-    image: "/react_developer_hero.png",
+    image: "/ReactJS Developer.svg",
     primaryCta: "Hire React Developer",
     primaryCtaUrl: "#contact-form",
     secondaryCta: "View Portfolio",

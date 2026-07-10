@@ -58,7 +58,9 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
     <section
       className="relative w-full overflow-hidden min-h-[auto] md:min-h-[727px] bg-[#f8f9ff]"
     >
-      <AnimatedMeshBackground position="left" isStatic={true} />
+      {!(dynamicTitle && dynamicTitle.toLowerCase().includes("next")) && (
+        <AnimatedMeshBackground position="left" isStatic={true} />
+      )}
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-[1358px] mx-auto pt-16 md:pt-48 pb-10 md:pb-16 px-6 md:px-[55px]">
@@ -153,9 +155,9 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
 
         {/* Right Column - Image */}
         <div className="lg:col-span-5 flex justify-center items-center relative w-full mt-10 lg:mt-0">
-          {(!image || image === "/react_developer_hero.png" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
+          {(!image || image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
             <img
-              src="/react_developer_hero.png"
+              src="/ReactJS%20Developer.svg"
               alt="React Developer Workspace"
               className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
             />
@@ -163,6 +165,12 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
             <img
               src="/NextJS%20Developer.svg"
               alt="NextJS Developer Workspace"
+              className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
+            />
+          ) : (image === "/Angular Developer.svg" || image === "/Angular%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("angular"))) ? (
+            <img
+              src="/Angular%20Developer.svg"
+              alt="Angular Developer Workspace"
               className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
             />
           ) : (
