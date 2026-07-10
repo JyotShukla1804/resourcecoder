@@ -323,6 +323,48 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
                   alt="Cloud Engineer Workspace"
                   className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
                 />
+              ) : (image === "/Shopify Developer.svg" || image === "/Shopify%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("shopify"))) ? (
+                <img
+                  src="/Shopify Developer.svg"
+                  alt="Shopify Developer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
+              ) : (image === "/WooCommerce Developer.svg" || image === "/WooCommerce%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("woocommerce"))) ? (
+                <img
+                  src="/WooCommerce Developer.svg"
+                  alt="WooCommerce Developer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
+              ) : (image === "/Wordpress Developer.svg" || image === "/Wordpress%20Developer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("wordpress") || dynamicTitle.toLowerCase().includes("word press")))) ? (
+                <img
+                  src="/Wordpress Developer.svg"
+                  alt="Wordpress Developer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
+              ) : (image === "/Automation Engineer.svg" || image === "/Automation%20Engineer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("qa") || dynamicTitle.toLowerCase().includes("automation")))) ? (
+                <img
+                  src="/Automation Engineer.svg"
+                  alt="QA Automation Engineer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
+              ) : (image === "/Devsecops Engineer.svg" || image === "/Devsecops%20Engineer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("cybersecurity") || dynamicTitle.toLowerCase().includes("cyber security") || dynamicTitle.toLowerCase().includes("devsecops")))) ? (
+                <img
+                  src="/Devsecops Engineer.svg"
+                  alt="Cybersecurity/DevSecOps Engineer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
+              ) : (image === "/beyond-work-collab.png" || image === "/beyond-work-collab.png" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("blockchain") || dynamicTitle.toLowerCase().includes("block chain")))) ? (
+                <img
+                  src="/beyond-work-collab.png"
+                  alt="Blockchain Developer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
+              ) : (image === "/Laravel Developer.svg" || image === "/Laravel%20Developer.svg" || (dynamicTitle && (dynamicTitle.toLowerCase().includes("laravel") || dynamicTitle.toLowerCase().includes("php")))) ? (
+                <img
+                  src="/Laravel Developer.svg"
+                  alt="PHP/Laravel Developer Workspace"
+                  className="max-w-full h-auto drop-shadow-2xl rounded-[19px] md:rounded-[27px] hover:-translate-y-2 transition-transform duration-500"
+                />
               ) : (
                 <img
                   src={image ? (image.startsWith('/') ? encodeURI(image) : '/' + encodeURI(image)) : "/ReactJS%20Developer.svg"}
