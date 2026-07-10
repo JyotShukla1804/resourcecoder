@@ -3,7 +3,6 @@
 import React from "react";
 import Link from "next/link";
 import { motion } from "framer-motion";
-
 import { AnimatedMeshBackground } from "./AnimatedMeshBackground";
 
 interface HireHeroProps {
@@ -59,7 +58,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
     <section
       className="relative w-full overflow-hidden min-h-[auto] md:min-h-[727px] bg-[#f8f9ff]"
     >
-      <AnimatedMeshBackground position="left" />
+      <AnimatedMeshBackground position="left" isStatic={true} />
 
       {/* Main Container */}
       <div className="relative z-10 w-full max-w-[1358px] mx-auto pt-16 md:pt-48 pb-10 md:pb-16 px-6 md:px-[55px]">
@@ -154,17 +153,23 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
 
         {/* Right Column - Image */}
         <div className="lg:col-span-5 flex justify-center items-center relative w-full mt-10 lg:mt-0">
-          {!image || image === "/react_developer_hero.png" ? (
+          {(!image || image === "/react_developer_hero.png" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
             <img
               src="/react_developer_hero.png"
               alt="React Developer Workspace"
-              className="w-full max-w-[580px] h-auto object-contain"
+              className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
+            />
+          ) : (image === "/NextJS Developer.svg" || image === "/NextJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("next"))) ? (
+            <img
+              src="/NextJS%20Developer.svg"
+              alt="NextJS Developer Workspace"
+              className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
             />
           ) : (
-            <div className="relative w-full max-w-[580px] rounded-[24px] md:rounded-[32px] overflow-hidden shadow-xl flex items-center justify-center">
+            <div className="relative w-full max-w-[580px] rounded-[19px] md:rounded-[27px] overflow-hidden shadow-lg flex items-center justify-center">
               <img
                 src={image}
-                alt="React Developer Workspace"
+                alt="Developer Workspace"
                 className="w-full h-auto object-cover"
               />
             </div>

@@ -4,9 +4,10 @@ import React from "react";
 
 interface AnimatedMeshBackgroundProps {
   position?: "left" | "center";
+  isStatic?: boolean;
 }
 
-export function AnimatedMeshBackground({ position = "left" }: AnimatedMeshBackgroundProps) {
+export function AnimatedMeshBackground({ position = "left", isStatic = false }: AnimatedMeshBackgroundProps) {
   const isCenter = position === "center";
 
   return (
@@ -20,13 +21,13 @@ export function AnimatedMeshBackground({ position = "left" }: AnimatedMeshBackgr
       {/* Animated Mesh Gradient Background (Now Pure CSS for Performance!) */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div 
-          className={`animate-mesh-blob-1 absolute top-[0%] ${isCenter ? 'left-[20%]' : 'left-[-10%]'} w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-[#4B56D2]/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70`}
+          className={`${isStatic ? '' : 'animate-mesh-blob-1'} absolute top-[0%] ${isCenter ? 'left-[20%]' : 'left-[-10%]'} w-[70vw] h-[70vw] max-w-[900px] max-h-[900px] bg-[#4B56D2]/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70`}
         />
         <div 
-          className={`animate-mesh-blob-2 absolute top-[10%] ${isCenter ? 'right-[20%]' : 'left-[10%]'} w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-indigo-400/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70`}
+          className={`${isStatic ? '' : 'animate-mesh-blob-2'} absolute top-[10%] ${isCenter ? 'right-[20%]' : 'left-[10%]'} w-[60vw] h-[60vw] max-w-[800px] max-h-[800px] bg-indigo-400/40 rounded-full mix-blend-multiply filter blur-[100px] opacity-70`}
         />
         <div 
-          className={`animate-mesh-blob-3 absolute bottom-[5%] ${isCenter ? 'left-[25%]' : 'left-[0%]'} w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-blue-400/40 rounded-full mix-blend-multiply filter blur-[120px] opacity-70`}
+          className={`${isStatic ? '' : 'animate-mesh-blob-3'} absolute bottom-[5%] ${isCenter ? 'left-[25%]' : 'left-[0%]'} w-[80vw] h-[80vw] max-w-[1000px] max-h-[1000px] bg-blue-400/40 rounded-full mix-blend-multiply filter blur-[120px] opacity-70`}
         />
       </div>
 
