@@ -41,12 +41,12 @@ export function TrustedBy({
     <>
       {logos.map((logo, idx) => (
         <div key={idx} className="shrink-0 w-[140px] md:w-[200px] h-20 flex items-center justify-center px-4 md:px-8">
-          <img 
-            src={`/${logo}`} 
-            alt={logo.replace('.svg', '').replace(/_/g, ' ')} 
+          <img
+            src={`/${logo}`}
+            alt={logo.replace('.svg', '').replace(/_/g, ' ')}
             width={200}
             height={80}
-            className="max-h-12 md:max-h-16 w-full object-contain mix-blend-multiply" 
+            className="max-h-12 md:max-h-16 w-full object-contain mix-blend-multiply"
           />
         </div>
       ))}

@@ -39,7 +39,7 @@ export default function DynamicHirePage() {
         }
 
         const page = await res.json();
-        
+
         // Deep string replacement to remove -- and em-dashes from the entire page content
         const removeHyphens = (obj: any): any => {
           if (typeof obj === 'string') {
@@ -102,7 +102,7 @@ export default function DynamicHirePage() {
   return (
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       {/* Page Animation Styling */}
-      
+
 
       {blocks.map((block: any, idx: number) => {
         switch (block.type) {

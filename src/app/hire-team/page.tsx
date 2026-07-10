@@ -31,7 +31,7 @@ export default async function HireTeamPage() {
   return (
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       {/* Page Animation Styling */}
-      
+
 
       {blocks.map((block: any, idx: number) => {
         let component = null;
@@ -46,12 +46,12 @@ export default async function HireTeamPage() {
             };
             component = (
               <React.Fragment>
-                <HireHero 
+                <HireHero
                   btn1Text={block.primaryCta}
                   btn1Url={block.primaryCtaUrl}
                   btn2Text={block.secondaryCta}
                   btn2Url={block.secondaryCtaUrl}
-                  data={heroContentBlocks} 
+                  data={heroContentBlocks}
                 />
                 <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
               </React.Fragment>
@@ -59,7 +59,7 @@ export default async function HireTeamPage() {
             break;
           case "benefits":
             component = (
-              <HireBenefits 
+              <HireBenefits
                 title={block.title}
                 description={block.subtitle}
                 benefitsTitle={block.paragraph}
@@ -82,7 +82,7 @@ export default async function HireTeamPage() {
               ]
             };
             component = (
-              <HireServices 
+              <HireServices
                 heading={block.title}
                 description={block.subtitle}
                 servicesList={servicesList}
@@ -103,8 +103,8 @@ export default async function HireTeamPage() {
               features: plan.features || []
             }));
             component = (
-              <HirePricing 
-                data={pricingPlans} 
+              <HirePricing
+                data={pricingPlans}
                 bottomCtaText={block.bottomCtaText}
                 bottomCtaUrl={block.bottomCtaUrl}
               />
@@ -112,7 +112,7 @@ export default async function HireTeamPage() {
             break;
           case "interview":
             component = (
-              <HireInterview 
+              <HireInterview
                 badge={block.badge}
                 heading={block.title}
                 description={block.subtitle}
@@ -135,7 +135,7 @@ export default async function HireTeamPage() {
               btnUrl: item.btnUrl || "#contact-form"
             }));
             component = (
-              <HireStories 
+              <HireStories
                 heading={block.title}
                 subheading={block.subtitle}
                 data={storiesList}
@@ -144,7 +144,7 @@ export default async function HireTeamPage() {
             break;
           case "expertise":
             component = (
-              <HireExpertise 
+              <HireExpertise
                 heading={block.title}
                 description={block.subtitle}
                 expertiseList={block.items || []}
@@ -153,7 +153,7 @@ export default async function HireTeamPage() {
             break;
           case "augmentation":
             component = (
-              <HireAugmentation 
+              <HireAugmentation
                 row1Title={block.row1Title}
                 row1P1={block.row1P1}
                 row1P2={block.row1P2}
@@ -169,14 +169,14 @@ export default async function HireTeamPage() {
             break;
           case "faqs":
             component = (
-              <HireFAQ 
-                data={block.items || []} 
+              <HireFAQ
+                data={block.items || []}
               />
             );
             break;
           case "cta":
             component = (
-              <HireCTA 
+              <HireCTA
                 title={block.title}
                 subtitle={block.subtitle}
                 btnText={block.buttonText || block.btnText}
