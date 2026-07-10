@@ -154,7 +154,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
           {/* Right Column - Image */}
           <div className="lg:col-span-5 flex justify-center items-center relative w-full mt-10 lg:mt-0">
             <div className="relative w-full max-w-[580px] rounded-[19px] md:rounded-[27px] overflow-hidden shadow-lg flex items-center justify-center">
-              {(image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
+              {(image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react") && !dynamicTitle.toLowerCase().includes("native"))) ? (
                 <img
                   src="/ReactJS Developer.svg"
                   alt="React Developer Workspace"
