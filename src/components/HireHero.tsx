@@ -48,7 +48,7 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
         dynamicExtraDesc = textBlocks[2]?.data?.text;
       }
     }
-    
+
     if (dynamicTitle) {
       dynamicTitle = dynamicTitle.replace(/(AR\/VR|ReactJS)/gi, '<span class="text-[#4B56D2]">$1</span>');
     }
@@ -66,123 +66,123 @@ export function HireHero({ btn1Text, btn1Url, btn2Text, btn2Url, image, data, ch
       <div className="relative z-10 w-full max-w-[1358px] mx-auto pt-16 md:pt-48 pb-10 md:pb-16 px-6 md:px-[55px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
 
-        {/* Left Column - Content */}
-        <div className="lg:col-span-7 flex flex-col justify-center items-start text-left">
+          {/* Left Column - Content */}
+          <div className="lg:col-span-7 flex flex-col justify-center items-start text-left">
 
-          {/* Badge Row */}
-          <div className="flex flex-wrap gap-2.5 mb-6">
-            <span
-              className="inline-flex items-center justify-center whitespace-nowrap px-4 py-1.5 rounded-full border border-zinc-200 bg-zinc-100 font-bold text-xs tracking-wide uppercase text-zinc-700 h-[30px]"
-            >
-              Plan & Pricing
-            </span>
-            <span
-              className="inline-flex items-center justify-center whitespace-nowrap px-4 py-1.5 rounded-full border border-zinc-200 bg-zinc-100 font-bold text-xs tracking-wide uppercase text-zinc-700 h-[30px]"
-            >
-              React Case Study
-            </span>
-            <span
-              className="inline-flex items-center justify-center whitespace-nowrap px-4 py-1.5 rounded-full border border-[#4B56D2]/20 bg-[#4B56D2]/10 font-bold text-xs tracking-wide uppercase text-[#4B56D2] h-[30px]"
-            >
-              15 Days Risk Free Trial
-            </span>
-          </div>
-
-          {/* Heading */}
-          {dynamicTitle ? (
-            <h1
-              className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6"
-              dangerouslySetInnerHTML={{ __html: dynamicTitle }}
-            />
-          ) : (
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
-              Hire <br />
+            {/* Badge Row */}
+            <div className="flex flex-wrap gap-2.5 mb-6">
               <span
-                className="bg-gradient-to-r from-[#4B56D2] to-[#4B56D2] bg-clip-text text-transparent"
+                className="inline-flex items-center justify-center whitespace-nowrap px-4 py-1.5 rounded-full border border-zinc-200 bg-zinc-100 font-bold text-xs tracking-wide uppercase text-zinc-700 h-[30px]"
               >
-                ReactJS Developer
+                Plan & Pricing
               </span>
-            </h1>
-          )}
-
-          {/* Paragraph description */}
-          {dynamicDesc ? (
-            <>
-              <p
-                className="max-w-[620px] mb-6 text-xl leading-[32.5px] text-[#52525C]"
-                dangerouslySetInnerHTML={{ __html: dynamicDesc }}
-              />
-              {dynamicExtraDesc && (
-                <p
-                  className="max-w-[620px] mb-10 text-[17px] leading-[28px] text-[#6b7280]"
-                  dangerouslySetInnerHTML={{ __html: dynamicExtraDesc }}
-                />
-              )}
-            </>
-          ) : (
-            <p
-              className="max-w-[620px] mb-10 text-xl leading-[32.5px] text-[#52525C]"
-            >
-              Looking to hire dedicated ReactJS developers? Get access to a<br className="hidden md:block" />
-              skilled, experienced, and cost-effective team to build cutting-<br className="hidden md:block" />
-              edge software solutions tailored to your business needs.
-            </p>
-          )}
-
-          {/* Call to Action Buttons */}
-          <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 w-full sm:w-auto">
-
-            {/* Hire Now button */}
-            <Link
-              href={btn1Url || "#contact-form"}
-              className="btn-ripple inline-flex items-center justify-center text-white shadow-[0_4px_20px_rgba(21,93,252,0.35)] hover:shadow-lg transition-shadow duration-300 bg-[#4B56D2] w-full sm:w-auto min-w-[185px] h-[56px] px-8 rounded-full font-bold text-base whitespace-nowrap flex-shrink-0"
-            >
-              <span>{btn1Text || "Hire Now"}</span>
-              <svg
-                className="w-4 h-4 ml-2 flex-shrink-0"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3.5"
-                viewBox="0 0 24 24"
+              <span
+                className="inline-flex items-center justify-center whitespace-nowrap px-4 py-1.5 rounded-full border border-zinc-200 bg-zinc-100 font-bold text-xs tracking-wide uppercase text-zinc-700 h-[30px]"
               >
-                <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
-              </svg>
-            </Link>
+                React Case Study
+              </span>
+              <span
+                className="inline-flex items-center justify-center whitespace-nowrap px-4 py-1.5 rounded-full border border-[#4B56D2]/20 bg-[#4B56D2]/10 font-bold text-xs tracking-wide uppercase text-[#4B56D2] h-[30px]"
+              >
+                15 Days Risk Free Trial
+              </span>
+            </div>
+
+            {/* Heading */}
+            {dynamicTitle ? (
+              <h1
+                className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6"
+                dangerouslySetInnerHTML={{ __html: dynamicTitle }}
+              />
+            ) : (
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-slate-900 leading-[1.1] mb-6">
+                Hire <br />
+                <span
+                  className="bg-gradient-to-r from-[#4B56D2] to-[#4B56D2] bg-clip-text text-transparent"
+                >
+                  ReactJS Developer
+                </span>
+              </h1>
+            )}
+
+            {/* Paragraph description */}
+            {dynamicDesc ? (
+              <>
+                <p
+                  className="max-w-[620px] mb-6 text-xl leading-[32.5px] text-[#52525C]"
+                  dangerouslySetInnerHTML={{ __html: dynamicDesc }}
+                />
+                {dynamicExtraDesc && (
+                  <p
+                    className="max-w-[620px] mb-10 text-[17px] leading-[28px] text-[#6b7280]"
+                    dangerouslySetInnerHTML={{ __html: dynamicExtraDesc }}
+                  />
+                )}
+              </>
+            ) : (
+              <p
+                className="max-w-[620px] mb-10 text-xl leading-[32.5px] text-[#52525C]"
+              >
+                Looking to hire dedicated ReactJS developers? Get access to a<br className="hidden md:block" />
+                skilled, experienced, and cost-effective team to build cutting-<br className="hidden md:block" />
+                edge software solutions tailored to your business needs.
+              </p>
+            )}
+
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-4 w-full sm:w-auto">
+
+              {/* Hire Now button */}
+              <Link
+                href={btn1Url || "#contact-form"}
+                className="btn-ripple inline-flex items-center justify-center text-white shadow-[0_4px_20px_rgba(21,93,252,0.35)] hover:shadow-lg transition-shadow duration-300 bg-[#4B56D2] w-full sm:w-auto min-w-[185px] h-[56px] px-8 rounded-full font-bold text-base whitespace-nowrap flex-shrink-0"
+              >
+                <span>{btn1Text || "Hire Now"}</span>
+                <svg
+                  className="w-4 h-4 ml-2 flex-shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3.5"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </Link>
+
+            </div>
 
           </div>
 
-        </div>
-
-        {/* Right Column - Image */}
-        <div className="lg:col-span-5 flex justify-center items-center relative w-full mt-10 lg:mt-0">
-          {(!image || image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
-            <img
-              src="/ReactJS%20Developer.svg"
-              alt="React Developer Workspace"
-              className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
-            />
-          ) : (image === "/NextJS Developer.svg" || image === "/NextJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("next"))) ? (
-            <img
-              src="/NextJS%20Developer.svg"
-              alt="NextJS Developer Workspace"
-              className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
-            />
-          ) : (image === "/Angular Developer.svg" || image === "/Angular%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("angular"))) ? (
-            <img
-              src="/Angular%20Developer.svg"
-              alt="Angular Developer Workspace"
-              className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
-            />
-          ) : (
-            <div className="relative w-full max-w-[580px] rounded-[19px] md:rounded-[27px] overflow-hidden shadow-lg flex items-center justify-center">
+          {/* Right Column - Image */}
+          <div className="lg:col-span-5 flex justify-center items-center relative w-full mt-10 lg:mt-0">
+            {(!image || image === "/ReactJS Developer.svg" || image === "/ReactJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("react"))) ? (
               <img
-                src={image}
-                alt="Developer Workspace"
-                className="w-full h-auto object-cover"
+                src="/ReactJS%20Developer.svg"
+                alt="React Developer Workspace"
+                className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
               />
-            </div>
-          )}
-        </div>
+            ) : (image === "/NextJS Developer.svg" || image === "/NextJS%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("next"))) ? (
+              <img
+                src="/NextJS%20Developer.svg"
+                alt="NextJS Developer Workspace"
+                className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
+              />
+            ) : (image === "/Angular Developer.svg" || image === "/Angular%20Developer.svg" || (dynamicTitle && dynamicTitle.toLowerCase().includes("angular"))) ? (
+              <img
+                src="/Angular%20Developer.svg"
+                alt="Angular Developer Workspace"
+                className="w-full max-w-[580px] h-auto object-contain drop-shadow-2xl"
+              />
+            ) : (
+              <div className="relative w-full max-w-[580px] rounded-[19px] md:rounded-[27px] overflow-hidden shadow-lg flex items-center justify-center">
+                <img
+                  src={image}
+                  alt="Developer Workspace"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            )}
+          </div>
 
         </div>
 

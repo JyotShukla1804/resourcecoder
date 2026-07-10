@@ -53,10 +53,10 @@ export function PartnerBenefits() {
   return (
     <section className="w-full bg-[#f8f9ff] py-24 relative overflow-hidden">
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        
+
         <div className="text-left mb-16 max-w-3xl">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
-            The ResourceCoders Edge. <br className="hidden md:block"/>
+            The ResourceCoders Edge. <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-500">
               Top-Tier Partner Benefits
             </span>
@@ -68,7 +68,7 @@ export function PartnerBenefits() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {benefits.map((benefit, index) => (
-            <motion.div 
+            <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.95 }}
               whileInView={{ opacity: 1, scale: 1 }}
