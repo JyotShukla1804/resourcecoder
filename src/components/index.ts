@@ -54,3 +54,4 @@ export * from "./development-process/DevProcessFAQ";
 export * from "./awards";
 export { FloatingContact } from "./FloatingContact";
 export { HeroBackground } from "./HeroBackground";
+export { AnimatedMeshBackground } from "./AnimatedMeshBackground";
