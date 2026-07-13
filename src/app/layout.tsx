@@ -27,14 +27,16 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable} ${geistMono.variable} h-full w-full overflow-x-hidden antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-50 text-[#0f172a]">
-        <Navbar />
-        <main className="flex-1">
-          {children}
-        </main>
-        <Footer />
+      <body className="min-h-full w-full overflow-x-hidden flex flex-col bg-slate-50 text-[#0f172a]">
+        <div className="flex flex-col min-h-screen w-full overflow-x-hidden relative">
+          <Navbar />
+          <main className="flex-1">
+            {children}
+          </main>
+          <Footer />
+        </div>
         <FloatingContact />
       </body>
     </html>
