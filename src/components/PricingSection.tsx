@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export function PricingSection() {
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative z-10 max-w-[1400px] mx-auto bg-white">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-12 md:py-16 relative z-10 max-w-[1358px] mx-auto bg-white">
       {/* Section Header */}
       <div className="max-w-4xl mx-auto text-center mb-10">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] mb-3 leading-[1.15]">

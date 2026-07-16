@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
-import { TrustedBy, TechSection, SpecializationSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, WhyKrazio, SuccessStoriesSection } from "@/components";
+import { TrustedBy, TechSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, HomeProcess, HomeComparison, HomeComparisonTable } from "@/components";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CTASection } from "@/components/CTASection";
 import { supabase } from "@/lib/supabase";
@@ -27,8 +27,6 @@ export default async function Home() {
   }
 
   const homeBlocks = (page?.content as any)?.blocks || [];
-  const whyKrazioBlock = homeBlocks.find((b: any) => b.type === "whyKrazio");
-  const whyKrazioImage = whyKrazioBlock?.image;
 
   const heroSection = dbSections.find(s => s.type === "hero");
   const heroContent = heroSection?.section_content?.[0]?.content;
@@ -139,11 +137,22 @@ export default async function Home() {
       {/* Trusted By Banner */}
       <TrustedBy />
 
+      {/* Home Process Section */}
+      <HomeProcess />
+
+      {/* Home Comparison Section */}
+      <HomeComparison />
+
+      {/* Testimonials Section */}
+      <TestimonialsSection />
+
+      {/* How We Compare Section */}
+      <HomeComparisonTable />
+
       {/* Tech Section */}
       <TechSection />
 
-      {/* Specialization Section */}
-      <SpecializationSection />
+
 
       {/* Hiring Models Section */}
       <HiringModels />
@@ -157,14 +166,7 @@ export default async function Home() {
       {/* Hiring Process Section */}
       <HiringProcessSection />
 
-      {/* Why Krazio Section */}
-      <WhyKrazio image={whyKrazioImage} />
 
-      {/* Success Stories Section */}
-      <SuccessStoriesSection />
-
-      {/* Testimonials Section */}
-      <TestimonialsSection />
 
       {/* CTA Section */}
       <CTASection />

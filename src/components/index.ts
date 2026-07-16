@@ -55,3 +55,7 @@ export * from "./awards";
 export { FloatingContact } from "./FloatingContact";
 export { HeroBackground } from "./HeroBackground";
 export { AnimatedMeshBackground } from "./AnimatedMeshBackground";
+export { StickyBanner } from "./StickyBanner";
+export { HomeProcess } from "./HomeProcess";
+export { HomeComparison } from "./HomeComparison";
+export { HomeComparisonTable } from "./HomeComparisonTable";

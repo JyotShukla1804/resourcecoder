@@ -32,7 +32,7 @@ export function SpecializationSection() {
   ];
 
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10 max-w-[1400px] mx-auto overflow-visible">
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-20 md:py-32 relative z-10 max-w-[1358px] mx-auto overflow-visible">
       {/* Subtle Background Glows */}
       <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-[#4B56D2]/5 rounded-full blur-[120px] pointer-events-none" />
       <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[120px] pointer-events-none" />

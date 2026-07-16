@@ -53,7 +53,7 @@ export function TestimonialsSection() {
       {/* Decorative Ambient Background Glows */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-blue-600/5 rounded-full blur-[120px] pointer-events-none" />
 
-      <div className="max-w-[1400px] mx-auto w-full relative z-10">
+      <div className="max-w-[1358px] mx-auto w-full relative z-10">
         {/* Header */}
         <div className="max-w-4xl mx-auto text-center mb-16 px-4">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-6 leading-[1.2]">

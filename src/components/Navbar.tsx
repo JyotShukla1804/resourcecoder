@@ -136,7 +136,7 @@ export function Navbar() {
   );
 
   return (
-    <div className="absolute top-[22px] left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 flex justify-center pointer-events-none">
+    <div className="fixed top-[22px] left-0 right-0 z-50 w-full px-4 sm:px-6 lg:px-8 flex justify-center pointer-events-none">
       <div
         className="w-full max-w-[1358px] transition-all duration-300 pointer-events-auto opacity-100"
       >
@@ -320,6 +320,17 @@ export function Navbar() {
                         );
                       })}
                     </ul>
+                    {category.title === "Frontend" && (
+                      <div className="mt-6">
+                        <Link
+                          href="/calculate-salary"
+                          onClick={() => setIsHireTeamDropdownOpen(false)}
+                          className="btn-ripple inline-flex items-center justify-center w-full h-[40px] rounded-full text-white font-bold text-[13px] tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none bg-[#4B56D2]"
+                        >
+                          Lets calculate salary
+                        </Link>
+                      </div>
+                    )}
                   </div>
                 ))}
               </div>
@@ -581,6 +592,17 @@ export function Navbar() {
                                         );
                                       })}
                                     </div>
+                                    {category.title === "Frontend" && (
+                                      <div className="mt-4 px-2">
+                                        <Link
+                                          href="/calculate-salary"
+                                          onClick={() => setIsOpen(false)}
+                                          className="btn-ripple inline-flex items-center justify-center w-full py-2 rounded-full text-white font-bold text-[12px] tracking-wider shadow-sm hover:shadow-md transition-shadow duration-300 select-none bg-[#4B56D2]"
+                                        >
+                                          Lets calculate salary
+                                        </Link>
+                                      </div>
+                                    )}
                                   </div>
                                 ))}
                               </div>
