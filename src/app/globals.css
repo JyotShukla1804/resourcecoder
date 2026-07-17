@@ -141,6 +141,16 @@ body {
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
 
+@keyframes shimmer {
+  100% { transform: translateX(100%); }
+}
+
+@keyframes gradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
 .grid-floor {
   background-image: linear-gradient(rgba(75, 86, 210, 0.08) 1px, transparent 1px),
                     linear-gradient(90deg, rgba(75, 86, 210, 0.08) 1px, transparent 1px);

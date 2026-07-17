@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, ChevronDown, Send, Star, Award, TrendingUp, Globe } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 
 const countries = [
   { name: "Afghanistan", code: "AF", dial_code: "+93" }, { name: "Albania", code: "AL", dial_code: "+355" }, { name: "Algeria", code: "DZ", dial_code: "+213" },
@@ -138,8 +139,31 @@ export function FloatingContact() {
 
   return (
     <>
-      {/* Floating Action Button */}
-      <div className="fixed bottom-[100px] right-6 z-[60]">
+      {/* Floating Action Buttons */}
+      <div className="fixed bottom-[100px] right-6 z-[60] flex flex-col gap-4">
+        <Link
+          href="https://wa.me/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="w-14 h-14 bg-gradient-to-tr from-[#4B56D2] to-[#60A5FA] hover:shadow-[0_0_20px_rgba(75,86,210,0.6)] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
+          aria-label="Chat on WhatsApp"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="w-7 h-7"
+          >
+            <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+            <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+          </svg>
+        </Link>
         <button
           id="floating-contact-button"
           onClick={() => setIsOpen(true)}

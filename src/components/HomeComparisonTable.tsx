@@ -77,9 +77,9 @@ export function HomeComparisonTable() {
         
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <p className="text-[13px] font-bold tracking-widest text-[#4B56D2] uppercase mb-3">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-[#f0f4ff] border border-[#d6e0ff] text-[#4B56D2] font-bold text-[11px] sm:text-xs tracking-widest uppercase mb-4">
             How We Compare
-          </p>
+          </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
             Why Companies Choose K Res .coder Over Other Options
           </h2>

@@ -59,3 +59,7 @@ export { StickyBanner } from "./StickyBanner";
 export { HomeProcess } from "./HomeProcess";
 export { HomeComparison } from "./HomeComparison";
 export { HomeComparisonTable } from "./HomeComparisonTable";
+export { HomeCostCalculator } from "./HomeCostCalculator";
+export * from "./StatsCards";
+export * from "./HomeITRecruitment";
+export * from "./HomeEOR";

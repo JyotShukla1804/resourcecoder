@@ -6,8 +6,66 @@ import { ChevronDown, CheckCircle2, ChevronRight, Calculator, HelpCircle, Plus, 
 import { motion, AnimatePresence } from 'framer-motion';
 import { CTASection } from '@/components/CTASection';
 
+function CustomSelect({ value, options, onChange, label }: { value: string, options: string[], onChange: (val: string) => void, label: string }) {
+  const [isOpen, setIsOpen] = React.useState(false);
+  const selectRef = React.useRef<HTMLDivElement>(null);
+
+  React.useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (selectRef.current && !selectRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div className="space-y-2 relative" ref={selectRef}>
+      <label className="text-sm font-bold text-slate-700 ml-1">{label}</label>
+      <button 
+        onClick={() => setIsOpen(!isOpen)}
+        type="button"
+        className={`w-full bg-slate-50 border ${isOpen ? 'border-[#4B56D2] ring-2 ring-[#4B56D2]/20' : 'border-slate-200'} rounded-2xl py-3.5 px-4 text-left text-[15px] text-slate-900 font-semibold transition-all flex justify-between items-center outline-none hover:border-[#4B56D2]/50`}
+      >
+        <span className="truncate">{value}</span>
+        <ChevronDown className={`w-5 h-5 text-slate-400 transition-transform shrink-0 ${isOpen ? 'rotate-180 text-[#4B56D2]' : ''}`} />
+      </button>
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div 
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            transition={{ duration: 0.15 }}
+            className="absolute z-50 w-full mt-2 bg-white border border-slate-100 rounded-2xl shadow-[0_10px_40px_rgba(0,0,0,0.08)] overflow-hidden max-h-60 overflow-y-auto"
+          >
+            {options.map((opt) => (
+              <div 
+                key={opt} 
+                onClick={() => { onChange(opt); setIsOpen(false); }} 
+                className={`px-4 py-3 cursor-pointer text-[15px] font-medium transition-colors hover:bg-[#4B56D2] hover:text-white ${value === opt ? 'bg-[#4B56D2] text-white' : 'text-slate-700'}`}
+              >
+                {opt}
+              </div>
+            ))}
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </div>
+  );
+}
+
 export default function CalculateSalaryPage() {
   const [activeFaq, setActiveFaq] = useState<number | null>(0);
+
+  useEffect(() => {
+    // Force scroll to top on mount, using a small timeout to bypass any Next.js scroll restoration quirks
+    const timer = setTimeout(() => {
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+    }, 50);
+    return () => clearTimeout(timer);
+  }, []);
   
   const [experience, setExperience] = useState('2-4 years');
   const [techstack, setTechstack] = useState('React.js Developer');
@@ -20,6 +78,7 @@ export default function CalculateSalaryPage() {
       case 'EURO': return '€';
       case 'AED': return 'AED';
       case 'SGD': return 'S$';
+      case 'AUD': return 'A$';
       case 'USD': default: return '$';
     }
   };
@@ -29,6 +88,7 @@ export default function CalculateSalaryPage() {
       case 'EURO': return 0.92;
       case 'AED': return 3.67;
       case 'SGD': return 1.34;
+      case 'AUD': return 1.52;
       case 'USD': default: return 1;
     }
   };
@@ -120,106 +180,145 @@ export default function CalculateSalaryPage() {
       </div>
 
       {/* Main Content Container */}
-      <div className="max-w-[1358px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col lg:flex-row gap-8 lg:gap-12 relative z-10">
+      <div className="max-w-[1358px] mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 md:py-16 flex flex-col gap-10 relative z-10">
          
-         {/* Left Column (Main Content) */}
-         <div className="flex-1 flex flex-col gap-10">
+         {/* Calculator (Top Section) */}
+         <div className="w-full">
             
             {/* Calculator Card */}
-            <div className="bg-white rounded-[24px] shadow-sm border border-slate-100 p-6 md:p-10">
-              <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-[#4B56D2]/10 flex items-center justify-center shrink-0">
-                  <Calculator className="w-5 h-5 text-[#4B56D2]" />
+            <div className="bg-white rounded-[32px] shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-slate-200 p-6 md:p-10">
+              <div className="flex items-center justify-center gap-3 mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-[#4B56D2]/10 flex items-center justify-center shrink-0">
+                  <Calculator className="w-6 h-6 text-[#4B56D2]" />
                 </div>
-                <h2 className="text-2xl font-bold text-slate-900">Calculate Your Costs</h2>
               </div>
-              <p className="text-slate-500 mb-8 text-[15px] leading-relaxed">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-center text-slate-900 mb-4 tracking-tight">
+                Calculate your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Salary</span>
+              </h2>
+              <p className="text-slate-500 text-center text-[15px] leading-relaxed mb-10 max-w-lg mx-auto">
                 Enter the gross salary to see a full breakdown of mandatory contributions required by local labor laws.
               </p>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-                {/* Experience */}
-                <div>
-                  <label className="block text-[14px] font-bold text-slate-700 mb-2">Experience</label>
-                  <div className="relative">
-                    <select
+              <div className="grid grid-cols-1 xl:grid-cols-12 gap-8 xl:gap-12">
+                {/* Form Section */}
+                <div className="xl:col-span-7 flex flex-col gap-6">
+                  
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <CustomSelect
+                      label="Experience Level"
                       value={experience}
-                      onChange={(e) => {
-                        setExperience(e.target.value);
+                      options={experienceOptions}
+                      onChange={(val) => {
+                        setExperience(val);
                         setIsCalculated(false);
                       }}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 pr-10 text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-[#4B56D2]/50 focus:border-[#4B56D2] transition-all appearance-none cursor-pointer"
-                    >
-                      {experienceOptions.map((exp) => (
-                        <option key={exp} value={exp}>
-                          {exp}
-                        </option>
-                      ))}
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
-                  </div>
-                </div>
+                    />
 
-                {/* Techstack */}
-                <div>
-                  <label className="block text-[14px] font-bold text-slate-700 mb-2">Techstack</label>
-                  <div className="relative">
-                    <select
+                    <CustomSelect
+                      label="Tech Stack"
                       value={techstack}
-                      onChange={(e) => setTechstack(e.target.value)}
-                      className="w-full bg-slate-50 border border-slate-200 rounded-xl py-3 px-4 pr-10 text-slate-900 font-semibold focus:outline-none focus:ring-2 focus:ring-[#4B56D2]/50 focus:border-[#4B56D2] transition-all appearance-none cursor-pointer"
-                    >
-                      {techStackOptions.map((tech) => (
-                        <option key={tech} value={tech}>
-                          {tech}
-                        </option>
+                      options={techStackOptions}
+                      onChange={setTechstack}
+                    />
+                  </div>
+
+                  <div className="space-y-3 mt-2">
+                    <label className="text-sm font-bold text-slate-700 ml-1">Currency</label>
+                    <div className="flex flex-wrap gap-3">
+                      {['USD', 'EURO', 'AUD', 'SGD', 'AED'].map((c) => (
+                        <button
+                          key={c}
+                          onClick={() => setCurrency(c)}
+                          className={`px-5 py-2.5 rounded-xl text-sm font-bold transition-all duration-300 ${
+                            currency === c 
+                              ? 'bg-[#4B56D2] text-white shadow-md shadow-[#4B56D2]/30 scale-105' 
+                              : 'bg-slate-50 text-slate-500 border border-slate-200 hover:bg-slate-100 hover:text-slate-700'
+                          }`}
+                        >
+                          {c}
+                        </button>
                       ))}
-                    </select>
-                    <ChevronDown className="absolute right-4 top-1/2 -translate-y-1/2 w-5 h-5 text-slate-400 pointer-events-none" />
+                    </div>
+                  </div>
+
+                  <button 
+                    onClick={handleCalculate}
+                    className="btn-ripple mt-4 w-full bg-[#4B56D2] text-white rounded-2xl py-4 font-bold text-lg tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
+                  >
+                    Calculate Now
+                  </button>
+                </div>
+
+                {/* Results Section */}
+                <div className="xl:col-span-5 flex flex-col justify-center">
+                  <div className="bg-[#4B56D2] rounded-[24px] p-6 lg:p-8 flex flex-col relative overflow-hidden shadow-xl shadow-[#4B56D2]/20 h-fit self-center w-full">
+                    <div className="absolute top-0 right-0 w-40 h-40 bg-gradient-to-br from-white/20 to-transparent rounded-full blur-[30px] -mr-10 -mt-10" />
+                    
+                    <h3 className="text-lg font-medium text-indigo-100 mb-2 relative z-10">Estimated Hourly Rate</h3>
+                    
+                    <AnimatePresence mode="wait">
+                      {isCalculated && cost ? (
+                        <motion.div
+                          key="result"
+                          initial={{ opacity: 0, y: 20 }}
+                          animate={{ opacity: 1, y: 0 }}
+                          exit={{ opacity: 0, y: -20 }}
+                          className="relative z-10"
+                        >
+                          <div className="flex flex-wrap items-baseline gap-x-2 mb-4">
+                            <div className="flex items-baseline gap-x-1.5 whitespace-nowrap">
+                              <span className={`${getCurrencySymbol(currency).length > 2 ? 'text-3xl md:text-4xl text-white' : 'text-5xl md:text-5xl text-white'} font-extrabold tracking-tighter`}>
+                                {getCurrencySymbol(currency)}
+                              </span>
+                              <span className="text-5xl md:text-5xl font-extrabold text-white tracking-tighter">
+                                {cost}
+                              </span>
+                            </div>
+                            <span className="text-xl text-indigo-200 font-medium whitespace-nowrap">/ hr</span>
+                          </div>
+                          
+                          <div className="space-y-4 pt-6 border-t border-white/20">
+                            <div className="flex justify-between items-center text-sm">
+                              <span className="text-indigo-100">Selected Role</span>
+                              <span className="font-semibold text-white">{techstack}</span>
+                            </div>
+                            <div className="flex justify-between items-center text-sm">
+                              <span className="text-indigo-100">Experience</span>
+                              <span className="font-semibold text-white">{experience}</span>
+                            </div>
+                          </div>
+                        </motion.div>
+                      ) : (
+                        <motion.div
+                          key="empty"
+                          initial={{ opacity: 0 }}
+                          animate={{ opacity: 1 }}
+                          exit={{ opacity: 0 }}
+                          className="relative z-10 py-6"
+                        >
+                          <div className="w-16 h-16 rounded-full bg-white/10 flex items-center justify-center mb-4 border border-white/20">
+                            <span className="text-3xl font-bold text-white">{getCurrencySymbol(currency)}</span>
+                          </div>
+                          <p className="text-indigo-100 font-medium">Fill in the details and click calculate to see your personalized estimate.</p>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
+                    
+                    <div className="mt-6 relative z-10">
+                      <p className="text-[11px] text-indigo-200 italic leading-tight">
+                        * Rates shown are estimates based on average market data. Actual costs may vary depending on specific requirements and currency fluctuations.
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
-
-              <div className="mb-8">
-
-                {/* Currency */}
-                <div>
-                  <label className="block text-[14px] font-bold text-slate-700 mb-3">Currency</label>
-                  <div className="flex flex-wrap gap-4">
-                    {['SGD', 'USD', 'AED', 'EURO'].map((c) => (
-                      <label 
-                        key={c} 
-                        onClick={() => setCurrency(c)}
-                        className="flex items-center gap-2 cursor-pointer group"
-                      >
-                        <div className={`w-5 h-5 rounded-full border-[2px] flex items-center justify-center transition-colors ${currency === c ? 'border-[#4B56D2]' : 'border-slate-300 group-hover:border-[#4B56D2]/50'}`}>
-                          {currency === c && <div className="w-2.5 h-2.5 bg-[#4B56D2] rounded-full" />}
-                        </div>
-                        <span className="text-slate-600 font-medium text-[15px]">{c}</span>
-                      </label>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              <div className="flex flex-col sm:flex-row items-center gap-6 mt-2">
-                <button 
-                  onClick={handleCalculate}
-                  className="btn-ripple w-full sm:w-auto px-8 py-3.5 bg-[#4B56D2] text-white rounded-xl font-bold text-[15px] shadow-md shadow-[#4B56D2]/20 hover:shadow-lg hover:shadow-[#4B56D2]/30 transition-all"
-                >
-                  Calculate Costs
-                </button>
-                {isCalculated && cost && (
-                  <div className="w-full sm:w-auto bg-[#4B56D2]/10 text-[#4B56D2] px-6 py-3 rounded-xl font-extrabold text-lg border border-[#4B56D2]/20 whitespace-nowrap shadow-sm text-center sm:text-left">
-                    Estimated Cost: {getCurrencySymbol(currency)} {cost}/hr
-                  </div>
-                )}
-              </div>
-
-              <p className="text-slate-400 text-[12px] mt-6 italic">
-                Disclaimer: This calculator uses a fixed exchange rate for illustration purposes. Actual costs may vary based on live rates and exact requirements.
-              </p>
             </div>
+         </div>
+
+         {/* Lower Section (FAQs and Sidebars) */}
+         <div className="flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+            {/* Left Column (FAQs) */}
+            <div className="flex-1">
 
             {/* FAQs */}
             <div className="bg-white rounded-[24px] shadow-sm border border-slate-100 p-6 md:p-10">
@@ -275,36 +374,7 @@ export default function CalculateSalaryPage() {
          {/* Right Column (Sidebars) */}
          <div className="w-full lg:w-[380px] flex flex-col gap-6">
             
-            {/* Top Scale CTA */}
-            <div className="bg-[#0f172a] rounded-[24px] p-8 text-white relative overflow-hidden group shadow-lg">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[#4B56D2] rounded-full blur-[60px] opacity-40 group-hover:opacity-60 transition-opacity" />
-              <div className="absolute bottom-[-20%] left-[-10%] w-40 h-40 bg-teal-500 rounded-full blur-[80px] opacity-20" />
-              
-              <div className="relative z-10">
-                <h3 className="text-2xl font-extrabold mb-3 tracking-tight">Ready to Scale with Top 5% Talent?</h3>
-                <p className="text-slate-300 text-[14px] mb-6">Access 10,000+ pre-vetted candidates ready to start working.</p>
-                <Link href="/hire-team" className="inline-flex items-center text-[14px] font-bold text-white hover:text-teal-400 transition-colors">
-                  Get Started Today <ChevronRight className="w-4 h-4 ml-1" />
-                </Link>
-              </div>
-            </div>
 
-            {/* Recruitment Services */}
-            <div className="bg-white rounded-[24px] border border-slate-100 shadow-sm p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-slate-700" />
-                </div>
-                <h3 className="text-[15px] font-bold text-slate-900">Our Recruitment Services</h3>
-              </div>
-              <ul className="space-y-3">
-                {['Hire Top Developers', 'Build a Dedicated Tech Team', 'Talent Sourcing & Screening', 'Staff Relocation Service'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-500 text-[14px] hover:text-[#4B56D2] transition-colors cursor-pointer">
-                    <ChevronRight className="w-3.5 h-3.5 opacity-60" /> {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
 
             {/* EOR Services */}
             <div className="bg-white rounded-[24px] border border-slate-100 shadow-sm p-6">
@@ -341,6 +411,7 @@ export default function CalculateSalaryPage() {
             </div>
 
          </div>
+        </div>
       </div>
 
       {/* Bottom CTA */}

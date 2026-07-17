@@ -4,30 +4,65 @@ import Link from "next/link";
 export function TestimonialsSection() {
   const testimonials = [
     {
-      text: '"Easy communication, high-quality project implementation, experienced tech experts, and meeting deadlines were amazing! With the help of the Krazio\'s team, the customer made a successful agreement with their end client for a long-term partnership."',
-      author: "Markiyan Podlyashet",
+      text: '"They took the time to understand how our technicians work in the field and adapted the AR experience accordingly."',
+      author: "Amerit Fleet Solution",
+      role: "Product Manager",
+    },
+    {
+      text: '"Communication was clear and proactive."',
+      author: "Icarus Digital Marketing",
+      role: "Senior Project Manager",
+    },
+    {
+      text: '"Krazio approached the engagement with a strong problem-solving mindset."',
+      author: "Trusense Ltd",
+      role: "CEO",
+    },
+    {
+      text: '"Their ability to combine deep AI expertise with strong product thinking stood out."',
+      author: "Blooper",
+      role: "Chief Product Officer",
+    },
+    {
+      text: '"Their team consistently focused on delivering measurable business impact rather than just technical outputs."',
+      author: "Harvey",
+      role: "Product Manager",
+    },
+    {
+      text: '"Overall, our experience with Krazio Cloud Pvt. Ltd. was very positive."',
+      author: "Korporacja Wschód",
       role: "COO",
     },
     {
-      text: '"Krazio Cloud always looks for ways to make the relationship work for both sides. The client is satisfied with Krazio\'s communication skills, speed, and quality of work. They checked in with the client to ensure high-quality services."',
-      author: "Syrne Hayrapetyan",
-      role: "Relationship Manager",
+      text: '"They aligned solutions directly with our growth objectives."',
+      author: "Elab Education Italy",
+      role: "Director of Marketing & PR",
     },
     {
-      text: '"They contribute to the development of the client\'s business. Krazio did they work fast, and what is more important, well. This enabled the client to reach new heights in his business. Communication was nice and pleasant."',
-      author: "Sarkis Symovyan",
-      role: "CMO",
+      text: '"What impressed us most was their strong mix of strategic thinking and technical depth."',
+      author: "digalo | DIGITAL MARKETING",
+      role: "Head Of Visual Creation",
     },
     {
-      text: '"Working with Krazio has been a game-changer for our product scaling. Their engineers integrated seamlessly with our in-house team, delivering top-notch code and architectural insights ahead of schedule. Highly recommended!"',
-      author: "Elena Rostova",
-      role: "VP of Engineering",
+      text: '"Krazio Cloud Pvt. Ltd.\'s ability to translate AR/VR technology into user-friendly solutions stood out."',
+      author: "JIVARO Recruitment",
+      role: "CEO",
     },
     {
-      text: '"Krazio\'s dedication to quality and communication is unmatched. They helped us rebuild our legacy platform into a modern cloud-native app, saving us significant operational costs. Their expertise in React and AWS was crucial."',
-      author: "David Chen",
-      role: "Founder & CTO",
+      text: '"Krazio Cloud Pvt. Ltd. demonstrated excellent project management throughout the implementation."',
+      author: "1Strike.ai",
+      role: "CEO & Co-Founder",
     },
+    {
+      text: '"They adhered to the schedule rigorously, delivering key milestones on time and maintaining transparent communication."',
+      author: "Avvocato360 | Innovazione per l\'avvocato",
+      role: "CEO",
+    },
+    {
+      text: '"Krazio Cloud Pvt. Ltd. has been very supportive and professional."',
+      author: "Forhopp",
+      role: "CEO",
+    }
   ];
 
   // Duplicate the list to create a seamless infinite marquee effect
@@ -68,7 +103,6 @@ export function TestimonialsSection() {
 
         {/* Testimonials Infinite Marquee */}
         <div className="relative w-full overflow-hidden mb-16 py-4">
-
 
           {/* Scrolling Track */}
           <div 

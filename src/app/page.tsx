@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import Link from "next/link";
-import { TrustedBy, TechSection, HiringModels, PricingSection, HiringProcessSection, InterviewForm, HomeProcess, HomeComparison, HomeComparisonTable } from "@/components";
+import { TrustedBy, TechSection, HiringModels, HiringProcessSection, InterviewForm, HomeProcess, HomeComparison, HomeComparisonTable, HomeCostCalculator, StatsCards, HomeITRecruitment, HomeEOR } from "@/components";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { CTASection } from "@/components/CTASection";
 import { supabase } from "@/lib/supabase";
@@ -54,7 +54,7 @@ export default async function Home() {
     <div className="relative min-h-screen w-full bg-white flex flex-col items-center">
       {/* Hero Section Container with exact specs */}
       <section
-        className="relative w-full min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-24 flex flex-col justify-center items-center text-center z-10 transition-all duration-300 bg-[#f8f9ff] overflow-hidden"
+        className="relative w-full min-h-[600px] md:min-h-[861px] mx-auto pt-48 px-6 pb-40 flex flex-col justify-center items-center text-center z-10 transition-all duration-300 bg-[#f8f9ff] overflow-hidden"
       >
         {/* Unique Home Page Hero Background */}
         <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -134,8 +134,17 @@ export default async function Home() {
         </div>
       </section>
 
+      {/* Stats Cards Overlapping Section */}
+      <StatsCards />
+
       {/* Trusted By Banner */}
       <TrustedBy />
+
+      {/* IT Recruitment Section */}
+      <HomeITRecruitment />
+
+      {/* Employer of Record (EOR) Section */}
+      <HomeEOR />
 
       {/* Home Process Section */}
       <HomeProcess />
@@ -149,6 +158,9 @@ export default async function Home() {
       {/* How We Compare Section */}
       <HomeComparisonTable />
 
+      {/* Cost Calculator Section */}
+      <HomeCostCalculator />
+
       {/* Tech Section */}
       <TechSection />
 
@@ -157,8 +169,6 @@ export default async function Home() {
       {/* Hiring Models Section */}
       <HiringModels />
 
-      {/* Pricing Models Section */}
-      <PricingSection />
 
       {/* Interview Form Section */}
       <InterviewForm />
