@@ -75,10 +75,10 @@ export function HomeEOR() {
               <div className="flex flex-col gap-6">
                 
                 {/* Main Employee Card */}
-                <div className="bg-[#f2fcf5] rounded-2xl p-4 border border-[#e5f7eb] shadow-sm animate-float" style={{ animationDelay: '0.2s' }}>
+                <div className="bg-[#f0f4ff] rounded-2xl p-4 border border-[#d6e0ff] shadow-sm animate-float" style={{ animationDelay: '0.2s' }}>
                   <div className="w-full h-32 rounded-xl bg-slate-200 mb-4 overflow-hidden relative">
                     <img src="https://i.pravatar.cc/300?img=11" alt="Employee" className="w-full h-full object-cover" />
-                    <div className="absolute bottom-2 right-2 bg-green-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
+                    <div className="absolute bottom-2 right-2 bg-[#4B56D2] text-white text-[9px] font-bold px-2 py-0.5 rounded-full flex items-center gap-1 shadow-sm">
                       <div className="w-1.5 h-1.5 bg-white rounded-full animate-pulse" /> Active
                     </div>
                   </div>
