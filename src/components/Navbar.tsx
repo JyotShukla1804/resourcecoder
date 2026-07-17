@@ -238,6 +238,7 @@ export function Navbar() {
                           { title: "Agile Mindset", slug: "agile-mindset" },
                           { title: "Awards & Recognition", slug: "awards" },
                           { title: "1:1 Startup Consulting", slug: "startup-consulting" },
+                          { title: "Case Studies", slug: "case-studies" },
                         ].map((page) => {
                           const isSubActive = pathname === `/${page.slug}`;
                           return (
@@ -631,6 +632,7 @@ export function Navbar() {
                                 { title: "Agile Mindset", slug: "agile-mindset" },
                                 { title: "Awards & Recognition", slug: "awards" },
                                 { title: "1:1 Startup Consulting", slug: "startup-consulting" },
+                                { title: "Case Studies", slug: "case-studies" },
                               ].map((page) => (
                                 <Link
                                   key={page.slug}
