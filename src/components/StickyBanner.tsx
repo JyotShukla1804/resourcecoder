@@ -17,12 +17,12 @@ export function StickyBanner() {
       {/* Absolute Centered Text Content */}
       <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10 px-4">
         <span className="font-extrabold text-[12px] sm:text-[14px] md:text-[16px] tracking-wide text-white drop-shadow-sm flex items-center justify-center gap-2 pointer-events-auto">
-          <span className="flex items-center leading-none mt-[1px]">🌟</span>
-          <span className="text-white uppercase text-center">
-            <span className="text-yellow-400 font-black mr-1.5">LIMITED TIME OFFER:</span>
+          <span className="flex items-center leading-none mt-[1px] animate-pulse drop-shadow-[0_0_8px_rgba(253,224,71,0.8)]">🌟</span>
+          <span className="text-white uppercase text-center mx-1">
+            <span className="text-yellow-400 font-black mr-1.5 drop-shadow-[0_0_2px_rgba(253,224,71,0.4)]">LIMITED TIME OFFER:</span>
             GET 50% OFF YOUR FIRST HIRE IN VIETNAM
           </span>
-          <span className="flex items-center leading-none mt-[1px]">🌟</span>
+          <span className="flex items-center leading-none mt-[1px] animate-pulse drop-shadow-[0_0_8px_rgba(253,224,71,0.8)]">🌟</span>
         </span>
       </div>
 
