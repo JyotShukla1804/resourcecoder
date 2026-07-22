@@ -13,12 +13,12 @@ export function AboutBeyondWork() {
           <h2
             className="text-[#0f172a] font-bold text-5xl leading-[48px] max-w-[665px]"
           >
-            Beyond Work, We Are...
+            Beyond Work, We Build Connections
           </h2>
           <p
             className="text-[#545454] font-normal text-lg leading-[29.25px] max-w-[665px]"
           >
-            A community of passionate individuals who love to celebrate, learn, and grow together. From hackathons and tech meetups to annual retreats and game nights, we believe that a strong team is built both inside and outside the office.
+            At Krazio Cloud, we believe great teams are built through collaboration, continuous learning, and shared experiences. From celebrating milestones and team events to knowledge-sharing
           </p>
           <div className="!mt-3">
             <Link

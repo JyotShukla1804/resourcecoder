@@ -51,7 +51,7 @@ export function DevProcessHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10 font-medium"
             >
-              At Krazio, our development process is more than just a workflow, it’s a commitment to excellence. Simple, Effective & Results-driven.
+              At Krazio Cloud, our development process is built around innovation, collaboration, and agility. From discovery to deployment, we deliver secure, scalable, and high-quality digital solutions with complete transparency and a focus on measurable business outcomes.
             </motion.p>
             
             <motion.div 
@@ -61,10 +61,10 @@ export function DevProcessHero() {
               className="grid grid-cols-1 sm:grid-cols-2 gap-4"
             >
               {[
-                { icon: Zap, label: "Agile Methodology" },
-                { icon: Eye, label: "Unmatched Transparency" },
-                { icon: Clock, label: "Fast Time to Market" },
-                { icon: Repeat, label: "Continuous Delivery" },
+                { icon: Zap, label: "Agile Development" },
+                { icon: Eye, label: "Transparent Collaboration" },
+                { icon: Clock, label: "Scalable & Secure Solutions" },
+                { icon: Repeat, label: "Quality-Driven Delivery" },
               ].map((item, idx) => (
                 <div key={idx} className="flex items-center gap-4 bg-white/50 backdrop-blur-xl border border-white px-5 py-3 rounded-2xl shadow-sm hover:shadow-md transition-all group">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/10 flex items-center justify-center border border-[#4B56D2]/20 shadow-inner group-hover:scale-110 transition-transform">

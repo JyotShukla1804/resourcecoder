@@ -17,7 +17,7 @@ export function OurWorkspace() {
             className="text-base md:text-[18px]"
             
           >
-            A collaborative environment designed to inspire creativity and foster innovation among our talented teams.
+            A collaborative workspace where innovation, creativity, and technology come together to build future-ready digital solutions. Our culture empowers teams to learn, innovate, and deliver excellence every day.
           </p>
         </div>
 

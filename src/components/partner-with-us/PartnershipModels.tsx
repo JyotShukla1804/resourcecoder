@@ -7,35 +7,35 @@ import { CheckCircle2 } from "lucide-react";
 export function PartnershipModels() {
   const models = [
     {
-      title: "Co-development Partnership",
+      title: "Dedicated Development Team",
       items: [
-        "Share resources and expertise to build joint products.",
-        "Collaborative agile sprints with unified engineering teams.",
-        "Shared risk and reward models for new ventures."
+        "Build your own remote team of experienced developers, designers, and QA engineers.",
+        "Work exclusively on your projects as a seamless extension of your in-house team.",
+        "Ensure complete transparency, flexibility, and control throughout development."
       ]
     },
     {
-      title: "Offshore Center",
+      title: "Offshore Development Center (ODC)",
       items: [
-        "Set up a dedicated offshore development center (ODC).",
-        "Full control over team composition and culture.",
-        "Significant cost reduction with top-tier global talent."
+        "Establish a scalable offshore development center with Krazio Cloud.",
+        "Significantly reduce operational costs without sacrificing quality.",
+        "Access world-class technical expertise and seamless collaboration."
       ]
     },
     {
-      title: "Sub-contracting Partnership",
+      title: "Project-Based Development",
       items: [
-        "Seamlessly expand your agency's delivery capacity.",
-        "White-label development services under your brand.",
-        "Flexible scaling based on your project pipeline."
+        "Deliver end-to-end custom software, AI, AR/VR/XR, web, and mobile applications.",
+        "Ideal for projects ranging from early-stage MVPs to enterprise-scale solutions.",
+        "Guaranteed delivery with a clear scope, timeline, and predictable outcomes."
       ]
     },
     {
-      title: "Service Partner",
+      title: "Technology Partnership",
       items: [
-        "Integrate our technical services into your offerings.",
-        "Referral programs and revenue sharing opportunities.",
-        "Dedicated technical support and account management."
+        "Work with us as your dedicated, long-term technology partner.",
+        "Accelerate your digital transformation and modernize legacy systems.",
+        "Continuously innovate with secure, scalable solutions tailored to your business."
       ]
     }
   ];
@@ -51,13 +51,13 @@ export function PartnershipModels() {
             viewport={{ once: true }}
             className="inline-block px-4 py-1.5 rounded-full bg-blue-50 border border-blue-100 text-blue-600 font-semibold text-sm mb-4"
           >
-            Flexible Collaboration
+            Partnership Models
           </motion.div>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
-            Strategic Partnership Models
+            Flexible Engagement Models
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Choose the engagement model that best aligns with your business strategy and operational needs.
+            Choose the partnership model that best fits your business goals, project requirements, and growth strategy.
           </p>
         </div>
 

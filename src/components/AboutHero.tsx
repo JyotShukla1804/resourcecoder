@@ -55,9 +55,8 @@ export function AboutHero({ data }: AboutHeroProps = {}) {
           />
         ) : (
           <h1 className="text-4xl sm:text-5xl md:text-[62px] font-extrabold tracking-[-0.025em] leading-[1.12] text-[#0f172a] max-w-4xl mx-auto animate-fade-in-up delay-100">
-            Driving digital<br className="hidden sm:block" />
-            transformation with<br className="hidden sm:block" />
-            <span className="text-[#4B56D2]">innovation</span> at the core
+            Empowering Businesses with<br className="hidden sm:block" />
+            <span className="text-[#4B56D2]">AI-Driven</span> Digital Innovation
           </h1>
         )}
 
@@ -69,7 +68,7 @@ export function AboutHero({ data }: AboutHeroProps = {}) {
           />
         ) : (
           <p className="text-slate-500 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal animate-fade-in-up delay-200">
-            We empower organizations with custom digital solutions that drive growth, enhance efficiency, and provide competitive advantages in today's evolving landscape.
+            From AI and AR/VR/XR to custom software, enterprise applications, and web & mobile development, Krazio Cloud builds scalable digital solutions that accelerate growth, streamline operations, and create lasting business value.
           </p>
         )}
       </div>

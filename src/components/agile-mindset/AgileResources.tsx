@@ -11,25 +11,32 @@ export function AgileResources() {
 
   const tabs = [
     {
-      label: "Digital Transformation",
-      title: "Advancing your ODC in India",
-      desc: "Leverage our agile frameworks to establish and scale your Offshore Development Center. We provide the expertise, infrastructure, and top-tier talent needed to accelerate your digital transformation initiatives globally without compromising on quality or control.",
+      label: "Artificial Intelligence",
+      title: "Artificial Intelligence",
+      desc: "Build intelligent solutions with Generative AI, LLMs, Computer Vision, Machine Learning, NLP, and Data Science.",
       image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/services/offshore-development"
+      link: "/services"
     },
     {
-      label: "Agile Product Strategy",
-      title: "Building Roadmaps that Resonate",
-      desc: "Our strategic product consulting ensures that every feature you build aligns with market needs and business goals. We utilize data-driven insights and rapid prototyping to validate assumptions and craft product strategies that win.",
+      label: "Immersive Technologies",
+      title: "Immersive Technologies",
+      desc: "Create engaging AR, VR, MR, gamification, and simulation experiences that transform customer engagement and workforce training.",
       image: "https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/services/product-strategy"
+      link: "/services"
     },
     {
       label: "Custom Software",
-      title: "Engineering Excellence at Scale",
-      desc: "We deliver bespoke software solutions tailored to your unique operational challenges. From complex enterprise systems to innovative SaaS platforms, our agile engineering practices ensure robust, scalable, and secure deployments.",
+      title: "Custom Software Development",
+      desc: "Develop scalable web, mobile, and enterprise applications tailored to your unique business goals.",
       image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-      link: "/services/custom-software"
+      link: "/services/bespoke-software"
+    },
+    {
+      label: "Dedicated Teams",
+      title: "Dedicated Development Teams",
+      desc: "Scale your business with experienced offshore developers and dedicated teams that integrate seamlessly with your organization, delivering flexibility, transparency, and faster project execution.",
+      image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
+      link: "/services/hire-dedicated"
     }
   ];
 
@@ -39,10 +46,10 @@ export function AgileResources() {
         
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-            Agile in <span className="text-indigo-600">Action</span>
+            Innovation in <span className="text-indigo-600">Action</span>
           </h2>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Explore how our agile methodologies are applied across our core service offerings to drive remarkable results.
+            Discover how Krazio Cloud leverages AI, immersive technologies, and custom software development to help businesses innovate, scale, and achieve digital excellence across industries.
           </p>
         </div>
 
@@ -86,6 +93,7 @@ export function AgileResources() {
                   src={tabs[activeTab].image}
                   alt={tabs[activeTab].title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-r from-transparent to-white/90 md:to-white" />
@@ -104,7 +112,7 @@ export function AgileResources() {
                     href={tabs[activeTab].link}
                     className="group inline-flex items-center gap-2 text-indigo-600 font-bold text-lg hover:text-indigo-800 transition-colors"
                   >
-                    Explore Service
+                    Explore Our Services
                     <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Link>
                 </div>

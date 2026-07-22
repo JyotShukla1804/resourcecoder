@@ -3,7 +3,6 @@ import { CTASection } from "@/components/CTASection";
 import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { TrustedBy } from "@/components/TrustedBy";
 import { PartnerHero } from "@/components/partner-with-us/PartnerHero";
-import { PartnerTrustedLogos } from "@/components/partner-with-us/PartnerTrustedLogos";
 import { PartnerCompaniesGrid } from "@/components/partner-with-us/PartnerCompaniesGrid";
 import { PartnershipModels } from "@/components/partner-with-us/PartnershipModels";
 import { PartnerBenefits } from "@/components/partner-with-us/PartnerBenefits";
@@ -21,9 +20,6 @@ export default function PartnerWithUsPage() {
       <div id="partner-form">
         <PartnerHero />
       </div>
-
-      {/* Trusted Logos (Diversity/Global) */}
-      <PartnerTrustedLogos />
 
       {/* Companies We Partner With Grid */}
       <PartnerCompaniesGrid />

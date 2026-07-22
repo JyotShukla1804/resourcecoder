@@ -7,23 +7,23 @@ import { Users, FileSearch, Presentation, RotateCcw, ArrowRight } from "lucide-r
 export function DevProcessScrum() {
   const steps = [
     {
-      title: "Sprint Planning",
-      desc: "We define sprint goals, select items from the backlog, and set clear expectations for the upcoming iteration.",
+      title: "Discovery & Planning",
+      desc: "We understand your business goals, gather requirements, define project scope, and create a strategic roadmap for success.",
       icon: FileSearch
     },
     {
-      title: "Daily Standups",
-      desc: "Daily 15-minute meetings to sync progress, identify blockers, and align the team on immediate tasks.",
+      title: "UI/UX Design & Development",
+      desc: "Our designers and developers work collaboratively to build intuitive, scalable, and future-ready digital experiences.",
       icon: Users
     },
     {
-      title: "Sprint Review",
-      desc: "A demo session where we present the completed work to stakeholders and gather crucial feedback.",
+      title: "Testing & Quality Assurance",
+      desc: "Every solution undergoes rigorous testing to ensure security, performance, functionality, and a seamless user experience.",
       icon: Presentation
     },
     {
-      title: "Retrospective",
-      desc: "Reflecting on the sprint to identify what went well and what can be improved for continuous growth.",
+      title: "Deployment & Continuous Support",
+      desc: "After a successful launch, we provide ongoing maintenance, optimization, and support to keep your solution secure, updated, and ready for future growth.",
       icon: RotateCcw
     }
   ];
@@ -43,7 +43,7 @@ export function DevProcessScrum() {
             className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#4B56D2]/5 border border-[#4B56D2]/10 mb-6"
           >
             <span className="w-2 h-2 rounded-full bg-[#4B56D2] animate-pulse"></span>
-            <span className="text-sm font-bold tracking-wider text-[#4B56D2] uppercase">Scrum Framework</span>
+            <span className="text-sm font-bold tracking-wider text-[#4B56D2] uppercase">Agile Development</span>
           </motion.div>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -52,7 +52,7 @@ export function DevProcessScrum() {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6"
           >
-            Explore How Our Scrum Methodology Shapes Your Success
+            How Our Agile Development Process Drives Success
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -61,7 +61,7 @@ export function DevProcessScrum() {
             transition={{ delay: 0.2 }}
             className="text-lg text-slate-600"
           >
-            We utilize Agile Scrum to ensure transparency, predictability, and continuous value delivery throughout your product's lifecycle.
+            At Krazio Cloud, we follow an Agile development approach that ensures faster delivery, seamless collaboration, and continuous innovation. Every stage is designed to transform your vision into a scalable, secure, and high-performing digital solution.
           </motion.p>
         </div>
 

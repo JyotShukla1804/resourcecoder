@@ -3,7 +3,7 @@
 import React from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Activity, Zap, RefreshCw } from "lucide-react";
+import { Zap, RefreshCw } from "lucide-react";
 import { HeroBackground } from "@/components";
 
 export function AgileMindsetHero() {
@@ -37,11 +37,11 @@ export function AgileMindsetHero() {
               transition={{ duration: 0.7, delay: 0.1 }}
               className="text-5xl sm:text-6xl md:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.05] mb-8"
             >
-              Embracing an <br/>
+              Driven by <br/>
               <span className="relative inline-block mt-2">
                 <span className="absolute -inset-2 bg-[#4B56D2]/30 blur-2xl animate-pulse"></span>
                 <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-500 animate-gradient-x">
-                  Agile Mindset
+                  Agile Innovation
                 </span>
               </span>
             </motion.h1>
@@ -52,26 +52,32 @@ export function AgileMindsetHero() {
               transition={{ duration: 0.7, delay: 0.2 }}
               className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10 font-medium"
             >
-              Agile is not just a methodology; it's a philosophy that empowers teams to deliver value rapidly, adapt to change seamlessly, and drive continuous improvement.
+              At Krazio Cloud, Agile is at the heart of everything we build. Our collaborative and iterative approach enables us to deliver high-quality digital solutions faster, adapt to changing business needs, and create continuous value throughout the development journey.
             </motion.p>
             
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.3 }}
-              className="flex flex-wrap gap-6"
+              className="flex flex-col gap-4"
             >
               <div className="flex items-center gap-4 bg-white/50 backdrop-blur-xl border border-white px-5 py-3 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-10 h-10 rounded-full bg-[#4B56D2]/10 flex items-center justify-center border border-[#4B56D2]/20 shadow-inner">
-                  <Activity className="w-5 h-5 text-[#4B56D2]" />
+                  <Zap className="w-5 h-5 text-[#4B56D2]" />
                 </div>
-                <span className="text-slate-800 font-bold">Rapid Delivery</span>
+                <div>
+                  <span className="text-slate-800 font-bold block">Faster Delivery</span>
+                  <span className="text-slate-600 text-sm">Accelerate project timelines with iterative development and rapid releases.</span>
+                </div>
               </div>
               <div className="flex items-center gap-4 bg-white/50 backdrop-blur-xl border border-white px-5 py-3 rounded-2xl shadow-sm hover:shadow-md transition-shadow">
                 <div className="w-10 h-10 rounded-full bg-[#4B56D2]/10 flex items-center justify-center border border-[#4B56D2]/20 shadow-inner">
                   <RefreshCw className="w-5 h-5 text-[#4B56D2]" />
                 </div>
-                <span className="text-slate-800 font-bold">Continuous Iteration</span>
+                <div>
+                  <span className="text-slate-800 font-bold block">Continuous Innovation</span>
+                  <span className="text-slate-600 text-sm">Continuously refine, optimize, and enhance solutions based on feedback.</span>
+                </div>
               </div>
             </motion.div>
           </div>
@@ -87,6 +93,7 @@ export function AgileMindsetHero() {
               src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
               alt="Agile Mindset Collaboration" 
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover transition-transform duration-1000 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-tr from-[#4B56D2]/40 via-blue-900/10 to-transparent mix-blend-overlay" />

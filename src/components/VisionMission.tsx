@@ -2,15 +2,15 @@ import React from "react";
 
 export function VisionMission() {
   const visionPoints = [
-    "Leading digital transformation globally",
-    "Empowering businesses with cutting-edge solutions",
-    "Creating sustainable technological ecosystems"
+    "Driving digital transformation with next-generation technologies",
+    "Empowering businesses through AI, AR/VR/XR, and custom software",
+    "Building scalable, secure, and future-ready digital ecosystems"
   ];
 
   const missionPoints = [
-    "Deliver innovative cloud solutions",
-    "Foster digital transformation excellence",
-    "Build scalable and secure architectures"
+    "Deliver innovative AI, AR/VR/XR, and custom software solutions",
+    "Enable digital transformation with scalable, secure technologies",
+    "Build long-term partnerships that drive measurable business growth"
   ];
 
   return (
@@ -30,10 +30,10 @@ export function VisionMission() {
               Our Vision
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-              Future-Forward<br />Innovation
+              Powering the Future<br />Through Innovation
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed font-normal">
-              <strong className="text-white font-semibold">Digitizing the World with Innovation</strong> - We envision a future where technology seamlessly integrates with business operations, creating unprecedented opportunities for growth and efficiency.
+              We envision a future where intelligent technologies empower businesses to innovate faster, operate smarter, and thrive in an ever-evolving digital world. Through AI, immersive technologies, and custom digital solutions, we help organizations unlock sustainable growth and long-term success.
             </p>
             
             <ul className="space-y-4 pt-2">
@@ -80,10 +80,10 @@ export function VisionMission() {
               Our Mission
             </span>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-[1.15]">
-              Empowering Success
+              Empowering Businesses<br />Through Digital Excellence
             </h2>
             <p className="text-slate-400 text-sm sm:text-base leading-relaxed font-normal">
-              <strong className="text-white font-semibold">Making Businesses Future-Ready</strong> - We empower organizations with custom digital solutions that drive growth, enhance efficiency, and provide competitive advantages in today's evolving landscape.
+              We help businesses unlock their full potential by delivering AI-powered, immersive, and custom digital solutions that solve complex challenges, accelerate innovation, and drive long-term business success. From strategy to deployment, we build secure, scalable, and future-ready technologies that create measurable impact.
             </p>
             
             <ul className="space-y-4 pt-2">

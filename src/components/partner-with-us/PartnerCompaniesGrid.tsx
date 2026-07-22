@@ -2,43 +2,43 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { Building2, Code2, Rocket, Globe2, Network, Blocks } from "lucide-react";
+import { Rocket, TrendingUp, Building2, Handshake, ShoppingCart, Award } from "lucide-react";
 
 const companies = [
   {
-    title: "Product Startups",
-    description: "We help innovative startups build MVPs quickly, scale their engineering teams, and accelerate time-to-market with our agile development approach.",
+    title: "Startups & Entrepreneurs",
+    description: "Helping startups validate ideas, build MVPs, and launch scalable digital products with speed and confidence.",
     icon: Rocket,
     color: "from-orange-400 to-red-500"
   },
   {
-    title: "Enterprise Platforms",
-    description: "Partnering with large enterprises to modernize legacy systems, build robust scalable platforms, and drive digital transformation initiatives.",
-    icon: Building2,
+    title: "Small & Medium Businesses (SMBs)",
+    description: "Empowering growing businesses with custom software, AI solutions, websites, and mobile applications to improve efficiency and accelerate growth.",
+    icon: TrendingUp,
     color: "from-[#4B56D2] to-blue-600"
   },
   {
-    title: "Software Agencies",
-    description: "Providing white-label development and staff augmentation to help agencies deliver more projects without compromising on quality.",
-    icon: Code2,
+    title: "Enterprises",
+    description: "Partnering with enterprises to modernize legacy systems, automate operations, and deliver secure, scalable digital transformation solutions.",
+    icon: Building2,
     color: "from-emerald-400 to-teal-600"
   },
   {
-    title: "Media Houses",
-    description: "Building high-performance content delivery systems, streaming platforms, and engaging user experiences for digital media brands.",
-    icon: Network,
+    title: "Agencies & Technology Partners",
+    description: "Providing white-label development, dedicated teams, and offshore development services to help agencies expand delivery capabilities.",
+    icon: Handshake,
     color: "from-purple-500 to-indigo-600"
   },
   {
-    title: "Web Hosts & Infra",
-    description: "Developing custom control panels, automation scripts, and infrastructure management tools for hosting providers.",
-    icon: Globe2,
+    title: "Retail & E-Commerce Businesses",
+    description: "Building AI-powered commerce platforms, immersive shopping experiences, inventory solutions, and customer engagement technologies.",
+    icon: ShoppingCart,
     color: "from-cyan-400 to-blue-500"
   },
   {
-    title: "SaaS Companies",
-    description: "End-to-end product development, from multi-tenant architecture design to recurring billing integrations.",
-    icon: Blocks,
+    title: "Industry Leaders",
+    description: "Delivering tailored technology solutions for Healthcare, Real Estate, Manufacturing, Logistics, Education, Banking & Finance, Travel, Entertainment, Restaurants, and many more industries.",
+    icon: Award,
     color: "from-pink-500 to-rose-600"
   }
 ];
@@ -51,10 +51,10 @@ export function PartnerCompaniesGrid() {
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
-            Companies We Partner With
+            Who We Work With
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            From agile startups to Fortune 500 enterprises, we tailor our partnership approach to meet your unique business objectives.
+            From startups to global enterprises, Krazio Cloud partners with businesses across industries to deliver innovative, scalable, and future-ready digital solutions.
           </p>
         </div>
 

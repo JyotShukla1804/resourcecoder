@@ -60,7 +60,7 @@ export function PartnerHero() {
               <span className="relative inline-block mt-2">
                 <span className="absolute -inset-2 bg-[#4B56D2]/30 blur-2xl animate-pulse"></span>
                 <span className="relative text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-500 animate-gradient-x">
-                  ResourceCoders
+                  Krazio Cloud
                 </span>
               </span>
             </motion.h1>
@@ -69,9 +69,18 @@ export function PartnerHero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2 }}
-              className="text-slate-700 text-lg md:text-xl leading-relaxed mb-10 font-medium"
+              className="text-slate-700 text-lg md:text-xl leading-relaxed mb-6 font-medium"
             >
-              A successful partnership is more than just an agreement, it's a shared vision. Join forces with us to deliver high-impact digital solutions and scale your operations globally.
+              More than a technology partner, we're committed to your long-term success. Collaborate with Krazio Cloud to build innovative digital solutions, accelerate business growth, and transform ideas into measurable results.
+            </motion.p>
+            
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.25 }}
+              className="text-slate-600 text-md leading-relaxed mb-10 font-normal"
+            >
+              <strong className="text-slate-800">Technology Partnership:</strong> Leverage our expertise in AI, AR/VR/XR, custom software, web & mobile development, and enterprise solutions to innovate faster, scale confidently, and achieve sustainable business growth.
             </motion.p>
 
             <motion.div

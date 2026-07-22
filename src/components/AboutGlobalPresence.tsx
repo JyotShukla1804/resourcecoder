@@ -2,22 +2,13 @@ import React from "react";
 
 export function AboutGlobalPresence() {
   const locations = [
-    {
-      city: "New York, USA",
-      role: "Global Headquarters",
-    },
-    {
-      city: "London, UK",
-      role: "European Hub",
-    },
-    {
-      city: "Mumbai, India",
-      role: "Development Center",
-    },
-    {
-      city: "Dubai, UAE",
-      role: "MENA Region Office",
-    },
+    { city: "Ahmedabad, India", role: "Headquarters & Development Center" },
+    { city: "Rajkot, India", role: "Regional Development Center" },
+    { city: "Abu Dhabi, UAE", role: "Middle East Business Hub" },
+    { city: "Rotterdam, Netherlands", role: "European Business Hub" },
+    { city: "Singapore", role: "Asia-Pacific Business Hub" },
+    { city: "Hong Kong", role: "East Asia Business Hub" },
+    { city: "Sydney, Australia", role: "Australia & Oceania Business Hub" },
   ];
 
   return (
@@ -35,7 +26,7 @@ export function AboutGlobalPresence() {
           <p
             className="text-[#545454] font-normal text-lg leading-7 text-center"
           >
-            Delivering excellence across borders with our strategically located delivery centers.
+            Delivering innovative digital solutions worldwide through our strategically located offices and development centers.
           </p>
         </div>
 

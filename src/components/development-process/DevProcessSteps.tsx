@@ -2,46 +2,46 @@
 
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { LogIn, Target, PenTool, Code2, TestTube, Rocket, Wrench } from "lucide-react";
+import { Search, ShieldCheck, PenTool, Code2, TestTube, Rocket, Wrench } from "lucide-react";
 
 export function DevProcessSteps() {
   const [activeTab, setActiveTab] = useState(0);
 
   const steps = [
     {
-      title: "Onboarding",
-      icon: LogIn,
-      description: "We initiate the partnership by aligning on vision, establishing communication channels, and seamlessly integrating our teams to set a strong foundation."
+      title: "Requirement Gathering",
+      icon: Search,
+      description: "We begin by understanding your business goals, gathering detailed requirements, and defining the project scope to create a clear roadmap for success."
     },
     {
-      title: "Scoping",
-      icon: Target,
-      description: "Our business analysts work closely with you to define project requirements, map out user journeys, and establish clear technical specifications."
+      title: "Documentation & NDA",
+      icon: ShieldCheck,
+      description: "We prepare comprehensive project documentation and sign an NDA to ensure complete confidentiality and transparency from day one."
     },
     {
-      title: "UI/UX Design",
+      title: "UI/UX Design & Planning",
       icon: PenTool,
-      description: "Our design team crafts intuitive, user-centric interfaces focused on maximizing engagement and providing a flawless user experience."
+      description: "Our team designs intuitive user experiences and creates a strategic development plan aligned with your business objectives."
     },
     {
       title: "Development",
       icon: Code2,
-      description: "Our engineers build your solution using modern, scalable tech stacks, adhering strictly to clean code practices and Agile sprint cycles."
+      description: "Using Agile methodologies and modern technologies, we build secure, scalable, and high-performance digital solutions tailored to your needs."
     },
     {
-      title: "Testing",
+      title: "Testing & Quality Assurance",
       icon: TestTube,
-      description: "Rigorous QA processes including automated testing, manual testing, and performance profiling ensure a robust, bug-free product."
+      description: "Every feature is thoroughly tested to ensure reliability, security, performance, and a seamless user experience before launch."
     },
     {
       title: "Deployment",
       icon: Rocket,
-      description: "We handle the seamless transition of your application to production environments, ensuring zero downtime and optimal performance tuning."
+      description: "We deploy your solution with precision, ensuring a smooth transition and successful go-live with minimal disruption."
     },
     {
-      title: "Support & Maintenance",
+      title: "Support & Growth",
       icon: Wrench,
-      description: "Post-launch, we provide continuous monitoring, updates, and optimization to ensure your software remains cutting-edge and secure."
+      description: "Our partnership continues after launch with ongoing maintenance, performance optimization, feature enhancements, and dedicated technical support to help your business grow."
     }
   ];
 
@@ -49,10 +49,10 @@ export function DevProcessSteps() {
     <section className="w-full relative py-24 bg-[#f8f9ff] overflow-hidden">
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-[#4B56D2] font-bold tracking-wider uppercase text-sm mb-4 block">STEP-BY-STEP</span>
+          <span className="text-[#4B56D2] font-bold tracking-wider uppercase text-sm mb-4 block">Our Development Process</span>
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-6 leading-tight">
-            Our Development Process at ResourceCoders: <br />
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-400">From Idea to Execution</span>
+            From Vision to <br />
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-400">Digital Success</span>
           </h2>
         </div>
 

@@ -2,49 +2,49 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { TrendingUp, ShieldCheck, Zap, Users, HeadphonesIcon, Settings } from "lucide-react";
+import { TrendingUp, ShieldCheck, Zap, Users, MessageSquare, Handshake } from "lucide-react";
 
 export function PartnerBenefits() {
   const benefits = [
     {
-      title: "Accelerated Time to Market",
-      description: "Our agile methodologies and ready-to-deploy frameworks ensure your products hit the market faster without compromising quality.",
+      title: "Future-Ready Innovation",
+      description: "Leverage cutting-edge technologies including AI, AR/VR/XR, Machine Learning, and custom software to stay ahead in a rapidly evolving digital landscape.",
       icon: Zap,
       color: "text-amber-500",
       bg: "bg-amber-100"
     },
     {
-      title: "Top-Tier Engineering Talent",
-      description: "Gain immediate access to a vetted pool of senior engineers, architects, and designers with deep domain expertise.",
+      title: "Expert Technology Team",
+      description: "Work with experienced engineers, designers, and technology consultants dedicated to delivering secure, scalable, and high-performance solutions.",
       icon: Users,
       color: "text-blue-500",
       bg: "bg-blue-100"
     },
     {
-      title: "Uncompromising Quality",
-      description: "Rigorous QA processes, automated testing, and code reviews guarantee robust, secure, and scalable deliverables.",
-      icon: ShieldCheck,
+      title: "Transparent Collaboration",
+      description: "Benefit from clear communication, a dedicated point of contact, regular project updates, and complete visibility throughout the development lifecycle.",
+      icon: MessageSquare,
       color: "text-emerald-500",
       bg: "bg-emerald-100"
     },
     {
-      title: "Flexible Scaling",
-      description: "Ramp up or scale down your dedicated teams on-demand based on your project cycles and budget requirements.",
+      title: "Flexible Engagement Models",
+      description: "Scale your team with dedicated developers, offshore development centers, or project-based engagement models tailored to your business needs.",
       icon: TrendingUp,
       color: "text-purple-500",
       bg: "bg-purple-100"
     },
     {
-      title: "Dedicated Support",
-      description: "Enjoy round-the-clock technical support and a dedicated account manager to ensure smooth operations.",
-      icon: HeadphonesIcon,
+      title: "Quality & Security",
+      description: "Every solution is built with industry best practices, robust security standards, rigorous testing, and a commitment to delivering enterprise-grade quality.",
+      icon: ShieldCheck,
       color: "text-rose-500",
       bg: "bg-rose-100"
     },
     {
-      title: "Customized Solutions",
-      description: "We don't believe in one-size-fits-all. Every solution is architected specifically to solve your unique business challenges.",
-      icon: Settings,
+      title: "End-to-End Partnership",
+      description: "From strategy and design to development, deployment, and ongoing support, we partner with you at every stage to ensure long-term digital success.",
+      icon: Handshake,
       color: "text-indigo-500",
       bg: "bg-indigo-100"
     }
@@ -54,15 +54,15 @@ export function PartnerBenefits() {
     <section className="w-full bg-[#f8f9ff] py-24 relative overflow-hidden">
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <div className="text-left mb-16 max-w-3xl">
+        <div className="text-center mb-16 max-w-3xl mx-auto">
           <h2 className="text-4xl md:text-5xl font-extrabold text-slate-900 tracking-tight mb-6">
-            The ResourceCoders Edge. <br className="hidden md:block" />
+            The Krazio Cloud Advantage <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-500">
-              Top-Tier Partner Benefits
+              Why Businesses Choose Us
             </span>
           </h2>
           <p className="text-lg text-slate-600">
-            Partnering with us means gaining a strategic advantage. We invest in your success as much as our own, providing the tools, talent, and technology you need to thrive.
+            Partnering with Krazio Cloud means gaining a trusted technology partner committed to innovation, quality, and long-term success. We combine deep technical expertise with a client-first approach to deliver scalable digital solutions that drive measurable business growth.
           </p>
         </div>
 

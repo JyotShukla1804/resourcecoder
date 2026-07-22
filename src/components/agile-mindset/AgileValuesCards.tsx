@@ -28,7 +28,7 @@ export function AgileValuesCards() {
                 Core Values
               </h3>
               <p className="text-slate-600 text-lg leading-relaxed">
-                Our core values encompass a commitment to excellence, continuous learning, and fostering a collaborative environment. We build software that not only works but drives meaningful business growth, ensuring every decision is rooted in transparency and trust.
+                At Krazio Cloud, our values are rooted in innovation, integrity, collaboration, and excellence. We build secure, scalable, and future-ready digital solutions while fostering long-term partnerships through transparency, continuous learning, and a commitment to delivering measurable business impact.
               </p>
             </div>
           </motion.div>
@@ -52,7 +52,7 @@ export function AgileValuesCards() {
                 What Sets Us Apart
               </h3>
               <p className="text-white/90 text-lg leading-relaxed">
-                What sets us apart is our relentless Agile mindset, allowing us to deliver software solutions with unmatched speed, quality, and adaptability. We prioritize your strategic goals in every sprint we execute, pivoting swiftly to seize new market opportunities.
+                What sets Krazio Cloud apart is our expertise in AI, AR/VR/XR, custom software, and enterprise technologies, combined with an agile, client-first approach. We deliver innovative, scalable, and business-focused solutions with transparent communication, flexible engagement models, and a relentless focus on quality, helping organizations accelerate digital transformation with confidence.
               </p>
             </div>
           </motion.div>
