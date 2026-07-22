@@ -7,23 +7,23 @@ import { Rocket, Target, Zap, ShieldCheck } from "lucide-react";
 const reasons = [
   {
     icon: Rocket,
-    title: "Accelerated Growth",
-    description: "Bypass common pitfalls and fast-track your startup's growth with battle-tested strategies.",
+    title: "Innovation Driven Solutions",
+    description: "Harness the power of AI, AR/VR/XR, Machine Learning, and custom software to accelerate digital transformation and unlock new business opportunities.",
   },
   {
     icon: Target,
-    title: "Precision Targeting",
-    description: "Identify your ideal customer profile and build a product that solves real pain points.",
+    title: "Scalable Technology",
+    description: "We architect secure, high performance, and scalable solutions that evolve with your business and support long term growth.",
   },
   {
     icon: Zap,
-    title: "Tech Architecture",
-    description: "Design scalable, future-proof technical foundations that can handle massive user growth.",
+    title: "Expert Technology Team",
+    description: "Collaborate with experienced developers, designers, AI specialists, and technology consultants dedicated to delivering exceptional digital experiences.",
   },
   {
     icon: ShieldCheck,
-    title: "Risk Mitigation",
-    description: "Minimize financial and technical risks with expert validation before you invest heavily.",
+    title: "Long Term Partnership",
+    description: "From strategy and development to deployment and ongoing support, we work as your trusted technology partner, ensuring continuous innovation and measurable business success.",
   },
 ];
 
@@ -34,10 +34,10 @@ export function WhyChooseConsulting() {
         <div className="text-center mb-16">
           <span className="badge-primary mb-6 inline-block">WHY CHOOSE US</span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0f172a] mb-6 tracking-tight">
-            Why Partner with Our Experts?
+            Why Choose Krazio Cloud?
           </h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            We don't just give advice; we provide actionable roadmaps based on years of experience building and scaling successful tech products.
+            We don't just build software we create innovative, scalable, and future ready digital solutions that empower businesses to grow, innovate, and stay ahead in an ever evolving digital landscape.
           </p>
         </div>
 

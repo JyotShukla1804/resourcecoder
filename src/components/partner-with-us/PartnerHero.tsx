@@ -29,8 +29,8 @@ export function PartnerHero() {
 
   return (
     <section className="w-full relative overflow-hidden flex items-center min-h-[90vh] bg-[#f8f9ff]">
-        <HeroBackground />
-      
+      <HeroBackground />
+
 
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full pt-48 pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -73,7 +73,7 @@ export function PartnerHero() {
             >
               More than a technology partner, we're committed to your long-term success. Collaborate with Krazio Cloud to build innovative digital solutions, accelerate business growth, and transform ideas into measurable results.
             </motion.p>
-            
+
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}

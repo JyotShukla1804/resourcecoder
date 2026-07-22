@@ -5,21 +5,21 @@ import { CheckCircle2, Monitor, Cpu, ShieldCheck, Settings } from "lucide-react"
 export function HomeITRecruitment() {
   const benefits = [
     {
-      title: "48-hour shortlist",
-      desc: "3–5 interview-ready candidates from our pre-vetted pool",
+      title: "Dedicated Development Teams",
+      desc: "Experienced professionals aligned with your business goals.",
     },
     {
-      title: "Compliant contracts",
-      desc: "bilingual, legally verified from day one",
+      title: "Flexible Engagement Models",
+      desc: "Scale your team on demand with dedicated developers or an Offshore Development Center (ODC).",
     },
     {
-      title: "Dedicated recruiter",
-      desc: "one point of contact who knows your business and the market",
+      title: "Transparent Collaboration",
+      desc: "Agile delivery, regular updates, and a dedicated point of contact throughout your project.",
     },
     {
-      title: "All stacks covered",
-      desc: "React, Node.js, Python, Flutter, DevOps, ML/AI, and more",
-    },
+      title: "Expertise Across Technologies",
+      desc: "AI, Machine Learning, AR/VR/XR, Web, Mobile, Enterprise Software, Cloud, and Custom Development.",
+    }
   ];
 
   return (
@@ -29,13 +29,13 @@ export function HomeITRecruitment() {
         {/* Left Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#f0f4ff] border border-[#d6e0ff] text-[#4B56D2] font-bold text-[11px] sm:text-xs tracking-widest uppercase mb-4">
-            IT Recruitment
+            Why Choose Krazio Cloud?
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 leading-[1.15] mb-6">
-            Hire Elite Developers Quickly - Without the 3-Month Grind
+            Scale Your Business with Expert Technology Talent
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
-            Most companies burn 3+ months hiring engineers on their own - navigating job boards, managing compliance, and losing candidates to other competitors. As a premier IT recruitment agency, we've built a 30,000+ pre-vetted candidate pool so you don't have to start from zero.
+            Accelerate your digital transformation with Krazio Cloud's dedicated development teams. Gain access to experienced software developers, AI engineers, AR/VR/XR specialists, UI/UX designers, QA professionals, and technology consultants who seamlessly integrate with your team to build secure, scalable, and future ready digital solutions.
           </p>
 
           <div className="flex flex-col gap-4 mb-10 w-full">
@@ -43,7 +43,7 @@ export function HomeITRecruitment() {
               <div key={idx} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#4B56D2] shrink-0 mt-0.5" />
                 <div className="text-sm sm:text-[15px] text-slate-700 leading-snug">
-                  <span className="font-bold text-slate-900">{benefit.title}</span> - {benefit.desc}
+                  <span className="font-bold text-slate-900">{benefit.title}</span> {benefit.desc}
                 </div>
               </div>
             ))}

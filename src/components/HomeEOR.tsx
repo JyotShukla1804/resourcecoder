@@ -5,24 +5,24 @@ import { CheckCircle2, UserCheck, FileSignature, CreditCard, Shield, HeartHandsh
 export function HomeEOR() {
   const benefits = [
     {
-      title: "We become the legal employer",
-      desc: "zero entity registration needed in your remote hub",
+      title: "Dedicated technology experts",
+      desc: "Build a team tailored to your project requirements and business objectives.",
     },
     {
-      title: "Full payroll processing",
-      desc: "tax deductions, bonuses, and on-time payment in local currency",
+      title: "Flexible engagement models",
+      desc: "Scale your team up or down as your business evolves.",
     },
     {
-      title: "Compliance managed",
-      desc: "local labor laws and statutory contributions handled with ease",
+      title: "Agile & transparent collaboration",
+      desc: "Regular updates, dedicated project management, and complete development visibility.",
     },
     {
-      title: "HR & employee lifecycle",
-      desc: "onboarding, offboarding, leave management, and equipment",
+      title: "End to end development",
+      desc: "From AI and enterprise software to web, mobile, and AR/VR/XR solutions, we deliver future ready technology.",
     },
     {
-      title: "Works alongside recruitment",
-      desc: "we can recruit and employ under EOR in one seamless workflow",
+      title: "Long term technology partnership",
+      desc: "Continuous maintenance, support, and innovation to help your business grow.",
     },
   ];
 
@@ -150,13 +150,13 @@ export function HomeEOR() {
         {/* Right Content */}
         <div className="w-full lg:w-1/2 flex flex-col items-start text-left">
           <span className="inline-block px-4 py-1.5 rounded-full bg-[#f0f4ff] border border-[#d6e0ff] text-[#4B56D2] font-bold text-[11px] sm:text-xs tracking-widest uppercase mb-4">
-            Employer of Record (EOR)
+            Offshore Development Center
           </span>
           <h2 className="text-3xl sm:text-4xl lg:text-[42px] font-extrabold text-slate-900 leading-[1.15] mb-6">
-            Manage Remote Employees Without a Local Entity
+            Build Your Dedicated Offshore Team with Krazio Cloud
           </h2>
           <p className="text-slate-600 text-sm sm:text-base leading-relaxed mb-8">
-            You found the right developer. Now you need a legal employer. We become the employer of record - handling payroll, social insurance, compliant contracts, and HR - so you can scale without the overhead of setting up a local entity.
+            Expand your engineering capabilities with a dedicated Offshore Development Center tailored to your business needs. Krazio Cloud provides experienced developers, AI engineers, AR/VR/XR specialists, UI/UX designers, and QA experts who seamlessly integrate with your organization, helping you accelerate innovation while maintaining complete transparency and control.
           </p>
 
           <div className="flex flex-col gap-4 mb-10 w-full">
@@ -164,7 +164,7 @@ export function HomeEOR() {
               <div key={idx} className="flex items-start gap-3">
                 <CheckCircle2 className="w-5 h-5 text-[#4B56D2] shrink-0 mt-0.5" />
                 <div className="text-sm sm:text-[15px] text-slate-700 leading-snug">
-                  <span className="font-bold text-slate-900">{benefit.title}</span> - {benefit.desc}
+                  <span className="font-bold text-slate-900">{benefit.title}</span> {benefit.desc}
                 </div>
               </div>
             ))}
@@ -174,7 +174,7 @@ export function HomeEOR() {
             href="#interview-section"
             className="btn-ripple inline-flex items-center justify-center text-white font-bold text-xs tracking-widest py-4.5 px-8 rounded-full transition-shadow duration-300 uppercase shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)] bg-[#4B56D2]"
           >
-            Get EOR Pricing
+            Get Pricing
           </Link>
         </div>
 

@@ -6,27 +6,27 @@ import { CheckCircle2 } from "lucide-react";
 
 const steps = [
   {
-    title: "Idea Validation & Market Research",
-    description: "Don't build in the dark. We help you validate your startup idea against real market data, analyze competitors, and identify your unique value proposition before writing a single line of code.",
-    points: ["Competitor Analysis", "User Persona Mapping", "Value Proposition Canvas"],
+    title: "Discovery & Requirement Gathering",
+    description: "We understand your business objectives, gather requirements, analyze challenges, and define a clear roadmap to ensure project success.",
+    points: ["Business Requirement Analysis", "Solution Planning", "Project Roadmap"],
     image: "https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "MVP Strategy & Planning",
-    description: "Scope your Minimum Viable Product to balance speed-to-market with core value delivery. We help you prioritize features, choose the right tech stack, and set a realistic launch timeline.",
-    points: ["Feature Prioritization", "Tech Stack Selection", "Go-To-Market Timeline"],
+    title: "UI/UX Design & Strategy",
+    description: "We create intuitive, engaging, and user centric designs that deliver exceptional digital experiences while aligning with your business goals.",
+    points: ["User Experience Design", "Interactive Prototyping", "Design Validation"],
     image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "Technical Architecture Design",
-    description: "Build on a solid foundation. Our experts design scalable, secure, and maintainable cloud architectures tailored to your startup's specific needs and projected growth.",
-    points: ["Cloud Infrastructure Setup", "Database Schema Design", "Security & Compliance Audits"],
+    title: "Agile Development & Quality Assurance",
+    description: "Our experts build secure, scalable, and high performance solutions using Agile methodologies, followed by rigorous testing to ensure reliability and quality.",
+    points: ["Agile Development", "Security & Performance Testing", "Quality Assurance"],
     image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=2070&auto=format&fit=crop",
   },
   {
-    title: "Scaling & Growth Strategy",
-    description: "Transition from an MVP to a robust, enterprise-grade platform. We guide you through team scaling, performance optimization, and implementing advanced features like AI or blockchain.",
-    points: ["Performance Bottleneck Resolution", "Engineering Team Scaling", "Advanced Tech Integration"],
+    title: "Deployment & Continuous Growth",
+    description: "After successful deployment, we provide ongoing support, maintenance, optimization, and feature enhancements to help your business scale with confidence.",
+    points: ["Seamless Deployment", "Ongoing Support & Maintenance", "Continuous Innovation & Optimization"],
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=2015&auto=format&fit=crop",
   },
 ];
@@ -37,13 +37,13 @@ export function StartupPotential() {
       <div className="max-w-[1358px] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#0f172a] mb-6 tracking-tight">
-            Unlocking Your Startup's <br className="hidden md:block" />
+            Transforming Ideas into <br className="hidden md:block" />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-blue-500">
-              True Potential
+              Digital Success
             </span>
           </h2>
           <p className="text-slate-500 text-lg max-w-2xl mx-auto">
-            A step-by-step approach to turning your vision into a scalable reality.
+            A structured, end to end development approach that helps businesses transform ideas into innovative, scalable, and future ready digital solutions.
           </p>
         </div>
 

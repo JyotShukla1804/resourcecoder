@@ -20,7 +20,7 @@ export function StickyBanner() {
           <span className="flex items-center leading-none mt-[1px] animate-pulse drop-shadow-[0_0_8px_rgba(253,224,71,0.8)]">🌟</span>
           <span className="text-white uppercase text-center mx-1">
             <span className="text-yellow-400 font-black mr-1.5 drop-shadow-[0_0_2px_rgba(253,224,71,0.4)]">LIMITED TIME OFFER:</span>
-            GET 50% OFF YOUR FIRST HIRE IN VIETNAM
+            GET 50% OFF YOUR FIRST HIRE IN INDIA
           </span>
           <span className="flex items-center leading-none mt-[1px] animate-pulse drop-shadow-[0_0_8px_rgba(253,224,71,0.8)]">🌟</span>
         </span>

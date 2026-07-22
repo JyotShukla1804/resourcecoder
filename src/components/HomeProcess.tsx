@@ -8,23 +8,23 @@ export function HomeProcess() {
   const steps = [
     {
       number: "01",
-      badge: "Day 1 - 24 hrs",
-      title: "Share Your Brief",
-      desc: "Tell us the role, tech stack, and budget. We review your brief and assign a dedicated recruiter within 24 hours someone who knows the engineering market deeply.",
+      badge: "Day 1 to 3",
+      title: "Discovery & Consultation",
+      desc: "Share your business goals, project requirements, and vision. Our experts analyze your needs, recommend the best technology approach, and prepare a tailored project roadmap.",
       icon: <FileText className="w-6 h-6 text-[#4B56D2]" />,
     },
     {
       number: "02",
-      badge: "Day 2-3 - 48 hrs",
-      title: "Receive Your Shortlist",
-      desc: "Within 48 hours, you get 3-5 pre vetted, interview ready candidates. Every profile is screened technically and reviewed by a senior recruiter before it reaches your inbox.",
+      badge: "Week 1 to 4",
+      title: "Planning & Development",
+      desc: "Our team finalizes the project scope, designs the user experience, and begins Agile development with regular updates, milestone reviews, and complete transparency.",
       icon: <Users className="w-6 h-6 text-[#4B56D2]" />,
     },
     {
       number: "03",
-      badge: "Week 3-4 - placement done",
-      title: "Interview, Hire, and Onboard",
-      desc: "You interview and select. We handle contracts, payroll setup, and everything else so your developer can start working in 3-4 weeks from your first brief.",
+      badge: "Deployment & Beyond",
+      title: "Launch & Continuous Support",
+      desc: "After rigorous testing, we deploy your solution and continue to support, maintain, and enhance it to ensure long term performance, security, and business growth.",
       icon: <Briefcase className="w-6 h-6 text-[#4B56D2]" />,
     },
   ];
@@ -39,10 +39,10 @@ export function HomeProcess() {
             The Process
           </span>
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-tight mb-4">
-            From Brief to Hire in 3-4 Weeks
+            From Idea to Successful Delivery
           </h2>
           <p className="text-slate-500 text-[16px] leading-relaxed">
-            No guesswork, no long timelines. Here's exactly what happens when you work with us.
+            A streamlined, transparent, and agile process that transforms your vision into a high quality digital solution.
           </p>
         </div>
 
@@ -91,21 +91,21 @@ export function HomeProcess() {
             href="/#interview-section"
             className="btn-ripple inline-flex items-center justify-center px-8 h-[56px] rounded-full text-white font-bold text-[16px] tracking-wide shadow-[0_8px_25px_rgba(75,86,210,0.3)] hover:shadow-[0_12px_35px_rgba(75,86,210,0.5)] transition-all duration-300 bg-[#4B56D2] mb-6"
           >
-            Start with a Free Brief Review
+            Start Your Digital Transformation Journey
           </Link>
           
           <div className="flex flex-wrap justify-center gap-4 sm:gap-8 text-sm font-medium text-slate-500">
             <div className="flex items-center gap-2">
               <Clock className="w-4 h-4 text-[#4B56D2]" />
-              <span>15-min call</span>
+              <span>Free Project Consultation</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="w-4 h-4 text-[#4B56D2]" />
-              <span>No commitment</span>
+              <span>Tailored Technology Roadmap</span>
             </div>
             <div className="flex items-center gap-2">
               <CheckSquare className="w-4 h-4 text-[#4B56D2]" />
-              <span>Full roadmap discovery</span>
+              <span>End to End Development Partnership</span>
             </div>
           </div>
         </div>
