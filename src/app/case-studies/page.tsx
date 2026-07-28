@@ -18,10 +18,10 @@ export default function CaseStudiesPage() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col pt-[88px] relative z-10">
+    <div className="min-h-screen bg-slate-50 flex flex-col relative z-10">
 
       {/* Hero Banner */}
-      <div className="relative w-full h-[250px] md:h-[300px] overflow-hidden flex flex-col items-center justify-center">
+      <div className="relative w-full h-[338px] md:h-[388px] pt-[88px] overflow-hidden flex flex-col items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#5b67e6] via-[#4B56D2] to-[#3e48b8]" />
 
         <div className="relative z-10 text-center px-4">
