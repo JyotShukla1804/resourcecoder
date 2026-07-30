@@ -5,6 +5,7 @@ import {
   DevProcessSteps,
   DevProcessWhy,
   DevProcessFAQ,
+  HiringProcessSection,
 } from "@/components";
 
 export const metadata = {
@@ -20,6 +21,7 @@ export default function DevelopmentProcessPage() {
       <DevProcessBanner />
       <DevProcessSteps />
       <DevProcessWhy />
+      <HiringProcessSection />
       <DevProcessFAQ />
     </main>
   );

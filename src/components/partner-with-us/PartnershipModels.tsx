@@ -29,15 +29,8 @@ export function PartnershipModels() {
         "Ideal for projects ranging from early-stage MVPs to enterprise-scale solutions.",
         "Guaranteed delivery with a clear scope, timeline, and predictable outcomes."
       ]
-    },
-    {
-      title: "Technology Partnership",
-      items: [
-        "Work with us as your dedicated, long-term technology partner.",
-        "Accelerate your digital transformation and modernize legacy systems.",
-        "Continuously innovate with secure, scalable solutions tailored to your business."
-      ]
     }
+
   ];
 
   return (

@@ -45,7 +45,7 @@ export function AgilePrinciples() {
     {
       num: "7/07",
       title: "Long-Term Partnerships",
-      desc: "We don't just deliver projects—we build lasting relationships by providing ongoing support, innovation, and technology that grows with your business.",
+      desc: "We don't just deliver projects we build lasting relationships by providing ongoing support, innovation, and technology that grows with your business.",
       image: "https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
     }
   ];

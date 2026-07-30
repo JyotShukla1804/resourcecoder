@@ -236,15 +236,13 @@ export function Navbar() {
                           { title: "Development Process", slug: "development-process" },
                           { title: "Partner with Us", slug: "partner-with-us" },
                           { title: "Agile Mindset", slug: "agile-mindset" },
-                          { title: "Awards & Recognition", slug: "awards" },
-                          { title: "1:1 Startup Consulting", slug: "startup-consulting" },
-                          { title: "Case Studies", slug: "case-studies" },
+                          { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.vercel.app/recognition-trust-badges/" },
                         ].map((page) => {
                           const isSubActive = pathname === `/${page.slug}`;
                           return (
                             <Link
                               key={page.slug}
-                              href={`/${page.slug}`}
+                              href={page.external || `/${page.slug}`}
                               onClick={() => setIsCompanyDropdownOpen(false)}
                               className={`group flex items-center justify-between px-4 py-3.5 rounded-[16px] text-[15px] font-semibold text-left transition-all duration-300 ${isSubActive
                                 ? "text-white bg-white/10 shadow-inner"
@@ -630,13 +628,11 @@ export function Navbar() {
                                 { title: "Development Process", slug: "development-process" },
                                 { title: "Partner with Us", slug: "partner-with-us" },
                                 { title: "Agile Mindset", slug: "agile-mindset" },
-                                { title: "Awards & Recognition", slug: "awards" },
-                                { title: "1:1 Startup Consulting", slug: "startup-consulting" },
-                                { title: "Case Studies", slug: "case-studies" },
+                                { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.vercel.app/recognition-trust-badges/" },
                               ].map((page) => (
                                 <Link
                                   key={page.slug}
-                                  href={`/${page.slug}`}
+                                  href={page.external || `/${page.slug}`}
                                   onClick={() => setIsOpen(false)}
                                   className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors text-slate-400 hover:text-white hover:bg-slate-900/50"
                                 >

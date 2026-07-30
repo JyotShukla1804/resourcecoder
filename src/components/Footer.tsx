@@ -385,7 +385,6 @@ const Footer = () => {
     { to: "/about", label: "About" },
     { to: "/services", label: "Services" },
     { to: "/industries-serve", label: "Industries" },
-    { to: "/case-studies", label: "Case Studies" },
     { to: "/blogs", label: "Most Recent Blogs" },
     { to: "/careers", label: "Careers" },
     { to: "/contact", label: "Contact" },

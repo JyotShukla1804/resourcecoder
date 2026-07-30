@@ -15,14 +15,12 @@ export function CTASection() {
         <div className="relative z-10 w-full max-w-[989px] mx-auto flex flex-col items-center gap-8 md:gap-[40px]">
           {/* Headline */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold leading-[1.15] tracking-tight text-white drop-shadow-sm">
-            Ready to Hire<br className="hidden sm:block" /> Dedicated Developers?
+            Get Ready to Team Up<br className="hidden sm:block" /> With Us
           </h2>
 
           {/* Description */}
           <p className="text-lg md:text-[22px] leading-[1.6] text-indigo-100/90 max-w-[780px] mx-auto font-normal">
-            Hire Dedicated Developer from India at affordable rates and get expected results for your envisioned
-            project. Our remote developers are skilled in full-stack development and they quickly satisfy your
-            needs beyond expectations.
+            Partner with our elite engineering team to bring your vision to life. We seamlessly integrate with your existing workflows, providing the expertise and dedication needed to accelerate your project's success and exceed your expectations.
           </p>
 
           {/* Button CTA */}
@@ -31,7 +29,7 @@ export function CTASection() {
               href="/#interview-section"
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
             >
-              Start 15 Days Risk-Free Trial
+              Become a Partner Today
             </Link>
           </div>
         </div>

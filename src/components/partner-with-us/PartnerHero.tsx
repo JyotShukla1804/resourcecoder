@@ -74,14 +74,7 @@ export function PartnerHero() {
               More than a technology partner, we're committed to your long-term success. Collaborate with Krazio Cloud to build innovative digital solutions, accelerate business growth, and transform ideas into measurable results.
             </motion.p>
 
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, delay: 0.25 }}
-              className="text-slate-600 text-md leading-relaxed mb-10 font-normal"
-            >
-              <strong className="text-slate-800">Technology Partnership:</strong> Leverage our expertise in AI, AR/VR/XR, custom software, web & mobile development, and enterprise solutions to innovate faster, scale confidently, and achieve sustainable business growth.
-            </motion.p>
+
 
             <motion.div
               initial={{ opacity: 0, y: 30 }}
