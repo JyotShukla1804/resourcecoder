@@ -141,7 +141,7 @@ export const HomeCostCalculator = () => {
   const experienceOptions = ["2-4 years", "5-7 years", "8-10 years", "11-15 years"];
 
   return (
-    <section className="relative py-24 bg-white overflow-hidden z-10 w-full flex justify-center border-t border-slate-100">
+    <section id="calculator-section" className="relative py-24 bg-white overflow-hidden z-10 w-full flex justify-center border-t border-slate-100">
       {/* Background decorations */}
       <div className="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
         <div className="absolute top-[-20%] right-[-10%] w-[50vw] h-[50vw] max-w-[600px] max-h-[600px] bg-gradient-to-br from-[#4B56D2]/5 to-purple-500/5 rounded-full blur-[100px]" />

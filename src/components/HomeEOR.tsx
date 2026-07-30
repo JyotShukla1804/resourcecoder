@@ -171,7 +171,7 @@ export function HomeEOR() {
           </div>
 
           <Link
-            href="#interview-section"
+            href="#calculator-section"
             className="btn-ripple inline-flex items-center justify-center text-white font-bold text-xs tracking-widest py-4.5 px-8 rounded-full transition-shadow duration-300 uppercase shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)] bg-[#4B56D2]"
           >
             Get Pricing

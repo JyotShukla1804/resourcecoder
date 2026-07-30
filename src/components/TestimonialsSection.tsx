@@ -5,15 +5,46 @@ import Link from "next/link";
 import Script from "next/script";
 
 export function TestimonialsSection() {
+  const widgetRef = React.useRef<HTMLDivElement>(null);
+
   useEffect(() => {
-    // Attempt to re-initialize if the script is already loaded (for client-side routing)
-    if (typeof window !== "undefined" && (window as any).CLUTCHCO) {
-      setTimeout(() => {
+    if (!widgetRef.current) return;
+    
+    // Clear the container to prevent duplicates on re-renders
+    widgetRef.current.innerHTML = '';
+
+    // Create the clutch widget div
+    const widgetDiv = document.createElement('div');
+    widgetDiv.className = "clutch-widget w-full";
+    widgetDiv.setAttribute("data-url", "https://widget.clutch.co");
+    widgetDiv.setAttribute("data-widget-type", "12");
+    widgetDiv.setAttribute("data-height", "375");
+    widgetDiv.setAttribute("data-nofollow", "false");
+    widgetDiv.setAttribute("data-expandifr", "true");
+    widgetDiv.setAttribute("data-scale", "100");
+    widgetDiv.setAttribute("data-reviews", "440657,439901,439844,437889,437527,434976,434972,434969,432085,427396,422318,408498");
+    widgetDiv.setAttribute("data-clutchcompany-id", "2344583");
+    
+    // Create the script
+    const script = document.createElement('script');
+    script.type = "text/javascript";
+    script.src = "https://widget.clutch.co/static/js/widget.js";
+    script.async = true;
+
+    // Append both to the container
+    widgetRef.current.appendChild(widgetDiv);
+    widgetRef.current.appendChild(script);
+
+    // Force initialization if the script was already loaded and cached globally
+    const timer = setTimeout(() => {
+      if (typeof window !== 'undefined' && (window as any).CLUTCHCO) {
         try {
           (window as any).CLUTCHCO.Init();
         } catch (e) {}
-      }, 500);
-    }
+      }
+    }, 1000);
+
+    return () => clearTimeout(timer);
   }, []);
 
   return (
@@ -36,16 +67,7 @@ export function TestimonialsSection() {
 
         {/* Clutch Widget Section */}
         <div className="relative w-full mb-16 flex justify-center py-4 min-h-[375px] bg-white rounded-2xl p-4">
-          <div 
-            className="clutch-widget w-full" 
-            data-url="https://widget.clutch.co" 
-            data-widget-type="12" 
-            data-height="375" 
-            data-nofollow="true" 
-            data-expandifr="true" 
-            data-scale="100" 
-            data-clutchcompany-id="2344583"
-          ></div>
+          <div ref={widgetRef} className="w-full min-h-[375px]" />
         </div>
 
         {/* Call To Action Button */}
