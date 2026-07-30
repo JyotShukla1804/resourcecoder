@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import { HireHero } from "@/components/HireHero";
 import { HireInterview } from "@/components/HireInterview";
-import { HirePricing } from "@/components/HirePricing";
+import { HomeCostCalculator } from "@/components/HomeCostCalculator";
 import { HireProcess } from "@/components/HireProcess";
 import { HiringModels } from "@/components/HiringModels";
 import { HireFAQ } from "@/components/HireFAQ";
@@ -138,9 +138,7 @@ export default function HireDedicatedPage() {
       </div>
 
       {/* Pricing Section */}
-      <div className="bg-[#F8F9FE] py-16">
-        <HirePricing />
-      </div>
+      <HomeCostCalculator />
 
       {/* Interview Form */}
       <HireInterview

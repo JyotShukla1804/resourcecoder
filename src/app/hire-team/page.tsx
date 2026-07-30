@@ -1,7 +1,7 @@
 export const dynamic = "force-dynamic";
 
 import React from "react";
-import { HireHero, TrustedBy, HireBenefits, HireServices, HirePricing, HireInterview, HireStories, HireExpertise, HireAugmentation, HireFAQ, HireCTA, ScrollToHash } from "@/components";
+import { HireHero, TrustedBy, HireBenefits, HireServices, HomeCostCalculator, HireInterview, HireStories, HireExpertise, HireAugmentation, HireFAQ, HireCTA, ScrollToHash } from "@/components";
 import { supabaseAdmin } from "@/lib/supabase-admin";
 import { DEFAULT_PAGE_CONTENT } from "@/lib/constants";
 
@@ -91,23 +91,8 @@ export default async function HireTeamPage() {
             );
             break;
           case "pricing":
-            const pricingPlans = (block.plans || []).map((plan: any) => ({
-              name: plan.name,
-              price: plan.price !== null ? (String(plan.price).startsWith("$") ? plan.price : `${plan.currency === 'USD' || !plan.currency ? '$' : ''}${plan.price}`) : "Custom",
-              unit: plan.unit,
-              badge: plan.badge || "",
-              description: plan.description || "",
-              cta_text: plan.cta_text || "Get Started",
-              cta_url: plan.cta_url || "#contact-form",
-              is_featured: plan.is_featured || plan.highlighted || false,
-              features: plan.features || []
-            }));
             component = (
-              <HirePricing
-                data={pricingPlans}
-                bottomCtaText={block.bottomCtaText}
-                bottomCtaUrl={block.bottomCtaUrl}
-              />
+              <HomeCostCalculator />
             );
             break;
           case "interview":

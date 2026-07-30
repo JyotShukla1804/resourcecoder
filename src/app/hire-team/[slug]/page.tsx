@@ -7,7 +7,7 @@ import {
   TrustedBy,
   HireBenefits,
   HireServices,
-  HirePricing,
+  HomeCostCalculator,
   HireInterview,
   HireStories,
   HireExpertise,
@@ -161,24 +161,8 @@ export default function DynamicHirePage() {
               />
             );
           case "pricing":
-            const pricingPlans = (block.plans || []).map((plan: any) => ({
-              name: plan.name,
-              price: plan.price !== null ? (String(plan.price).startsWith("$") ? plan.price : `${plan.currency === 'USD' || !plan.currency ? '$' : ''}${plan.price}`) : "Custom",
-              unit: plan.unit,
-              badge: plan.badge || "",
-              description: plan.description || "",
-              cta_text: plan.cta_text || "Get Started",
-              cta_url: plan.cta_url || "#contact-form",
-              is_featured: plan.is_featured || plan.highlighted || false,
-              features: plan.features || []
-            }));
             return (
-              <HirePricing
-                key={idx}
-                data={pricingPlans}
-                bottomCtaText={block.bottomCtaText}
-                bottomCtaUrl={block.bottomCtaUrl}
-              />
+              <HomeCostCalculator key={idx} />
             );
           case "interview":
             return (

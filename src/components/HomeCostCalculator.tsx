@@ -113,6 +113,22 @@ export const HomeCostCalculator = () => {
     }
   }, [currency, isCalculated, handleCalculate]);
 
+  useEffect(() => {
+    const handleModalSubmitEvent = () => {
+      handleCalculate();
+    };
+    window.addEventListener('contact-modal-submitted', handleModalSubmitEvent);
+    return () => {
+      window.removeEventListener('contact-modal-submitted', handleModalSubmitEvent);
+    };
+  }, [handleCalculate]);
+
+  const handleCalculateClick = () => {
+    if (!isCalculated) {
+      window.dispatchEvent(new Event('open-contact-modal'));
+    }
+  };
+
   const techStackOptions = [
     "React.js Developer", "Next.js Developer", "Angular Developer", "Vue.js Developer", "Frontend Developer", "UI/UX Designer",
     "Node.js Developer", "Python Developer", "Java Developer", ".NET Developer", "PHP / Laravel Developer", "Golang Developer",
@@ -190,8 +206,9 @@ export const HomeCostCalculator = () => {
               </div>
 
               <button 
-                onClick={handleCalculate}
-                className="btn-ripple mt-4 w-full bg-[#4B56D2] text-white rounded-2xl py-4 font-bold text-lg tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
+                onClick={handleCalculateClick}
+                disabled={isCalculated}
+                className={`btn-ripple mt-4 w-full rounded-2xl py-4 font-bold text-lg tracking-wider shadow-md hover:shadow-lg transition-all duration-300 select-none ${isCalculated ? 'bg-slate-300 text-slate-500 cursor-not-allowed opacity-70' : 'bg-[#4B56D2] text-white'}`}
               >
                 Calculate Now
               </button>
