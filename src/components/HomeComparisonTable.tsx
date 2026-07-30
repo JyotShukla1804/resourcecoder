@@ -15,7 +15,7 @@ export function HomeComparisonTable() {
     },
     {
       label: "Pre-vetted candidates",
-      jdi: "30,000+ screened",
+      jdi: "100+ screened",
       jobBoards: "Self-apply only",
       agencies: "Partial",
       freelance: "Self-rated"
@@ -35,7 +35,7 @@ export function HomeComparisonTable() {
       freelance: "Contractor only"
     },
     {
-      label: "MoLSW-licensed compliance",
+      label: "Licensed compliance",
       jdi: "Full compliance",
       jobBoards: "—",
       agencies: "Varies",
@@ -84,7 +84,7 @@ export function HomeComparisonTable() {
             Why Companies Choose K Res .coder Over Other Options
           </h2>
           <p className="text-slate-500 text-[16px] leading-relaxed">
-            Not all Vietnam developer hiring options are equal. Here's how K Res .coder stacks up against job boards, generic recruitment agencies, and freelance platforms.
+            Not all India developer hiring options are equal. Here's how K Res .coder stacks up against job boards, generic recruitment agencies, and freelance platforms.
           </p>
         </div>
 

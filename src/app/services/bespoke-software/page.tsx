@@ -144,18 +144,22 @@ export default function BespokeSoftwarePage() {
               </div>
 
               {/* Stats Row */}
-              <div className="grid grid-cols-3 gap-6 pt-12 border-t border-slate-100 mt-12">
+              <div className="grid grid-cols-2 gap-y-6 gap-x-4 pt-12 border-t border-slate-100 mt-12">
                 <div>
                   <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="10+" /></div>
                   <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Years Experience</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="350+" /></div>
-                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Projects Done</div>
+                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="232+" /></div>
+                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Projects Delivered</div>
                 </div>
                 <div>
-                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="150+" /></div>
-                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Happy Clients</div>
+                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="100+" /></div>
+                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Global Clients</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-extrabold text-[#4B56D2]"><AnimatedNumber value="100+" /></div>
+                  <div className="text-xs text-slate-500 font-semibold uppercase tracking-wider mt-1">Experienced Developers<br/>under Management</div>
                 </div>
               </div>
             </div>

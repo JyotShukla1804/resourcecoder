@@ -94,8 +94,28 @@ export function FloatingContact() {
     const handleOpenModal = () => setIsOpen(true);
     window.addEventListener('open-contact-modal', handleOpenModal);
 
+    // Intercept clicks on CTA buttons across the site
+    const handleGlobalClick = (e: MouseEvent) => {
+      const target = (e.target as HTMLElement).closest('a');
+      if (target && target.href && target.href.includes('#interview-section')) {
+        // Check if the form section actually exists on the current page
+        const formSectionExists = document.getElementById('interview-section');
+        
+        // If there is NO form on this page, open the popup instead of navigating
+        if (!formSectionExists) {
+          e.preventDefault();
+          e.stopPropagation();
+          setIsOpen(true);
+        }
+      }
+    };
+    
+    // Use capture phase to intercept before React Router handles the link click
+    window.addEventListener('click', handleGlobalClick, true);
+
     return () => {
       window.removeEventListener('open-contact-modal', handleOpenModal);
+      window.removeEventListener('click', handleGlobalClick, true);
     };
   }, []);
 

@@ -74,9 +74,9 @@ export function AboutStats() {
         {/* Stat Item 1 */}
         <div className="flex flex-col items-center justify-center relative">
           <span className="text-4xl md:text-[48px] font-extrabold text-[#4B56D2] tracking-tight mb-2 leading-none">
-            <AnimatedNumber value="300+" />
+            <AnimatedNumber value="10+" />
           </span>
-          <span className="text-xs md:text-sm font-semibold text-slate-700">Global Customers</span>
+          <span className="text-xs md:text-sm font-semibold text-slate-700">Years Experience</span>
           {/* Divider (desktop) */}
           <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-400/50" />
           {/* Divider (mobile) */}
@@ -86,9 +86,9 @@ export function AboutStats() {
         {/* Stat Item 2 */}
         <div className="flex flex-col items-center justify-center relative">
           <span className="text-4xl md:text-[48px] font-extrabold text-[#4B56D2] tracking-tight mb-2 leading-none">
-            <AnimatedNumber value="4+" />
+            <AnimatedNumber value="232+" />
           </span>
-          <span className="text-xs md:text-sm font-semibold text-slate-700">Global Locations</span>
+          <span className="text-xs md:text-sm font-semibold text-slate-700">Projects Delivered</span>
           {/* Divider (desktop) */}
           <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-400/50" />
         </div>
@@ -96,9 +96,9 @@ export function AboutStats() {
         {/* Stat Item 3 */}
         <div className="flex flex-col items-center justify-center relative">
           <span className="text-4xl md:text-[48px] font-extrabold text-[#4B56D2] tracking-tight mb-2 leading-none">
-            <AnimatedNumber value="2015" />
+            <AnimatedNumber value="100+" />
           </span>
-          <span className="text-xs md:text-sm font-semibold text-slate-700">Established</span>
+          <span className="text-xs md:text-sm font-semibold text-slate-700">Global Clients</span>
           {/* Divider (desktop) */}
           <div className="hidden md:block absolute right-0 top-1/2 -translate-y-1/2 w-px h-12 bg-slate-400/50" />
           {/* Divider (mobile) */}
@@ -108,9 +108,9 @@ export function AboutStats() {
         {/* Stat Item 4 */}
         <div className="flex flex-col items-center justify-center relative">
           <span className="text-4xl md:text-[48px] font-extrabold text-[#4B56D2] tracking-tight mb-2 leading-none">
-            <AnimatedNumber value="45+" />
+            <AnimatedNumber value="100+" />
           </span>
-          <span className="text-xs md:text-sm font-semibold text-slate-700">Talent Pool</span>
+          <span className="text-xs md:text-sm font-semibold text-slate-700">Experienced Developers<br/>under Management</span>
         </div>
 
       </div>

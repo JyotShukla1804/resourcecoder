@@ -127,24 +127,24 @@ export default function CalculateSalaryPage() {
 
   const faqs = [
     {
-      question: "What is Gross Salary?",
-      answer: "Gross Salary is the total earnings before deductions, tax withholdings. Gross Salary = Net Salary + Personal Income Tax (PIT) + Employee Mandatory Insurance (SHUI) + Trade Union Fund (TUF) + Other Bonuses (if applicable)"
+      question: "1. How does the salary calculator estimate developer costs?",
+      answer: "Our calculator uses current market salary trends, experience levels, technology stacks, and hiring benchmarks across India to provide realistic cost estimates."
     },
     {
-      question: "What is Net Salary?",
-      answer: "Net Salary is the actual amount an employee receives after all mandatory deductions."
+      question: "2. Are the salary estimates updated regularly?",
+      answer: "Yes. We periodically update the data to reflect changing market conditions, demand for technologies, and industry hiring trends."
     },
     {
-      question: "Mandatory Contributions (SHI/UI) & Trade Union Fund (TUF)",
-      answer: "Mandatory Contributions are the required payments to Vietnam's social security system, by law. Both employees and employers are legally obligated to pay these contributions."
+      question: "3. Does the calculator include only salary or the total hiring cost?",
+      answer: "The calculator primarily estimates the developer's salary. Additional costs such as recruitment, infrastructure, employee benefits, and operational expenses may vary depending on your hiring model."
     },
     {
-      question: "Minimum Wage Zones (I, II, III, IV)",
-      answer: "Vietnam divides into four wage zones (I, II, III, IV). Employers are obligated to pay salaries at or above minimum wage, based on these statutory requirements."
+      question: "4. Can I compare salaries for different technologies and experience levels?",
+      answer: "Yes. You can estimate costs based on different roles, technologies, and seniority levels to help you plan your hiring budget more effectively."
     },
     {
-      question: "Are There Any Additional Costs?",
-      answer: "Yes, in addition to gross salary and mandatory contributions, employers often incur other costs such as recruitment fees, office space, health insurance, etc."
+      question: "5. Why should I hire developers from India?",
+      answer: "India offers access to a large pool of highly skilled software developers at competitive rates, enabling businesses to reduce development costs while maintaining high-quality delivery and faster scalability."
     }
   ];
 
@@ -174,7 +174,7 @@ export default function CalculateSalaryPage() {
         <div className="relative z-10 text-center px-4">
           <h1 className="text-3xl md:text-5xl font-extrabold text-white mb-4 tracking-tight">Salary Calculator</h1>
           <p className="text-slate-200 text-[16px] md:text-lg max-w-2xl mx-auto">
-            Quickly understand what it costs to hire developers in Vietnam. Our salary calculator gives you clear, up-to-date market rates.
+            Quickly understand what it costs to hire developers in India. Our salary calculator gives you clear, up-to-date market rates.
           </p>
         </div>
       </div>
@@ -402,7 +402,7 @@ export default function CalculateSalaryPage() {
                 <h3 className="text-[15px] font-bold text-slate-900">Download Our Resources</h3>
               </div>
               <ul className="space-y-3">
-                {['Vietnam Developer Salary Report', 'Vietnam Tech Talent Market Snapshot', 'Cost Considerations For Hiring In Vietnam'].map((item, i) => (
+                {['India Developer Salary Report', 'India Tech Talent Market Snapshot', 'Cost Considerations For Hiring In India'].map((item, i) => (
                   <li key={i} className="flex items-center gap-3 text-slate-500 text-[14px] hover:text-[#4B56D2] transition-colors cursor-pointer">
                     <ChevronRight className="w-3.5 h-3.5 opacity-60" /> {item}
                   </li>

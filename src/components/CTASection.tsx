@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import Link from "next/link";
 
@@ -27,6 +28,12 @@ export function CTASection() {
           <div className="flex justify-center mt-4">
             <Link
               href="/#interview-section"
+              onClick={(e) => {
+                if (!document.getElementById('interview-section')) {
+                  e.preventDefault();
+                  window.dispatchEvent(new CustomEvent('open-contact-modal'));
+                }
+              }}
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
             >
               Become a Partner Today

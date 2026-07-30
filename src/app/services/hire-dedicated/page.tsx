@@ -36,20 +36,25 @@ export default function HireDedicatedPage() {
       >
         {/* Integrated Badges Banner */}
         <div className="w-full text-gray-900 py-6 relative z-20">
-          <div className="max-w-[1358px] mx-auto px-6 flex flex-wrap justify-center items-center gap-6 sm:gap-12 md:gap-24">
+          <div className="max-w-[1358px] mx-auto px-4 lg:px-6 flex flex-wrap xl:flex-nowrap justify-center items-center gap-4 sm:gap-8 lg:gap-12 xl:gap-16">
             <div className="flex items-center space-x-3">
-              <span className="text-[#4B56D2] font-bold text-2xl">50+</span>
-              <span className="text-sm text-gray-800 font-medium leading-tight">Software<br/>Experts</span>
+              <span className="text-[#4B56D2] font-bold text-2xl">10+</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Years<br/>Experience</span>
             </div>
             <div className="hidden sm:block w-px h-10 bg-slate-400/50"></div>
             <div className="flex items-center space-x-3">
-              <span className="text-[#4B56D2] font-bold text-2xl">97%</span>
-              <span className="text-sm text-gray-800 font-medium leading-tight">Client<br/>Retention</span>
+              <span className="text-[#4B56D2] font-bold text-2xl">232+</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Projects<br/>Delivered</span>
             </div>
             <div className="hidden sm:block w-px h-10 bg-slate-400/50"></div>
             <div className="flex items-center space-x-3">
-              <span className="text-[#4B56D2] font-bold text-2xl">4.9/5</span>
-              <span className="text-sm text-gray-800 font-medium leading-tight">Average<br/>Rating</span>
+              <span className="text-[#4B56D2] font-bold text-2xl">100+</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Global<br/>Clients</span>
+            </div>
+            <div className="hidden sm:block w-px h-10 bg-slate-400/50"></div>
+            <div className="flex items-center space-x-3">
+              <span className="text-[#4B56D2] font-bold text-2xl">100+</span>
+              <span className="text-sm text-gray-800 font-medium leading-tight">Experienced Developers<br/>under Management</span>
             </div>
           </div>
         </div>

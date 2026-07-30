@@ -16,6 +16,7 @@ import {
   ChevronLeft,
   ChevronRight,
   Download,
+  Users,
 } from "lucide-react";
 const FacebookIcon = ({ className = "" }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
@@ -521,7 +522,7 @@ const Footer = () => {
               </motion.div>
             )}
 
-            <motion.div variants={itemVariants} className="mt-6">
+            <motion.div variants={itemVariants} className="mt-6 flex flex-wrap gap-4">
               <a
                 href="/krazio-corporate-profile.pdf"
                 target="_blank"
@@ -531,6 +532,13 @@ const Footer = () => {
                 <Download className="w-5 h-5 mr-2" />
                 <span className="font-medium">Krazio Profile</span>
               </a>
+              <Link
+                href="/partner-with-us"
+                className="btn-ripple inline-flex items-center px-6 py-3 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-colors duration-300 text-white"
+              >
+                <Users className="w-5 h-5 mr-2" />
+                <span className="font-medium">Partner</span>
+              </Link>
             </motion.div>
 
           </div>

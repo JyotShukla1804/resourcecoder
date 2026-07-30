@@ -13,13 +13,13 @@ export function HomeComparison() {
     },
     {
       label: "Time to hire",
-      withUs: "3–4 weeks",
+      withUs: "3 weeks",
       onOwn: "3–6 months average"
     },
     {
       label: "Compliance risk",
-      withUs: "MoLSW-licensed, zero risk",
-      onOwn: "High — Vietnam labour law is complex"
+      withUs: "zero risk",
+      onOwn: "High — India labour law is complex"
     },
     {
       label: "Local entity required",
@@ -33,11 +33,11 @@ export function HomeComparison() {
     },
     {
       label: "Candidate pool",
-      withUs: "30,000+ pre-vetted & ready",
+      withUs: "100+ ready to deploy",
       onOwn: "Cold outreach from zero"
     },
     {
-      label: "Vietnam market expertise",
+      label: "Indian market expertise",
       withUs: "10+ years of building tech teams",
       onOwn: "Learning curve at your cost"
     }

@@ -2,10 +2,10 @@ import React from "react";
 
 export function StatsCards() {
   const stats = [
-    { number: "300+", label: "Clients" },
-    { number: "1,000+", label: "Successfully Hired" },
-    { number: "30,000+", label: "Skilled Tech Candidates" },
-    { number: "500+", label: "Experienced Developers\nunder Management" },
+    { number: "10+", label: "Years Experience" },
+    { number: "232+", label: "Projects Delivered" },
+    { number: "100+", label: "Global Clients" },
+    { number: "100+", label: "Experienced Developers\nunder Management" },
   ];
 
   return (
