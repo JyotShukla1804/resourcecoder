@@ -13,13 +13,16 @@ export const metadata: Metadata = {
   description: "Explore strategic partnership models with ResourceCoders to scale your business, co-develop innovative solutions, and leverage top-tier engineering talent.",
 };
 
+import { HomeCostCalculator } from "@/components";
+
 export default function PartnerWithUsPage() {
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section with Form */}
-      <div id="partner-form">
-        <PartnerHero />
-      </div>
+      {/* Hero Section */}
+      <PartnerHero />
+      
+      {/* Cost Calculator */}
+      <HomeCostCalculator />
 
       {/* Companies We Partner With Grid */}
       <PartnerCompaniesGrid />

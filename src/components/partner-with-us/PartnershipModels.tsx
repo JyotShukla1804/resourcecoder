@@ -7,29 +7,26 @@ import { CheckCircle2 } from "lucide-react";
 export function PartnershipModels() {
   const models = [
     {
-      title: "Dedicated Development Team",
+      title: "Become a Channel Partner",
       items: [
-        "Build your own remote team of experienced developers, designers, and QA engineers.",
-        "Work exclusively on your projects as a seamless extension of your in-house team.",
-        "Ensure complete transparency, flexibility, and control throughout development."
+        "Earn 20% referral commission on every successful project.",
+        "Get paid on MRR (Monthly Recurring Revenue) or ARR (Annual Recurring Revenue) models.",
+        "No delivery responsibility, we handle development, support, and project management.",
+        "White-label collaboration to protect your brand and client relationships.",
+        "Join our network of 50+ global channel partners driving mutual growth."
       ]
     },
     {
-      title: "Offshore Development Center (ODC)",
+      title: "Why Partner with Krazio Cloud?",
       items: [
-        "Establish a scalable offshore development center with Krazio Cloud.",
-        "Significantly reduce operational costs without sacrificing quality.",
-        "Access world-class technical expertise and seamless collaboration."
-      ]
-    },
-    {
-      title: "Project-Based Development",
-      items: [
-        "Deliver end-to-end custom software, AI, AR/VR/XR, web, and mobile applications.",
-        "Ideal for projects ranging from early-stage MVPs to enterprise-scale solutions.",
-        "Guaranteed delivery with a clear scope, timeline, and predictable outcomes."
+        "Dedicated team with 10+ years of software development experience.",
+        "Access to 100+ vetted developers across multiple technologies.",
+        "Fast onboarding and transparent project execution.",
+        "Expand your service portfolio without hiring in-house resources.",
+        "Dedicated partner success manager to support every opportunity."
       ]
     }
+
 
   ];
 
@@ -50,7 +47,7 @@ export function PartnershipModels() {
             Flexible Engagement Models
           </h2>
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Choose the partnership model that best fits your business goals, project requirements, and growth strategy.
+            Grow your business without increasing your delivery overhead. Whether you're an agency, consultant, IT company, or independent sales professional, partner with Krazio Cloud and earn recurring revenue by referring clients who need dedicated developers and software development services.
           </p>
         </div>
 

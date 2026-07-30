@@ -16,27 +16,23 @@ export function CTASection() {
         <div className="relative z-10 w-full max-w-[989px] mx-auto flex flex-col items-center gap-8 md:gap-[40px]">
           {/* Headline */}
           <h2 className="text-4xl sm:text-5xl md:text-6xl lg:text-[64px] font-extrabold leading-[1.15] tracking-tight text-white drop-shadow-sm">
-            Get Ready to Team Up<br className="hidden sm:block" /> With Us
+            Become a Partner<br className="hidden sm:block" /> Today!
           </h2>
 
           {/* Description */}
           <p className="text-lg md:text-[22px] leading-[1.6] text-indigo-100/90 max-w-[780px] mx-auto font-normal">
-            Partner with our elite engineering team to bring your vision to life. We seamlessly integrate with your existing workflows, providing the expertise and dedication needed to accelerate your project's success and exceed your expectations.
+            Join our growing network of global channel partners and start earning recurring revenue by connecting businesses with trusted software development talent. We take care of the entire delivery while you focus on building relationships and growing your business. It's simple, transparent, and designed for long-term success.
           </p>
 
           {/* Button CTA */}
           <div className="flex justify-center mt-4">
             <Link
-              href="/#interview-section"
-              onClick={(e) => {
-                if (!document.getElementById('interview-section')) {
-                  e.preventDefault();
-                  window.dispatchEvent(new CustomEvent('open-contact-modal'));
-                }
-              }}
+              href="https://calendly.com/rahul-b-f5nl/consulting-call?month=2026-07"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
             >
-              Become a Partner Today
+              Become a Channel Partner
             </Link>
           </div>
         </div>

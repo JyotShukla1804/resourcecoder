@@ -141,6 +141,10 @@ export function FloatingContact() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitted(true);
+    
+    // Dispatch an event so other components (like HomeCostCalculator) know it was submitted
+    window.dispatchEvent(new Event('contact-modal-submitted'));
+
     setTimeout(() => {
       setIsOpen(false);
       setIsSubmitted(false);
