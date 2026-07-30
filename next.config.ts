@@ -12,6 +12,20 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/case_studies',
+        destination: '/case-studies',
+        permanent: true,
+      },
+      {
+        source: '/case_studies/:id*',
+        destination: '/case-studies/:id*',
+        permanent: true,
+      }
+    ];
+  },
 };
 
 export default nextConfig;

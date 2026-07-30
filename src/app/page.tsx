@@ -81,16 +81,10 @@ export default async function Home() {
             />
           ) : (
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-[1.2] text-[#0f172a] max-w-3xl">
-              Hire Dedicated Developers<br className="hidden md:inline" />
-              from India &{" "}
-              <span
-                className="bg-gradient-to-r from-[#4B56D2] to-[#4B56D2] bg-clip-text text-transparent"
-                
-              >
-                Save 40%
-              </span>{" "}
-              on<br className="hidden md:inline" />
-              Development Cost
+              Build Your Dedicated Development Team with{" "}
+              <span className="bg-gradient-to-r from-[#4B56D2] to-[#4B56D2] bg-clip-text text-transparent">
+                Krazio Cloud
+              </span>
             </h1>
           )}
 
@@ -102,16 +96,16 @@ export default async function Home() {
             />
           ) : (
             <p className="text-slate-500 text-sm sm:text-base leading-relaxed max-w-2xl mx-auto font-normal">
-              Looking to hire dedicated developers in India? Get access to a skilled, experienced, and cost-effective team to build cutting-edge software solutions tailored to your business needs. Whether you need web development, mobile apps, AI solutions, or enterprise software, our developers are ready to deliver excellence.
+              Scale your business with experienced developers and technology specialists who seamlessly integrate with your team. From AI and AR/VR/XR to enterprise software, web, and mobile development, we provide the expertise you need to deliver high quality digital products faster and more efficiently.
             </p>
           )}
 
           {/* Benefits Checks */}
           <div className="flex flex-col sm:flex-row flex-wrap items-center justify-center gap-4 sm:gap-8 pt-4">
             {[
-              "05 Days Risk Free Trial",
-              "24/7 Technical Support",
-              "61+ Developers Team"
+              "Dedicated Offshore Development Team",
+              "Agile & Transparent Delivery",
+              "Scalable, Secure & Future Ready Solutions"
             ].map((benefit, idx) => (
               <div key={idx} className="benefit-item">
                 <svg className="w-4 h-4 text-[#4B56D2] flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="3.5" viewBox="0 0 24 24">

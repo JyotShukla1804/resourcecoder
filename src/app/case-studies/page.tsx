@@ -5,134 +5,7 @@ import Link from 'next/link';
 import { Calendar, ChevronLeft, ChevronRight } from 'lucide-react';
 import { CTASection } from '@/components/CTASection';
 
-const caseStudies = [
-  {
-    id: 1,
-    title: "Discover How Gigacover Scaled Their Tech Team in Vietnam",
-    company: "Gigacover",
-    tags: ["HR", "Payroll", "Recruitment"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 2,
-    title: "How K Res .coder Helped Fulfilled Build Their Vietnam Tech Team",
-    company: "Fulfilled",
-    tags: ["HR", "Recruitment"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 3,
-    title: "Building Cynopsis' Vietnam Tech Team",
-    company: "Cynopsis.co",
-    tags: ["Recruitment", "HR"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 4,
-    title: "ErudiFi Navigates and Resolves HR Challenges in Vietnam with K Res .coder",
-    company: "ErudiFi",
-    tags: ["HR", "Recruitment", "Payroll"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 5,
-    title: "How ShopBack Built Its Vietnam Tech Hub With K Res .coder",
-    company: "ShopBack",
-    tags: ["HR", "Recruitment", "ODC"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 6,
-    title: "Helping V-Key Build an Offshore Team for Global Expansion",
-    company: "V-Key",
-    tags: ["Recruitment", "HR", "Payroll", "ODC"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 7,
-    title: "Alfagomma Successfully Built Their Tech Team in Vietnam with K Res .coder",
-    company: "Alfagomma",
-    tags: ["HR", "Payroll", "ODC", "Recruitment"],
-    date: "08/12/2024",
-    image: "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 8,
-    title: "Helping Dreamcloud Grow Their Vietnam Tech Team",
-    company: "Dreamcloud",
-    tags: ["Recruitment", "ODC", "HR", "Payroll"],
-    date: "23/12/2024",
-    image: "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 9,
-    title: "An E-commerce Firm Rebuilt Its Offshore Development Team with K Res .coder",
-    company: "E-commerce Firm",
-    tags: ["Recruitment"],
-    date: "26/06/2020",
-    image: "https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 10,
-    title: "How a US SaaS Firm Hired 10 Vietnam Developers in 28 Days —...",
-    overlayText1: "How a US SaaS Firm Hired",
-    overlayText2: "10 Vietnam Developers in 28 Days",
-    tags: ["EOR", "Recruitment"],
-    date: "23/06/2020",
-    image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 11,
-    title: "Building a Software Team in Vietnam Without the Legal & Compliance...",
-    overlayText1: "Building a Tech Team in Vietnam",
-    overlayText2: "Without the Legal & Compliance Headaches",
-    tags: ["Recruitment"],
-    date: "20/05/2025",
-    image: "https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 12,
-    title: "How an Australian Startup Built a Tech Hub in Vietnam — Without a...",
-    overlayText1: "How an Australian Firm Built a Tech Hub",
-    overlayText2: "in Vietnam Without a Single Entity",
-    tags: ["Recruitment"],
-    date: "28/05/2020",
-    image: "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 13,
-    title: "How a Singapore Fintech Hired 6 Vietnam Engineers in 3 Weeks —...",
-    overlayText1: "How a Singapore Fintech Hired 6",
-    overlayText2: "Vietnam Engineers in 3 Weeks",
-    tags: ["Recruitment"],
-    date: "14/08/2020",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 14,
-    title: "Helping a Singapore SaaS Startup Run Its Vietnam Team Seamlessly...",
-    overlayText1: "Helping a Singapore SaaS Startup Run Its",
-    overlayText2: "Vietnam Team Seamlessly with EOR Services",
-    tags: ["EOR"],
-    date: "02/11/2025",
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
-  },
-  {
-    id: 15,
-    title: "How a Startup Built Its AI Team in Just 30 Days With K Res .coder",
-    overlayText1: "How a Startup Built Its AI Team",
-    overlayText2: "in Just 30 Days With K Res .coder",
-    tags: ["Recruitment"],
-    date: "02/07/2025",
-    image: "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=800",
-  }
-];
+import { caseStudies } from '@/data/caseStudies';
 
 export default function CaseStudiesPage() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -145,10 +18,10 @@ export default function CaseStudiesPage() {
   );
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col pt-[88px] relative z-10">
+    <div className="min-h-screen bg-slate-50 flex flex-col relative z-10">
 
       {/* Hero Banner */}
-      <div className="relative w-full h-[250px] md:h-[300px] overflow-hidden flex flex-col items-center justify-center">
+      <div className="relative w-full h-[338px] md:h-[388px] pt-[88px] overflow-hidden flex flex-col items-center justify-center">
         <div className="absolute inset-0 bg-gradient-to-br from-[#5b67e6] via-[#4B56D2] to-[#3e48b8]" />
 
         <div className="relative z-10 text-center px-4">
