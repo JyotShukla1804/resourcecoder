@@ -2,33 +2,18 @@
 
 import React, { useEffect } from "react";
 import Link from "next/link";
+import Script from "next/script";
 
 export function TestimonialsSection() {
   useEffect(() => {
-    // Prevent injecting multiple scripts if the component re-mounts
-    const existingScript = document.querySelector('script[src="https://widget.clutch.co/static/js/widget.js"]');
-    
-    if (existingScript) {
-      // If script is already there, just tell Clutch to re-initialize
-      if ((window as any).CLUTCHCO) {
-        (window as any).CLUTCHCO.Init();
-      }
-      return;
+    // Attempt to re-initialize if the script is already loaded (for client-side routing)
+    if (typeof window !== "undefined" && (window as any).CLUTCHCO) {
+      setTimeout(() => {
+        try {
+          (window as any).CLUTCHCO.Init();
+        } catch (e) {}
+      }, 500);
     }
-
-    const script = document.createElement("script");
-    script.type = "text/javascript";
-    script.src = "https://widget.clutch.co/static/js/widget.js";
-    script.async = true;
-    
-    script.onload = () => {
-      // Once loaded, initialize the widget if it didn't automatically
-      if ((window as any).CLUTCHCO) {
-        (window as any).CLUTCHCO.Init();
-      }
-    };
-
-    document.body.appendChild(script);
   }, []);
 
   return (
@@ -56,10 +41,9 @@ export function TestimonialsSection() {
             data-url="https://widget.clutch.co" 
             data-widget-type="12" 
             data-height="375" 
-            data-nofollow="false" 
+            data-nofollow="true" 
             data-expandifr="true" 
             data-scale="100" 
-            data-reviews="440657,439901,439844,437889,437527,434976,434972,434969,432085,427396,422318,408498" 
             data-clutchcompany-id="2344583"
           ></div>
         </div>
