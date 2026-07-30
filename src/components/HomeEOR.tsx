@@ -38,15 +38,15 @@ export function HomeEOR() {
   return (
     <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-[#f8f9ff] overflow-hidden relative z-10">
       <div className="max-w-[1358px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
-        
+
         {/* Left Graphic - Dashboard UI */}
         <div className="w-full lg:w-1/2 relative min-h-[500px] flex justify-center items-center">
-          
+
           {/* Main Dashboard Container */}
           <div className="relative w-full max-w-[500px] h-[500px] bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.05)] border border-slate-100 overflow-hidden flex flex-col">
-            
+
             {/* Background Grid inside dashboard */}
-            <div 
+            <div
               className="absolute inset-0 opacity-[0.04] pointer-events-none"
               style={{
                 backgroundImage: `linear-gradient(#4B56D2 1px, transparent 1px), linear-gradient(90deg, #4B56D2 1px, transparent 1px)`,
@@ -70,10 +70,10 @@ export function HomeEOR() {
 
             {/* Dashboard Content Grid */}
             <div className="flex-1 p-6 relative z-10 grid grid-cols-2 gap-6">
-              
+
               {/* Left Column in Dashboard */}
               <div className="flex flex-col gap-6">
-                
+
                 {/* Main Employee Card */}
                 <div className="bg-[#f0f4ff] rounded-2xl p-4 border border-[#d6e0ff] shadow-sm animate-float" style={{ animationDelay: '0.2s' }}>
                   <div className="w-full h-32 rounded-xl bg-slate-200 mb-4 overflow-hidden relative">
@@ -104,7 +104,7 @@ export function HomeEOR() {
               {/* Right Column in Dashboard - Timeline */}
               <div className="flex flex-col gap-4 bg-white rounded-2xl p-5 border border-slate-100 shadow-sm animate-float" style={{ animationDelay: '0.8s' }}>
                 <h4 className="font-bold text-slate-900 text-xs uppercase tracking-wider mb-2">Our EOR Process</h4>
-                
+
                 {[
                   { title: "Initial Alignment", desc: "Define needs & legal requirements", active: true },
                   { title: "Contract Setup", desc: "Local contracts approved by team", active: true },
@@ -116,7 +116,7 @@ export function HomeEOR() {
                     {i !== 3 && (
                       <div className={`absolute left-2.5 top-6 bottom-[-16px] w-[2px] ${step.active ? 'bg-[#4B56D2]' : 'bg-slate-100'}`} />
                     )}
-                    
+
                     {/* Icon */}
                     <div className={`w-5 h-5 rounded-full flex items-center justify-center shrink-0 relative z-10 ${step.active ? 'bg-[#4B56D2] text-white shadow-md' : 'bg-slate-100 text-slate-400'}`}>
                       {step.active ? <CheckCircle2 className="w-3 h-3" /> : <div className="w-1.5 h-1.5 rounded-full bg-slate-300" />}
@@ -135,7 +135,7 @@ export function HomeEOR() {
           </div>
 
           {/* Floating Element outside dashboard */}
-          <div className="absolute -bottom-6 -right-6 z-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 animate-float" style={{ animationDelay: '2s' }}>
+          <div className="absolute -bottom-10 -right-2 md:-right-8 z-20 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 flex items-center gap-4 animate-float" style={{ animationDelay: '2s' }}>
             <div className="w-12 h-12 bg-blue-50 rounded-full flex items-center justify-center">
               <Shield className="w-6 h-6 text-[#4B56D2]" />
             </div>

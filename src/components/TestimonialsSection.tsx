@@ -1,87 +1,35 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Link from "next/link";
 
 export function TestimonialsSection() {
-  const testimonials = [
-    {
-      text: '"They took the time to understand how our technicians work in the field and adapted the AR experience accordingly."',
-      author: "Amerit Fleet Solution",
-      role: "Product Manager",
-    },
-    {
-      text: '"Communication was clear and proactive."',
-      author: "Icarus Digital Marketing",
-      role: "Senior Project Manager",
-    },
-    {
-      text: '"Krazio approached the engagement with a strong problem-solving mindset."',
-      author: "Trusense Ltd",
-      role: "CEO",
-    },
-    {
-      text: '"Their ability to combine deep AI expertise with strong product thinking stood out."',
-      author: "Blooper",
-      role: "Chief Product Officer",
-    },
-    {
-      text: '"Their team consistently focused on delivering measurable business impact rather than just technical outputs."',
-      author: "Harvey",
-      role: "Product Manager",
-    },
-    {
-      text: '"Overall, our experience with Krazio Cloud Pvt. Ltd. was very positive."',
-      author: "Korporacja Wschód",
-      role: "COO",
-    },
-    {
-      text: '"They aligned solutions directly with our growth objectives."',
-      author: "Elab Education Italy",
-      role: "Director of Marketing & PR",
-    },
-    {
-      text: '"What impressed us most was their strong mix of strategic thinking and technical depth."',
-      author: "digalo | DIGITAL MARKETING",
-      role: "Head Of Visual Creation",
-    },
-    {
-      text: '"Krazio Cloud Pvt. Ltd.\'s ability to translate AR/VR technology into user-friendly solutions stood out."',
-      author: "JIVARO Recruitment",
-      role: "CEO",
-    },
-    {
-      text: '"Krazio Cloud Pvt. Ltd. demonstrated excellent project management throughout the implementation."',
-      author: "1Strike.ai",
-      role: "CEO & Co-Founder",
-    },
-    {
-      text: '"They adhered to the schedule rigorously, delivering key milestones on time and maintaining transparent communication."',
-      author: "Avvocato360 | Innovazione per l\'avvocato",
-      role: "CEO",
-    },
-    {
-      text: '"Krazio Cloud Pvt. Ltd. has been very supportive and professional."',
-      author: "Forhopp",
-      role: "CEO",
+  useEffect(() => {
+    // Prevent injecting multiple scripts if the component re-mounts
+    const existingScript = document.querySelector('script[src="https://widget.clutch.co/static/js/widget.js"]');
+    
+    if (existingScript) {
+      // If script is already there, just tell Clutch to re-initialize
+      if ((window as any).CLUTCHCO) {
+        (window as any).CLUTCHCO.Init();
+      }
+      return;
     }
-  ];
 
-  // Duplicate the list to create a seamless infinite marquee effect
-  const doubledTestimonials = [...testimonials, ...testimonials];
+    const script = document.createElement("script");
+    script.type = "text/javascript";
+    script.src = "https://widget.clutch.co/static/js/widget.js";
+    script.async = true;
+    
+    script.onload = () => {
+      // Once loaded, initialize the widget if it didn't automatically
+      if ((window as any).CLUTCHCO) {
+        (window as any).CLUTCHCO.Init();
+      }
+    };
 
-  const StarIcon = () => (
-    <svg
-      className="w-4 h-4 text-[#FACC15] fill-current"
-      stroke="currentColor"
-      strokeWidth="2"
-      viewBox="0 0 24 24"
-    >
-      <path
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.907c.961 0 1.36 1.252.583 1.828l-3.97 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.971-2.888a1 1 0 00-1.176 0l-3.97 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.97-2.888c-.777-.576-.378-1.828.583-1.828h4.907a1 1 0 00.95-.69l1.519-4.674z"
-      />
-    </svg>
-  );
+    document.body.appendChild(script);
+  }, []);
 
   return (
     <section className="w-full self-stretch bg-black py-20 px-4 sm:px-6 lg:px-8 relative z-10 overflow-hidden border-t border-slate-950/80">
@@ -101,49 +49,19 @@ export function TestimonialsSection() {
           </p>
         </div>
 
-        {/* Testimonials Infinite Marquee */}
-        <div className="relative w-full overflow-hidden mb-16 py-4">
-
-          {/* Scrolling Track */}
+        {/* Clutch Widget Section */}
+        <div className="relative w-full mb-16 flex justify-center py-4 min-h-[375px] bg-white rounded-2xl p-4">
           <div 
-            className="animate-marquee flex gap-6"
-          >
-            {doubledTestimonials.map((t, idx) => (
-              <div
-                key={idx}
-                className="flex-shrink-0 w-[320px] md:w-[410px]"
-              >
-                <div 
-                  className="w-full h-full min-h-[280px] bg-white/5 rounded-3xl border border-white/10 p-8 flex flex-col justify-between hover:border-white/20 hover:bg-white/10 transition-all duration-300 group relative overflow-hidden"
-                >
-                  <div className="space-y-6 relative z-10">
-                    {/* 5 Filled Star Rating */}
-                    <div className="flex gap-1.5">
-                      <StarIcon />
-                      <StarIcon />
-                      <StarIcon />
-                      <StarIcon />
-                      <StarIcon />
-                    </div>
-                    {/* Review Text */}
-                    <p className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal italic group-hover:text-slate-100 transition-colors duration-350">
-                      {t.text}
-                    </p>
-                  </div>
-
-                  {/* Author Info */}
-                  <div className="relative z-10 mt-6">
-                    <h3 className="text-white font-bold text-sm sm:text-base leading-tight group-hover:text-blue-400 transition-colors duration-350">
-                      {t.author}
-                    </h3>
-                    <p className="text-slate-500 text-xs sm:text-sm mt-1">
-                      {t.role}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+            className="clutch-widget w-full" 
+            data-url="https://widget.clutch.co" 
+            data-widget-type="12" 
+            data-height="375" 
+            data-nofollow="false" 
+            data-expandifr="true" 
+            data-scale="100" 
+            data-reviews="440657,439901,439844,437889,437527,434976,434972,434969,432085,427396,422318,408498" 
+            data-clutchcompany-id="2344583"
+          ></div>
         </div>
 
         {/* Call To Action Button */}

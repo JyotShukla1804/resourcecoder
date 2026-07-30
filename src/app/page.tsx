@@ -146,8 +146,8 @@ export default async function Home() {
       {/* Employer of Record (EOR) Section */}
       <HomeEOR />
 
-      {/* Home Process Section */}
-      <HomeProcess />
+      {/* Hiring Process Section */}
+      <HiringProcessSection />
 
       {/* Home Comparison Section */}
       <HomeComparison />
@@ -173,8 +173,8 @@ export default async function Home() {
       {/* Interview Form Section */}
       <InterviewForm />
 
-      {/* Hiring Process Section */}
-      <HiringProcessSection />
+      {/* Home Process Section */}
+      <HomeProcess />
 
 
 
