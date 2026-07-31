@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { TrustedBy, HireFAQ, CTASection } from "@/components";
+import { AnimatedNumber } from "@/components/AboutStats";
 import { Lightbulb, Palette, Settings, Gamepad2, Wrench, Link as LinkIcon, FlaskConical, Globe, Box, Monitor, Smartphone, Package, Glasses, Cpu } from "lucide-react";
 
 export default function VirtualRealityDevelopmentPage() {
@@ -55,12 +56,12 @@ export default function VirtualRealityDevelopmentPage() {
   ];
 
   const hardwareIntegrations = [
-    { name: "Oculus Rift", icon: <Monitor className="w-6 h-6 text-[#4B56D2]" />, desc: "High-fidelity PC-powered VR experiences with precise tracking." },
-    { name: "HTC Vive", icon: <Cpu className="w-6 h-6 text-[#4B56D2]" />, desc: "Room-scale VR with unparalleled immersion and realistic interactions." },
-    { name: "PlayStation VR", icon: <Gamepad2 className="w-6 h-6 text-[#4B56D2]" />, desc: "Console-based VR development reaching a massive gaming audience." },
-    { name: "Samsung Gear VR", icon: <Smartphone className="w-6 h-6 text-[#4B56D2]" />, desc: "Accessible mobile VR experiences powered by Oculus technology." },
-    { name: "Google Cardboard", icon: <Package className="w-6 h-6 text-[#4B56D2]" />, desc: "Entry-level VR apps for widespread distribution on smartphones." },
-    { name: "Microsoft HoloLens", icon: <Glasses className="w-6 h-6 text-[#4B56D2]" />, desc: "Mixed reality applications blending digital content with the real world." }
+    { name: "Oculus Rift", icon: <Monitor className="w-6 h-6 text-blue-500" />, desc: "High-fidelity PC-powered VR experiences with precise tracking." },
+    { name: "HTC Vive", icon: <Cpu className="w-6 h-6 text-blue-500" />, desc: "Room-scale VR with unparalleled immersion and realistic interactions." },
+    { name: "PlayStation VR", icon: <Gamepad2 className="w-6 h-6 text-blue-500" />, desc: "Console-based VR development reaching a massive gaming audience." },
+    { name: "Samsung Gear VR", icon: <Smartphone className="w-6 h-6 text-blue-500" />, desc: "Accessible mobile VR experiences powered by Oculus technology." },
+    { name: "Google Cardboard", icon: <Package className="w-6 h-6 text-blue-500" />, desc: "Entry-level VR apps for widespread distribution on smartphones." },
+    { name: "Microsoft HoloLens", icon: <Glasses className="w-6 h-6 text-blue-500" />, desc: "Mixed reality applications blending digital content with the real world." }
   ];
 
   const faqs = [
@@ -195,22 +196,26 @@ export default function VirtualRealityDevelopmentPage() {
       </section>
 
       {/* 5. Hardware Integration */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-y border-slate-100">
-        <div className="max-w-7xl mx-auto">
+      <section className="py-24 px-4 sm:px-6 lg:px-8 bg-[#0A0F1C] border-y border-slate-800 relative overflow-hidden">
+        {/* Dark theme background glows */}
+        <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-blue-600/10 rounded-full blur-[120px] pointer-events-none" />
+        <div className="absolute bottom-0 right-1/4 w-[500px] h-[500px] bg-indigo-600/10 rounded-full blur-[120px] pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto relative z-10">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-4">
-              Robust Solutions & Integration with <span className="text-blue-600">Smart Hardware</span>
+            <h2 className="text-3xl md:text-4xl font-extrabold text-white mb-4">
+              Robust Solutions & Integration with <span className="text-blue-500">Smart Hardware</span>
             </h2>
-            <p className="text-slate-600 max-w-2xl mx-auto">Our developers are proficient in building experiences for the industry's leading VR headsets and peripherals.</p>
+            <p className="text-slate-400 max-w-2xl mx-auto">Our developers are proficient in building experiences for the industry's leading VR headsets and peripherals.</p>
           </div>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {hardwareIntegrations.map((hw, idx) => (
-                <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-slate-50 border border-slate-200 hover:bg-white hover:shadow-lg hover:shadow-slate-200/50 hover:border-blue-200 transition-all cursor-default">
-                  <div className="w-14 h-14 rounded-2xl bg-[#F4F6FC] flex items-center justify-center shrink-0">{hw.icon}</div>
+                <div key={idx} className="flex items-start gap-4 p-6 rounded-2xl bg-[#131B2C] border border-slate-800 hover:bg-[#1A2338] hover:shadow-lg hover:shadow-blue-900/20 hover:border-blue-500/30 transition-all cursor-default group">
+                  <div className="w-14 h-14 rounded-2xl bg-[#1E293B] flex items-center justify-center shrink-0 border border-slate-700 group-hover:bg-[#253347] transition-colors">{hw.icon}</div>
                   <div>
-                    <h4 className="text-slate-900 font-bold mb-1">{hw.name}</h4>
-                    <p className="text-sm text-slate-600">{hw.desc}</p>
+                    <h4 className="text-white font-bold mb-1">{hw.name}</h4>
+                    <p className="text-sm text-slate-400">{hw.desc}</p>
                   </div>
                 </div>
              ))}
@@ -227,15 +232,21 @@ export default function VirtualRealityDevelopmentPage() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
             <div className="pt-8 md:pt-0">
-              <div className="text-5xl lg:text-7xl font-black text-[#4B56D2] mb-2">14+</div>
+              <div className="text-5xl lg:text-7xl font-black text-[#4B56D2] mb-2">
+                <AnimatedNumber value="14+" />
+              </div>
               <div className="text-slate-500 font-bold uppercase tracking-widest text-sm">Years Experience</div>
             </div>
             <div className="pt-8 md:pt-0">
-              <div className="text-5xl lg:text-7xl font-black text-[#4B56D2] mb-2">450+</div>
+              <div className="text-5xl lg:text-7xl font-black text-[#4B56D2] mb-2">
+                <AnimatedNumber value="450+" />
+              </div>
               <div className="text-slate-500 font-bold uppercase tracking-widest text-sm">Apps Delivered</div>
             </div>
             <div className="pt-8 md:pt-0">
-              <div className="text-5xl lg:text-7xl font-black text-[#4B56D2] mb-2">6,000+</div>
+              <div className="text-5xl lg:text-7xl font-black text-[#4B56D2] mb-2">
+                <AnimatedNumber value="6,000+" />
+              </div>
               <div className="text-slate-500 font-bold uppercase tracking-widest text-sm">Global Developers</div>
             </div>
           </div>

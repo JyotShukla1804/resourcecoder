@@ -58,7 +58,7 @@ export function AnimatedNumber({ value, duration = 1500 }: { value: string; dura
 
   return (
     <span ref={elementRef}>
-      {count}
+      {count.toLocaleString()}
       {isPlus ? "+" : ""}
       {isPercent ? "%" : ""}
     </span>
