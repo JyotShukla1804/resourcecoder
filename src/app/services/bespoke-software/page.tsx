@@ -95,12 +95,12 @@ export default function BespokeSoftwarePage() {
   ];
 
   const industries = [
-    { name: "Retail & E-commerce", img: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=1000", desc: "Custom digital marketplaces and checkout engines." },
-    { name: "Manufacturing", img: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1000", desc: "Automated workflow and factory resource management." },
-    { name: "Education", img: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&q=80&w=1000", desc: "Smart learning systems and student dashboards." },
-    { name: "Healthcare", img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1000", desc: "HIPAA-compliant software and telemedicine tools." },
-    { name: "Real Estate", img: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=1000", desc: "Immersive property portals and booking platforms." },
-    { name: "Finance & Banking", img: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&q=80&w=1000", desc: "Secure transaction channels and fintech portals." }
+    { name: "Retail & E-commerce", img: "/image%20219.svg", desc: "Custom digital marketplaces and checkout engines." },
+    { name: "Manufacturing", img: "/image%20221.svg", desc: "Automated workflow and factory resource management." },
+    { name: "Education", img: "/image%20222.svg", desc: "Smart learning systems and student dashboards." },
+    { name: "Healthcare", img: "/image%20223.svg", desc: "HIPAA-compliant software and telemedicine tools." },
+    { name: "Real Estate", img: "/image%20224.svg", desc: "Immersive property portals and booking platforms." },
+    { name: "Finance & Banking", img: "/image%20225.svg", desc: "Secure transaction channels and fintech portals." }
   ];
 
   return (
@@ -164,56 +164,14 @@ export default function BespokeSoftwarePage() {
               </div>
             </div>
 
-            {/* Right Column: Software Product Ecosystem Visual */}
+            {/* Right Column: Software Product Visual */}
             <div className="lg:col-span-6 flex items-center justify-center w-full lg:pl-10">
-              <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-2xl overflow-hidden shadow-2xl border border-slate-800 bg-[#0a0f1d] hover:shadow-[0_20px_50px_rgba(75,86,210,0.15)] transition-all duration-500 group flex items-center justify-center p-4">
-                
-                {/* Abstract Background Elements */}
-                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(, tw-gradient-stops))] from-indigo-900/20 via-[#0a0f1d] to-[#0a0f1d]" />
-                <div className="absolute w-[300px] h-[300px] bg-[#4B56D2]/10 rounded-full blur-[80px] animate-pulse" />
-
-                {/* Central Product Hub */}
-                <div className="relative z-10 flex items-center justify-center w-full h-full">
-                  
-                  {/* Orbit Rings */}
-                  <div className="absolute w-64 h-64 sm:w-[340px] sm:h-[340px] border border-slate-700/50 rounded-full animate-[spin_40s_linear_infinite]" />
-                  <div className="absolute w-40 h-40 sm:w-56 sm:h-56 border border-indigo-500/30 rounded-full animate-[spin_30s_linear_infinite_reverse]" />
-                  
-                  {/* Core Product Node (Center) */}
-                  <div className="relative z-20 flex flex-col items-center justify-center w-28 h-28 sm:w-32 sm:h-32 bg-gradient-to-br from-[#4B56D2] to-indigo-600 rounded-3xl shadow-[0_0_40px_rgba(75,86,210,0.4)] border border-indigo-400">
-                    <svg className="w-8 h-8 text-white mb-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m2-1l-2-1m2 1v2.5M14 4l-2-1-2 1M4 7l2-1M4 7l2 1M4 7v2.5M12 21l-2-1m2 1l2-1m-2 1v-2.5M6 18l-2-1v-2.5M18 18l2-1v-2.5" />
-                    </svg>
-                    <span className="text-[10px] sm:text-xs font-bold text-white text-center leading-tight tracking-wide">Core Software<br/>Product</span>
-                  </div>
-
-                  {/* Satellite Nodes */}
-                  {/* Top Left: Web App */}
-                  <div className="absolute top-[12%] left-[12%] sm:top-[15%] sm:left-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-emerald-500/50 transition-all cursor-default group/node">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-emerald-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" /></svg>
-                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Web App</span>
-                  </div>
-
-                  {/* Top Right: Mobile App */}
-                  <div className="absolute top-[12%] right-[12%] sm:top-[15%] sm:right-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-blue-500/50 transition-all cursor-default group/node">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-blue-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" /></svg>
-                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Mobile App</span>
-                  </div>
-
-                  {/* Bottom Right: Admin Panel */}
-                  <div className="absolute bottom-[12%] right-[12%] sm:bottom-[15%] sm:right-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-rose-500/50 transition-all cursor-default group/node">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-rose-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2-2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" /></svg>
-                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Admin Panel</span>
-                  </div>
-
-                  {/* Bottom Left: Integrations */}
-                  <div className="absolute bottom-[12%] left-[12%] sm:bottom-[15%] sm:left-[15%] flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 bg-slate-800/90 border border-slate-600 rounded-2xl shadow-lg backdrop-blur-md hover:scale-110 hover:border-amber-500/50 transition-all cursor-default group/node">
-                    <svg className="w-6 h-6 sm:w-7 sm:h-7 text-amber-400 mb-1.5 group-hover/node:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
-                    <span className="text-[9px] sm:text-[10px] font-bold text-slate-300 text-center uppercase tracking-wider">Integrations</span>
-                  </div>
-
-                </div>
-
+              <div className="relative w-full aspect-[4/3] md:aspect-[16/10] rounded-[20px] overflow-hidden shadow-2xl border border-slate-800 bg-[#0a0f1d] hover:shadow-[0_20px_50px_rgba(75,86,210,0.15)] transition-all duration-500 group">
+                <img 
+                  src="/image%202119.svg" 
+                  alt="Software Product Ecosystem" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
 
@@ -341,9 +299,9 @@ export default function BespokeSoftwarePage() {
 
             {/* Left: Team image */}
             <div className="lg:col-span-5 relative">
-              <div className="relative rounded-2xl overflow-hidden aspect-[4/3]">
+              <div className="relative rounded-[24px] overflow-hidden aspect-[4/3]">
                 <img
-                  src="/team_working_table.png"
+                  src="/image%202118.svg"
                   alt="Krazio Engineering Team"
                   className="w-full h-full object-cover"
                 />
@@ -450,19 +408,19 @@ export default function BespokeSoftwarePage() {
             {
               title: "Revolutionizing Retail: How AI is transforming sales funnel velocity",
               tag: "Artificial Intelligence",
-              img: "/beyond-work-code.png",
+              img: "/image%202120.svg",
               readTime: "5 min read"
             },
             {
               title: "Smart Logistics: The future of supply chain custom microservices",
               tag: "Cloud Solutions",
-              img: "/workspace-collaborating.png",
+              img: "/image%20217.svg",
               readTime: "7 min read"
             },
             {
               title: "Winning Team: How building the right tech culture speeds up delivery",
               tag: "Engineering Culture",
-              img: "/team_collab_sticky.png",
+              img: "/image%20218.svg",
               readTime: "6 min read"
             }
           ].map((blog, idx) => (
@@ -513,7 +471,7 @@ export default function BespokeSoftwarePage() {
 
         <div className="max-w-6xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Left Text */}
-          <div className="lg:col-span-8 space-y-6 text-left">
+          <div className="lg:col-span-6 space-y-6 text-left">
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
               Your Competitors Aren't Just Using AI. <br className="hidden sm:block" />
               They're Profiting From It.
@@ -531,46 +489,16 @@ export default function BespokeSoftwarePage() {
             </div>
           </div>
 
-          {/* Right illustration: Cute animated robot in CSS/SVG */}
-          <div className="lg:col-span-4 flex items-center justify-center">
-            <div className="relative w-56 h-56 flex items-center justify-center bg-[#111116] border border-slate-800 rounded-3xl shadow-[0_15px_40px_rgba(0,0,0,0.3)] group overflow-hidden">
+          {/* Right illustration: AI Robot */}
+          <div className="lg:col-span-6 flex items-center justify-center lg:justify-end">
+            <div className="relative w-[483px] h-[361px] max-w-full flex items-center justify-center bg-[#111116] border border-slate-800 rounded-[12px] shadow-[0_15px_40px_rgba(0,0,0,0.3)] group overflow-hidden">
               <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-48 h-48 bg-[#4B56D2]/5 rounded-full blur-[40px] pointer-events-none" />
 
-              {/* Cute SVG Robot */}
-              <svg className="w-36 h-36 z-10 animate-[robot-bounce_4s_ease-in-out_infinite]" fill="none" viewBox="0 0 100 100">
-                {/* Antennas */}
-                <path d="M 50 15 L 50 30" stroke="#4B56D2" strokeWidth="3" strokeLinecap="round" />
-                <circle cx="50" cy="12" r="5" fill="#4B56D2" className="animate-pulse" />
-
-                {/* Ears */}
-                <rect x="20" y="38" width="6" height="14" rx="3" fill="#3d46a8" />
-                <rect x="74" y="38" width="6" height="14" rx="3" fill="#3d46a8" />
-
-                {/* Robot Head */}
-                <rect x="24" y="28" width="52" height="34" rx="14" fill="#1b1c24" stroke="#4B56D2" strokeWidth="2.5" />
-
-                {/* Screen / Face */}
-                <rect x="29" y="33" width="42" height="24" rx="9" fill="#08080a" />
-
-                {/* Glowing Eyes */}
-                <circle cx="41" cy="45" r="4.5" fill="#00C950" className="animate-ping opacity-60" />
-                <circle cx="41" cy="45" r="3.5" fill="#00C950" />
-
-                <circle cx="59" cy="45" r="4.5" fill="#00C950" className="animate-ping opacity-60" />
-                <circle cx="59" cy="45" r="3.5" fill="#00C950" />
-
-                {/* Cute smile */}
-                <path d="M 45 52 Q 50 55 55 52" stroke="#00C950" strokeWidth="2" strokeLinecap="round" />
-
-                {/* Neck */}
-                <rect x="44" y="62" width="12" height="6" rx="2" fill="#2d2f3b" />
-
-                {/* Body (partial) */}
-                <path d="M 30 68 L 70 68 L 66 84 L 34 84 Z" fill="#1b1c24" stroke="#4B56D2" strokeWidth="2" />
-
-                {/* Chest light */}
-                <circle cx="50" cy="76" r="3" fill="#4B56D2" className="animate-pulse" />
-              </svg>
+              <img 
+                src="/image%20220.svg" 
+                alt="AI Robot" 
+                className="w-full h-full object-cover z-10 relative" 
+              />
             </div>
           </div>
         </div>
