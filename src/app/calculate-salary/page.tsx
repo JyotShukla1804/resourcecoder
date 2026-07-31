@@ -123,7 +123,23 @@ export default function CalculateSalaryPage() {
     if (isCalculated) {
       handleCalculate();
     }
-  }, [currency]); // Only re-run when currency changes, if already calculated
+  }, [currency, isCalculated, handleCalculate]); // Only re-run when currency changes, if already calculated
+
+  useEffect(() => {
+    const handleModalSubmitEvent = () => {
+      handleCalculate();
+    };
+    window.addEventListener('contact-modal-submitted', handleModalSubmitEvent);
+    return () => {
+      window.removeEventListener('contact-modal-submitted', handleModalSubmitEvent);
+    };
+  }, [handleCalculate]);
+
+  const handleCalculateClick = () => {
+    if (!isCalculated) {
+      window.dispatchEvent(new Event('open-contact-modal'));
+    }
+  };
 
   const faqs = [
     {
@@ -193,7 +209,7 @@ export default function CalculateSalaryPage() {
                 </div>
               </div>
               <h2 className="text-3xl md:text-4xl font-extrabold text-center text-slate-900 mb-4 tracking-tight">
-                Calculate your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Salary</span>
+                Calculate Candidate <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Salary</span>
               </h2>
               <p className="text-slate-500 text-center text-[15px] leading-relaxed mb-10 max-w-lg mx-auto">
                 Enter the gross salary to see a full breakdown of mandatory contributions required by local labor laws.
@@ -242,8 +258,9 @@ export default function CalculateSalaryPage() {
                   </div>
 
                   <button 
-                    onClick={handleCalculate}
-                    className="btn-ripple mt-4 w-full bg-[#4B56D2] text-white rounded-2xl py-4 font-bold text-lg tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none"
+                    onClick={handleCalculateClick}
+                    disabled={isCalculated}
+                    className={`btn-ripple mt-4 w-full rounded-2xl py-4 font-bold text-lg tracking-wider shadow-md hover:shadow-lg transition-all duration-300 select-none ${isCalculated ? 'bg-slate-300 text-slate-500 cursor-not-allowed opacity-70' : 'bg-[#4B56D2] text-white'}`}
                   >
                     Calculate Now
                   </button>

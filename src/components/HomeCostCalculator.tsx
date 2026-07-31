@@ -154,7 +154,7 @@ export const HomeCostCalculator = () => {
             <Calculator className="w-7 h-7 text-[#4B56D2]" />
           </div>
           <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-4 tracking-tight">
-            Calculate your <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Salary</span>
+            Calculate Candidate <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#4B56D2] to-indigo-600">Salary</span>
           </h2>
           <p className="text-slate-500 text-lg">
             Get an instant estimate for hiring top-tier talent in India. Transparent pricing, zero hidden fees.
