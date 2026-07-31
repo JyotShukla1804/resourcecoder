@@ -96,12 +96,12 @@ export default function MixedRealityDevelopmentPage() {
       <HireHero
         btn1Text="Let's talk"
         btn1Url="/#contact-form"
-        image="/image%202118.svg"
+        image="/image 2268.svg"
         data={heroContentBlocks}
       >
         <AboutStats />
       </HireHero>
-      
+
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 
       <HireBenefits
@@ -109,8 +109,8 @@ export default function MixedRealityDevelopmentPage() {
         description="Join forces with a team of seasoned professionals dedicated to pushing the boundaries of mixed reality. Our developers, designers, and strategists possess the expertise and passion required to deliver innovative MR solutions that redefine user experiences and drive business success."
         benefitsTitle="Tools and Technologies"
         benefitsList={[
-          'VR/MR Headsets', 
-          '3D Modeling Software', 
+          'VR/MR Headsets',
+          '3D Modeling Software',
           'Game Engines (Unity, Unreal Engine)',
           'PC/Mac Computers',
           'AR/VR/MR Frameworks',
@@ -158,7 +158,7 @@ export default function MixedRealityDevelopmentPage() {
         btnText="Get a Free Consultation"
         btnUrl="/#contact-form"
       />
-      
+
       <ScrollToHash />
     </div>
   );

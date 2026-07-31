@@ -96,7 +96,7 @@ export default function GameModeling3DPage() {
       <HireHero
         btn1Text="Let's Talk"
         btn1Url="/#contact-form"
-        image="/mission-team.png"
+        image="/image 2269.svg"
         data={heroContentBlocks}
       >
         <AboutStats />

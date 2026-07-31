@@ -107,12 +107,12 @@ export default function VirtualRealityDevelopmentPage() {
       <HireHero
         btn1Text="Let's talk"
         btn1Url="/#contact-form"
-        image="/image%202118.svg"
+        image="/image 2266.svg"
         data={heroContentBlocks}
       >
         <AboutStats />
       </HireHero>
-      
+
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 
       <HireBenefits
@@ -120,8 +120,8 @@ export default function VirtualRealityDevelopmentPage() {
         description="Our dedicated team of 3D artists, Unity/Unreal developers, and spatial computing experts are passionate about pushing the boundaries of what's possible. We don't just write code; we craft worlds."
         benefitsTitle="Why Choose Us?"
         benefitsList={[
-          'Vetted Spatial Computing Experts', 
-          'Certified Unity & Unreal Engine Developers', 
+          'Vetted Spatial Computing Experts',
+          'Certified Unity & Unreal Engine Developers',
           'Agile Delivery with Rapid Prototyping'
         ]}
         btnText="Talk to our experts"
@@ -166,7 +166,7 @@ export default function VirtualRealityDevelopmentPage() {
         btnText="Get a Free Consultation"
         btnUrl="/#contact-form"
       />
-      
+
       <ScrollToHash />
     </div>
   );

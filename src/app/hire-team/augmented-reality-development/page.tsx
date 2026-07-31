@@ -101,12 +101,12 @@ export default function AugmentedRealityDevelopmentPage() {
       <HireHero
         btn1Text="Let's talk"
         btn1Url="/#contact-form"
-        image="/image%202118.svg"
+        image="/image 2267.svg"
         data={heroContentBlocks}
       >
         <AboutStats />
       </HireHero>
-      
+
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 
       <HireBenefits
@@ -114,8 +114,8 @@ export default function AugmentedRealityDevelopmentPage() {
         description="Our AR development experts specialize in blending the physical and digital worlds flawlessly. With deep expertise in spatial computing, computer vision, and interactive design, we turn complex augmented reality concepts into market-ready applications."
         benefitsTitle="Why Choose Us?"
         benefitsList={[
-          'Proficient in ARKit, ARCore & Unity', 
-          'Specialized in Computer Vision & SLAM', 
+          'Proficient in ARKit, ARCore & Unity',
+          'Specialized in Computer Vision & SLAM',
           'Agile Delivery with Rapid Prototyping'
         ]}
         btnText="Talk to our experts"
@@ -160,7 +160,7 @@ export default function AugmentedRealityDevelopmentPage() {
         btnText="Get a Free Consultation"
         btnUrl="/#contact-form"
       />
-      
+
       <ScrollToHash />
     </div>
   );

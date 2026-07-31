@@ -97,7 +97,7 @@ export default function GameDevelopment3DPage() {
       <HireHero
         btn1Text="Schedule a Call"
         btn1Url="/#contact-form"
-        image="/mission-team.png"
+        image="/image 2270.svg"
         data={heroContentBlocks}
       >
         <AboutStats />
