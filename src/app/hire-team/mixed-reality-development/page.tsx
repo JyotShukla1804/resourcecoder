@@ -95,7 +95,7 @@ export default function MixedRealityDevelopmentPage() {
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       <HireHero
         btn1Text="Let's talk"
-        btn1Url="/#contact-form"
+        btn1Url="#contact-form"
         image="/image 2268.svg"
         data={heroContentBlocks}
       >
@@ -117,7 +117,7 @@ export default function MixedRealityDevelopmentPage() {
           'UI/UX Design Tools'
         ]}
         btnText="Talk to our experts"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <HireServices
@@ -156,7 +156,7 @@ export default function MixedRealityDevelopmentPage() {
         title="Looking for the right tech partner? Let's Build a Custom MR App"
         subtitle="Accelerate your digital transformation with our expert mixed reality development team."
         btnText="Get a Free Consultation"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <ScrollToHash />

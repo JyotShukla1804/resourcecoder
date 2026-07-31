@@ -106,7 +106,7 @@ export default function VirtualRealityDevelopmentPage() {
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       <HireHero
         btn1Text="Let's talk"
-        btn1Url="/#contact-form"
+        btn1Url="#contact-form"
         image="/image 2266.svg"
         data={heroContentBlocks}
       >
@@ -125,7 +125,7 @@ export default function VirtualRealityDevelopmentPage() {
           'Agile Delivery with Rapid Prototyping'
         ]}
         btnText="Talk to our experts"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <HireServices
@@ -164,7 +164,7 @@ export default function VirtualRealityDevelopmentPage() {
         title="Looking for the right tech partner? Let's Build a Custom VR App"
         subtitle="Consultation, Design, Development, and Deployment under one roof."
         btnText="Get a Free Consultation"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <ScrollToHash />

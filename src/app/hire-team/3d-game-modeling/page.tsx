@@ -95,7 +95,7 @@ export default function GameModeling3DPage() {
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       <HireHero
         btn1Text="Let's Talk"
-        btn1Url="/#contact-form"
+        btn1Url="#contact-form"
         image="/image 2269.svg"
         data={heroContentBlocks}
       >
@@ -115,7 +115,7 @@ export default function GameModeling3DPage() {
           'Agile & Collaborative Art Process'
         ]}
         btnText="Talk to our experts"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <HireServices
@@ -154,7 +154,7 @@ export default function GameModeling3DPage() {
         title="Looking for an art team? Start a Conversation"
         subtitle="Bring your visionary game ideas to life with our expert 3D artists."
         btnText="Let's Talk"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
       
       <ScrollToHash />
