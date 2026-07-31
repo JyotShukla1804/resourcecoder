@@ -70,8 +70,13 @@ export function HireExpertise({ heading, description, expertiseList }: HireExper
           </p>
         </div>
 
-        {/* 4x2 Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-8 lg:gap-x-12 gap-y-12 w-full">
+        {/* Grid */}
+        <div className={`grid gap-x-8 lg:gap-x-12 gap-y-12 w-full ${
+          expertiseGroups.length === 1 ? 'grid-cols-1 max-w-md mx-auto' :
+          expertiseGroups.length === 2 ? 'grid-cols-1 sm:grid-cols-2 max-w-4xl mx-auto' :
+          expertiseGroups.length === 3 ? 'grid-cols-1 sm:grid-cols-3 max-w-6xl mx-auto' :
+          'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4'
+        }`}>
           {expertiseGroups.map((group, idx) => (
             <div key={idx} className="flex flex-col items-stretch text-left">
               

@@ -12,7 +12,7 @@ interface HireBenefitsProps {
   title?: string;
   description?: string;
   benefitsTitle?: string;
-  benefitsList?: BenefitItem[];
+  benefitsList?: (BenefitItem | string | any)[];
   btnText?: string;
   btnUrl?: string;
 }
@@ -107,10 +107,16 @@ export function HireBenefits({
                   <div 
                     className="text-xs sm:text-[14px] leading-relaxed text-[#3F3F46]"
                   >
-                    <strong className="text-[#0f172a] font-bold">
-                      {benefit.label}:{" "}
-                    </strong>
-                    <span className="font-normal">{benefit.text}</span>
+                    {typeof benefit === 'string' ? (
+                      <span className="text-[#0f172a] font-bold">{benefit}</span>
+                    ) : (
+                      <>
+                        <strong className="text-[#0f172a] font-bold">
+                          {benefit.label}:{" "}
+                        </strong>
+                        <span className="font-normal">{benefit.text}</span>
+                      </>
+                    )}
                   </div>
                 </div>
               ))}
