@@ -97,9 +97,9 @@ export function FloatingContact() {
     // Intercept clicks on CTA buttons across the site
     const handleGlobalClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a');
-      if (target && target.href && target.href.includes('#interview-section')) {
+      if (target && target.href && (target.href.includes('#interview-section') || target.href.includes('#contact-form'))) {
         // Check if the form section actually exists on the current page
-        const formSectionExists = document.getElementById('interview-section');
+        const formSectionExists = document.getElementById('interview-section') || document.getElementById('contact-form');
         
         // If there is NO form on this page, open the popup instead of navigating
         if (!formSectionExists) {

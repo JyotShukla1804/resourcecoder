@@ -12,9 +12,9 @@ interface CTASectionProps {
 export function CTASection({
   title = <>Become a Partner<br className="hidden sm:block" /> Today!</>,
   description = "Join our growing network of global channel partners and start earning recurring revenue by connecting businesses with trusted software development talent. We take care of the entire delivery while you focus on building relationships and growing your business. It's simple, transparent, and designed for long-term success.",
-  buttonText = "Become a Channel Partner",
-  buttonHref = "https://calendly.com/rahul-b-f5nl/consulting-call?month=2026-07"
+  buttonText = "Become a Channel Partner"
 }: CTASectionProps) {
+  const finalButtonHref = "https://calendly.com/rahul-b-f5nl/consulting-call";
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-white relative z-10 mx-auto flex justify-center">
       {/* Blue Banner Card with exact specs: width/max-w-[1280px], h-[656px], rounded-[64px], padding (pt/pb 100px, pl/pr 128px), opacity: 1, angle: 0deg */}
@@ -39,7 +39,7 @@ export function CTASection({
           {/* Button CTA */}
           <div className="flex justify-center mt-4">
             <Link
-              href={buttonHref}
+              href={finalButtonHref}
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
             >
               {buttonText}
