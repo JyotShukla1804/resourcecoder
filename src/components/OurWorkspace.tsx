@@ -27,7 +27,7 @@ export function OurWorkspace() {
           {/* Left Column (Hallway Image) */}
           <div className="relative w-full aspect-[657/596] lg:aspect-auto rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.015)]">
             <img 
-              src="/workspace-hallway.png" 
+              src="/image%20204.svg" 
               alt="Office Hallway" 
               className="w-full h-full object-cover"
             />
@@ -39,14 +39,14 @@ export function OurWorkspace() {
             <div className="grid grid-cols-2 gap-5">
               <div className="relative w-full h-full aspect-[322/290] lg:aspect-auto rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.015)]">
                 <img 
-                  src="/workspace-meeting.png" 
+                  src="/image%20202.svg" 
                   alt="Team Meeting" 
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="relative w-full h-full aspect-[322/290] lg:aspect-auto rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.015)]">
                 <img 
-                  src="/workspace-working.png" 
+                  src="/image%20203.svg" 
                   alt="Workspace Working" 
                   className="w-full h-full object-cover"
                 />
@@ -55,8 +55,8 @@ export function OurWorkspace() {
             {/* Bottom Row: Wide collaborating image */}
             <div className="relative w-full h-full aspect-[660/290] lg:aspect-auto rounded-[24px] overflow-hidden border border-slate-100 shadow-[0_2px_8px_rgba(0,0,0,0.015)]">
               <img 
-                src="/workspace-collaborating.png" 
-                alt="Developers Collaborating" 
+                src="/image%20201.svg" 
+                alt="Workspace Collaborating" 
                 className="w-full h-full object-cover"
               />
             </div>

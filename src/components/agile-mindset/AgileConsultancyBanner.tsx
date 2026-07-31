@@ -83,9 +83,9 @@ export function AgileConsultancyBanner() {
           transition={{ delay: 0.4 }}
           className="w-full md:w-2/5 flex justify-center lg:justify-end"
         >
-          <div className="relative w-64 h-80 sm:w-72 sm:h-[350px] transform rotate-3 hover:rotate-0 transition-transform duration-500 shadow-2xl rounded-2xl overflow-hidden border border-white/20">
+          <div className="relative w-full max-w-[388px] aspect-[388/259] shadow-2xl rounded-[20px] overflow-hidden border border-white/20">
             <Image 
-              src="https://images.unsplash.com/photo-1544947950-fa07a98d237f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" 
+              src="/image%20215.svg" 
               alt="Accelerate Digital Transformation"
               fill
               sizes="(max-width: 768px) 100vw, 33vw"

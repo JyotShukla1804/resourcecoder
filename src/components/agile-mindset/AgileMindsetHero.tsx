@@ -90,7 +90,7 @@ export function AgileMindsetHero() {
             className="relative w-full aspect-square md:aspect-[4/3] rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] group perspective-1000 overflow-hidden"
           >
             <Image 
-              src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+              src="/image%20206.svg" 
               alt="Agile Mindset Collaboration" 
               fill
               sizes="(max-width: 768px) 100vw, 50vw"

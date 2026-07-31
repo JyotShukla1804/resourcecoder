@@ -84,7 +84,7 @@ export function DevProcessHero() {
             className="relative w-full aspect-square md:aspect-[4/3] rounded-[2rem] shadow-[0_20px_60px_-15px_rgba(0,0,0,0.1)] group perspective-1000 overflow-hidden"
           >
             <Image 
-              src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" 
+              src="/image%20205.svg" 
               alt="Development Process" 
               fill
               className="object-cover transition-transform duration-1000 group-hover:scale-110"

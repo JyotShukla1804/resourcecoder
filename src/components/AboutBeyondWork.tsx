@@ -47,7 +47,7 @@ export function AboutBeyondWork() {
             {/* Column 1: Coding Close Up */}
             <div className="relative w-full h-full rounded-[24px] overflow-hidden">
               <img
-                src="/beyond-work-code.png"
+                src="/Event.svg"
                 alt="Coding Close Up"
                 className="w-full h-full object-cover"
               />
@@ -55,7 +55,7 @@ export function AboutBeyondWork() {
             {/* Column 2: Team Collaboration */}
             <div className="relative w-full h-full rounded-[24px] overflow-hidden">
               <img
-                src="/beyond-work-collab.png"
+                src="/image%20200.svg"
                 alt="Team Collaboration"
                 className="w-full h-full object-cover"
               />

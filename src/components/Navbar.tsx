@@ -94,6 +94,10 @@ export function Navbar() {
     {
       title: "CMS, E-commerce & QA",
       roles: ["WordPress Developer", "Shopify Developer", "WooCommerce Developer", "QA / Automation Engineer", "Cybersecurity / DevSecOps Engineer", "Blockchain Developer"]
+    },
+    {
+      title: "Immersive",
+      roles: ["Virtual Reality Development", "Augmented Reality Development", "Mixed Reality Development", "3D Game Modeling", "3D Game Development"]
     }
   ];
 
@@ -299,7 +303,7 @@ export function Navbar() {
                   </svg>
                 </Link>
               </div>
-              <div className="grid grid-cols-6 gap-x-6 gap-y-8">
+              <div className="grid grid-cols-7 gap-x-6 gap-y-8">
                 {hireTeamCategories.map((category) => (
                   <div key={category.title}>
                     <h4 className="text-slate-200 font-bold text-[14px] mb-3 uppercase tracking-wider">{category.title}</h4>
