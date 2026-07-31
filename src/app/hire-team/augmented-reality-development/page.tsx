@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { TrustedBy, HireFAQ, CTASection } from "@/components";
+import { TrustedBy, HireFAQ, CTASection, HomeCostCalculator } from "@/components";
 import { AnimatedNumber } from "@/components/AboutStats";
 import { ShoppingBag, HeartPulse, Settings, MapPin, Wrench, Palette, Link as LinkIcon, Smartphone, Glasses, Monitor, Cpu, Box, Hexagon, Code2, Layers, Globe } from "lucide-react";
 
@@ -137,8 +137,12 @@ export default function AugmentedRealityDevelopmentPage() {
           {/* Let's Talk CTA Button */}
           <div className="pt-8 w-full flex justify-center gap-4">
             <Link
-              href="/#contact-form"
-              className="inline-flex items-center justify-center text-white font-bold text-[15px] tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 select-none w-auto h-[60px] py-4 px-10 rounded-full bg-[#4B56D2]"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event('open-contact-modal'));
+              }}
+              className="btn-ripple inline-flex items-center justify-center text-white font-bold text-[15px] tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 select-none w-auto h-[60px] py-4 px-10 rounded-full bg-[#4B56D2]"
             >
               Let's talk
             </Link>
@@ -188,7 +192,14 @@ export default function AugmentedRealityDevelopmentPage() {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">Hire Augmented Reality Developers From Krazio</h3>
             <p className="text-blue-100">Top-tier AR talent ready to bring your visionary mixed-reality ideas to life.</p>
           </div>
-          <Link href="/#contact-form" className="relative z-10 whitespace-nowrap px-8 py-4 bg-white text-[#4B56D2] rounded-full font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
+          <Link 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event('open-contact-modal'));
+            }}
+            className="btn-ripple relative z-10 whitespace-nowrap px-8 py-4 bg-white text-[#4B56D2] rounded-full font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
+          >
             Let's Talk
           </Link>
         </div>
@@ -282,11 +293,21 @@ export default function AugmentedRealityDevelopmentPage() {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2 lg:whitespace-nowrap">A smart and reliable AR/VR tech partner Krazio</h3>
             <p className="text-blue-100">Join industry leaders who trust us for cutting-edge immersive tech solutions.</p>
           </div>
-          <Link href="/#contact-form" className="relative z-10 whitespace-nowrap px-8 py-4 bg-white text-[#4B56D2] rounded-full font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
+          <Link 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event('open-contact-modal'));
+            }}
+            className="btn-ripple relative z-10 whitespace-nowrap px-8 py-4 bg-white text-[#4B56D2] rounded-full font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
+          >
             Partner With Us
           </Link>
         </div>
       </section>
+
+      {/* Calculator Section */}
+      <HomeCostCalculator />
 
       {/* 9. About AR Team */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-100">
@@ -328,7 +349,7 @@ export default function AugmentedRealityDevelopmentPage() {
         title={<>Looking for the right tech partner? <br className="hidden md:block"/> Let's Build a Custom AR App</>}
         description=""
         buttonText="Get a Free Consultation"
-        buttonHref="/#contact-form"
+        buttonHref="#interview-section"
       />
 
     </div>

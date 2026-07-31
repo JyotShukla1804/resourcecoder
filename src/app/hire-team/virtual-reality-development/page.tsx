@@ -2,7 +2,7 @@
 
 import React from "react";
 import Link from "next/link";
-import { TrustedBy, HireFAQ, CTASection } from "@/components";
+import { TrustedBy, HireFAQ, CTASection, HomeCostCalculator } from "@/components";
 import { AnimatedNumber } from "@/components/AboutStats";
 import { Lightbulb, Palette, Settings, Gamepad2, Wrench, Link as LinkIcon, FlaskConical, Globe, Box, Monitor, Smartphone, Package, Glasses, Cpu } from "lucide-react";
 
@@ -138,8 +138,12 @@ export default function VirtualRealityDevelopmentPage() {
           {/* Let's Talk CTA Button */}
           <div className="pt-8 w-full flex justify-center gap-4">
             <Link
-              href="/#contact-form"
-              className="inline-flex items-center justify-center text-white font-bold text-[15px] tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 select-none w-auto h-[60px] py-4 px-10 rounded-full bg-[#4B56D2]"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault();
+                window.dispatchEvent(new Event('open-contact-modal'));
+              }}
+              className="btn-ripple inline-flex items-center justify-center text-white font-bold text-[15px] tracking-wider transition-all duration-300 shadow-md hover:shadow-lg hover:-translate-y-0.5 select-none w-auto h-[60px] py-4 px-10 rounded-full bg-[#4B56D2]"
             >
               Let's talk
             </Link>
@@ -189,7 +193,14 @@ export default function VirtualRealityDevelopmentPage() {
             <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">End-to-End VR App Development Company</h3>
             <p className="text-blue-100">Consultation, Design, Development, and Deployment under one roof.</p>
           </div>
-          <Link href="/#contact-form" className="relative z-10 whitespace-nowrap px-8 py-4 bg-white text-[#4B56D2] rounded-full font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1">
+          <Link 
+            href="#" 
+            onClick={(e) => {
+              e.preventDefault();
+              window.dispatchEvent(new Event('open-contact-modal'));
+            }}
+            className="btn-ripple relative z-10 whitespace-nowrap px-8 py-4 bg-white text-[#4B56D2] rounded-full font-bold hover:bg-slate-50 transition-all shadow-xl hover:-translate-y-1"
+          >
             Hire VR Experts
           </Link>
         </div>
@@ -227,7 +238,7 @@ export default function VirtualRealityDevelopmentPage() {
       <section className="py-24 px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-slate-50 border-b border-slate-100">
         <div className="max-w-7xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-16">
-            Custom AR/VR Apps — <span className="text-blue-600">Proven Industry Records</span>
+            Custom AR/VR Apps <span className="text-blue-600">Proven Industry Records</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 divide-y md:divide-y-0 md:divide-x divide-slate-200">
@@ -252,6 +263,9 @@ export default function VirtualRealityDevelopmentPage() {
           </div>
         </div>
       </section>
+
+      {/* Calculator Section */}
+      <HomeCostCalculator />
 
       {/* 7. About VR Team */}
       <section className="py-24 px-4 sm:px-6 lg:px-8 bg-white border-b border-slate-100">
@@ -293,7 +307,7 @@ export default function VirtualRealityDevelopmentPage() {
         title={<>Looking for the right tech partner? <br className="hidden md:block"/> Let's Build a Custom VR App</>}
         description=""
         buttonText="Get a Free Consultation"
-        buttonHref="/#contact-form"
+        buttonHref="#interview-section"
       />
 
     </div>
