@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { AboutStats } from "@/components/AboutStats";
 import {
   HireHero,
   TrustedBy,
@@ -108,7 +109,9 @@ export default function VirtualRealityDevelopmentPage() {
         btn1Url="/#contact-form"
         image="/image%202118.svg"
         data={heroContentBlocks}
-      />
+      >
+        <AboutStats />
+      </HireHero>
       
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 

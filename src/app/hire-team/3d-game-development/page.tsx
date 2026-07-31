@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { AboutStats } from "@/components/AboutStats";
 import {
   HireHero,
   TrustedBy,
@@ -98,7 +99,9 @@ export default function GameDevelopment3DPage() {
         btn1Url="/#contact-form"
         image="/mission-team.png"
         data={heroContentBlocks}
-      />
+      >
+        <AboutStats />
+      </HireHero>
       
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 
