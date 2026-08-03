@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
+import { AboutStats } from "@/components/AboutStats";
 import {
   HireHero,
   TrustedBy,
@@ -123,7 +124,9 @@ export default function DynamicHirePage() {
                   btn2Url={block.secondaryCtaUrl}
                   image={block.image}
                   data={heroContentBlocks}
-                />
+                >
+                  <AboutStats />
+                </HireHero>
                 <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
               </React.Fragment>
             );

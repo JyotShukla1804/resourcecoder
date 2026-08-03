@@ -39,7 +39,9 @@ export const HireCTA: React.FC<HireCTAProps> = ({
 
         {/* Button */}
         <Link 
-          href={btnUrl || "#contact-form"}
+          href="https://calendly.com/rahul-b-f5nl/consulting-call?month=2026-07"
+          target="_blank"
+          rel="noopener noreferrer"
           className="btn-ripple bg-white text-[#4B56D2] font-bold text-[16px] md:text-[18px] py-4 px-10 rounded-full transition-shadow duration-500 shadow-[0_10px_25px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_40px_-10px_rgba(0,0,0,0.2)] cursor-pointer inline-block text-center"
         >
           {btnText || defaultBtnText}

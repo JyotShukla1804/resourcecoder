@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { AboutStats } from "@/components/AboutStats";
 import {
   HireHero,
   TrustedBy,
@@ -105,11 +106,13 @@ export default function VirtualRealityDevelopmentPage() {
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       <HireHero
         btn1Text="Let's talk"
-        btn1Url="/#contact-form"
-        image="/image%202118.svg"
+        btn1Url="#contact-form"
+        image="/image 2266.svg"
         data={heroContentBlocks}
-      />
-      
+      >
+        <AboutStats />
+      </HireHero>
+
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 
       <HireBenefits
@@ -117,12 +120,12 @@ export default function VirtualRealityDevelopmentPage() {
         description="Our dedicated team of 3D artists, Unity/Unreal developers, and spatial computing experts are passionate about pushing the boundaries of what's possible. We don't just write code; we craft worlds."
         benefitsTitle="Why Choose Us?"
         benefitsList={[
-          'Vetted Spatial Computing Experts', 
-          'Certified Unity & Unreal Engine Developers', 
+          'Vetted Spatial Computing Experts',
+          'Certified Unity & Unreal Engine Developers',
           'Agile Delivery with Rapid Prototyping'
         ]}
         btnText="Talk to our experts"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <HireServices
@@ -161,9 +164,9 @@ export default function VirtualRealityDevelopmentPage() {
         title="Looking for the right tech partner? Let's Build a Custom VR App"
         subtitle="Consultation, Design, Development, and Deployment under one roof."
         btnText="Get a Free Consultation"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
-      
+
       <ScrollToHash />
     </div>
   );

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { AboutStats } from "@/components/AboutStats";
 import {
   HireHero,
   TrustedBy,
@@ -94,11 +95,13 @@ export default function MixedRealityDevelopmentPage() {
     <div className="relative min-h-screen flex flex-col items-center animate-fade-in-up bg-white w-full">
       <HireHero
         btn1Text="Let's talk"
-        btn1Url="/#contact-form"
-        image="/image%202118.svg"
+        btn1Url="#contact-form"
+        image="/image 2268.svg"
         data={heroContentBlocks}
-      />
-      
+      >
+        <AboutStats />
+      </HireHero>
+
       <TrustedBy bgColor="bg-[#F9FAFB]" fadeColor="from-[#F9FAFB]" />
 
       <HireBenefits
@@ -106,15 +109,15 @@ export default function MixedRealityDevelopmentPage() {
         description="Join forces with a team of seasoned professionals dedicated to pushing the boundaries of mixed reality. Our developers, designers, and strategists possess the expertise and passion required to deliver innovative MR solutions that redefine user experiences and drive business success."
         benefitsTitle="Tools and Technologies"
         benefitsList={[
-          'VR/MR Headsets', 
-          '3D Modeling Software', 
+          'VR/MR Headsets',
+          '3D Modeling Software',
           'Game Engines (Unity, Unreal Engine)',
           'PC/Mac Computers',
           'AR/VR/MR Frameworks',
           'UI/UX Design Tools'
         ]}
         btnText="Talk to our experts"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
 
       <HireServices
@@ -153,9 +156,9 @@ export default function MixedRealityDevelopmentPage() {
         title="Looking for the right tech partner? Let's Build a Custom MR App"
         subtitle="Accelerate your digital transformation with our expert mixed reality development team."
         btnText="Get a Free Consultation"
-        btnUrl="/#contact-form"
+        btnUrl="#contact-form"
       />
-      
+
       <ScrollToHash />
     </div>
   );
