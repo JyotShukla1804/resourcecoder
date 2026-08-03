@@ -110,6 +110,8 @@ export function AgileResources() {
                 <div className="pt-6">
                   <Link 
                     href={tabs[activeTab].link}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="group inline-flex items-center gap-2 text-indigo-600 font-bold text-lg hover:text-indigo-800 transition-colors"
                   >
                     Explore Our Services

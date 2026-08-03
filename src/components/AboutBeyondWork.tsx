@@ -23,13 +23,8 @@ export function AboutBeyondWork() {
           </p>
           <div className="!mt-3">
             <Link
-              href="/#interview-section"
-              onClick={(e) => {
-                if (!document.getElementById('interview-section')) {
-                  e.preventDefault();
-                  window.dispatchEvent(new CustomEvent('open-contact-modal'));
-                }
-              }}
+              href="https://kraziocloud.com/careers/"
+              target="_blank"
               className="btn-ripple inline-flex items-center justify-center text-white rounded-full px-8 py-3.5 shadow-lg shadow-blue-500/25 hover:shadow-blue-500/45 transition-shadow duration-300 w-fit bg-[#4B56D2]"
             >
               <span

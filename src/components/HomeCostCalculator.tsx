@@ -61,6 +61,7 @@ export const HomeCostCalculator = () => {
   const [cost, setCost] = useState("");
   const [currency, setCurrency] = useState("USD");
   const [isCalculated, setIsCalculated] = useState(false);
+  const [hasSubmittedForm, setHasSubmittedForm] = useState(false);
 
   const getCurrencySymbol = (curr: string) => {
     switch (curr) {
@@ -115,6 +116,7 @@ export const HomeCostCalculator = () => {
 
   useEffect(() => {
     const handleModalSubmitEvent = () => {
+      setHasSubmittedForm(true);
       handleCalculate();
     };
     window.addEventListener('contact-modal-submitted', handleModalSubmitEvent);
@@ -124,7 +126,9 @@ export const HomeCostCalculator = () => {
   }, [handleCalculate]);
 
   const handleCalculateClick = () => {
-    if (!isCalculated) {
+    if (hasSubmittedForm) {
+      handleCalculate();
+    } else if (!isCalculated) {
       window.dispatchEvent(new Event('open-contact-modal'));
     }
   };
@@ -182,7 +186,10 @@ export const HomeCostCalculator = () => {
                   label="Tech Stack"
                   value={techstack}
                   options={techStackOptions}
-                  onChange={setTechstack}
+                  onChange={(val) => {
+                    setTechstack(val);
+                    setIsCalculated(false);
+                  }}
                 />
               </div>
 

@@ -248,6 +248,8 @@ export function Navbar() {
                               key={page.slug}
                               href={page.external || `/${page.slug}`}
                               onClick={() => setIsCompanyDropdownOpen(false)}
+                              target={page.external ? "_blank" : undefined}
+                              rel={page.external ? "noopener noreferrer" : undefined}
                               className={`group flex items-center justify-between px-4 py-3.5 rounded-[16px] text-[15px] font-semibold text-left transition-all duration-300 ${isSubActive
                                 ? "text-white bg-white/10 shadow-inner"
                                 : "text-slate-400 hover:text-white hover:bg-white/5"
@@ -410,7 +412,7 @@ export function Navbar() {
                     <div className="text-white font-extrabold text-[15px]">+1 (623) 887-5363</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
+                <a href="mailto:sales@kraziocloud.com" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
                   </div>
@@ -418,8 +420,8 @@ export function Navbar() {
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">EMAIL ADDRESS</div>
                     <div className="text-white font-extrabold text-[15px]">sales@kraziocloud.com</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </a>
+                <a href="https://www.linkedin.com/company/krazio-cloud/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg>
                   </div>
@@ -427,8 +429,8 @@ export function Navbar() {
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">LINKEDIN</div>
                     <div className="text-white font-extrabold text-[15px]">krazio</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=918160809521&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 2.667C8.639 2.667 2.667 8.638 2.667 16c0 2.347.634 4.638 1.837 6.643L2.667 29.333l6.875-1.802A13.265 13.265 0 0 0 16.003 29.333c7.363 0 13.33-5.97 13.33-13.333 0-7.362-5.967-13.333-13.33-13.333zm0 24.267a11.04 11.04 0 0 1-5.635-1.545l-.404-.24-4.08 1.07 1.09-3.978-.263-.41A10.972 10.972 0 0 1 5.04 16c0-6.044 4.92-10.96 10.963-10.96C22.044 5.04 26.96 9.956 26.96 16c0 6.044-4.916 10.934-10.957 10.934zm6.01-8.196c-.33-.165-1.95-.962-2.252-1.072-.302-.11-.521-.165-.74.165-.22.33-.851 1.072-1.043 1.292-.192.22-.384.247-.714.082-.33-.165-1.394-.514-2.655-1.638-.982-.875-1.645-1.955-1.838-2.285-.192-.33-.02-.508.145-.672.149-.148.33-.385.494-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.027-.578-.083-.165-.74-1.785-1.014-2.443-.267-.64-.538-.553-.74-.563l-.63-.011c-.22 0-.577.083-.88.413-.302.33-1.153 1.127-1.153 2.747 0 1.62 1.18 3.187 1.344 3.407.165.22 2.322 3.547 5.627 4.973.787.34 1.4.543 1.879.694.789.252 1.508.217 2.077.132.634-.095 1.95-.797 2.225-1.567.275-.77.275-1.43.192-1.567-.082-.138-.302-.22-.632-.385z"/></svg>
                   </div>
@@ -436,7 +438,7 @@ export function Navbar() {
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">WHATSAPP</div>
                     <div className="text-white font-extrabold text-[15px]">+91 7202002034</div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -485,7 +487,7 @@ export function Navbar() {
                     <div className="text-white font-extrabold text-[15px]">+1 (623) 887-5363</div>
                   </div>
                 </div>
-                <div className="flex items-center gap-4">
+                <a href="mailto:sales@kraziocloud.com" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></svg>
                   </div>
@@ -493,8 +495,8 @@ export function Navbar() {
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">EMAIL ADDRESS</div>
                     <div className="text-white font-extrabold text-[15px]">sales@kraziocloud.com</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </a>
+                <a href="https://www.linkedin.com/company/krazio-cloud/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.79M6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37h2.77z" /></svg>
                   </div>
@@ -502,8 +504,8 @@ export function Navbar() {
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">LINKEDIN</div>
                     <div className="text-white font-extrabold text-[15px]">krazio</div>
                   </div>
-                </div>
-                <div className="flex items-center gap-4">
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone=918160809521&text&type=phone_number&app_absent=0" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 hover:opacity-80 transition-opacity">
                   <div className="w-10 h-10 rounded-full bg-[#4B56D2]/20 flex items-center justify-center flex-shrink-0">
                     <svg className="w-[18px] h-[18px] text-[#4B56D2]" fill="currentColor" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg"><path d="M16.003 2.667C8.639 2.667 2.667 8.638 2.667 16c0 2.347.634 4.638 1.837 6.643L2.667 29.333l6.875-1.802A13.265 13.265 0 0 0 16.003 29.333c7.363 0 13.33-5.97 13.33-13.333 0-7.362-5.967-13.333-13.33-13.333zm0 24.267a11.04 11.04 0 0 1-5.635-1.545l-.404-.24-4.08 1.07 1.09-3.978-.263-.41A10.972 10.972 0 0 1 5.04 16c0-6.044 4.92-10.96 10.963-10.96C22.044 5.04 26.96 9.956 26.96 16c0 6.044-4.916 10.934-10.957 10.934zm6.01-8.196c-.33-.165-1.95-.962-2.252-1.072-.302-.11-.521-.165-.74.165-.22.33-.851 1.072-1.043 1.292-.192.22-.384.247-.714.082-.33-.165-1.394-.514-2.655-1.638-.982-.875-1.645-1.955-1.838-2.285-.192-.33-.02-.508.145-.672.149-.148.33-.385.494-.578.165-.193.22-.33.33-.55.11-.22.055-.413-.027-.578-.083-.165-.74-1.785-1.014-2.443-.267-.64-.538-.553-.74-.563l-.63-.011c-.22 0-.577.083-.88.413-.302.33-1.153 1.127-1.153 2.747 0 1.62 1.18 3.187 1.344 3.407.165.22 2.322 3.547 5.627 4.973.787.34 1.4.543 1.879.694.789.252 1.508.217 2.077.132.634-.095 1.95-.797 2.225-1.567.275-.77.275-1.43.192-1.567-.082-.138-.302-.22-.632-.385z"/></svg>
                   </div>
@@ -511,7 +513,7 @@ export function Navbar() {
                     <div className="text-[11px] font-bold text-[#4B56D2] uppercase tracking-wider mb-0.5">WHATSAPP</div>
                     <div className="text-white font-extrabold text-[15px]">+91 7202002034</div>
                   </div>
-                </div>
+                </a>
               </div>
             </div>
           </div>
@@ -638,6 +640,8 @@ export function Navbar() {
                                   key={page.slug}
                                   href={page.external || `/${page.slug}`}
                                   onClick={() => setIsOpen(false)}
+                                  target={page.external ? "_blank" : undefined}
+                                  rel={page.external ? "noopener noreferrer" : undefined}
                                   className="flex items-center gap-2 px-4 py-2.5 rounded-xl text-xs font-semibold transition-colors text-slate-400 hover:text-white hover:bg-slate-900/50"
                                 >
                                   <span>{page.title}</span>
