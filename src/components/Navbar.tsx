@@ -330,7 +330,7 @@ export function Navbar() {
                         <Link
                           href="/calculate-salary"
                           onClick={() => setIsHireTeamDropdownOpen(false)}
-                          className="btn-ripple inline-flex items-center justify-center w-full h-[40px] rounded-full text-white font-bold text-[13px] tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none bg-[#4B56D2]"
+                          className="btn-ripple inline-flex items-center justify-center w-fit h-[40px] rounded-full text-white font-bold text-[13px] tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none bg-[#4B56D2] whitespace-nowrap px-5 mx-auto"
                         >
                           Lets calculate salary
                         </Link>
@@ -602,7 +602,7 @@ export function Navbar() {
                                         <Link
                                           href="/calculate-salary"
                                           onClick={() => setIsOpen(false)}
-                                          className="btn-ripple inline-flex items-center justify-center w-full py-2 rounded-full text-white font-bold text-[12px] tracking-wider shadow-sm hover:shadow-md transition-shadow duration-300 select-none bg-[#4B56D2]"
+                                          className="btn-ripple inline-flex items-center justify-center w-fit py-2 rounded-full text-white font-bold text-[12px] tracking-wider shadow-sm hover:shadow-md transition-shadow duration-300 select-none bg-[#4B56D2] whitespace-nowrap px-5"
                                         >
                                           Lets calculate salary
                                         </Link>
