@@ -166,7 +166,7 @@ export function FloatingContact() {
       {/* Floating Action Buttons */}
       <div className="fixed bottom-[100px] right-6 z-[60] flex flex-col gap-4">
         <Link
-          href="https://wa.me/"
+          href="https://api.whatsapp.com/send/?phone=918160809521&text&type=phone_number&app_absent=0"
           target="_blank"
           rel="noopener noreferrer"
           className="w-14 h-14 bg-gradient-to-tr from-[#4B56D2] to-[#60A5FA] hover:shadow-[0_0_20px_rgba(75,86,210,0.6)] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-300 hover:scale-110 active:scale-95 group"
