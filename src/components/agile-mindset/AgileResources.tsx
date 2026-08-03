@@ -15,28 +15,28 @@ export function AgileResources() {
       title: "Artificial Intelligence",
       desc: "Build intelligent solutions with Generative AI, LLMs, Computer Vision, Machine Learning, NLP, and Data Science.",
       image: "/image%20214.svg",
-      link: "https://kraziocloud.vercel.app/services/ai-machine-learning-development/"
+      link: "https://kraziocloud.com/services/ai-machine-learning-development/"
     },
     {
       label: "Immersive Technologies",
       title: "Immersive Technologies",
       desc: "Create engaging AR, VR, MR, gamification, and simulation experiences that transform customer engagement and workforce training.",
       image: "/image%202114.svg",
-      link: "https://kraziocloud.vercel.app/services/apple-vision-pro-development/"
+      link: "https://kraziocloud.com/services/apple-vision-pro-development/"
     },
     {
       label: "Custom Software",
       title: "Custom Software Development",
       desc: "Develop scalable web, mobile, and enterprise applications tailored to your unique business goals.",
       image: "/image%202115.svg",
-      link: "https://kraziocloud.vercel.app/services/custom-software-development/"
+      link: "https://kraziocloud.com/services/custom-software-development/"
     },
     {
       label: "Dedicated Teams",
       title: "Dedicated Development Teams",
       desc: "Scale your business with experienced offshore developers and dedicated teams that integrate seamlessly with your organization, delivering flexibility, transparency, and faster project execution.",
       image: "/image%20216.svg",
-      link: "https://kraziocloud.vercel.app/services/web-app-developer/"
+      link: "https://kraziocloud.com/services/web-app-developer/"
     }
   ];
 

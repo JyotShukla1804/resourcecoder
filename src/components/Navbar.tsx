@@ -240,7 +240,7 @@ export function Navbar() {
                           { title: "Development Process", slug: "development-process" },
                           { title: "Partner with Us", slug: "partner-with-us" },
                           { title: "Agile Mindset", slug: "agile-mindset" },
-                          { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.vercel.app/recognition-trust-badges/" },
+                          { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.com/recognition-trust-badges/" },
                         ].map((page) => {
                           const isSubActive = pathname === `/${page.slug}`;
                           return (
@@ -634,7 +634,7 @@ export function Navbar() {
                                 { title: "Development Process", slug: "development-process" },
                                 { title: "Partner with Us", slug: "partner-with-us" },
                                 { title: "Agile Mindset", slug: "agile-mindset" },
-                                { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.vercel.app/recognition-trust-badges/" },
+                                { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.com/recognition-trust-badges/" },
                               ].map((page) => (
                                 <Link
                                   key={page.slug}
