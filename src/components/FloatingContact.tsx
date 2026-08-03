@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { MessageSquare, X, ChevronDown, Send, Star, Award, TrendingUp, Globe } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { supabaseForm } from "@/lib/supabase-form";
 
 const countries = [
   { name: "Afghanistan", code: "AF", dial_code: "+93" }, { name: "Albania", code: "AL", dial_code: "+355" }, { name: "Algeria", code: "DZ", dial_code: "+213" },
@@ -130,6 +131,8 @@ export function FloatingContact() {
     };
   }, [isOpen]);
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -138,27 +141,57 @@ export function FloatingContact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setIsSubmitting(true);
     
-    // Dispatch an event so other components (like HomeCostCalculator) know it was submitted
-    window.dispatchEvent(new Event('contact-modal-submitted'));
+    try {
+      const { error } = await supabaseForm
+        .from('upcoming_leads')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            mobile: formData.phoneNumber,
+            company_name: formData.companyName,
+            company_web: formData.companyWebsite,
+            linkedin: formData.linkedinLink,
+            message: `Tech Stack: ${formData.techStack}\nMessage: ${formData.message}`,
+            source_website: 'resource-coder-floating-contact',
+          }
+        ]);
 
-    setTimeout(() => {
-      setIsOpen(false);
-      setIsSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phoneNumber: "",
-        companyName: "",
-        companyWebsite: "",
-        linkedinLink: "",
-        techStack: "",
-        message: "",
-      });
-    }, 3000);
+      if (error) {
+        console.error("Error submitting form:", error);
+        alert(`Failed to submit request. Reason: ${error.message || error.details || 'Unknown Error'}`);
+        setIsSubmitting(false);
+        return;
+      }
+
+      setIsSubmitted(true);
+      setIsSubmitting(false);
+      
+      // Dispatch an event so other components (like HomeCostCalculator) know it was submitted
+      window.dispatchEvent(new Event('contact-modal-submitted'));
+
+      setTimeout(() => {
+        setIsOpen(false);
+        setIsSubmitted(false);
+        setFormData({
+          name: "",
+          email: "",
+          phoneNumber: "",
+          companyName: "",
+          companyWebsite: "",
+          linkedinLink: "",
+          techStack: "",
+          message: "",
+        });
+      }, 3000);
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      alert("An unexpected error occurred.");
+    }
   };
 
   return (
@@ -498,10 +531,15 @@ export function FloatingContact() {
                       {/* Submit Button */}
                       <button
                         type="submit"
-                        className="group w-full bg-[#4B56D2] hover:bg-blue-700 text-white rounded-xl font-bold py-3.5 text-sm transition-all duration-300 shadow-[0_8px_25px_rgba(75,86,210,0.3)] hover:shadow-[0_12px_35px_rgba(75,86,210,0.5)] flex items-center justify-center gap-2 mt-4"
+                        disabled={isSubmitting}
+                        className={`group w-full rounded-xl font-bold py-3.5 text-sm transition-all duration-300 flex items-center justify-center gap-2 mt-4 ${
+                          isSubmitting 
+                            ? 'bg-slate-400 cursor-not-allowed text-white shadow-none' 
+                            : 'bg-[#4B56D2] hover:bg-blue-700 text-white shadow-[0_8px_25px_rgba(75,86,210,0.3)] hover:shadow-[0_12px_35px_rgba(75,86,210,0.5)]'
+                        }`}
                       >
-                        Submit Request
-                        <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />
+                        {isSubmitting ? "Submitting..." : "Submit Request"}
+                        {!isSubmitting && <Send className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300" />}
                       </button>
                     </form>
                   </>

@@ -2,17 +2,26 @@
 
 import React, { useState } from "react";
 import { supabaseForm } from "@/lib/supabase-form";
+import { motion, AnimatePresence } from "framer-motion";
+import { ChevronDown } from "lucide-react";
+import { countries } from "@/lib/countries";
 
 export function InterviewForm() {
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
+    name: "",
     email: "",
     phoneNumber: "",
+    companyName: "",
+    companyWebsite: "",
+    linkedinLink: "",
     techStack: "",
-    projectDetails: "",
+    message: "",
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
+  const [selectedCountry, setSelectedCountry] = useState(countries.find(c => c.code === "IN") || countries[0]);
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target;
@@ -24,27 +33,33 @@ export function InterviewForm() {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setIsSubmitting(true);
     
     try {
       const { error } = await supabaseForm
         .from('upcoming_leads')
         .insert([
           {
-            name: `${formData.firstName} ${formData.lastName}`.trim(),
+            name: formData.name,
             email: formData.email,
             mobile: formData.phoneNumber,
-            message: `Tech Stack: ${formData.techStack}\nProject Details: ${formData.projectDetails}`,
+            company_name: formData.companyName,
+            company_web: formData.companyWebsite,
+            linkedin: formData.linkedinLink,
+            message: `Tech Stack: ${formData.techStack}\nMessage: ${formData.message}`,
             source_website: 'resource-coder-hire-team',
           }
         ]);
 
       if (error) {
         console.error("Error submitting form:", error);
-        alert("Failed to submit request. Please try again.");
+        alert(`Failed to submit request. Reason: ${error.message || error.details || 'Unknown Error'}`);
+        setIsSubmitting(false);
         return;
       }
 
       setIsSubmitted(true);
+      setIsSubmitting(false);
     } catch (err) {
       console.error("Unexpected error:", err);
       alert("An unexpected error occurred.");
@@ -130,91 +145,160 @@ export function InterviewForm() {
                   </h3>
                   
                   <form onSubmit={handleSubmit} className="space-y-4">
-                    {/* Name Fields Grid */}
+                    
+                    {/* Row 1: Name and Email */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <input
                         type="text"
-                        name="firstName"
+                        name="name"
                         required
-                        value={formData.firstName}
+                        value={formData.name}
                         onChange={handleChange}
-                        placeholder="First Name"
+                        placeholder="Name *"
+                        className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                      />
+                      <input
+                        type="email"
+                        name="email"
+                        required
+                        value={formData.email}
+                        onChange={handleChange}
+                        placeholder="Email *"
+                        className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                      />
+                    </div>
+
+                    {/* Row 2: Phone and Company Name */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <div className="flex relative">
+                        <button
+                          type="button"
+                          onClick={() => setIsCountryDropdownOpen(!isCountryDropdownOpen)}
+                          className="flex items-center justify-center px-3 bg-slate-50 border border-slate-200/50 border-r-0 rounded-l-xl text-slate-700 text-sm shrink-0 gap-1.5 hover:bg-slate-100 transition-colors focus:outline-none"
+                        >
+                          <img src={`https://flagcdn.com/w20/${selectedCountry.code.toLowerCase()}.png`} alt={`${selectedCountry.name} Flag`} className="w-5 h-3.5 object-cover rounded-sm" />
+                          <span>{selectedCountry.dial_code}</span>
+                          <ChevronDown className={`w-3.5 h-3.5 text-slate-400 ml-0.5 transition-transform ${isCountryDropdownOpen ? 'rotate-180' : ''}`} />
+                        </button>
+                        
+                        <AnimatePresence>
+                          {isCountryDropdownOpen && (
+                            <>
+                              <div className="fixed inset-0 z-40" onClick={() => setIsCountryDropdownOpen(false)} />
+                              <motion.div
+                                initial={{ opacity: 0, y: -10 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                exit={{ opacity: 0, y: -10 }}
+                                className="absolute top-full left-0 mt-2 w-[220px] bg-white border border-slate-100 rounded-xl shadow-xl z-50 overflow-hidden"
+                              >
+                                <div className="max-h-[200px] overflow-y-auto py-2 scrollbar-thin">
+                                  {countries.map((country) => (
+                                    <button
+                                      key={country.code}
+                                      type="button"
+                                      onClick={() => {
+                                        setSelectedCountry(country);
+                                        setIsCountryDropdownOpen(false);
+                                      }}
+                                      className="w-full flex items-center gap-3 px-4 py-2 hover:bg-slate-50 transition-colors text-left overflow-hidden"
+                                    >
+                                      <img src={`https://flagcdn.com/w20/${country.code.toLowerCase()}.png`} alt={country.name} className="w-5 h-3.5 object-cover rounded-sm shrink-0" />
+                                      <span className="text-sm font-medium text-slate-700 truncate">{country.name}</span>
+                                      <span className="text-xs text-slate-400 ml-auto whitespace-nowrap shrink-0">{country.dial_code}</span>
+                                    </button>
+                                  ))}
+                                </div>
+                              </motion.div>
+                            </>
+                          )}
+                        </AnimatePresence>
+
+                        <input
+                          type="tel"
+                          name="phoneNumber"
+                          required
+                          value={formData.phoneNumber}
+                          onChange={handleChange}
+                          placeholder="Phone number *"
+                          className="w-full bg-slate-50 border border-slate-200/50 rounded-r-xl px-3 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                        />
+                      </div>
+                      <input
+                        type="text"
+                        name="companyName"
+                        value={formData.companyName}
+                        onChange={handleChange}
+                        placeholder="Company Name"
+                        className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
+                      />
+                    </div>
+
+                    {/* Row 3: Website and LinkedIn */}
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <input
+                        type="url"
+                        name="companyWebsite"
+                        value={formData.companyWebsite}
+                        onChange={handleChange}
+                        placeholder="Company Website"
                         className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
                       />
                       <input
                         type="text"
-                        name="lastName"
+                        name="linkedinLink"
                         required
-                        value={formData.lastName}
+                        value={formData.linkedinLink}
                         onChange={handleChange}
-                        placeholder="Last Name"
+                        placeholder="LinkedIn / Instagram Link *"
                         className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
                       />
                     </div>
 
-                    {/* Email Field */}
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      placeholder="Email Address"
-                      className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
-                    />
-
-                    {/* Phone Number Field */}
-                    <input
-                      type="tel"
-                      name="phoneNumber"
-                      required
-                      value={formData.phoneNumber}
-                      onChange={handleChange}
-                      placeholder="Phone Number"
-                      className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors"
-                    />
-
-                    {/* Tech Stack Select Dropdown */}
+                    {/* Row 4: Tech Stack */}
                     <div className="relative">
                       <select
                         name="techStack"
-                        aria-label="Select Tech Stack"
                         required
                         value={formData.techStack}
                         onChange={handleChange}
-                        className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-500 text-sm focus:outline-none focus:border-blue-500/50 appearance-none cursor-pointer transition-colors"
+                        className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 text-sm focus:outline-none focus:border-blue-500/50 transition-colors appearance-none cursor-pointer"
                       >
-                        <option value="" disabled>Select Tech Stack</option>
+                        <option value="" disabled>Select Tech Stack *</option>
                         <option value="React / Next.js">React / Next.js</option>
                         <option value="Node.js / Python">Node.js / Python</option>
                         <option value="Flutter / React Native">Flutter / React Native</option>
-                        <option value="AI / ML / Data">AI / ML / Data Engineering</option>
+                        <option value="AI / ML / Data Engineering">AI / ML / Data Engineering</option>
                         <option value="Unity / Unreal / AR/VR">Unity / Unreal / AR/VR</option>
                         <option value="Full Stack Developers">Full Stack Developers</option>
+                        <option value="other">Other</option>
                       </select>
-                      <div className="absolute inset-y-0 right-0 flex items-center pr-4 pointer-events-none text-slate-400">
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-                          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-                        </svg>
+                      <div className="absolute inset-y-0 right-4 flex items-center pointer-events-none text-slate-400">
+                        <ChevronDown className="w-4 h-4" />
                       </div>
                     </div>
 
-                    {/* Project Details Textarea */}
+                    {/* Row 5: Message */}
                     <textarea
-                      name="projectDetails"
+                      name="message"
                       required
-                      value={formData.projectDetails}
+                      rows={3}
+                      value={formData.message}
                       onChange={handleChange}
-                      placeholder="Project Details"
-                      className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 h-28 sm:h-32 resize-none transition-colors"
+                      className="w-full bg-slate-50 border border-slate-200/50 rounded-xl px-4 py-3 text-slate-800 placeholder-slate-400 text-sm focus:outline-none focus:border-blue-500/50 transition-colors resize-none h-28"
+                      placeholder="Message *"
                     />
 
                     {/* Submit Button */}
                     <button
                       type="submit"
-                      className="btn-ripple inline-flex items-center justify-center text-white font-bold text-base tracking-wide transition-shadow duration-300 shadow-md hover:shadow-lg w-full sm:w-[469px] max-w-full h-14 py-4 rounded-full uppercase bg-[#4B56D2] text-center mt-4"
+                      disabled={isSubmitting}
+                      className={`w-full sm:w-[469px] max-w-full h-14 rounded-full font-bold text-base tracking-wide transition-all duration-300 flex items-center justify-center uppercase shadow-md ${
+                        isSubmitting 
+                          ? 'bg-slate-400 cursor-not-allowed text-white shadow-none' 
+                          : 'bg-[#4B56D2] hover:bg-[#3d45a5] text-white shadow-md hover:shadow-lg'
+                      }`}
                     >
-                      Submit Request
+                      {isSubmitting ? "SUBMITTING..." : "SUBMIT REQUEST"}
                     </button>
                   </form>
                 </>
