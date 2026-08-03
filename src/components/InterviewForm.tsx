@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { supabaseForm } from "@/lib/supabase-form";
 
 export function InterviewForm() {
   const [formData, setFormData] = useState({
@@ -21,10 +22,33 @@ export function InterviewForm() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Simulate API request submission
-    setIsSubmitted(true);
+    
+    try {
+      const { error } = await supabaseForm
+        .from('upcoming_leads')
+        .insert([
+          {
+            name: `${formData.firstName} ${formData.lastName}`.trim(),
+            email: formData.email,
+            mobile: formData.phoneNumber,
+            message: `Tech Stack: ${formData.techStack}\nProject Details: ${formData.projectDetails}`,
+            source_website: 'resource-coder-hire-team',
+          }
+        ]);
+
+      if (error) {
+        console.error("Error submitting form:", error);
+        alert("Failed to submit request. Please try again.");
+        return;
+      }
+
+      setIsSubmitted(true);
+    } catch (err) {
+      console.error("Unexpected error:", err);
+      alert("An unexpected error occurred.");
+    }
   };
 
   return (
