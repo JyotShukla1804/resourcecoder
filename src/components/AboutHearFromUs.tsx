@@ -35,81 +35,20 @@ const marqueeTestimonials = [...testimonials, ...testimonials, ...testimonials];
 
 export function AboutHearFromUs() {
   return (
-    <section
-      className="w-full relative z-10 flex flex-col items-center overflow-hidden border-t border-slate-950 bg-[#0A0A0A]"
-    >
-      {/* Custom styles for the infinite scrolling marquee */}
-      
-
-      <div className="w-full max-w-[1358px] min-h-[638px] flex flex-col justify-between py-24 relative text-white">
-
-        {/* Section Header */}
-        <div className="space-y-4 max-w-4xl mx-auto text-center px-6 md:px-[55px] mb-8">
-          <h2
-            className="text-3xl sm:text-4xl md:text-[48px] font-bold leading-[48px] text-center"
-          >
-            Hear From Our Team
-          </h2>
-          <p
-            className="text-base md:text-[18px] text-slate-400 font-normal leading-7 text-center"
-          >
-            Real stories from real people who are building their careers with us.
-          </p>
-        </div>
-
-        {/* Testimonials Auto-Scrolling Marquee Track */}
-        <div className="relative w-full overflow-hidden py-4 z-10">
-
-          {/* Edge Fading Gradients (Desktop) */}
-          <div className="absolute left-0 top-0 bottom-0 w-24 bg-gradient-to-r from-[#0A0A0A] to-transparent z-20 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-24 bg-gradient-to-l from-[#0A0A0A] to-transparent z-20 pointer-events-none" />
-
-          {/* Scrolling Container */}
-          <div className="animate-marquee-slow px-6 md:px-[55px]">
-            {marqueeTestimonials.map((item, idx) => (
-              <div
-                key={idx}
-                className="w-[320px] sm:w-[400px] md:w-[450px] flex-shrink-0 bg-white/5 border border-white/10 backdrop-blur-sm rounded-[24px] p-8 text-left relative overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.15)] flex flex-col justify-start h-[270px] hover:border-white/20 transition-colors duration-300"
-              >
-                {/* Top User Info Row */}
-                <div className="flex gap-4 items-center">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden border border-white/25 bg-slate-800 flex-shrink-0">
-                    <img
-                      src={item.avatar}
-                      alt={item.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <h3
-                      className="text-white text-lg font-bold"
-                    >
-                      {item.name}
-                    </h3>
-                    <p
-                      className="text-blue-500 text-sm font-semibold tracking-wide mt-0.5"
-                    >
-                      {item.role}
-                    </p>
-                  </div>
-                </div>
-
-                {/* Bottom Quote Text */}
-                <p
-                  className="text-slate-300 text-sm sm:text-base leading-relaxed font-normal italic mt-6"
-                >
-                  "{item.quote}"
-                </p>
-
-              </div>
-            ))}
-          </div>
-
-        </div>
-
-        {/* Small spacing element for bottom padding layout balance */}
-        <div className="h-4" />
-
+    <section className="py-2 sm:py-4 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-center">
+        <a
+          href="https://www.ambitionbox.com/overview/krazio-cloud-overview?utm_source=employer-dashboard&utm_campaign=krazio-cloud&utm_medium=badges"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="View Krazio Cloud rating on AmbitionBox"
+        >
+          <img
+            src="https://employer.ambitionbox.com/api/badge/2088278?badge-type=ratings-detailed"
+            alt="Krazio Cloud AmbitionBox rating badge"
+            loading="lazy"
+          />
+        </a>
       </div>
     </section>
   );

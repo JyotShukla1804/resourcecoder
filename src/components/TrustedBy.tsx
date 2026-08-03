@@ -12,7 +12,7 @@ export function TrustedBy({
     "Adani.svg",
     "Deloitte.svg",
     "Dream_Bricks.svg",
-    "Focal_Charge.svg",
+    "Focal Charge.svg",
     "G-Crankz.svg",
     "Getco.svg",
     "Giriraj Jewellers.svg",
