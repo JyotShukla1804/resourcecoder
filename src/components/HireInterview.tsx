@@ -35,7 +35,7 @@ export function HireInterview({
     companyWebsite: "",
     linkedinLink: "",
     techStack: "",
-    projectDetails: ""
+    message: ""
   });
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isCountryDropdownOpen, setIsCountryDropdownOpen] = useState(false);
