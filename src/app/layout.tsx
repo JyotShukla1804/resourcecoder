@@ -30,6 +30,32 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
     >
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              if (typeof window !== 'undefined') {
+                const originalLog = console.log;
+                const originalWarn = console.warn;
+                const originalError = console.error;
+                
+                console.log = function(...args) {
+                  if (typeof args[0] === 'string' && args[0].includes('[iFrameSizer]')) return;
+                  originalLog.apply(console, args);
+                };
+                console.warn = function(...args) {
+                  if (typeof args[0] === 'string' && args[0].includes('[iFrameSizer]')) return;
+                  originalWarn.apply(console, args);
+                };
+                console.error = function(...args) {
+                  if (typeof args[0] === 'string' && args[0].includes('[iFrameSizer]')) return;
+                  originalError.apply(console, args);
+                };
+              }
+            `,
+          }}
+        />
+      </head>
       <body className="overflow-x-hidden flex flex-col bg-slate-50 text-[#0f172a]">
         <div className="flex flex-col min-h-screen w-full overflow-x-hidden relative">
           <Navbar />

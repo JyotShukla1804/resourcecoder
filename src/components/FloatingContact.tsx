@@ -152,10 +152,11 @@ export function FloatingContact() {
           {
             name: formData.name,
             email: formData.email,
+            country_code: selectedCountry.dial_code,
             mobile: formData.phoneNumber,
             company_name: formData.companyName,
             company_web: formData.companyWebsite,
-            linkedin: formData.linkedinLink,
+            social_url: formData.linkedinLink,
             message: `Tech Stack: ${formData.techStack}\nMessage: ${formData.message}`,
             source_website: 'resource-coder-floating-contact',
           }
