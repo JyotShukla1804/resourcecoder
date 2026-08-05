@@ -4,6 +4,8 @@ import "./globals.css";
 import { Navbar, FloatingContact, StickyBanner } from "@/components";
 import { Footer } from "@/components/Footer";
 
+import Script from "next/script";
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -30,8 +32,11 @@ export default function RootLayout({
       data-scroll-behavior="smooth"
       className={`${geistSans.variable} ${geistMono.variable} overflow-x-hidden antialiased`}
     >
-      <head>
-        <script
+      <head />
+      <body className="overflow-x-hidden flex flex-col bg-slate-50 text-[#0f172a]">
+        <Script
+          id="suppress-iframe-sizer-logs"
+          strategy="beforeInteractive"
           dangerouslySetInnerHTML={{
             __html: `
               if (typeof window !== 'undefined') {
@@ -55,8 +60,6 @@ export default function RootLayout({
             `,
           }}
         />
-      </head>
-      <body className="overflow-x-hidden flex flex-col bg-slate-50 text-[#0f172a]">
         <div className="flex flex-col min-h-screen w-full overflow-x-hidden relative">
           <Navbar />
           <main className="flex-1">

@@ -37,7 +37,7 @@ export function HiringProcessSection() {
 
   return (
     <div className="w-full bg-white relative z-10 overflow-hidden border-t border-slate-100">
-      <div className="w-full max-w-[1358px] mx-auto py-16 md:py-24 px-4 sm:px-6 md:px-[55px] relative min-h-[auto]">
+      <div className="w-full max-w-[1358px] mx-auto py-24 px-4 sm:px-6 md:px-[55px] relative min-h-[auto]">
       <div className="max-w-4xl mx-auto text-center mb-16">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold tracking-tight text-[#0f172a] mb-6 leading-[1.2]">
           Hiring IT Resources A Simple &<br className="hidden sm:block" /> Streamlined Process

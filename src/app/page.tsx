@@ -120,7 +120,7 @@ export default async function Home() {
           <div className="pt-6 w-full flex justify-center">
             <Link
               href="#interview-section"
-              className="btn-ripple inline-flex items-center justify-center text-white font-bold text-[13px] tracking-wider transition-shadow duration-300 shadow-md hover:shadow-lg select-none w-auto sm:w-[157px] h-[60px] py-4 px-10 rounded-full bg-[#4B56D2]"
+              className="btn-ripple inline-flex items-center justify-center text-white font-bold text-lg tracking-wider transition-shadow duration-300 shadow-md hover:shadow-lg select-none w-auto sm:min-w-[157px] h-[60px] py-4 px-10 rounded-full bg-[#4B56D2]"
             >
               Let's talk
             </Link>
@@ -158,19 +158,14 @@ export default async function Home() {
       {/* Tech Section */}
       <TechSection />
 
-
-
       {/* Hiring Models Section */}
       <HiringModels />
-
 
       {/* Interview Form Section */}
       <InterviewForm />
 
       {/* Home Process Section */}
       <HomeProcess />
-
-
 
       {/* CTA Section */}
       <CTASection />

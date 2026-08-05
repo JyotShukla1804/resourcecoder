@@ -69,7 +69,7 @@ export function InterviewForm() {
 
   return (
     <div id="interview-section" className="w-full bg-[#4B56D2] relative z-10 overflow-hidden">
-      <div className="w-full max-w-[1358px] mx-auto py-16 md:py-20 px-4 sm:px-6 md:px-[55px] relative min-h-[auto] md:min-h-[800px]">
+      <div className="w-full max-w-[1358px] mx-auto py-24 px-4 sm:px-6 md:px-[55px] relative">
         {/* Dynamic Ambient Background Glows */}
         <div className="absolute top-1/2 left-1/4 -translate-y-1/2 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px] pointer-events-none" />
         <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-indigo-500/20 rounded-full blur-[100px] pointer-events-none" />

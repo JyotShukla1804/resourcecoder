@@ -98,15 +98,28 @@ export function FloatingContact() {
     // Intercept clicks on CTA buttons across the site
     const handleGlobalClick = (e: MouseEvent) => {
       const target = (e.target as HTMLElement).closest('a');
-      if (target && target.href && (target.href.includes('#interview-section') || target.href.includes('#contact-form'))) {
-        // Check if the form section actually exists on the current page
-        const formSectionExists = document.getElementById('interview-section') || document.getElementById('contact-form');
+      if (target) {
+        const text = target.textContent?.trim().toLowerCase() || "";
+        const isTalkToExpert = text.includes("talk to an expert");
+        const isModalLink = target.href && target.href.includes('#contact-modal');
+        const isFormLink = target.href && (target.href.includes('#interview-section') || target.href.includes('#contact-form'));
         
-        // If there is NO form on this page, open the popup instead of navigating
-        if (!formSectionExists) {
+        // Always open popup for "Talk to an Expert" or explicit modal links
+        if (isTalkToExpert || isModalLink) {
           e.preventDefault();
           e.stopPropagation();
           setIsOpen(true);
+          return;
+        }
+
+        // For other form links, only open popup if form doesn't exist on page
+        if (isFormLink) {
+          const formSectionExists = document.getElementById('interview-section') || document.getElementById('contact-form');
+          if (!formSectionExists) {
+            e.preventDefault();
+            e.stopPropagation();
+            setIsOpen(true);
+          }
         }
       }
     };

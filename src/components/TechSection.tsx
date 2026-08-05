@@ -2,9 +2,9 @@ import React from 'react';
 
 export function TechSection() { // Tech Section Component
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-8 py-12 relative z-10 flex justify-center">
+    <div className="w-full px-4 sm:px-6 lg:px-8 relative z-10 flex justify-center">
       <section
-        className="w-full max-w-[1358px] min-h-[auto] md:min-h-[942px] px-6 md:px-[55px] py-12 md:py-[96px] rounded-3xl md:rounded-[48px] bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#4B56D2] border-0 text-white transition-all duration-300 shadow-[0_20px_50px_rgba(75,86,210,0.15)] relative overflow-hidden mx-auto"
+        className="w-full max-w-[1358px] min-h-[auto] px-6 md:px-[55px] py-24 rounded-3xl md:rounded-[48px] bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#4B56D2] border-0 text-white transition-all duration-300 shadow-[0_20px_50px_rgba(75,86,210,0.15)] relative overflow-hidden mx-auto"
       >
         <div className="max-w-[1018px] mx-auto text-center mb-16">
           <h2

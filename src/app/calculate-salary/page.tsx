@@ -388,46 +388,7 @@ export default function CalculateSalaryPage() {
 
          </div>
 
-         {/* Right Column (Sidebars) */}
-         <div className="w-full lg:w-[380px] flex flex-col gap-6">
-            
 
-
-            {/* EOR Services */}
-            <div className="bg-white rounded-[24px] border border-slate-100 shadow-sm p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-slate-700" />
-                </div>
-                <h3 className="text-[15px] font-bold text-slate-900">Our EOR Services</h3>
-              </div>
-              <ul className="space-y-3">
-                {['Employer of Record (EOR)', 'Payroll & Staffing Services', 'HR & Employee Handbooks', 'Co-working Space'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-500 text-[14px] hover:text-[#4B56D2] transition-colors cursor-pointer">
-                    <ChevronRight className="w-3.5 h-3.5 opacity-60" /> {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* Resources */}
-            <div className="bg-white rounded-[24px] border border-slate-100 shadow-sm p-6">
-              <div className="flex items-center gap-3 mb-5">
-                <div className="w-8 h-8 rounded-full bg-slate-100 flex items-center justify-center shrink-0">
-                  <CheckCircle2 className="w-4 h-4 text-slate-700" />
-                </div>
-                <h3 className="text-[15px] font-bold text-slate-900">Download Our Resources</h3>
-              </div>
-              <ul className="space-y-3">
-                {['India Developer Salary Report', 'India Tech Talent Market Snapshot', 'Cost Considerations For Hiring In India'].map((item, i) => (
-                  <li key={i} className="flex items-center gap-3 text-slate-500 text-[14px] hover:text-[#4B56D2] transition-colors cursor-pointer">
-                    <ChevronRight className="w-3.5 h-3.5 opacity-60" /> {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-         </div>
         </div>
       </div>
 

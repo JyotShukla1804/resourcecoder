@@ -41,7 +41,7 @@ export function HiringModels() {
 
   return (
     <div className="w-full bg-black relative z-10 overflow-hidden border-t border-slate-950/80">
-      <div className="w-full max-w-[1358px] mx-auto py-16 md:py-24 px-4 sm:px-6 md:px-[55px] relative min-h-[auto]">
+      <div className="w-full max-w-[1358px] mx-auto py-24 px-4 sm:px-6 md:px-[55px] relative min-h-[auto]">
         {/* Decorative Ambient Background Glows */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-blue-600/5 rounded-full blur-[100px] pointer-events-none" />
 

@@ -16,10 +16,10 @@ export function CTASection({
 }: CTASectionProps) {
   const finalButtonHref = "https://calendly.com/rahul-b-f5nl/consulting-call";
   return (
-    <section className="w-full px-4 sm:px-6 lg:px-8 py-16 md:py-24 bg-white relative z-10 mx-auto flex justify-center">
-      {/* Blue Banner Card with exact specs: width/max-w-[1280px], h-[656px], rounded-[64px], padding (pt/pb 100px, pl/pr 128px), opacity: 1, angle: 0deg */}
+    <section className="w-full px-4 sm:px-6 lg:px-8 py-24 bg-white relative z-10 mx-auto flex justify-center">
+      {/* Blue Banner Card with exact specs: width/max-w-[1280px], rounded-[64px], opacity: 1, angle: 0deg */}
       <div
-        className="bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#4B56D2] rounded-[32px] md:rounded-[64px] w-full max-w-[1358px] min-h-[500px] md:h-[656px] flex flex-col justify-center items-center py-16 px-6 sm:px-12 md:pt-[100px] md:pb-[100px] md:pl-[128px] md:pr-[128px] text-center shadow-[0_20px_50px_rgba(75,86,210,0.25)] relative overflow-hidden transition-all duration-300 transform-none opacity-100"
+        className="bg-gradient-to-br from-[#1e1b4b] via-[#312e81] to-[#4B56D2] rounded-[32px] md:rounded-[64px] w-full max-w-[1358px] flex flex-col justify-center items-center py-16 md:py-24 px-6 sm:px-12 md:pl-[128px] md:pr-[128px] text-center shadow-[0_20px_50px_rgba(75,86,210,0.25)] relative overflow-hidden transition-all duration-300 transform-none opacity-100"
       >
         {/* Soft background light reflections */}
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-white/10 to-transparent pointer-events-none" />
@@ -40,6 +40,8 @@ export function CTASection({
           <div className="flex justify-center mt-4">
             <Link
               href={finalButtonHref}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
             >
               {buttonText}

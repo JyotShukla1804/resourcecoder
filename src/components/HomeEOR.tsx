@@ -36,7 +36,7 @@ export function HomeEOR() {
   ];
 
   return (
-    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-[#f8f9ff] overflow-hidden relative z-10">
+    <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-[#f8f9ff] overflow-hidden relative z-10">
       <div className="max-w-[1358px] mx-auto flex flex-col-reverse lg:flex-row items-center gap-16">
 
         {/* Left Graphic - Dashboard UI */}
@@ -172,7 +172,7 @@ export function HomeEOR() {
 
           <Link
             href="#calculator-section"
-            className="btn-ripple inline-flex items-center justify-center text-white font-bold text-xs tracking-widest py-4.5 px-8 rounded-full transition-shadow duration-300 uppercase shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)] bg-[#4B56D2]"
+            className="self-center lg:self-start btn-ripple inline-flex items-center justify-center text-white font-bold text-xs tracking-widest py-4.5 px-8 rounded-full transition-shadow duration-300 uppercase shadow-[0_4px_20px_rgba(37,99,235,0.3)] hover:shadow-[0_4px_30px_rgba(37,99,235,0.5)] bg-[#4B56D2]"
           >
             Get Pricing
           </Link>

@@ -23,7 +23,7 @@ export function HomeITRecruitment() {
   ];
 
   return (
-    <section className="w-full py-20 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden relative z-10">
+    <section className="w-full py-24 px-4 sm:px-6 lg:px-8 bg-white overflow-hidden relative z-10">
       <div className="max-w-[1358px] mx-auto flex flex-col lg:flex-row items-center gap-16">
         
         {/* Left Content */}
