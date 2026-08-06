@@ -533,13 +533,15 @@ const Footer = () => {
                 <Download className="w-5 h-5 mr-2" />
                 <span className="font-medium">Krazio Profile</span>
               </a>
-              <Link
-                href="/partner-with-us"
+              <a
+                href="https://calendly.com/rahul-b-f5nl/consulting-call"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-ripple inline-flex items-center px-6 py-3 rounded-md bg-slate-800 hover:bg-slate-700 border border-slate-700 transition-colors duration-300 text-white"
               >
                 <Users className="w-5 h-5 mr-2" />
                 <span className="font-medium">Partner</span>
-              </Link>
+              </a>
             </motion.div>
 
           </div>
