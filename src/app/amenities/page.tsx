@@ -1,10 +1,9 @@
 import React from "react";
 import { Metadata } from "next";
+import Image from "next/image";
 import { AmenitiesHero } from "@/components/amenities/AmenitiesHero";
 import { AmenitiesGallery } from "@/components/amenities/AmenitiesGallery";
 import { AmenitiesSection } from "@/components/amenities/AmenitiesSection";
-import { Footer } from "@/components/Footer";
-import { FloatingContact } from "@/components/FloatingContact";
 import {
   Wifi,
   Zap,
@@ -37,7 +36,20 @@ export default function AmenitiesPage() {
   return (
     <main className="min-h-screen bg-black">
       <AmenitiesHero />
-      <AmenitiesGallery />
+      {/* Full Bleed Image Section */}
+      <section className="w-full bg-black">
+        <div className="relative w-full aspect-[16/9] md:aspect-[21/9] bg-slate-900">
+          <Image 
+            src="/image.png" 
+            alt="Conference Room"
+            fill
+            priority
+            quality={100}
+            className="object-cover"
+            sizes="100vw"
+          />
+        </div>
+      </section>
 
       <div className="w-full flex flex-col">
         {/* Infrastructure & Connectivity */}
@@ -123,8 +135,7 @@ export default function AmenitiesPage() {
         />
       </div>
 
-      <FloatingContact />
-      <Footer />
+      <AmenitiesGallery />
     </main>
   );
 }

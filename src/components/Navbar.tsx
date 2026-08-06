@@ -242,6 +242,7 @@ export function Navbar() {
                           { title: "Agile Mindset", slug: "agile-mindset" },
                           { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.com/recognition-trust-badges/" },
                           { title: "Amenities", slug: "amenities" },
+                          { title: "Spaces", slug: "spaces" },
                         ].map((page) => {
                           const isSubActive = pathname === `/${page.slug}`;
                           return (
@@ -637,6 +638,7 @@ export function Navbar() {
                                 { title: "Agile Mindset", slug: "agile-mindset" },
                                 { title: "Awards & Recognition", slug: "awards", external: "https://kraziocloud.com/recognition-trust-badges/" },
                                 { title: "Amenities", slug: "amenities" },
+                                { title: "Spaces", slug: "spaces" },
                               ].map((page) => (
                                 <Link
                                   key={page.slug}

@@ -65,8 +65,8 @@ export function AmenitiesSection({ titlePart1, titlePart2, subtitle, items, them
                 key={idx}
                 className={`rounded-[32px] p-8 flex flex-col items-start text-left transition-all duration-500 group ${styles.card}`}
               >
-                <div className={`mb-8 w-14 h-14 rounded-2xl flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 ${styles.iconWrapper}`}>
-                  <Icon className="w-7 h-7 stroke-[1.5]" />
+                <div className={`mb-8 w-20 h-20 rounded-[24px] flex items-center justify-center transition-transform duration-500 group-hover:scale-110 group-hover:rotate-3 ${styles.iconWrapper}`}>
+                  <Icon className="w-10 h-10 stroke-[1.5]" />
                 </div>
                 <h3 className={`text-xl font-bold mb-3 leading-snug ${styles.cardTitle}`}>
                   {item.title}
