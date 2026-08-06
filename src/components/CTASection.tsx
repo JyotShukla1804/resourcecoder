@@ -11,10 +11,13 @@ interface CTASectionProps {
 
 export function CTASection({
   title = <>Become a Partner<br className="hidden sm:block" /> Today!</>,
-  description = "Join our growing network of global channel partners and start earning recurring revenue by connecting businesses with trusted software development talent. We take care of the entire delivery while you focus on building relationships and growing your business. It's simple, transparent, and designed for long-term success.",
-  buttonText = "Become a Channel Partner"
+  description = "Join our growing network of global channel partners and start earning recurring revenue by connecting businesses with trusted software development talent. We take care of the entire delivery while you focus on building relationships and growing your business. It's simple, transparent, and designed for long term success.",
+  buttonText = "Become a Channel Partner",
+  buttonHref = "/partner-with-us"
 }: CTASectionProps) {
-  const finalButtonHref = "https://calendly.com/rahul-b-f5nl/consulting-call";
+  const finalButtonHref = buttonHref || "/partner-with-us";
+  const isExternal = finalButtonHref.startsWith("http://") || finalButtonHref.startsWith("https://");
+
   return (
     <section className="w-full px-4 sm:px-6 lg:px-8 py-24 bg-white relative z-10 mx-auto flex justify-center">
       {/* Blue Banner Card with exact specs: width/max-w-[1280px], rounded-[64px], opacity: 1, angle: 0deg */}
@@ -40,8 +43,8 @@ export function CTASection({
           <div className="flex justify-center mt-4">
             <Link
               href={finalButtonHref}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={isExternal ? "_blank" : undefined}
+              rel={isExternal ? "noopener noreferrer" : undefined}
               className="btn-ripple bg-white text-[#4B56D2] px-10 py-5 rounded-full font-extrabold text-[18px] tracking-wide shadow-lg hover:shadow-[0_10px_30px_rgba(0,0,0,0.15)] hover:scale-105 transition-all duration-300"
             >
               {buttonText}
