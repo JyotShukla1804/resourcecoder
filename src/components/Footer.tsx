@@ -570,14 +570,14 @@ const Footer = () => {
               variants={itemVariants}
               className="flex items-center gap-4"
             >
-              <div>
+              <div className="text-right">
                 <h3 className="text-gray-400">Contact Number</h3>
                 <p className="text-white text-sm sm:text-base md:text-lg whitespace-nowrap">
                   <a href="tel:+917202002034"> +91 7202002034 </a>|
                   <a href="tel:+1(623)887-5363"> +1 (623) 887-5363</a>
                 </p>
               </div>
-              <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
                 <Phone className="w-6 h-6 text-gray-300" />
               </div>
             </motion.div>
@@ -586,7 +586,7 @@ const Footer = () => {
               variants={itemVariants}
               className="flex items-center gap-4 mt-4"
             >
-              <div>
+              <div className="text-right">
                 <h3 className="text-gray-400">Email Us</h3>
                 <a href="mailto:sales@kraziocloud.com">
                   <p className="text-white text-sm sm:text-base md:text-lg">
@@ -594,7 +594,7 @@ const Footer = () => {
                   </p>
                 </a>
               </div>
-              <div className="w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
+              <div className="flex-shrink-0 w-12 h-12 rounded-full bg-gray-800 flex items-center justify-center">
                 <Mail className="w-6 h-6 text-gray-300" />
               </div>
             </motion.div>
@@ -766,26 +766,23 @@ const Footer = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-8 text-center">
             <div className="inline-flex flex-col items-center">
-
               <span className="text-white/50 text-[11px] sm:text-xs uppercase tracking-[0.25em] mb-1">
                 Part of
               </span>
-
               <h2 className="relative text-3xl sm:text-5xl font-semibold tracking-[-0.04em] text-transparent bg-clip-text bg-gradient-to-b from-white via-blue-100 to-white/40 drop-shadow-[0_4px_24px_rgba(255,255,255,0.08)] [mask-image:linear-gradient(to_bottom,white_75%,transparent)] [-webkit-mask-image:linear-gradient(to_bottom,white_75%,transparent)]">
                 Krazio Group
               </h2>
-
               <div className="mt-2 h-[2px] w-16 rounded-full bg-gradient-to-r from-transparent via-white/60 to-transparent" />
             </div>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-x-6 gap-y-6 items-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-10 gap-y-6">
             {logos.map((logo) => (
               <a
                 key={logo.id}
                 href={logo.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="group flex items-center justify-center gap-3 min-w-0"
+                className="group flex items-center justify-center gap-3"
               >
                 <img
                   src={logo.image}
@@ -806,7 +803,6 @@ const Footer = () => {
               </a>
             ))}
           </div>
-
         </div>
       </div>
       {/* Certifications */}

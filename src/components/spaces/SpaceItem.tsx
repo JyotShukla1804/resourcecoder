@@ -45,6 +45,8 @@ export function SpaceItem({
               src={imageSrc}
               alt={imageAlt}
               fill
+              unoptimized
+              priority
               className="object-cover transition-transform duration-700 group-hover:scale-105"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 via-transparent to-transparent opacity-60" />
@@ -53,20 +55,20 @@ export function SpaceItem({
 
         {/* Content Side */}
         <div className="w-full lg:w-1/2 flex flex-col items-start">
-          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-6 text-slate-900">
+          <h2 className="text-4xl md:text-5xl font-extrabold tracking-tight mb-8 text-slate-900">
             {title} <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-[#4B56D2] font-light italic pr-2 py-1">{highlight}</span>
           </h2>
-          <p className="text-slate-600 text-lg mb-10 leading-relaxed">
+          <p className="text-slate-600 text-lg mb-14 leading-relaxed">
             {description}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 w-full mb-10">
-            <div className="flex-1">
-              <h4 className="text-slate-900 font-bold text-lg mb-4 flex items-center gap-2">
+          <div className="flex flex-col sm:flex-row gap-8 sm:gap-16 w-full mb-14">
+            <div className="flex-1 flex flex-col gap-8">
+              <h4 className="text-slate-900 font-bold text-lg flex items-center gap-2">
                 <span className="w-1.5 h-6 bg-[#4B56D2] rounded-full inline-block" />
                 Includes
               </h4>
-              <ul className="space-y-3">
+              <ul className="flex flex-col gap-5">
                 {includes.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-slate-600">
                     <CheckCircle2 className="w-5 h-5 text-[#4B56D2] shrink-0 mt-0.5" />
@@ -76,12 +78,12 @@ export function SpaceItem({
               </ul>
             </div>
             
-            <div className="flex-1">
-              <h4 className="text-slate-900 font-bold text-lg mb-4 flex items-center gap-2">
+            <div className="flex-1 flex flex-col gap-8">
+              <h4 className="text-slate-900 font-bold text-lg flex items-center gap-2">
                 <span className="w-1.5 h-6 bg-purple-500 rounded-full inline-block" />
                 Best For
               </h4>
-              <ul className="space-y-3">
+              <ul className="flex flex-col gap-5">
                 {bestFor.map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 text-slate-600">
                     <CheckCircle2 className="w-5 h-5 text-[#4B56D2] shrink-0 mt-0.5" />
@@ -92,7 +94,7 @@ export function SpaceItem({
               {pricing && (
                 <div className="mt-6">
                   <h4 className="text-slate-900 font-bold text-lg mb-2 flex items-center gap-2">
-                    <span className="w-1.5 h-6 bg-yellow-500 rounded-full inline-block" />
+                    <span className="w-1.5 h-6 bg-[#4B56D2] rounded-full inline-block" />
                     Pricing
                   </h4>
                   <p className="text-slate-600 text-[15px]">{pricing}</p>
@@ -103,7 +105,7 @@ export function SpaceItem({
 
           <Link 
             href="/#interview-section"
-            className="btn-ripple inline-flex items-center justify-center h-[56px] px-8 rounded-full text-white font-bold text-[16px] tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none bg-[#4B56D2]"
+            className="btn-ripple mt-8 inline-flex items-center justify-center h-[56px] px-8 rounded-full text-white font-bold text-[16px] tracking-wider shadow-md hover:shadow-lg transition-shadow duration-300 select-none bg-[#4B56D2]"
           >
             BOOK A SPACE
             <svg className="w-5 h-5 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
