@@ -4,12 +4,8 @@ import React, { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import Slider from "react-slick";
-const BehanceIcon = ({ className = "" }) => (
-  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>
-    <path d="M9.825 10.366c.866-.37 1.487-1.127 1.487-2.185 0-1.848-1.391-2.616-3.719-2.616H2v13h5.753c2.723 0 4.148-1.07 4.148-3.036 0-1.332-.781-2.28-2.076-2.631zm-4.708-2.261h2.247c1 0 1.545.412 1.545 1.137 0 .73-.556 1.191-1.574 1.191H5.117V8.105zm0 7.828v-3.023h2.528c1.233 0 1.93.473 1.93 1.444 0 .963-.67 1.579-2.002 1.579H5.117zm11.233-5.32c-2.316 0-3.692 1.636-3.692 4.025 0 2.502 1.464 4.07 3.791 4.07 1.83 0 3.013-1.002 3.39-2.477h-2.164c-.266.6-.837.95-1.503.95-1.163 0-1.802-.821-1.85-2.096h5.666c.026-.263.042-.562.042-.876 0-2.378-1.282-3.596-3.68-3.596zm-1.583 2.52c.118-1.042.85-1.635 1.64-1.635.867 0 1.442.614 1.516 1.635h-3.156zM13.411 6.551h5.811v1.654h-5.811z" />
-  </svg>
-); 
 import {
   Mail,
   Phone,
@@ -18,6 +14,15 @@ import {
   Download,
   Users,
 } from "lucide-react";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+const BehanceIcon = ({ className = "" }) => (
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="none" className={className}>
+    <path d="M9.825 10.366c.866-.37 1.487-1.127 1.487-2.185 0-1.848-1.391-2.616-3.719-2.616H2v13h5.753c2.723 0 4.148-1.07 4.148-3.036 0-1.332-.781-2.28-2.076-2.631zm-4.708-2.261h2.247c1 0 1.545.412 1.545 1.137 0 .73-.556 1.191-1.574 1.191H5.117V8.105zm0 7.828v-3.023h2.528c1.233 0 1.93.473 1.93 1.444 0 .963-.67 1.579-2.002 1.579H5.117zm11.233-5.32c-2.316 0-3.692 1.636-3.692 4.025 0 2.502 1.464 4.07 3.791 4.07 1.83 0 3.013-1.002 3.39-2.477h-2.164c-.266.6-.837.95-1.503.95-1.163 0-1.802-.821-1.85-2.096h5.666c.026-.263.042-.562.042-.876 0-2.378-1.282-3.596-3.68-3.596zm-1.583 2.52c.118-1.042.85-1.635 1.64-1.635.867 0 1.442.614 1.516 1.635h-3.156zM13.411 6.551h5.811v1.654h-5.811z" />
+  </svg>
+); 
+
 const FacebookIcon = ({ className = "" }) => (
   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className={className}>
     <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
@@ -43,10 +48,6 @@ const XIcon = ({ className = "" }) => (
     <path d="M4 20l6.768 -6.768m2.46 -2.46l6.772 -6.772" />
   </svg>
 );
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
-import { usePathname } from "next/navigation";
 
 const SocialLink = ({ href, icon: Icon }: { href: string; icon: React.ElementType }) => (
   <a
